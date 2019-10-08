@@ -1,0 +1,7 @@
+pandas
+numpy
+scipy
+statsmodels
+scikit-learn
+psutil
+networkx

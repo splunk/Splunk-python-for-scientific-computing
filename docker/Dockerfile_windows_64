@@ -1,0 +1,20 @@
+# escape=`
+FROM microsoft/windowsservercore:1803
+
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
+
+WORKDIR "C:\temp"
+COPY files .
+
+# Set the execution policy to RemoteSigned, which will
+# allow us to install choco, a package manager for windows.
+RUN Set-ExecutionPolicy bypass; `
+    .\chocolatey-install.ps1; `
+    choco install 7zip git -y;
+
+# The Joys of Doze
+# Without this, pip goes  a bit crazy because it tries to use cp65001 encoding
+# for some reason.
+ENV PYTHONIOENCODING "ascii"
+
+ENTRYPOINT powershell.exe
