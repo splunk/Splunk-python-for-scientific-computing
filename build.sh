@@ -38,7 +38,7 @@ fi
 APPDIR="Splunk_SA_Scientific_Python"
 TARGETBASE="$SCRIPTDIR/build/$APPDIR"
 
-PLATFORMS="linux_x86_64 darwin_x86_64 windows_x86_64"
+PLATFORMS="linux_x86_64 darwin_x86_64"
 
 for platform in $PLATFORMS; do
     TARBALL="$SCRIPTDIR/build/miniconda-repack-${platform}.tar.gz"
@@ -52,6 +52,7 @@ for platform in $PLATFORMS; do
 
     run rm -rf "$TARGET"
     run rsync -xva "$SCRIPTDIR/package/" "$TARGET"
+    run rsync -xva "$SCRIPTDIR/${platform}/LICENSE" "$TARGET/LICENSE"
 
     ## Update conf files
     run sed -i.bak -e "s/@build@/$APPBUILD/" "$TARGET/default/app.conf"

@@ -3,7 +3,7 @@
 set_base_variables() {
 
 #https://repo.anaconda.com/miniconda/
-MINICONDA_VERSION="Miniconda3-4.5.12"
+MINICONDA_VERSION="Miniconda3-4.7.10"
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
@@ -27,9 +27,10 @@ else
     exit 1
 fi
 
+BUILD_BASE_DIR="$SCRIPT_DIR/build"
 PLATFORM_DIR="$SCRIPT_DIR/$PLATFORM"
 MINICONDA_PATH="$PLATFORM_DIR/$MINICONDA_FILE"
-BUILD_DIR="$SCRIPT_DIR/build/$PLATFORM"
+BUILD_DIR="$BUILD_BASE_DIR/$PLATFORM"
 CONDA_DIR="$BUILD_DIR/conda"
 
 test -f "$MINICONDA_PATH"
