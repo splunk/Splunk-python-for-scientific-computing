@@ -212,41 +212,25 @@ of the following licenses.
 =============================================================================
 Apache 2.0
 =============================================================================
-cryptography     (https://github.com/pyca/cryptography/blob/master/LICENSE)
-pyopenssl        (https://github.com/pyca/pyopenssl/blob/master/LICENSE)
 python-dateutil  (https://github.com/dateutil/dateutil/blob/master/LICENSE)
-requests         (https://github.com/psf/requests/blob/master/LICENSE)
 
 =============================================================================
 MIT licenses
 =============================================================================
-asn1crypto   (https://github.com/wbond/asn1crypto/blob/master/LICENSE)
-cffi         (https://bitbucket.org/cffi/cffi/src/default/LICENSE)
-libxml2      (https://gitlab.gnome.org/GNOME/libxml2/blob/master/Copyright)
 pip          (https://github.com/pypa/pip/blob/master/LICENSE.txt)
-pycosat      (https://github.com/ContinuumIO/pycosat/blob/master/LICENSE)
 pytz         (https://github.com/newvem/pytz/blob/master/LICENSE.txt)
-ruamel_yaml  (https://bitbucket.org/ruamel/yaml/src/default/LICENSE)
 setuptools   (https://github.com/pypa/setuptools/blob/master/LICENSE)
 six          (https://github.com/benjaminp/six/blob/master/LICENSE)
-urllib3      (https://github.com/urllib3/urllib3/blob/master/LICENSE.txt)
 wheel        (https://github.com/pypa/wheel/blob/master/LICENSE.txt)
-libyaml      (https://github.com/yaml/libyaml/blob/master/LICENSE)
 
 
 =============================================================================
 BSD
 =============================================================================
-BSD 3-clause     conda                   (https://conda.io/en/latest/license.html)
-BSD 3-clause     conda-package-handling  (https://conda.io/en/latest/license.html)
-BSD 3-clause     cryptography            (https://github.com/pyca/cryptography/blob/master/LICENSE)
 BSD 2-clause     decorator               (https://github.com/micheles/decorator/blob/master/LICENSE.txt)
-BSD like         idna                    (https://github.com/kjd/idna/blob/master/LICENSE.rst)
 BSD 3-clause     intel-openmp            (https://www.openmprtl.org/licensing, https://www.openmprtl.org/faq/10)
 BSD 3-clause     joblib                  (https://github.com/joblib/joblib/blob/master/LICENSE.txt)
-BSD 2-clause     libarchive              (https://raw.githubusercontent.com/libarchive/libarchive/master/COPYING)
 BSD 3-clause     libedit                 (http://thrysoee.dk/editline/, http://www.netbsd.org/about/redistribution.html)
-BSD 2-clause     lz4-c                   (https://anaconda.org/anaconda/lz4-c, https://github.com/lz4/lz4/blob/dev/LICENSE)
 BSD 3-clause     mkl-service             (https://github.com/ContinuumIO/mkl-service/blob/master/LICENSE.txt)
 BSD 3-clause     mkl_fft                 (https://github.com/IntelPython/mkl_fft/blob/master/LICENSE.txt)
 BSD 3-clause     mkl_random              (https://github.com/IntelPython/mkl_random/blob/master/LICENSE.txt)
@@ -256,23 +240,17 @@ BSD 3-clause     numpy-base              (https://github.com/numpy/numpy/blob/ma
 BSD 3-clause     pandas                  (https://github.com/pandas-dev/pandas/blob/master/LICENSE)
 BSD 2-clause/PSF patsy                   (https://github.com/pydata/patsy/blob/master/LICENSE.txt)
 BSD 3-clause     psutil                  (https://github.com/giampaolo/psutil/blob/master/LICENSE)
-BSD 3-clause     pycparser               (https://github.com/eliben/pycparser/blob/master/LICENSE)
-BSD 3-clause     pysocks                 (https://github.com/Anorov/PySocks/blob/master/LICENSE)
 New BSD License  scikit-learn            (https://github.com/scikit-learn/scikit-learn/blob/master/COPYING)
 BSD 3-clause     scipy                   (https://github.com/scipy/scipy/blob/master/LICENSE.txt)
 BSD 3-clause     statsmodels             (https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt)
-BSD 3-clause     zstd                    (https://github.com/facebook/zstd/blob/dev/LICENSE)
 
 
 =============================================================================
 GPL/LGPL
 =============================================================================
-LGPLv2                                chardet    (https://github.com/chardet/chardet/blob/master/LICENSE)
 GPL with RuntimeLibrary Exception     libgcc-ng  (https://www.gnu.org/licenses/gcc-exception-3.1.en.html)
 GPL with RuntimeLibrary Exception     libgfortran-ng (https://www.gnu.org/licenses/gcc-exception-3.1.en.html)
 GPL with RuntimeLibrary Exception     libstdcxx-ng  (https://anaconda.org/anaconda/libstdcxx-ng)
-GPLv2                                 lzo            (https://anaconda.org/anaconda/lzo, http://www.oberhumer.com/opensource/gpl.html)
-GPLv3                                 readline    (https://github.com/ludwigschwardt/python-gnureadline/blob/master/LICENSE)
 LGPLv2.1/GPLv2                        xz          (https://git.tukaani.org/?p=xz.git;a=blob_plain;f=COPYING;hb=HEAD)
 
 
@@ -286,13 +264,11 @@ MPL2.0/MIT  tqdm     (https://github.com/tqdm/tqdm/blob/master/LICENCE)
 =============================================================================
 Others
 =============================================================================
-bzip2 license (BSD)   bzip2    (https://sourceware.org/git/?p=bzip2.git;a=blob_plain;f=LICENSE;hb=HEAD)
 libffi license        libffi   (https://github.com/libffi/libffi/blob/master/LICENSE)
 proprietary - Intel   mkl      (https://software.intel.com/en-us/mkl/license-faq)
 free                  ncurses  (https://invisible-island.net/ncurses/ncurses-license.html)
 OpenSSL license       openssl  (https://www.openssl.org/source/license.html)
 PSF                   python   (https://docs.python.org/3/license.html)
-CC0-1.0               python-libarchive-c (https://github.com/Changaco/python-libarchive-c/blob/master/LICENSE.md)
 public domain         sqlite   (https://github.com/mackyle/sqlite/blob/master/LICENSE.md)
 zlib                  zlib     (https://github.com/madler/zlib)
 ISC                   ca-certificates   (https://github.com/conda-forge/ca-certificates-feedstock)

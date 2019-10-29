@@ -209,12 +209,6 @@ separate copyright notices and license terms.  Your use of the source
 code for the these subcomponents is subject to the terms and conditions
 of the following licenses.
 
-=============================================================================
-Apache 2.0
-=============================================================================
-cryptography (https://github.com/pyca/cryptography/blob/master/LICENSE)
-
-
 
 =============================================================================
 MIT licenses
@@ -229,13 +223,9 @@ six          (https://github.com/benjaminp/six/blob/master/LICENSE)
 wheel        (https://github.com/pypa/wheel/blob/master/LICENSE.txt)
 
 
-
-
 =============================================================================
 BSD
 =============================================================================
-BSD 3-clause               conda                   (https://conda.io/en/latest/license.html)
-BSD 3-clause               conda-package-handling  (https://conda.io/en/latest/license.html)
 BSD 2-clause               decorator               (https://github.com/micheles/decorator/blob/master/LICENSE.txt)
 BSD 3-clause               intel-openmp            (https://www.openmprtl.org/licensing, https://www.openmprtl.org/faq/10)
 BSD 3-clause               joblib                  (https://github.com/joblib/joblib/blob/master/LICENSE.txt)
@@ -257,10 +247,8 @@ BSD 3-clause               statsmodels             (https://github.com/statsmode
 =============================================================================
 GPL/LGPL
 =============================================================================
-LGPLv2.1                           chardet      (https://github.com/chardet/chardet/blob/master/LICENSE)
 LGPLv2.1                           xz           (https://git.tukaani.org/?p=xz.git;a=blob;f=COPYING.GPLv2;h=d159169d1050894d3ea3b98e1c965c4058208fe1;hb=HEAD)
 GPL with RuntimeLibrary Exception  libgfortran  (https://www.gnu.org/licenses/gcc-exception-3.1.en.html)
-GPLv3                              readline     (https://github.com/ludwigschwardt/python-gnureadline/blob/master/LICENSE)
 
 
 =============================================================================
@@ -270,18 +258,11 @@ certifi  (https://github.com/certifi/python-certifi/blob/master/LICENSE)
 
 
 =============================================================================
-ISC
-=============================================================================
-ca-certificates   (https://github.com/conda-forge/ca-certificates-feedstock)
-
-
-=============================================================================
 Others
 =============================================================================
 libffi license             libffi            (https://github.com/libffi/libffi/blob/master/LICENSE)
 Free software (MIT-like)   ncurses           (https://invisible-island.net/ncurses/ncurses-license.html)
 PSF license                Python            (https://docs.python.org/3/license.html)
-PSF 2 license              wincertstore      (https://bitbucket.org/tiran/wincertstore/src/default/LICENSE)
 Public-Domain              sqlite            (https://github.com/mackyle/sqlite/blob/master/LICENSE.md)
 OpenSSL license            openssl           (https://www.openssl.org/source/license.html)
 zlib                       zlib              (https://github.com/madler/zlib)
