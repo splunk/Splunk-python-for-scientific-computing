@@ -1,36 +1,38 @@
-## Python for Scientific Computing (PSC)
+# Python for Scientific Computing (PSC)
 
-The Python for Scientific Computing app is an app that bundles Miniconda (a commercial binary distribution of Python) and some common Python libraries for scientific computing: numpy, scipy, pandas, scikit-learn, statsmodels.
+The Python for Scientific Computing app is an app that bundles Miniconda (a
+commercial binary distribution of Python) and some common Python libraries
+for scientific computing: numpy, scipy, pandas, scikit-learn, statsmodels.
 
-This repo builds PSC for 4 platforms:
-* Mac: https://splunkbase.splunk.com/app/2881/
-* Linux 64-bit: https://splunkbase.splunk.com/app/2882/
-* Windows 64-bit: https://splunkbase.splunk.com/app/2883/
+This repo builds PSC for 3 platforms:
 
-### Running Native Unit Tests for Libraries in PSC
-1. Build a PSC without removing ```nose``` library and ```tests``` files
-    1. drop the ".skip" suffix in the nose package file name, e.g. ```darwin_x86_64/pkgs/nose-1.3.7-py27h2ee3cb8_2.tar.bz2.skip``` -> ```darwin_x86_64/pkgs/nose-1.3.7-py27h2ee3cb8_2.tar.bz2```
-    2. run ```bash repack.sh```, automatically removes tests folders except networkx library's tests folder
-    3. run ```bash build.sh```
-2. Follow [NumPy/SciPy Testing Guidelines](https://github.com/numpy/numpy/blob/master/doc/TESTS.rst.txt) to run tests.
-    1. To run SciPy's full test suite, use the following:
-    ```python
-    >>> import scipy
-    >>> scipy.test()
-    ```
-    2. To run Numpy's full test suite, use the following:
-    ```python
-    >>> import numpy
-    >>> numpy.test()
-    ```
+* Mac: <https://splunkbase.splunk.com/app/2881/>
+* Linux 64-bit: <https://splunkbase.splunk.com/app/2882/>
+* Windows 64-bit: <https://splunkbase.splunk.com/app/2883/>
 
-### Disabling Bundle Replication
-PSC is not supposed to be bundle replicated in a Search Head Clustering environment, therefore, it must be added to ```distsearch.conf```
-```
-[replicationBlacklist]
-noanaconda = apps[/\\]Splunk_SA_Scientific_Python*[/\\]...
-```
+## Building your own Python for Scientific Computing
 
-
-
-
+1. Update `packages.txt` in the repo root dir
+    * Always specify your `python` version, keep major version consistent with
+      the target splunk platform. e.g. Splunk 8.0.x ships with python 3.7.x,
+      so put `python==3.7.*` in there or the specific version you need
+    * Fix the major version, leave the minor version flexible, i.e. `pandas==0.25.*`
+    * There's another `packages.txt` inside of each platform's folder, which act
+      as the lock file to lockdown the specific versions of all dependencies
+      (like `pip freeze`).
+2. Run freeze task of the build scripts
+    * There are two build scripts to be used on different platforms
+        * `repack.sh` for Linux and OSX
+        * `repack.ps1` for Windows
+    * run `bash repack.sh freeze`
+3. If there's any package _*ADDED*_ to existing `packages.txt`, we can run
+   `bash repack.sh analyze` to inspect the package dependency tree
+4. Optional, check licenses, *if you are redistributing this app*, you need
+   to include the proper licenses of the package redistributed, run
+   `bash repack.sh license` to generate a license file
+    * Note you may need to update `license_db.csv` if you included a new package
+5. Finally, when the platform specific `packages.txt` looks good, run
+   `bash repack.sh build` to build the Python for Scientific Computing app
+6. Copy it to your `$SPLUNK_HOME/etc/apps` folder
+    * Note, due to the size of this app, installing it via web
+      installer/deployer may fail with a timeout error

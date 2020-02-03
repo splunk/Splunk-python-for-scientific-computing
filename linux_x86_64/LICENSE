@@ -178,7 +178,7 @@
    APPENDIX: How to apply the Apache License to your work.
 
       To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "{}"
+      boilerplate notice, with the fields enclosed by brackets "[]"
       replaced with your own identifying information. (Don't include
       the brackets!)  The text should be enclosed in the appropriate
       comment syntax for the file format. We also recommend that a
@@ -186,7 +186,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright 2018 Splunk Inc.
+   Copyright [yyyy] [name of copyright owner]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -200,81 +200,44 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 
-=============================================================================
 
-Splunk Python for Scientific Computing
+========================================================================
 
-Splunk Python for Scientific Computing contains subcomponents with
-separate copyright notices and license terms.  Your use of the source
-code for the these subcomponents is subject to the terms and conditions
-of the following licenses.
+Package licenses:
 
-=============================================================================
-Apache 2.0
-=============================================================================
-python-dateutil  (https://github.com/dateutil/dateutil/blob/master/LICENSE)
-
-=============================================================================
-MIT licenses
-=============================================================================
-pip          (https://github.com/pypa/pip/blob/master/LICENSE.txt)
-pytz         (https://github.com/newvem/pytz/blob/master/LICENSE.txt)
-setuptools   (https://github.com/pypa/setuptools/blob/master/LICENSE)
-six          (https://github.com/benjaminp/six/blob/master/LICENSE)
-wheel        (https://github.com/pypa/wheel/blob/master/LICENSE.txt)
-
-
-=============================================================================
-BSD
-=============================================================================
-BSD 2-clause     decorator               (https://github.com/micheles/decorator/blob/master/LICENSE.txt)
-BSD 3-clause     intel-openmp            (https://www.openmprtl.org/licensing, https://www.openmprtl.org/faq/10)
-BSD 3-clause     joblib                  (https://github.com/joblib/joblib/blob/master/LICENSE.txt)
-BSD 3-clause     libedit                 (http://thrysoee.dk/editline/, http://www.netbsd.org/about/redistribution.html)
-BSD 3-clause     mkl-service             (https://github.com/ContinuumIO/mkl-service/blob/master/LICENSE.txt)
-BSD 3-clause     mkl_fft                 (https://github.com/IntelPython/mkl_fft/blob/master/LICENSE.txt)
-BSD 3-clause     mkl_random              (https://github.com/IntelPython/mkl_random/blob/master/LICENSE.txt)
-BSD 3-clause     networkx                (https://github.com/networkx/networkx/blob/master/LICENSE.txt)
-BSD 3-clause     numpy                   (https://github.com/numpy/numpy/blob/master/LICENSE.txt)
-BSD 3-clause     numpy-base              (https://github.com/numpy/numpy/blob/master/LICENSE.txt)
-BSD 3-clause     pandas                  (https://github.com/pandas-dev/pandas/blob/master/LICENSE)
-BSD 2-clause/PSF patsy                   (https://github.com/pydata/patsy/blob/master/LICENSE.txt)
-BSD 3-clause     psutil                  (https://github.com/giampaolo/psutil/blob/master/LICENSE)
-New BSD License  scikit-learn            (https://github.com/scikit-learn/scikit-learn/blob/master/COPYING)
-BSD 3-clause     scipy                   (https://github.com/scipy/scipy/blob/master/LICENSE.txt)
-BSD 3-clause     statsmodels             (https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt)
-
-
-=============================================================================
-GPL/LGPL
-=============================================================================
-GPL with RuntimeLibrary Exception     libgcc-ng  (https://www.gnu.org/licenses/gcc-exception-3.1.en.html)
-GPL with RuntimeLibrary Exception     libgfortran-ng (https://www.gnu.org/licenses/gcc-exception-3.1.en.html)
-GPL with RuntimeLibrary Exception     libstdcxx-ng  (https://anaconda.org/anaconda/libstdcxx-ng)
-LGPLv2.1/GPLv2                        xz          (https://git.tukaani.org/?p=xz.git;a=blob_plain;f=COPYING;hb=HEAD)
-
-
-=============================================================================
-MPL 2.0 
-=============================================================================
-MPL2.0      certifi  (https://github.com/certifi/python-certifi/blob/master/LICENSE)
-MPL2.0/MIT  tqdm     (https://github.com/tqdm/tqdm/blob/master/LICENCE)
-
-
-=============================================================================
-Others
-=============================================================================
-libffi license        libffi   (https://github.com/libffi/libffi/blob/master/LICENSE)
-proprietary - Intel   mkl      (https://software.intel.com/en-us/mkl/license-faq)
-free                  ncurses  (https://invisible-island.net/ncurses/ncurses-license.html)
-OpenSSL license       openssl  (https://www.openssl.org/source/license.html)
-PSF                   python   (https://docs.python.org/3/license.html)
-public domain         sqlite   (https://github.com/mackyle/sqlite/blob/master/LICENSE.md)
-zlib                  zlib     (https://github.com/madler/zlib)
-ISC                   ca-certificates   (https://github.com/conda-forge/ca-certificates-feedstock)
-
-=============================================================================
-The following packages do not have license attached to them on anaconda repo
-They are redistributed without any modification
-_libgcc_mutex     (https://anaconda.org/anaconda/_libgcc_mutex)
-blas              (https://anaconda.org/anaconda/blas)
+_libgcc_mutex                                         https://anaconda.org/anaconda/_libgcc_mutex
+blas                                                  https://anaconda.org/anaconda/blas
+ca-certificates  ISC                                  https://github.com/conda-forge/ca-certificates-feedstock
+certifi          MPL2.0                               https://github.com/certifi/python-certifi/blob/master/LICENSE
+decorator        BSD 2-clause                         https://github.com/micheles/decorator/blob/master/LICENSE.txt
+intel-openmp     BSD 3-clause                         https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10
+joblib           BSD 3-clause                         https://github.com/joblib/joblib/blob/master/LICENSE.txt
+ld_impl_linux-64 GPLv3                                http://www.gnu.org/licenses/gpl
+libedit          BSD 3-clause                         http://thrysoee.dk/editline|http://www.netbsd.org/about/redistribution.html
+libffi           libffi license                       https://github.com/libffi/libffi/blob/master/LICENSE
+libgcc-ng        GPL with RuntimeLibrary Exception    http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libgfortran-ng   GPL with RuntimeLibrary Exception    http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libstdcxx-ng     GPL with RuntimeLibrary Exception    https://anaconda.org/anaconda/libstdcxx-ng
+mkl              proprietary - Intel                  https://software.intel.com/en-us/mkl/license-faq
+mkl-service      BSD 3-clause                         https://github.com/ContinuumIO/mkl-service/blob/master/LICENSE.txt
+mkl_fft          BSD 3-clause                         https://github.com/IntelPython/mkl_fft/blob/master/LICENSE.txt
+mkl_random       BSD 3-clause                         https://github.com/IntelPython/mkl_random/blob/master/LICENSE.txt
+ncurses          free                                 https://invisible-island.net/ncurses/ncurses-license.html
+networkx         BSD 3-clause                         https://github.com/networkx/networkx/blob/master/LICENSE.txt
+numpy            BSD 3-clause                         https://github.com/numpy/numpy/blob/master/LICENSE.txt
+numpy-base       BSD 3-clause                         https://github.com/numpy/numpy/blob/master/LICENSE.txt
+openssl          OpenSSL license                      https://www.openssl.org/source/license.html
+pandas           BSD 3-clause                         https://github.com/pandas-dev/pandas/blob/master/LICENSE
+patsy            BSD 2-clause/PSF                     https://github.com/pydata/patsy/blob/master/LICENSE.txt
+psutil           BSD 3-clause                         https://github.com/giampaolo/psutil/blob/master/LICENSE
+python           PSF                                  https://docs.python.org/3/license.html
+python-dateutil  Apache 2.0                           https://github.com/dateutil/dateutil/blob/master/LICENSE
+pytz             MIT                                  https://github.com/newvem/pytz/blob/master/LICENSE.txt
+scikit-learn     New BSD License                      https://github.com/scikit-learn/scikit-learn/blob/master/COPYING
+scipy            BSD 3-clause                         https://github.com/scipy/scipy/blob/master/LICENSE.txt
+setuptools       MIT                                  https://github.com/pypa/setuptools/blob/master/LICENSE
+six              MIT                                  https://github.com/benjaminp/six/blob/master/LICENSE
+statsmodels      BSD 3-clause                         https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt
+wheel            MIT                                  https://github.com/pypa/wheel/blob/master/LICENSE.txt
+xz               LGPLv2.1/GPLv2                       https://git.tukaani.org/?p=xz.git;a=blob_plain;f=COPYING;hb=HEAD
+zlib             zlib                                 https://github.com/madler/zlib

@@ -1,0 +1,58 @@
+stages:
+  - build
+  - publish
+
+build_linux:
+  stage: build
+  image: ${LINUX_BUILD_IMAGE}
+  artifacts:
+    paths:
+      - build/Splunk_SA_Scientific_Python_linux_x86_64.tgz
+    untracked: false
+    expire_in: 30 days
+  script:
+    - bash repack.sh license
+    - bash repack.sh build
+  tags:
+    - linux64-docker
+
+build_windows:
+  stage: build
+  image: ${WINDOWS_BUILD_IMAGE}
+  artifacts:
+    paths:
+      - build/Splunk_SA_Scientific_Python_windows_x86_64.tgz
+    untracked: false
+    expire_in: 30 days
+  script:
+    - powershell .\repack.ps1 license
+    - powershell .\repack.ps1 build
+  tags:
+    - win64-docker
+
+build_osx:
+  stage: build
+  artifacts:
+    paths:
+      - build/Splunk_SA_Scientific_Python_darwin_x86_64.tgz
+    untracked: false
+    expire_in: 30 days
+  script:
+    - bash repack.sh license
+    - bash repack.sh build
+  tags:
+    - mac64
+
+publish_artifacts:
+  stage: publish
+  dependencies:
+    - build_linux
+    - build_windows
+    - build_osx
+  image: docker.bintray.io/jfrog/jfrog-cli-go:latest
+  script:
+    - apk add --no-cache git
+    - jfrog rt config artifactory_config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_PASS
+    - bash repack.sh publish
+  tags:
+    - linux64-docker

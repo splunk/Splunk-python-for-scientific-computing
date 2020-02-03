@@ -1,20 +1,15 @@
-FROM ubuntu:16.04
+FROM debian:buster-slim
 
 ENV PSC_HOME /var/tmp/home
 
-RUN apt-get update  && apt-get install -y --no-install-recommends apt-utils && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update && apt-get install -y wget \
+RUN apt-get -qq update -y \
+    && apt-get -qq upgrade -y \
+    && apt-get -qq install curl \
         unzip \
-        curl \
-        vim \
         net-tools \
-        sudo \
-        python2.7 \
-        python-pip \
         git \
         rsync \
-    && mkdir -p ${PSC_HOME}
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR ${PSC_HOME}
 
