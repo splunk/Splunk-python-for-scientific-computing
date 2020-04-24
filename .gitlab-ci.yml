@@ -4,6 +4,7 @@ stages:
 
 build_linux:
   stage: build
+  allow_failure: true
   image: ${LINUX_BUILD_IMAGE}
   artifacts:
     paths:
@@ -18,6 +19,7 @@ build_linux:
 
 build_windows:
   stage: build
+  allow_failure: true
   image: ${WINDOWS_BUILD_IMAGE}
   artifacts:
     paths:
@@ -32,6 +34,7 @@ build_windows:
 
 build_osx:
   stage: build
+  allow_failure: true
   artifacts:
     paths:
       - build/Splunk_SA_Scientific_Python_darwin_x86_64.tgz
