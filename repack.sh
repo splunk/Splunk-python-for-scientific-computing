@@ -141,6 +141,7 @@ if [[ $MODE -lt 4 ]]; then
 
         # Remove whl files
         find "$PACK_TARGET" -iname "*.whl" -print0 | $XARGS -0 rm
+        find "$PACK_TARGET" -xtype l -print0 | $XARGS -0 rm
         # remove all tests folders except networkx's tests folder
         PKG_INCLUDE_TESTS="$PACK_TARGET/*networkx*"
         find "$PACK_TARGET" -type d -iname tests -not -path "$PKG_INCLUDE_TESTS" -print0 | $XARGS -0 rm -rf
