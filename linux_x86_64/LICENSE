@@ -212,7 +212,6 @@ certifi          MPL2.0                               https://github.com/certifi
 decorator        BSD 2-clause                         https://github.com/micheles/decorator/blob/master/LICENSE.txt
 intel-openmp     BSD 3-clause                         https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10
 joblib           BSD 3-clause                         https://github.com/joblib/joblib/blob/master/LICENSE.txt
-ld_impl_linux-64 GPLv3                                http://www.gnu.org/licenses/gpl
 libedit          BSD 3-clause                         http://thrysoee.dk/editline|http://www.netbsd.org/about/redistribution.html
 libffi           libffi license                       https://github.com/libffi/libffi/blob/master/LICENSE
 libgcc-ng        GPL with RuntimeLibrary Exception    http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html

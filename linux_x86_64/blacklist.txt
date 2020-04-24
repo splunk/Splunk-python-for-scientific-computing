@@ -2,3 +2,4 @@ sqlite
 readline
 tk
 pip
+ld_impl_linux-64
