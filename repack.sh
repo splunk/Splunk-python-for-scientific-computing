@@ -2,7 +2,7 @@
 set -e
 
 APPDIR="Splunk_SA_Scientific_Python"
-VERSION="2.0.1"
+VERSION="2.0.2"
 APPBUILD="`git rev-parse --short HEAD`${BUILD_NUMBER:+.$BUILD_NUMBER}"
 BUILD_NUMBER=${APPBUILD:-testing}
 
@@ -189,12 +189,15 @@ if [[ $MODE -lt 4 ]]; then
         rm -rf "$TARGET"
         rsync -xva "$SCRIPT_DIR/package/" "$TARGET"
         rsync -xva "$SCRIPT_DIR/${PLATFORM}/LICENSE" "$TARGET/LICENSE"
+        rsync -xva "$SCRIPT_DIR/${PLATFORM}/app.manifest" "$TARGET/app.manifest"
 
         ## Update conf files
         sed -i.bak -e "s/@build@/$APPBUILD/" "$TARGET/default/app.conf"
         sed -i.bak -e "s/@version@/$VERSION/" "$TARGET/default/app.conf"
+        sed -i.bak -e "s/@version@/$VERSION/" "$TARGET/app.manifest"
         sed -i.bak -e "s/@platform@/$PLATFORM/" "$TARGET/default/app.conf"
         rm -f "$TARGET/default/app.conf.bak"
+        rm -f "$TARGET/app.manifest.bak"
 
         mkdir -p "$TARGET/bin"
         mv "$PACK_TARGET" "$TARGET/bin/$PLATFORM"

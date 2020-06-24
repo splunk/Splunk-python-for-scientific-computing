@@ -6,7 +6,7 @@ Param (
 $ErrorActionPreference = "Stop"
 
 $script:APPDIR = "Splunk_SA_Scientific_Python"
-$script:VERSION = "2.0.1"
+$script:VERSION = "2.0.2"
 $script:GIT_HASH = & git rev-parse --short HEAD
 $script:APPBUILD = "$GIT_HASH.$($env:BUILD_NUMBER)"
 $script:BUILD_NUMBER = ${APPBUILD:-testing}
@@ -144,6 +144,7 @@ if ($MODE -eq 0) {
     (Get-Content -Path "$TARGET\default\app.conf" | ForEach-Object { $_ -replace "@build@", "$APPBUILD" }) | Set-Content -Path "$TARGET\default\app.conf"
     (Get-Content -Path "$TARGET\default\app.conf" | ForEach-Object { $_ -replace "@version@", "$VERSION" }) | Set-Content -Path "$TARGET\default\app.conf"
     (Get-Content -Path "$TARGET\default\app.conf" | ForEach-Object { $_ -replace "@platform@", "$PLATFORM" }) | Set-Content -Path "$TARGET\default\app.conf"
+    (Get-Content -Path "$TARGET\app.manifest" | ForEach-Object { $_ -replace "@version@", "$VERSION" }) | Set-Content -Path "$TARGET\app.manifest"
 
     Copy-Item -Path "$PACK_TARGET" -Destination "$TARGET\bin\$PLATFORM" -Recurse
 
