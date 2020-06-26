@@ -47,6 +47,7 @@ if [ "`uname`" = "Linux" ]; then
     if [ "`uname -m`" = "x86_64" ]; then
         MINICONDA_PLATFORM="Linux"
         PLATFORM="linux_x86_64"
+        PLATFORM_NAME="Linux 64-bit"
     else
         echo "[ERROR] Unsupported platform \"`uname`\", aborting."
         exit 1
@@ -54,6 +55,7 @@ if [ "`uname`" = "Linux" ]; then
 elif [ "`uname`" = "Darwin" ]; then
     MINICONDA_PLATFORM="MacOSX"
     PLATFORM="darwin_x86_64"
+    PLATFORM_NAME="Mac"
     export COPYFILE_DISABLE=true
     XARGS="xargs"
 else
@@ -188,14 +190,16 @@ if [[ $MODE -lt 4 ]]; then
 
         rm -rf "$TARGET"
         rsync -xva "$SCRIPT_DIR/package/" "$TARGET"
+        rsync -xva "$SCRIPT_DIR/app.manifest" "$TARGET/"
         rsync -xva "$SCRIPT_DIR/${PLATFORM}/LICENSE" "$TARGET/LICENSE"
-        rsync -xva "$SCRIPT_DIR/${PLATFORM}/app.manifest" "$TARGET/app.manifest"
 
-        ## Update conf files
+        ## Update conf/manifest files
         sed -i.bak -e "s/@build@/$APPBUILD/" "$TARGET/default/app.conf"
         sed -i.bak -e "s/@version@/$VERSION/" "$TARGET/default/app.conf"
-        sed -i.bak -e "s/@version@/$VERSION/" "$TARGET/app.manifest"
         sed -i.bak -e "s/@platform@/$PLATFORM/" "$TARGET/default/app.conf"
+        sed -i.bak -e "s/@version@/$VERSION/" "$TARGET/app.manifest"
+        sed -i.bak -e "s/@platform@/$PLATFORM/" "$TARGET/app.manifest"
+        sed -i.bak -e "s/@platform_name@/$PLATFORM_NAME/" "$TARGET/app.manifest"
         rm -f "$TARGET/default/app.conf.bak"
         rm -f "$TARGET/app.manifest.bak"
 

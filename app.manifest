@@ -1,17 +1,17 @@
 {
   "schemaVersion": "2.0.0",
   "info": {
-    "title": "Python for Scientific Computing (for Linux 64-bit)",
+    "title": "Python for Scientific Computing (for @platform_name@)",
     "id": {
       "group": null,
-      "name": "Splunk_SA_Scientific_Python_linux_x86_64",
+      "name": "Splunk_SA_Scientific_Python_@platform@",
       "version": "@version@"
     },
     "author": [
       {
         "name": "Splunk",
         "email": "mlsupport@splunk.com",
-        "company": null
+        "company": "Splunk, Inc."
       }
     ],
     "releaseDate": null,
@@ -19,7 +19,7 @@
     "classification": {
       "intendedAudience": null,
       "categories": ["Utilities"],
-      "developmentStatus": null
+      "developmentStatus": "Production/Stable"
     },
     "license": {
       "name": "Apache License 2.0",

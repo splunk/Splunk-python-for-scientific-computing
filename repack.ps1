@@ -35,6 +35,7 @@ $script:BUILD_BASE_DIR = Join-Path "$SCRIPT_DIR" "build"
 # See the list from https://repo.anaconda.com/miniconda/
 $script:MINICONDA_VERSION = "4.7.12.1"
 $script:PLATFORM = "windows_x86_64"
+$script:PLATFORM_NAME = "Windows 64-bit"
 $script:PLATFORM_DIR = Join-Path $SCRIPT_DIR $PLATFORM
 $script:BUILD_DIR = Join-Path $BUILD_BASE_DIR $PLATFORM
 
@@ -138,6 +139,7 @@ if ($MODE -eq 0) {
     }
 
     Copy-Item -Path $(Join-Path "$SCRIPT_DIR" "package") -Destination "$TARGET" -Recurse
+    Copy-Item -Path $(Join-Path "$SCRIPT_DIR" "app.manifest") -Destination "$TARGET" -Recurse
     Copy-Item -Path $(Join-Path "$SCRIPT_DIR" $(Join-Path "$PLATFORM" "LICENSE")) -Destination $(Join-Path "$TARGET" "LICENSE") -Recurse -Force
 
     ## Update conf files
@@ -145,6 +147,8 @@ if ($MODE -eq 0) {
     (Get-Content -Path "$TARGET\default\app.conf" | ForEach-Object { $_ -replace "@version@", "$VERSION" }) | Set-Content -Path "$TARGET\default\app.conf"
     (Get-Content -Path "$TARGET\default\app.conf" | ForEach-Object { $_ -replace "@platform@", "$PLATFORM" }) | Set-Content -Path "$TARGET\default\app.conf"
     (Get-Content -Path "$TARGET\app.manifest" | ForEach-Object { $_ -replace "@version@", "$VERSION" }) | Set-Content -Path "$TARGET\app.manifest"
+    (Get-Content -Path "$TARGET\app.manifest" | ForEach-Object { $_ -replace "@platform@", "$PLATFORM" }) | Set-Content -Path "$TARGET\app.manifest"
+    (Get-Content -Path "$TARGET\app.manifest" | ForEach-Object { $_ -replace "@platform_name@", "$PLATFORM_NAME" }) | Set-Content -Path "$TARGET\app.manifest"
 
     Copy-Item -Path "$PACK_TARGET" -Destination "$TARGET\bin\$PLATFORM" -Recurse
 
