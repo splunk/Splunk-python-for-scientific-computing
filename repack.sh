@@ -206,6 +206,7 @@ if [[ $MODE -lt 4 ]]; then
         mkdir -p "$TARGET/bin"
         mv "$PACK_TARGET" "$TARGET/bin/$PLATFORM"
         rm -rf "$BUILD_DIR"
+        slim validate "$TARGET"
         tar czf "${TARGET}.tgz" -C "$BUILD_BASE_DIR" "${APPDIR}_${PLATFORM}"
         echo "[INFO] Build Success"
     elif [[ $MODE -eq 1 ]]; then

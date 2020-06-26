@@ -151,6 +151,7 @@ if ($MODE -eq 0) {
     (Get-Content -Path "$TARGET\app.manifest" | ForEach-Object { $_ -replace "@platform_name@", "$PLATFORM_NAME" }) | Set-Content -Path "$TARGET\app.manifest"
 
     Copy-Item -Path "$PACK_TARGET" -Destination "$TARGET\bin\$PLATFORM" -Recurse
+    slim validate "$TARGET"
 
     # Tarball the entire package
     $script:PACKAGE_NAME = "$($APPDIR)_$($PLATFORM)"
