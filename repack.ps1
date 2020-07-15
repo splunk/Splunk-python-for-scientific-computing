@@ -139,7 +139,6 @@ if ($MODE -eq 0) {
     }
 
     Copy-Item -Path $(Join-Path "$SCRIPT_DIR" "package") -Destination "$TARGET" -Recurse
-    Copy-Item -Path $(Join-Path "$SCRIPT_DIR" "app.manifest") -Destination "$TARGET" -Recurse
     Copy-Item -Path $(Join-Path "$SCRIPT_DIR" $(Join-Path "$PLATFORM" "LICENSE")) -Destination $(Join-Path "$TARGET" "LICENSE") -Recurse -Force
 
     ## Update conf files

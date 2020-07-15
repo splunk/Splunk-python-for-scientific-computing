@@ -190,7 +190,6 @@ if [[ $MODE -lt 4 ]]; then
 
         rm -rf "$TARGET"
         rsync -xva "$SCRIPT_DIR/package/" "$TARGET"
-        rsync -xva "$SCRIPT_DIR/app.manifest" "$TARGET/"
         rsync -xva "$SCRIPT_DIR/${PLATFORM}/LICENSE" "$TARGET/LICENSE"
 
         ## Update conf/manifest files
