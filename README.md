@@ -36,3 +36,15 @@ This repo builds PSC for 3 platforms:
 6. Copy it to your `$SPLUNK_HOME/etc/apps` folder
     * Note, due to the size of this app, installing it via web
       installer/deployer may fail with a timeout error
+
+## Note on packaging
+There may be unwanted content in the build that will fail the SplunkBase App verification, e.g. hidden files. We can use Splunk Package Toolkit CLI to facilitate the packaging process.
+
+```
+# Get Splunk
+wget http://releases.splunk.com/released_builds/8.0.5/splunk/osx/splunk-8.0.5-a1a6394cc5ae-darwin-64.tgz
+tar -xf splunk-8.0.5-a1a6394cc5ae-darwin-64.tgz
+
+# Run package command on the app folder
+./splunk/bin/slim package ${APPDIR}_${PLATFORM}
+```
