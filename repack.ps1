@@ -6,7 +6,7 @@ Param (
 $ErrorActionPreference = "Stop"
 
 $script:APPDIR = "Splunk_SA_Scientific_Python"
-$script:VERSION = "2.0.1"
+$script:VERSION = "2.1.0"
 $script:GIT_HASH = & git rev-parse --short HEAD
 $script:APPBUILD = "$GIT_HASH.$($env:BUILD_NUMBER)"
 $script:BUILD_NUMBER = ${APPBUILD:-testing}

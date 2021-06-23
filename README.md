@@ -36,3 +36,10 @@ This repo builds PSC for 3 platforms:
 6. Copy it to your `$SPLUNK_HOME/etc/apps` folder
     * Note, due to the size of this app, installing it via web
       installer/deployer may fail with a timeout error
+
+
+## Releasing a new version of Python for Scientific Computing
+If you are releasing a new PSC, you need follow these steps before running the repack scripts: 
+1. Edit the value of `VERSION` variable at the top of the repack scripts.
+2. Set the values of `MINICONDA_VERSION`, `LINUX_MD5`, and `OSX_MD5` variables to the appropriate value. Note that for OSX we use the `.sh` installer and not the `.pkg` installer. For the list of available miniconda versions, their respective package names, and MD5 hash, see https://repo.anaconda.com/miniconda/.
+3. Update the README file under `package` directory with the correct version of included packages.

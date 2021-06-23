@@ -2,7 +2,7 @@
 set -e
 
 APPDIR="Splunk_SA_Scientific_Python"
-VERSION="2.0.1"
+VERSION="3.0.0"
 APPBUILD="`git rev-parse --short HEAD`${BUILD_NUMBER:+.$BUILD_NUMBER}"
 BUILD_NUMBER=${APPBUILD:-testing}
 
@@ -39,7 +39,9 @@ esac
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 BUILD_BASE_DIR="$SCRIPT_DIR/build"
 # See the list from https://repo.anaconda.com/miniconda/
-MINICONDA_VERSION="4.7.12.1"
+MINICONDA_VERSION="py38_4.9.2"
+LINUX_MD5="122c8c9beb51e124ab32a0fa6426c656"
+OSX_MD5="cb40e2c1a32dccd6cdd8d5e49977a635"
 
 # Platform detection
 XARGS="xargs -r"
@@ -80,14 +82,12 @@ if [[ $MODE -lt 4 ]]; then
         fi
     fi
     if [ "`uname`" = "Linux" ]; then
-        LINUX_MD5="81c773ff87af5cfac79ab862942ab6b3"
         MINICONDA_MD5=$(md5sum < $MINICONDA_PATH | awk '{print $1}')
         if [ "$MINICONDA_MD5" != "$LINUX_MD5" ]; then
             echo "[ERROR] checksum of $MINICONDA_PATH is $MINICONDA_MD5, does not match $LINUX_MD5, please check file integrity"
             exit 1
         fi
     elif [ "`uname`" = "Darwin" ]; then
-        OSX_MD5="621daddf9de519014c6c38e8923583b8"
         MINICONDA_MD5=$(md5 -q $MINICONDA_PATH)
         if [ "$MINICONDA_MD5" != "$OSX_MD5" ]; then
             echo "[ERROR] checksum of $MINICONDA_PATH is $MINICONDA_MD5, does not match $OSX_MD5, please check file integrity"
@@ -154,7 +154,7 @@ if [[ $MODE -lt 4 ]]; then
         "$PACK_TARGET"/etc \
         "$PACK_TARGET"/include \
         "$PACK_TARGET"/lib/pkgconfig \
-        "$PACK_TARGET"/lib/python3.7/site-packages/scipy/weave \
+        "$PACK_TARGET"/lib/python3.8/site-packages/scipy/weave \
         "$PACK_TARGET"/lib/xml2Conf.sh \
         "$PACK_TARGET"/lib/xsltConf.sh \
         "$PACK_TARGET"/lib/terminfo \
@@ -167,7 +167,7 @@ if [[ $MODE -lt 4 ]]; then
                 j=`readlink "$i"`
                 d=`dirname "$i"`
                 b=`basename "$i"`
-                bash -c "cd \"$d\"; rm -v \"$b\"; cp -v \"$j\" \"$b\""
+                bash -c "cd \"$d\"; rm -v \"$b\"; cp -r -v \"$j\" \"$b\""
             done < <(find "$PACK_TARGET/${subdir}" -type l)
         done
 
@@ -176,13 +176,13 @@ if [[ $MODE -lt 4 ]]; then
         rm -rf "$PACK_TARGET"/envs
 
         # Mangle SSL
-        if [ ! "$NO_MANGLE_SSL" ]; then
-            find "$PACK_TARGET" -type f -iname "*crypto*" -print0 | $XARGS -0 rm -rfv
-            find "$PACK_TARGET" -type f -iname "*ssl*" -print0 | $XARGS -0 rm -rfv
-            rm -rfv "$PACK_TARGET"/lib/engines
-            rm -rfv "$PACK_TARGET"/ssl
-            rm -rfv "$PACK_TARGET/lib/python3.7/site-packages/Crypto"
-        fi
+        #if [ ! "$NO_MANGLE_SSL" ]; then
+            #find "$PACK_TARGET" -type f -iname "*crypto*" -print0 | $XARGS -0 rm -rfv
+            #find "$PACK_TARGET" -type f -iname "*ssl*" -print0 | $XARGS -0 rm -rfv
+            #rm -rfv "$PACK_TARGET"/lib/engines
+            #rm -rfv "$PACK_TARGET"/ssl
+            #rm -rfv "$PACK_TARGET/lib/python3.8/site-packages/Crypto"
+        #fi
 
         TARGET="$BUILD_BASE_DIR/${APPDIR}_${PLATFORM}"
 
