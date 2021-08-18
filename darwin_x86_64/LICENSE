@@ -212,10 +212,8 @@ decorator        BSD 2-clause                         https://github.com/michele
 intel-openmp     BSD 3-clause                         https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10
 joblib           BSD 3-clause                         https://github.com/joblib/joblib/blob/master/LICENSE.txt
 libcxx           MIT                                  https://llvm.org/docs/DeveloperPolicy.html#license
-libcxxabi        MIT                                  https://llvm.org/docs/DeveloperPolicy.html#license
-libedit          BSD 3-clause                         http://thrysoee.dk/editline|http://www.netbsd.org/about/redistribution.html
 libffi           libffi license                       https://github.com/libffi/libffi/blob/master/LICENSE
-libgfortran      GPL with RuntimeLibrary Exception    https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libgfortran      GPL with RuntimeLibrary Exception    http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 llvm-openmp      MIT                                  https://llvm.org/docs/DeveloperPolicy.html#license
 mkl              proprietary - Intel                  https://software.intel.com/en-us/mkl/license-faq
 mkl-service      BSD 3-clause                         https://github.com/ContinuumIO/mkl-service/blob/master/LICENSE.txt
@@ -237,6 +235,7 @@ scipy            BSD 3-clause                         https://github.com/scipy/s
 setuptools       MIT                                  https://github.com/pypa/setuptools/blob/master/LICENSE
 six              MIT                                  https://github.com/benjaminp/six/blob/master/LICENSE
 statsmodels      BSD 3-clause                         https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt
+threadpoolctl    BSD 3-clause                         https://github.com/joblib/threadpoolctl/blob/master/LICENSE
 wheel            MIT                                  https://github.com/pypa/wheel/blob/master/LICENSE.txt
 xz               LGPLv2.1/GPLv2                       https://git.tukaani.org/?p=xz.git;a=blob_plain;f=COPYING;hb=HEAD
 zlib             zlib                                 https://github.com/madler/zlib
