@@ -1,4 +1,4 @@
-# Copyright (C) 2015-2019 Splunk Inc. All Rights Reserved.
+# Copyright (C) 2015-2021 Splunk Inc. All Rights Reserved.
 
 # To be used in accordance with the README file in Python for Scientific
 # Computing (PSC). That is, exec_anaconda.py is available to be copied and

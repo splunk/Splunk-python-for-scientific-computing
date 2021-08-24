@@ -5,9 +5,9 @@ Splunk_SA_Scientific_Python - Python for Scientific Computing in Splunk
 This package contains a Python interpreter bundled with the following
 Python scientific and machine learning libraries:
 
-  * numpy 1.20.2
+  * numpy 1.20.3
   * scipy 1.6.2
-  * pandas 1.2.4
+  * pandas 1.0.5
   * scikit-learn 0.24.2
   * statsmodels 0.12.2
   * networkx 2.5.1
