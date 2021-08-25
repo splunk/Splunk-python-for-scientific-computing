@@ -89,8 +89,7 @@ if ($MODE -eq 0) {
     Write-Output "Creating PSC conda environment in $PACK_TARGET and installing packages"
     & conda create -y -v -p $PACK_TARGET --file $PACKAGE_LIST_FILE_PATH
 
-    #& conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
-    #& conda clean -tisy
+    & conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
 	& conda build purge-all
 
     # ------------------------- CREATE CONDA-PACK PACKAGE -------------------------------
@@ -159,7 +158,7 @@ if ($MODE -eq 0) {
     Write-Output "[INFO] Build Successful"
 } elseif ($MODE -eq 1) {
     & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "packages.txt")
-    #& conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
+    & conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
     & conda list -p $PACK_TARGET -e | Out-File -FilePath $PACKAGE_LIST_FILE_PATH -Encoding ASCII
     Write-Output "$PACKAGE_LIST_FILE_PATH"
     git diff -- $PACKAGE_LIST_FILE_PATH
@@ -169,7 +168,7 @@ if ($MODE -eq 0) {
     & conda-tree -p $PACK_TARGET deptree
 } elseif ($MODE -eq 3) {
     & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "packages.txt")
-    #& conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
+    & conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
     $script:LICENSE_FILE = $(Join-Path "$SCRIPT_DIR" $(Join-Path "$PLATFORM" "LICENSE"))
     Copy-Item -Path $(Join-Path "$SCRIPT_DIR" "LICENSE") -Destination $LICENSE_FILE -Recurse -Force
     Add-Content "$LICENSE_FILE" "`r`n`r`n========================================================================`r`n"
