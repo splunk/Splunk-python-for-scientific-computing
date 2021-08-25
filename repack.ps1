@@ -126,11 +126,6 @@ if ($MODE -eq 0) {
         Remove-Item -Recurse -Path "$ITEM" -ErrorAction Ignore
     }
 
-    # Apply Patches
-    Push-Location $(Join-Path "$PACK_TARGET" "Lib")
-    (Get-Content -Path ".\ssl.py" | ForEach-Object { $_ -replace "_create_default_https_context = create_default_context", "_create_default_https_context = _create_unverified_context" }) | Set-Content -Path ".\ssl.py"
-    Pop-Location
-
     $script:TARGET = Join-Path "$BUILD_BASE_DIR" "${APPDIR}_${PLATFORM}"
 
     if (-Not (Test-Path "$BUILD_DIR")) {

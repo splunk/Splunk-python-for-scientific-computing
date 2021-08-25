@@ -148,7 +148,6 @@ if [[ $MODE -lt 4 ]]; then
 
         # Remove other unnecessary cruft
         rm -f "$PACK_TARGET"/bin/{sqlite3,tclsh8.5,wish8.5,xmlcatalog,xmllint,xsltproc,smtpd.py,xml2-config,xslt-config,c_rehash}
-        rm -f "$PACK_TARGET"/bin/{.openssl-libcrypto-fix,.openssl-post-link.sh}
         rm -rf "$PACK_TARGET"/lib/{Tk.icns,Tk.tiff,tcl8,tcl8.5,tk8.5} \
         "$PACK_TARGET"/conda-meta \
         "$PACK_TARGET"/etc \
@@ -174,15 +173,6 @@ if [[ $MODE -lt 4 ]]; then
         rm -rf "$PACK_TARGET"/conda-meta
         rm -rf "$PACK_TARGET"/pkgs
         rm -rf "$PACK_TARGET"/envs
-
-        # Mangle SSL
-        #if [ ! "$NO_MANGLE_SSL" ]; then
-            #find "$PACK_TARGET" -type f -iname "*crypto*" -print0 | $XARGS -0 rm -rfv
-            #find "$PACK_TARGET" -type f -iname "*ssl*" -print0 | $XARGS -0 rm -rfv
-            #rm -rfv "$PACK_TARGET"/lib/engines
-            #rm -rfv "$PACK_TARGET"/ssl
-            #rm -rfv "$PACK_TARGET/lib/python3.8/site-packages/Crypto"
-        #fi
 
         TARGET="$BUILD_BASE_DIR/${APPDIR}_${PLATFORM}"
 
