@@ -25,6 +25,7 @@ ncurses,free,https://invisible-island.net/ncurses/ncurses-license.html
 networkx,BSD 3-clause,https://github.com/networkx/networkx/blob/master/LICENSE.txt
 numpy,BSD 3-clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt
 numpy-base,BSD 3-clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt
+_openmp_mutex,BSD 3-clause,https://github.com/conda-forge/_openmp_mutex-feedstock/blob/master/LICENSE.txt
 openssl,OpenSSL license,https://www.openssl.org/source/license.html
 pandas,BSD 3-clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE
 patsy,BSD 2-clause/PSF,https://github.com/pydata/patsy/blob/master/LICENSE.txt
