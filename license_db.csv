@@ -15,6 +15,8 @@ libffi,libffi license,https://github.com/libffi/libffi/blob/master/LICENSE
 libgcc-ng,GPL with RuntimeLibrary Exception,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran,GPL with RuntimeLibrary Exception,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran-ng,GPL with RuntimeLibrary Exception,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libgfortran4,GPL with RuntimeLibrary Exception,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libgomp,GNU General Public License,https://gcc.gnu.org/onlinedocs/gcc-4.2.4/libgomp/Copying.html#Copying
 libstdcxx-ng,GPL with RuntimeLibrary Exception,https://anaconda.org/anaconda/libstdcxx-ng
 llvm-openmp,MIT,https://llvm.org/docs/DeveloperPolicy.html#license
 mkl,proprietary - Intel,https://software.intel.com/en-us/mkl/license-faq

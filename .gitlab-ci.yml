@@ -1,3 +1,10 @@
+variables:
+  # Vault-required variable: path of the cwd to allow docker-based operations to work
+  CREDS_SECRET_ROOT: $CI_PROJECT_DIR
+  ARTIFACTORY_URL: "https://stg-repo.splunk.com/artifactory"
+  ARTIFACTORY_TARGET: "Solutions/Machine-Learning/app-sasp"
+  PSC_VERSION: "3.0.3"
+
 stages:
   - build
   - publish
@@ -11,11 +18,14 @@ build_linux:
       - build/Splunk_SA_Scientific_Python_linux_x86_64.tgz
     untracked: false
     expire_in: 30 days
+  before_script:
+    - apt-get update -y && apt-get -y install rsync
   script:
     - bash repack.sh license
     - bash repack.sh build
-  tags:
-    - linux64-docker
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'
 
 build_windows:
   stage: build
@@ -30,32 +40,36 @@ build_windows:
     - powershell .\repack.ps1 license
     - powershell .\repack.ps1 build
   tags:
-    - win64-docker
+    - psc-win64
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'
 
-build_osx:
-  stage: build
-  allow_failure: true
-  artifacts:
-    paths:
-      - build/Splunk_SA_Scientific_Python_darwin_x86_64.tgz
-    untracked: false
-    expire_in: 30 days
-  script:
-    - bash repack.sh license
-    - bash repack.sh build
-  tags:
-    - mac64
+#build_osx:
+#  stage: build
+#  allow_failure: true
+#  artifacts:
+#    paths:
+#      - build/Splunk_SA_Scientific_Python_darwin_x86_64.tgz
+#    untracked: false
+#    expire_in: 30 days
+#  script:
+#    - bash repack.sh license
+#    - bash repack.sh build
+#  tags:
+#    - mac64
 
 publish_artifacts:
   stage: publish
   dependencies:
     - build_linux
     - build_windows
-    - build_osx
+#    - build_osx
   image: docker.bintray.io/jfrog/jfrog-cli-go:latest
   script:
     - apk add --no-cache git
     - jfrog rt config artifactory_config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_PASS
-    - bash repack.sh publish
-  tags:
-    - linux64-docker
+    - CI_MERGE_REQUEST_IID=$CI_MERGE_REQUEST_IID $CI_PROJECT_DIR/repack.sh publish
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'

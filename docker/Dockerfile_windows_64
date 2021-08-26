@@ -9,6 +9,6 @@ COPY files .
 RUN Set-ItemProperty -Path "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\FileSystem" -Name 'LongPathsEnabled' -Value 1; `
     Set-ExecutionPolicy RemoteSigned -force; `
     .\chocolatey-install.ps1; `
-    choco install 7zip git -y;
+    choco install 7zip git powershell-core -y;
 
 ENTRYPOINT powershell.exe
