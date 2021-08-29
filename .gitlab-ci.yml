@@ -1,8 +1,6 @@
 variables:
   # Vault-required variable: path of the cwd to allow docker-based operations to work
   CREDS_SECRET_ROOT: $CI_PROJECT_DIR
-  ARTIFACTORY_URL: "https://stg-repo.splunk.com/artifactory"
-  ARTIFACTORY_TARGET: "Solutions/Machine-Learning/app-sasp"
   PSC_VERSION: "3.0.3"
 
 stages:
