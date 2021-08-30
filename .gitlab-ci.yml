@@ -1,7 +1,6 @@
 variables:
   # Vault-required variable: path of the cwd to allow docker-based operations to work
   CREDS_SECRET_ROOT: $CI_PROJECT_DIR
-  PSC_VERSION: "3.0.3"
 
 stages:
   - build
