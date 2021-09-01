@@ -157,7 +157,8 @@ if [[ $MODE -lt 4 ]]; then
         "$PACK_TARGET"/lib/xml2Conf.sh \
         "$PACK_TARGET"/lib/xsltConf.sh \
         "$PACK_TARGET"/lib/terminfo \
-        "$PACK_TARGET"/share
+        "$PACK_TARGET"/share \
+        "$PACK_TARGET"/bin/.scikit-learn-post-link.sh
 
         # Convert symlinks to copies.
         SYMLINK_SUBDIRS="bin lib"
