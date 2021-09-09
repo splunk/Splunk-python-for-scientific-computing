@@ -36,7 +36,7 @@ whitesource:
   variables:
     ws_user_key: ${WHITESOURCE_USER_KEY}
     product_id: ${WHITESOURCE_ID}
-    config: python-poetry_js-yarn
+    config: python-pip
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'
