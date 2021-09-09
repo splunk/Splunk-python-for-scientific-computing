@@ -4,7 +4,42 @@ variables:
 
 stages:
   - build
+  - prodsec-review
   - publish
+
+include:
+  - project: 'prodsec/scp-scanning/gitlab-checkmarx'
+    ref: latest
+    file: '/templates/.sast_scan.yml'
+
+  - project: "prodsec/whitesource"
+    ref: latest
+    file: "/templates/.whitesource.yml"
+
+sast-scanner:
+  stage: prodsec-review
+  extends: .sast_scan
+  variables:
+    SAST_SCANNER: "Semgrep"
+    SEMGREP_EXCLUDE: "vendor,*_mock.go"
+    alert_mode: "on" # Alert mode turned off
+  allow_failure: False
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'
+
+whitesource:
+  stage: prodsec-review
+  extends: .whitesource
+  timeout: 240 minutes
+  #when: manual
+  variables:
+    ws_user_key: ${WHITESOURCE_USER_KEY}
+    product_id: ${WHITESOURCE_ID}
+    config: python-poetry_js-yarn
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'
 
 build_linux:
   stage: build
