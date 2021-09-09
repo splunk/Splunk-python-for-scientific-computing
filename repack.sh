@@ -70,7 +70,7 @@ if [[ $MODE -lt 4 ]]; then
     # ----------------------- MINICONDA ----------------------------
 
     # Check if miniconda installer is already downloaded
-    PACKAGE_LIST_FILE_PATH="$PLATFORM_DIR/packages.txt"
+    PACKAGE_LIST_FILE_PATH="$PLATFORM_DIR/requirements.txt"
     MINICONDA_FILE="Miniconda3-${MINICONDA_VERSION}-${MINICONDA_PLATFORM}-x86_64.sh"
     MINICONDA_PATH="$PLATFORM_DIR/$MINICONDA_FILE"
     if ! test -f "$MINICONDA_PATH"; then
@@ -113,7 +113,7 @@ if [[ $MODE -lt 4 ]]; then
         # Step 2: install conda-pack to intemidiate conda env
         "$CONDA" install -y -c conda-forge conda-pack
 
-        # Step 3: create a virtualenv and install PSC packages from the platform specific dir's packages.txt
+        # Step 3: create a virtualenv and install PSC packages from the platform specific dir's requirements.txt
         "$CONDA" create -p "$PACK_TARGET" -y --file "$PACKAGE_LIST_FILE_PATH"
 
         # Step 4: clean up the virtualenv and conda cache
@@ -193,14 +193,14 @@ if [[ $MODE -lt 4 ]]; then
         tar czf "${TARGET}.tgz" -C "$BUILD_BASE_DIR" "${APPDIR}_${PLATFORM}"
         echo "[INFO] Build Success"
     elif [[ $MODE -eq 1 ]]; then
-        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/packages.txt"
+        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/requirements.txt"
         "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES || true
         "$CONDA" list -p "$PACK_TARGET" -e > "$PACKAGE_LIST_FILE_PATH"
         git diff "$PACKAGE_LIST_FILE_PATH"
     elif [[ $MODE -eq 2 ]]; then
         # Install conda-tree to inspect package dependencies
         "$CONDA" install -c conda-forge -y conda-tree
-        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/packages.txt"
+        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/requirements.txt"
         "$BUILD_CONDA_DIR/bin/conda-tree" -p "$PACK_TARGET" deptree
     elif [[ $MODE -eq 3 ]]; then
         "$CONDA" create -p "$PACK_TARGET" -y --file "$PACKAGE_LIST_FILE_PATH"
