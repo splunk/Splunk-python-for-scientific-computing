@@ -49,6 +49,7 @@ tar -xf splunk-8.0.5-a1a6394cc5ae-darwin-64.tgz
 ./splunk/bin/slim package ${APPDIR}_${PLATFORM}
 ```
 
+
 ## Releasing a new version of Python for Scientific Computing
 If you are releasing a new PSC, you need follow these steps before running the repack scripts: 
 1. Edit the value of `VERSION` variable at the top of the repack scripts.
