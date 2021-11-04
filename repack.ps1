@@ -147,6 +147,8 @@ if ($MODE -eq 0) {
     $script:PACKAGE_NAME = "$($APPDIR)_$($PLATFORM)"
     Write-Output "Tarballing the $PACKAGE_NAME"
 
+    Copy-Item -Path $(Join-Path "$SCRIPT_DIR" $(Join-Path "resources" "app.manifest.windows")) -Destination $(Join-Path "$TARGET" "app.manifest") -Recurse -Force
+
     & "$7Z" a "$BUILD_DIR\$PACKAGE_NAME.tar" "$TARGET" -y
     & "$7Z" a "$BUILD_BASE_DIR\$PACKAGE_NAME.tgz" "$BUILD_DIR\$PACKAGE_NAME.tar" -y
     Remove-Item -Recurse -Path "$BUILD_DIR" 

@@ -2,7 +2,7 @@
 set -e
 
 APPDIR="Splunk_SA_Scientific_Python"
-VERSION="3.0.0"
+VERSION="3.0.1"
 APPBUILD="`git rev-parse --short HEAD`${BUILD_NUMBER:+.$BUILD_NUMBER}"
 BUILD_NUMBER=${APPBUILD:-testing}
 
@@ -49,6 +49,7 @@ if [ "`uname`" = "Linux" ]; then
     if [ "`uname -m`" = "x86_64" ]; then
         MINICONDA_PLATFORM="Linux"
         PLATFORM="linux_x86_64"
+        MANIFEST_FILE="app.manifest.linux"
     else
         echo "[ERROR] Unsupported platform \"`uname`\", aborting."
         exit 1
@@ -56,6 +57,7 @@ if [ "`uname`" = "Linux" ]; then
 elif [ "`uname`" = "Darwin" ]; then
     MINICONDA_PLATFORM="MacOSX"
     PLATFORM="darwin_x86_64"
+    MANIFEST_FILE="app.manifest.osx"
     export COPYFILE_DISABLE=true
     XARGS="xargs"
 else
@@ -190,6 +192,7 @@ if [[ $MODE -lt 4 ]]; then
         mkdir -p "$TARGET/bin"
         mv "$PACK_TARGET" "$TARGET/bin/$PLATFORM"
         rm -rf "$BUILD_DIR"
+        cp  "${SCRIPT_DIR}/resources/${MANIFEST_FILE}" "${TARGET}/app.manifest"
         tar czf "${TARGET}.tgz" -C "$BUILD_BASE_DIR" "${APPDIR}_${PLATFORM}"
         echo "[INFO] Build Success"
     elif [[ $MODE -eq 1 ]]; then
