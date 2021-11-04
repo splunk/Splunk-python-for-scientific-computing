@@ -6,7 +6,7 @@ Param (
 $ErrorActionPreference = "Stop"
 
 $script:APPDIR = "Splunk_SA_Scientific_Python"
-$script:VERSION = "3.0.0"
+$script:VERSION = "3.0.1"
 $script:GIT_HASH = & git rev-parse --short HEAD
 $script:APPBUILD = "$GIT_HASH.$($env:BUILD_NUMBER)"
 $script:BUILD_NUMBER = ${APPBUILD:-testing}
@@ -154,17 +154,17 @@ if ($MODE -eq 0) {
     Remove-Item -Recurse -Path "$BUILD_DIR" 
     Write-Output "[INFO] Build Successful"
 } elseif ($MODE -eq 1) {
-    & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "packages.txt")
+    & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "requirements.txt")
     & conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
     & conda list -p $PACK_TARGET -e | Out-File -FilePath $PACKAGE_LIST_FILE_PATH -Encoding ASCII
     Write-Output "$PACKAGE_LIST_FILE_PATH"
     git diff -- $PACKAGE_LIST_FILE_PATH
 } elseif ($MODE -eq 2) {
     & conda install -c conda-forge -y conda-tree
-    & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "packages.txt")
+    & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "requirements.txt")
     & conda-tree -p $PACK_TARGET deptree
 } elseif ($MODE -eq 3) {
-    & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "packages.txt")
+    & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "requirements.txt")
     & conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
     $script:LICENSE_FILE = $(Join-Path "$SCRIPT_DIR" $(Join-Path "$PLATFORM" "LICENSE"))
     Copy-Item -Path $(Join-Path "$SCRIPT_DIR" "LICENSE") -Destination $LICENSE_FILE -Recurse -Force
