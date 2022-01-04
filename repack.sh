@@ -2,7 +2,7 @@
 set -e
 
 APPDIR="Splunk_SA_Scientific_Python"
-VERSION="3.0.1"
+VERSION="3.0.2"
 APPBUILD="`git rev-parse --short HEAD`${BUILD_NUMBER:+.$BUILD_NUMBER}"
 BUILD_NUMBER=${APPBUILD:-testing}
 
