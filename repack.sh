@@ -196,14 +196,14 @@ if [[ $MODE -lt 4 ]]; then
         tar czf "${TARGET}.tgz" -C "$BUILD_BASE_DIR" "${APPDIR}_${PLATFORM}"
         echo "[INFO] Build Success"
     elif [[ $MODE -eq 1 ]]; then
-        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/requirements.txt"
+        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/packages.txt"
         "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES || true
         "$CONDA" list -p "$PACK_TARGET" -e > "$PACKAGE_LIST_FILE_PATH"
         git diff "$PACKAGE_LIST_FILE_PATH"
     elif [[ $MODE -eq 2 ]]; then
         # Install conda-tree to inspect package dependencies
         "$CONDA" install -c conda-forge -y conda-tree
-        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/requirements.txt"
+        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/packages.txt"
         "$BUILD_CONDA_DIR/bin/conda-tree" -p "$PACK_TARGET" deptree
     elif [[ $MODE -eq 3 ]]; then
         "$CONDA" create -p "$PACK_TARGET" -y --file "$PACKAGE_LIST_FILE_PATH"

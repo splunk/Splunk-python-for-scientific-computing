@@ -1,0 +1,9 @@
+# replace the fixed versions with * in the future such as pandas==1.0.*
+pandas==1.0.5
+numpy==1.20.3
+scipy==1.6.2
+statsmodels==0.12.2
+scikit-learn==0.24.2
+psutil==5.8.0
+networkx==2.5.1
+python==3.8.10
