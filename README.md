@@ -20,7 +20,7 @@ This repo builds PSC for 3 platforms:
     * There's another `packages.txt` inside of each platform's folder, which act
       as the lock file to lockdown the specific versions of all dependencies
       (like `pip freeze`).
-2. Run freeze task of the build scripts
+2. Run freeze task of the build scripts for each platform and push the updated versions of platform/packages.txt to the repo.
     * There are two build scripts to be used on different platforms
         * `repack.sh` for Linux and OSX
         * `repack.ps1` for Windows
@@ -31,9 +31,10 @@ This repo builds PSC for 3 platforms:
    to include the proper licenses of the package redistributed, run
    `bash repack.sh license` to generate a license file
     * Note you may need to update `license_db.csv` if you included a new package
-5. Finally, when the platform specific `packages.txt` looks good, run
+5. Update the requirements.txt's content with the linux_x86_64/packages.txt for prodsec-review scans.
+6. Finally, when the platform specific `packages.txt` looks good, run
    `bash repack.sh build` to build the Python for Scientific Computing app
-6. Copy it to your `$SPLUNK_HOME/etc/apps` folder
+7. Copy it to your `$SPLUNK_HOME/etc/apps` folder
     * Note, due to the size of this app, installing it via web
       installer/deployer may fail with a timeout error
 
