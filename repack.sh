@@ -6,7 +6,7 @@ VERSION="3.0.2"
 APPBUILD="`git rev-parse --short HEAD`${BUILD_NUMBER:+.$BUILD_NUMBER}"
 BUILD_NUMBER=${APPBUILD:-testing}
 
-usage() { echo "Usage: $0 {analyze|build|freeze|license|publish}" 1>&2; exit 1; }
+usage() { echo "Usage: $0 {analyze|build|build-dev|freeze|license|publish}" 1>&2; exit 1; }
 
 case "$1" in
     analyze)
@@ -25,10 +25,14 @@ case "$1" in
         echo "[INFO] Generating license information"
         MODE=3
         ;;
+    build-dev)
+      echo "[INFO] Creating Build and Dev env for PSC"
+      MODE=4
+      ;;
     publish)
-        echo "[INFO] Publishing builds"
-        MODE=4
-        ;;
+      echo "[INFO] Publishing builds"
+      MODE=5
+      ;;
     *)
         usage
         ;;
@@ -68,9 +72,8 @@ fi
 PLATFORM_DIR="$SCRIPT_DIR/$PLATFORM"
 BUILD_DIR="$BUILD_BASE_DIR/$PLATFORM"
 
-if [[ $MODE -lt 4 ]]; then
+if [[ $MODE -lt 5 ]]; then
     # ----------------------- MINICONDA ----------------------------
-
     # Check if miniconda installer is already downloaded
     PACKAGE_LIST_FILE_PATH="$PLATFORM_DIR/packages.txt"
     MINICONDA_FILE="Miniconda3-${MINICONDA_VERSION}-${MINICONDA_PLATFORM}-x86_64.sh"
@@ -111,7 +114,7 @@ if [[ $MODE -lt 4 ]]; then
     # Step 1: install miniconda to BUILD_CONDA_DIR
     bash "$MINICONDA_PATH" -b -p "$BUILD_CONDA_DIR"
 
-    if [[ $MODE -eq 0 ]]; then
+    if [[ $MODE -eq 0 || $MODE -eq 4 ]]; then
         # Step 2: install conda-pack to intemidiate conda env
         "$CONDA" install -y -c conda-forge conda-pack
 
@@ -150,17 +153,19 @@ if [[ $MODE -lt 4 ]]; then
 
         # Remove other unnecessary cruft
         rm -f "$PACK_TARGET"/bin/{sqlite3,tclsh8.5,wish8.5,xmlcatalog,xmllint,xsltproc,smtpd.py,xml2-config,xslt-config,c_rehash}
-        rm -rf "$PACK_TARGET"/lib/{Tk.icns,Tk.tiff,tcl8,tcl8.5,tk8.5} \
-        "$PACK_TARGET"/conda-meta \
-        "$PACK_TARGET"/etc \
-        "$PACK_TARGET"/include \
-        "$PACK_TARGET"/lib/pkgconfig \
-        "$PACK_TARGET"/lib/python3.8/site-packages/scipy/weave \
-        "$PACK_TARGET"/lib/xml2Conf.sh \
-        "$PACK_TARGET"/lib/xsltConf.sh \
-        "$PACK_TARGET"/lib/terminfo \
-        "$PACK_TARGET"/share \
-        "$PACK_TARGET"/bin/.scikit-learn-post-link.sh
+        if [[ $MODE -eq 0 ]]; then
+          rm -rf "$PACK_TARGET"/lib/{Tk.icns,Tk.tiff,tcl8,tcl8.5,tk8.5} \
+          "$PACK_TARGET"/conda-meta \
+          "$PACK_TARGET"/etc \
+          "$PACK_TARGET"/include \
+          "$PACK_TARGET"/lib/pkgconfig \
+          "$PACK_TARGET"/lib/python3.8/site-packages/scipy/weave \
+          "$PACK_TARGET"/lib/xml2Conf.sh \
+          "$PACK_TARGET"/lib/xsltConf.sh \
+          "$PACK_TARGET"/lib/terminfo \
+          "$PACK_TARGET"/share \
+          "$PACK_TARGET"/bin/.scikit-learn-post-link.sh
+        fi
 
         # Convert symlinks to copies.
         SYMLINK_SUBDIRS="bin lib"
@@ -172,10 +177,11 @@ if [[ $MODE -lt 4 ]]; then
                 bash -c "cd \"$d\"; rm -v \"$b\"; cp -r -v \"$j\" \"$b\""
             done < <(find "$PACK_TARGET/${subdir}" -type l)
         done
-
-        rm -rf "$PACK_TARGET"/conda-meta
-        rm -rf "$PACK_TARGET"/pkgs
-        rm -rf "$PACK_TARGET"/envs
+        if [[ $MODE -eq 0 ]]; then
+          rm -rf "$PACK_TARGET"/conda-meta
+          rm -rf "$PACK_TARGET"/pkgs
+          rm -rf "$PACK_TARGET"/envs
+        fi
 
         TARGET="$BUILD_BASE_DIR/${APPDIR}_${PLATFORM}"
 
@@ -248,7 +254,7 @@ if [[ $MODE -lt 4 ]]; then
         done
         echo -e "\n[INFO] License file $SCRIPT_DIR/$PLATFORM/LICENSE updated"
     fi
-elif [[ $MODE -eq 4 ]]; then
+elif [[ $MODE -eq 5 ]]; then
     if [[ -z "${CI}" ]]; then
         echo "[WARNING] Tsk tsk tsk, not on CI, you're on your own"
     else
