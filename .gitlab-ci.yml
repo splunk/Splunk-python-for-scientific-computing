@@ -1,7 +1,7 @@
 variables:
   # Vault-required variable: path of the cwd to allow docker-based operations to work
   CREDS_SECRET_ROOT: $CI_PROJECT_DIR
-  PSC_VERSION: "3.0.3"
+  PSC_VERSION: "4.0.0"
 
 stages:
   - build
@@ -15,29 +15,34 @@ include:
 
   - project: "prodsec/whitesource"
     ref: latest
-    file: "/templates/.whitesource.yml"
+    file: "/templates/.oss-scan.yml"
 
 sast-scanner:
   stage: prodsec-review
   extends: .sast_scan
   variables:
     SAST_SCANNER: "Semgrep"
-    SEMGREP_EXCLUDE: "vendor,*_mock.go"
     alert_mode: "on" # Alert mode turned off
   allow_failure: False
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'
 
-whitesource:
+fossa-scan:
   stage: prodsec-review
-  extends: .whitesource
-  timeout: 240 minutes
-  #when: manual
+  image: ${LINUX_BUILD_IMAGE}
+  allow_failure: true
+  retry: 0
+  timeout: 60m
   variables:
-    ws_user_key: ${WHITESOURCE_USER_KEY}
-    product_id: ${WHITESOURCE_ID}
-    config: python-pip
+    FOSSA_API_KEY: "${FOSSA_API_KEY_D04082022}"
+  script:
+    - bash repack.sh analyze
+  artifacts:
+    paths:
+      - oss-results/
+    expire_in: 1 year
+    when: always
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'
@@ -78,26 +83,30 @@ build_windows:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'
 
-#build_osx:
-#  stage: build
-#  allow_failure: true
-#  artifacts:
-#    paths:
-#      - build/Splunk_SA_Scientific_Python_darwin_x86_64.tgz
-#    untracked: false
-#    expire_in: 30 days
-#  script:
-#    - bash repack.sh license
-#    - bash repack.sh build
-#  tags:
-#    - mac64
+build_osx:
+  stage: build
+  allow_failure: true
+  artifacts:
+    paths:
+      - build/Splunk_SA_Scientific_Python_darwin_x86_64.tgz
+    untracked: false
+    expire_in: 30 days
+  script:
+    - git clean -xdf
+    - bash repack.sh license
+    - bash repack.sh build
+  tags:
+    - psc-mac64
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH =~ /^release\//'
 
 publish_artifacts:
   stage: publish
   dependencies:
     - build_linux
     - build_windows
-#    - build_osx
+    - build_osx
   image: docker.bintray.io/jfrog/jfrog-cli-go:latest
   script:
     - apk add --no-cache git

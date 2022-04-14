@@ -2,7 +2,7 @@
 set -e
 
 APPDIR="Splunk_SA_Scientific_Python"
-VERSION="3.0.2"
+VERSION="4.0.0"
 APPBUILD="`git rev-parse --short HEAD`${BUILD_NUMBER:+.$BUILD_NUMBER}"
 BUILD_NUMBER=${APPBUILD:-testing}
 
@@ -69,13 +69,16 @@ else
     exit 1
 fi
 
+rm -rf "$PACK_TARGET/*"
+rm -rf "$BUILD_CONDA_DIR"
+
 PLATFORM_DIR="$SCRIPT_DIR/$PLATFORM"
 BUILD_DIR="$BUILD_BASE_DIR/$PLATFORM"
 
 if [[ $MODE -lt 5 ]]; then
     # ----------------------- MINICONDA ----------------------------
     # Check if miniconda installer is already downloaded
-    PACKAGE_LIST_FILE_PATH="$PLATFORM_DIR/packages.txt"
+    PACKAGE_LIST_FILE_PATH="$PLATFORM_DIR/environment.yml"
     MINICONDA_FILE="Miniconda3-${MINICONDA_VERSION}-${MINICONDA_PLATFORM}-x86_64.sh"
     MINICONDA_PATH="$PLATFORM_DIR/$MINICONDA_FILE"
     if ! test -f "$MINICONDA_PATH"; then
@@ -118,8 +121,9 @@ if [[ $MODE -lt 5 ]]; then
         # Step 2: install conda-pack to intemidiate conda env
         "$CONDA" install -y -c conda-forge conda-pack
 
+        "$CONDA" config --set ssl_verify no
         # Step 3: create a virtualenv and install PSC packages from the platform specific dir's packages.txt
-        "$CONDA" create -p "$PACK_TARGET" -y --file "$PACKAGE_LIST_FILE_PATH"
+        "$CONDA" env create --prefix "$PACK_TARGET" -f "$PACKAGE_LIST_FILE_PATH"
 
         # Step 4: clean up the virtualenv and conda cache
         "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES || true
@@ -188,70 +192,46 @@ if [[ $MODE -lt 5 ]]; then
         rm -rf "$TARGET"
         rsync -xva "$SCRIPT_DIR/package/" "$TARGET"
         rsync -xva "$SCRIPT_DIR/${PLATFORM}/LICENSE" "$TARGET/LICENSE"
+        rsync -xva "$SCRIPT_DIR/resources/${MANIFEST_FILE}" "${TARGET}/app.manifest"
 
         ## Update conf files
         sed -i.bak -e "s/@build@/$APPBUILD/" "$TARGET/default/app.conf"
         sed -i.bak -e "s/@version@/$VERSION/" "$TARGET/default/app.conf"
         sed -i.bak -e "s/@platform@/$PLATFORM/" "$TARGET/default/app.conf"
+        sed -i.bak -e "s/@version@/$VERSION/" "$TARGET/app.manifest"
         rm -f "$TARGET/default/app.conf.bak"
 
         mkdir -p "$TARGET/bin"
         mv "$PACK_TARGET" "$TARGET/bin/$PLATFORM"
         rm -rf "$BUILD_DIR"
-        cp  "${SCRIPT_DIR}/resources/${MANIFEST_FILE}" "${TARGET}/app.manifest"
         tar czf "${TARGET}.tgz" -C "$BUILD_BASE_DIR" "${APPDIR}_${PLATFORM}"
         echo "[INFO] Build Success"
     elif [[ $MODE -eq 1 ]]; then
-        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/packages.txt"
+        "$CONDA" env create --prefix "$PACK_TARGET" -f "$SCRIPT_DIR/environment.nix.yml"
         "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES || true
-        "$CONDA" list -p "$PACK_TARGET" -e > "$PACKAGE_LIST_FILE_PATH"
+        "$CONDA" list -p "$PACK_TARGET" -e > "$PLATFORM_DIR/requirements.txt" || true
+        "$CONDA" env export -p "$PACK_TARGET" > "$PACKAGE_LIST_FILE_PATH"
+        sed -i '' -e '$ d' "$PACKAGE_LIST_FILE_PATH"
         git diff "$PACKAGE_LIST_FILE_PATH"
     elif [[ $MODE -eq 2 ]]; then
+        "$CONDA" update -y conda
         # Install conda-tree to inspect package dependencies
-        "$CONDA" install -c conda-forge -y conda-tree
-        "$CONDA" create -p "$PACK_TARGET" -y --file "$SCRIPT_DIR/packages.txt"
+        "$CONDA" install -c conda-forge -y conda-tree conda
+        "$CONDA" env create --prefix "$PACK_TARGET" -f "$SCRIPT_DIR/environment.nix.yml"
         "$BUILD_CONDA_DIR/bin/conda-tree" -p "$PACK_TARGET" deptree
+        "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES || true
+        # FOSSA analyze
+        source "$BUILD_CONDA_DIR/etc/profile.d/conda.sh"
+        conda activate "$PACK_TARGET"
+        if ! command -v fossa &> /dev/null
+        then
+          curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.sh | bash
+        fi
+        fossa analyze -c fossa/.fossa.yml --team "FOSSA Sandbox"
     elif [[ $MODE -eq 3 ]]; then
-        "$CONDA" create -p "$PACK_TARGET" -y --file "$PACKAGE_LIST_FILE_PATH"
-        "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES
-        LICENSE_DB="$(tail -n +2 "$SCRIPT_DIR/license_db.csv")"
-        LICENSE_PKG_NAMES=()
-        LICENSE_TYPES=()
-        LICENSE_URLS=()
-        while IFS=',' read -r -a line; do
-            if [[ ${line:0:1} != "#" ]]; then
-                LICENSE_PKG_NAMES+=("${line[0]}")
-                LICENSE_TYPES+=("${line[1]}")
-                LICENSE_URLS+=("${line[2]}")
-            fi
-        done < <(cat "$SCRIPT_DIR/license_db.csv")
-        PKG_INSTALLED=()
-        while IFS="\n" read -r line
-        do
-            if [[ ${line:0:1} != "#" ]]; then
-                PKG_NAME=$(echo $line | cut -f1 -d " ")
-                PKG_INSTALLED+=($PKG_NAME)
-                if [[ ! " ${LICENSE_PKG_NAMES[@]} " =~ " ${PKG_NAME} " ]]; then
-                    echo "$PKG_NAME does not have a record in license_db.csv, please update license_db.csv"
-                    exit 1
-                fi
-            fi
-        done < <("$CONDA" list -p "$PACK_TARGET")
-
-        cp "$SCRIPT_DIR/LICENSE" "$SCRIPT_DIR/$PLATFORM/LICENSE"
-        echo -e "\n\n========================================================================\n" >> "$SCRIPT_DIR/$PLATFORM/LICENSE"
-        echo -e "Package licenses:\n" >> "$SCRIPT_DIR/$PLATFORM/LICENSE"
-        echo -e "\nPackage licenses:\n"
-        for j in "${PKG_INSTALLED[@]}"
-        do
-            for i in "${!LICENSE_PKG_NAMES[@]}"; do
-                if [[ "$j" == "${LICENSE_PKG_NAMES[$i]}" ]]; then
-                    LINE_OUTPUT="$(printf "%-16s %-36s %s\n" "${LICENSE_PKG_NAMES[$i]}" "${LICENSE_TYPES[$i]}" "${LICENSE_URLS[$i]}")"
-                    echo "$LINE_OUTPUT" >> "$SCRIPT_DIR/$PLATFORM/LICENSE"
-                    echo "$LINE_OUTPUT"
-                fi
-            done
-        done
+        "$CONDA" env create --prefix "$PACK_TARGET" -f "$PACKAGE_LIST_FILE_PATH"
+        "$CONDA" install --prefix "$PACK_TARGET" -c conda-forge -y conda
+        PLATFORM="$PLATFORM" BLACKLISTED_PACKAGES="$BLACKLISTED_PACKAGES" PACK_TARGET="$PACK_TARGET" "$PACK_TARGET/bin/python" "$SCRIPT_DIR/tools/license.py"
         echo -e "\n[INFO] License file $SCRIPT_DIR/$PLATFORM/LICENSE updated"
     fi
 elif [[ $MODE -eq 5 ]]; then

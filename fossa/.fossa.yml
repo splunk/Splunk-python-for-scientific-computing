@@ -1,0 +1,7 @@
+version: 3
+
+paths:
+  only:
+    - ./linux_x86_64/
+    - ./darwin_x86_64/
+    - ./windows_x86_64/

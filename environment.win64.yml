@@ -1,0 +1,21 @@
+name: psc
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pandas==1.0.5
+  - numpy==1.20.3
+  - scipy==1.6.2
+  - statsmodels==0.12.2
+  - scikit-learn==0.24.2=py38hf11a4ad_1
+  - psutil==5.8.0
+  - networkx==2.5.1
+  - python==3.8.10
+  - pytorch==1.11.0
+  - transformers==4.16.2
+  - cpuonly=2.0
+  - pydantic==1.9.0
+  - watchdog==2.1.7
+  - pip:
+    - onnxruntime==1.10.0

@@ -6,7 +6,7 @@ Param (
 $ErrorActionPreference = "Stop"
 
 $script:APPDIR = "Splunk_SA_Scientific_Python"
-$script:VERSION = "3.0.2"
+$script:VERSION = "4.0.0"
 $script:GIT_HASH = & git rev-parse --short HEAD
 $script:APPBUILD = "$GIT_HASH.$($env:BUILD_NUMBER)"
 $script:BUILD_NUMBER = ${APPBUILD:-testing}
@@ -40,7 +40,7 @@ $script:BUILD_DIR = Join-Path $BUILD_BASE_DIR $PLATFORM
 
 # ------------------------ MINICONDA ----------------------------------------
 
-$script:PACKAGE_LIST_FILE_PATH = Join-Path "$PLATFORM_DIR" "packages.txt"
+$script:PACKAGE_LIST_FILE_PATH = Join-Path "$PLATFORM_DIR" "environment.yml"
 $script:MINICONDA_FILE = "Miniconda3-$MINICONDA_VERSION-Windows-x86_64.exe"
 $script:MINICONDA_PATH = Join-Path $PLATFORM_DIR $MINICONDA_FILE
 
@@ -65,6 +65,10 @@ if (Test-Path -Path "$BUILD_BASE_DIR") {
     Write-Output "Cleaning build directory"
     # Work around long file names/paths
     Cmd /C "rmdir /S /Q $BUILD_BASE_DIR"
+    if (Test-Path -Path "$BUILD_BASE_DIR") {
+        # Sometimes the above command does not completely remove the dir
+        Remove-Item -r $BUILD_BASE_DIR
+    }
 }
 New-Item -Path "$BUILD_BASE_DIR" -ItemType "Directory"
 
@@ -85,12 +89,13 @@ $env:Path += ";$($CONDA_ENV_PATH);$(Join-Path $CONDA_ENV_PATH "Scripts");$(Join-
 & conda update -y -n base -c defaults conda
 if ($MODE -eq 0) {
     & conda install -y -c conda-forge conda-pack conda-build
+    & conda config --set ssl_verify_no
 
     Write-Output "Creating PSC conda environment in $PACK_TARGET and installing packages"
-    & conda create -y -v -p $PACK_TARGET --file $PACKAGE_LIST_FILE_PATH
+    & conda env create --prefix $PACK_TARGET -f $PACKAGE_LIST_FILE_PATH
 
     & conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
-	& conda build purge-all
+    & conda build purge-all
 
     # ------------------------- CREATE CONDA-PACK PACKAGE -------------------------------
     Write-Output "Packing PSC conda environment: $PACK_TARGET and saving as: $PACK_FILE_PATH"
@@ -135,11 +140,13 @@ if ($MODE -eq 0) {
 
     Copy-Item -Path $(Join-Path "$SCRIPT_DIR" "package") -Destination "$TARGET" -Recurse
     Copy-Item -Path $(Join-Path "$SCRIPT_DIR" $(Join-Path "$PLATFORM" "LICENSE")) -Destination $(Join-Path "$TARGET" "LICENSE") -Recurse -Force
+    Copy-Item -Path $(Join-Path "$SCRIPT_DIR" $(Join-Path "resources" "app.manifest.windows")) -Destination $(Join-Path "$TARGET" "app.manifest") -Recurse -Force
 
     ## Update conf files
     (Get-Content -Path "$TARGET\default\app.conf" | ForEach-Object { $_ -replace "@build@", "$APPBUILD" }) | Set-Content -Path "$TARGET\default\app.conf"
     (Get-Content -Path "$TARGET\default\app.conf" | ForEach-Object { $_ -replace "@version@", "$VERSION" }) | Set-Content -Path "$TARGET\default\app.conf"
     (Get-Content -Path "$TARGET\default\app.conf" | ForEach-Object { $_ -replace "@platform@", "$PLATFORM" }) | Set-Content -Path "$TARGET\default\app.conf"
+    (Get-Content -Path "$TARGET\app.manifest" | ForEach-Object { $_ -replace "@version@", "$VERSION" }) | Set-Content -Path "$TARGET\app.manifest"
 
     Copy-Item -Path "$PACK_TARGET" -Destination "$TARGET\bin\$PLATFORM" -Recurse
 
@@ -147,48 +154,30 @@ if ($MODE -eq 0) {
     $script:PACKAGE_NAME = "$($APPDIR)_$($PLATFORM)"
     Write-Output "Tarballing the $PACKAGE_NAME"
 
-    Copy-Item -Path $(Join-Path "$SCRIPT_DIR" $(Join-Path "resources" "app.manifest.windows")) -Destination $(Join-Path "$TARGET" "app.manifest") -Recurse -Force
-
     & "$7Z" a "$BUILD_DIR\$PACKAGE_NAME.tar" "$TARGET" -y
     & "$7Z" a "$BUILD_BASE_DIR\$PACKAGE_NAME.tgz" "$BUILD_DIR\$PACKAGE_NAME.tar" -y
     Remove-Item -Recurse -Path "$BUILD_DIR" 
     Write-Output "[INFO] Build Successful"
 } elseif ($MODE -eq 1) {
-    & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "packages.txt")
+    & conda env create --prefix $PACK_TARGET -f $(Join-Path $SCRIPT_DIR "environment.win64.yml")
     & conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
-    & conda list -p $PACK_TARGET -e | Out-File -FilePath $PACKAGE_LIST_FILE_PATH -Encoding ASCII
-    Write-Output "$PACKAGE_LIST_FILE_PATH"
+    & conda env export -p $PACK_TARGET | Out-File -FilePath $PACKAGE_LIST_FILE_PATH -Encoding ASCII
+    $stream = [IO.File]::OpenWrite($PACKAGE_LIST_FILE_PATH)
+    $stream.SetLength($stream.Length - 2)
+    $stream.Close()
+    $stream.Dispose()
     git diff -- $PACKAGE_LIST_FILE_PATH
 } elseif ($MODE -eq 2) {
+    & conda update -y conda
     & conda install -c conda-forge -y conda-tree
-    & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "packages.txt")
+    & conda env create --prefix "$PACK_TARGET" -f $(Join-Path $SCRIPT_DIR "environment.win64.yml")
     & conda-tree -p $PACK_TARGET deptree
 } elseif ($MODE -eq 3) {
-    & conda create -p $PACK_TARGET -y --file $(Join-Path $SCRIPT_DIR "packages.txt")
-    & conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
-    $script:LICENSE_FILE = $(Join-Path "$SCRIPT_DIR" $(Join-Path "$PLATFORM" "LICENSE"))
-    Copy-Item -Path $(Join-Path "$SCRIPT_DIR" "LICENSE") -Destination $LICENSE_FILE -Recurse -Force
-    Add-Content "$LICENSE_FILE" "`r`n`r`n========================================================================`r`n"
-    Add-Content "$LICENSE_FILE" "Package licenses:`r`n"
-    Write-Output "`r`nPackage licenses:`r`n"
-    $script:LICENSE_DB = Import-Csv -Path $(Join-Path "$SCRIPT_DIR" "license_db.csv")
-    & conda list -p $PACK_TARGET | ForEach-Object {
-        $script:line = $_
-        if (-Not $line.StartsWith("#")) {
-            $script:PKG_NAME = $line.split(" ")[0]
-            $script:OUTPUT_LINE = ""
-            $script:LICENSE_DB | ForEach-Object {
-                if ($_.NAME -eq $PKG_NAME) {
-                    $script:OUTPUT_LINE = "{0,-16}{1,-36}{2}" -f $_.NAME, $_.LICENSE, $_.URL
-                }
-            }
-            if ($script:OUTPUT_LINE -eq "") {
-                Write-Output "$PKG_NAME does not have a record in license_db.csv, please update license_db.csv"
-                Exit 1
-            }
-            Add-Content "$LICENSE_FILE" "$OUTPUT_LINE"
-            Write-Output $OUTPUT_LINE
-        }
-    }
+    & conda env create --prefix $PACK_TARGET -f $PACKAGE_LIST_FILE_PATH
+    & conda install --prefix $PACK_TARGET -c conda-forge -y conda
+    $env:PLATFORM=$script:PLATFORM
+    $env:BLACKLISTED_PACKAGES=$script:BLACKLISTED_PACKAGES
+    $env:PACK_TARGET=$script:PACK_TARGET
+    & $(Join-Path $PACK_TARGET "python") $(Join-Path $SCRIPT_DIR $(Join-Path "tools" "license.py"))
     Write-Output "`r`n[INFO] License file $LICENSE_FILE updated"
 }
