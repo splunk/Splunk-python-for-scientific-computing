@@ -8,11 +8,11 @@ dependencies:
   - _openmp_mutex=4.5=2_kmp_llvm
   - blas=2.114=mkl
   - blas-devel=3.9.0=14_linux64_mkl
-  - ca-certificates=2021.10.8=ha878542_0
+  - ca-certificates=2022.5.18.1=ha878542_0
   - cpuonly=2.0=0
   - dataclasses=0.8=pyhc8e2a94_3
   - decorator=4.4.2=py_0
-  - filelock=3.6.0=pyhd8ed1ab_0
+  - filelock=3.7.0=pyhd8ed1ab_0
   - huggingface_hub=0.6.0=pyhd8ed1ab_0
   - joblib=1.1.0=pyhd8ed1ab_0
   - libblas=3.9.0=14_linux64_mkl

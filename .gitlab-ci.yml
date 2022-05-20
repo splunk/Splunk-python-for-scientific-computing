@@ -110,7 +110,7 @@ publish_artifacts:
   image: docker.bintray.io/jfrog/jfrog-cli-go:latest
   script:
     - apk add --no-cache git
-    - jfrog rt config artifactory_config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_PASS
+    - jfrog config add artifactory_config --artifactory-url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_PASS
     - CI_MERGE_REQUEST_IID=$CI_MERGE_REQUEST_IID $CI_PROJECT_DIR/repack.sh publish
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'

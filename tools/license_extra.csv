@@ -27,7 +27,7 @@ libgomp,GPL-3.0-only WITH GCC-exception-3.1,https://gcc.gnu.org/onlinedocs/gcc-4
 liblapack,,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,
 liblapacke,,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,
 libprotobuf,,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler
-libstdcxx-ng,,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GNU C++ Runtime Libsrary,
+libstdcxx-ng,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GNU C++ Runtime Libsrary,
 libuv,,https://github.com/libuv/libuv/blob/v1.x/LICENSE,Cross-platform asynchronous I/O,
 libzlib,Zlib,http://zlib.net/zlib_license.html,compression library,dependency of python
 llvm-openmp,MIT,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM openmp runtime,

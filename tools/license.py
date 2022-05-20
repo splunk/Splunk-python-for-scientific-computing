@@ -1,11 +1,12 @@
-import conda.cli.python_api
 import json
 import os
 import csv
+import conda.cli.python_api
+from datetime import date
 from collections import OrderedDict
 from conda.exceptions import PackagesNotFoundError
 from colorama import init, Fore, Back, Style
-init()
+
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
 extra_conda_blacklist = ['conda', 'conda-package-handling', 'pycosat', 'ruamel_yaml'] # need to install conda to make this script work, so we need to exclude conda from end package
@@ -98,7 +99,8 @@ def generate_license_report(pkgs_scanned):
 def generate_app_license_file(pkgs_scanned):
     license_content = ""
     with open(os.path.join(script_dir, "..", "LICENSE")) as f:
-        license_content = f.read()
+        current_year = date.today().year
+        license_content = f.read().replace("@year@", str(current_year))
         license_content += "\n\n========================================================================\n"
         license_packages = "Package licenses:\n"
         for name, pkg in get_packages(pkgs_scanned):

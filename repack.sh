@@ -200,6 +200,7 @@ if [[ $MODE -lt 5 ]]; then
         sed -i.bak -e "s/@platform@/$PLATFORM/" "$TARGET/default/app.conf"
         sed -i.bak -e "s/@version@/$VERSION/" "$TARGET/app.manifest"
         rm -f "$TARGET/default/app.conf.bak"
+        rm -f "$TARGET/app.manifest.bak"
 
         mkdir -p "$TARGET/bin"
         mv "$PACK_TARGET" "$TARGET/bin/$PLATFORM"
@@ -209,7 +210,7 @@ if [[ $MODE -lt 5 ]]; then
     elif [[ $MODE -eq 1 ]]; then
         "$CONDA" env create --prefix "$PACK_TARGET" -f "$SCRIPT_DIR/environment.nix.yml"
         "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES || true
-        "$CONDA" list -p "$PACK_TARGET" -e > "$PLATFORM_DIR/requirements.txt" || true
+        # "$CONDA" list -p "$PACK_TARGET" -e > "$PLATFORM_DIR/requirements.txt" || true # we don't need this anymore
         "$CONDA" env export -p "$PACK_TARGET" > "$PACKAGE_LIST_FILE_PATH"
         sed -i '' -e '$ d' "$PACKAGE_LIST_FILE_PATH"
         git diff "$PACKAGE_LIST_FILE_PATH"
