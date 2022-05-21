@@ -68,6 +68,7 @@ pywin32,PSF/Custom,https://github.com/mhammond/pywin32/blob/main/setup.py#L2512|
 pyyaml,,https://github.com/yaml/pyyaml/blob/master/LICENSE,YAML parser,
 re2,,https://github.com/google/re2/blob/main/LICENSE,regular expression library,
 regex,Python-2.0 and Apache 2.0,https://bitbucket.org/mrabarnett/mrab-regex/src/hg/LICENSE.txt,regular expression library,
+requests,,https://github.com/psf/requests/blob/main/LICENSE,HTTP Library for Python,
 sacremoses,MIT,https://github.com/alvations/sacremoses/blob/master/LICENSE,MosesTokenizer library,
 scikit-learn,New BSD License,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,
 scipy,BSD 3-clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,

@@ -43,6 +43,7 @@ pytz,2022.1,MIT,https://github.com/newvem/pytz/blob/master/LICENSE.txt,dependenc
 pywin32,303,PSF-2.0,https://github.com/mhammond/pywin32/blob/main/setup.py#L2512|https://github.com/mhammond/pywin32/blob/main/win32/License.txt,Python for Win32 extensions,package meta data state it's under PSF. source code has other licenses,pywin32-303-py38h294d835_0,conda-forge,py38h294d835_0,0
 pyyaml,6.0,MIT,https://github.com/yaml/pyyaml/blob/master/LICENSE,YAML parser,,pyyaml-6.0-py38h294d835_4,conda-forge,py38h294d835_4,4
 regex,2022.4.24,Python-2.0,https://bitbucket.org/mrabarnett/mrab-regex/src/hg/LICENSE.txt,regular expression library,,regex-2022.4.24-py38h294d835_0,conda-forge,py38h294d835_0,0
+requests,2.27.1,Apache-2.0,https://github.com/psf/requests/blob/main/LICENSE,HTTP Library for Python,,requests-2.27.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 sacremoses,0.0.53,LGPL-2.1-or-later,https://github.com/alvations/sacremoses/blob/master/LICENSE,MosesTokenizer library,,sacremoses-0.0.53-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 scikit-learn,0.24.2,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-0.24.2-py38hf11a4ad_1,pkgs/main,py38hf11a4ad_1,1
 scipy,1.6.2,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.6.2-py38he847743_0,conda-forge,py38he847743_0,0

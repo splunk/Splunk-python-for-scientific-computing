@@ -46,6 +46,7 @@ dependencies:
   - pytz=2022.1=pyhd8ed1ab_0
   - pyyaml=6.0=py38h294d835_4
   - regex=2022.4.24=py38h294d835_0
+  - requests=2.27.1=pyhd8ed1ab_0
   - sacremoses=0.0.53=pyhd8ed1ab_0
   - scikit-learn=0.24.2=py38hf11a4ad_1
   - scipy=1.6.2=py38he847743_0

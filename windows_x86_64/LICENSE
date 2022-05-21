@@ -247,6 +247,7 @@ pytz                          	MIT                                 	https://gith
 pywin32                       	PSF/Custom                          	https://github.com/mhammond/pywin32/blob/main/setup.py#L2512|https://github.com/mhammond/pywin32/blob/main/win32/License.txt
 pyyaml                        	MIT                                 	https://github.com/yaml/pyyaml/blob/master/LICENSE
 regex                         	Python-2.0 and Apache 2.0           	https://bitbucket.org/mrabarnett/mrab-regex/src/hg/LICENSE.txt
+requests                      	Apache-2.0                          	https://github.com/psf/requests/blob/main/LICENSE
 sacremoses                    	MIT                                 	https://github.com/alvations/sacremoses/blob/master/LICENSE
 scikit-learn                  	New BSD License                     	https://github.com/scikit-learn/scikit-learn/blob/master/COPYING
 scipy                         	BSD 3-clause                        	https://github.com/scipy/scipy/blob/master/LICENSE.txt
