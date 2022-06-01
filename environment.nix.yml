@@ -1,6 +1,7 @@
 name: psc
 channels:
   - pytorch
+  - defaults
   - conda-forge
 dependencies:
   - python=3.8

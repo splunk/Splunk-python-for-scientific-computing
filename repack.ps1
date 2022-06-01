@@ -89,7 +89,8 @@ $env:Path += ";$($CONDA_ENV_PATH);$(Join-Path $CONDA_ENV_PATH "Scripts");$(Join-
 & conda update -y -n base -c defaults conda
 if ($MODE -eq 0) {
     & conda install -y -c conda-forge conda-pack conda-build
-    & conda config --set ssl_verify_no
+    & conda config --set ssl_verify no
+    & conda config --set channel_priority flexible
 
     Write-Output "Creating PSC conda environment in $PACK_TARGET and installing packages"
     & conda env create --prefix $PACK_TARGET -f $PACKAGE_LIST_FILE_PATH
@@ -159,6 +160,7 @@ if ($MODE -eq 0) {
     Remove-Item -Recurse -Path "$BUILD_DIR" 
     Write-Output "[INFO] Build Successful"
 } elseif ($MODE -eq 1) {
+    & conda config --set channel_priority flexible
     & conda env create --prefix $PACK_TARGET -f $(Join-Path $SCRIPT_DIR "environment.win64.yml")
     & conda remove -p $PACK_TARGET -y --force @BLACKLISTED_PACKAGES
     & conda env export -p $PACK_TARGET | Out-File -FilePath $PACKAGE_LIST_FILE_PATH -Encoding ASCII
@@ -173,6 +175,7 @@ if ($MODE -eq 0) {
     & conda env create --prefix "$PACK_TARGET" -f $(Join-Path $SCRIPT_DIR "environment.win64.yml")
     & conda-tree -p $PACK_TARGET deptree
 } elseif ($MODE -eq 3) {
+    & conda config --set channel_priority flexible
     & conda env create --prefix $PACK_TARGET -f $PACKAGE_LIST_FILE_PATH
     & conda install --prefix $PACK_TARGET -c conda-forge -y conda
     $env:PLATFORM=$script:PLATFORM

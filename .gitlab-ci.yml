@@ -93,8 +93,8 @@ build_osx:
     expire_in: 30 days
   script:
     - git clean -xdf
-    - bash repack.sh license
-    - bash repack.sh build
+    - bash -x repack.sh license
+    - bash -x repack.sh build
   tags:
     - psc-mac64
   rules:
