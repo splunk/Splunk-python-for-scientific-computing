@@ -156,7 +156,7 @@ if [[ $MODE -lt 5 ]]; then
         find "$PACK_TARGET" -type d -iname tests -not -path "$PKG_INCLUDE_TESTS" -print0 | $XARGS -0 rm -rf
 
         # Remove other unnecessary cruft
-        rm -f "$PACK_TARGET"/bin/{sqlite3,tclsh8.5,wish8.5,xmlcatalog,xmllint,xsltproc,smtpd.py,xml2-config,xslt-config,c_rehash}
+        rm -f "$PACK_TARGET"/bin/{sqlite3,tclsh8.5,wish8.5,xmlcatalog,xmllint,xsltproc,smtpd.py,xml2-config,xslt-config,c_rehash,lzcmp,xzcmp,lzdiff,xzdiff}
         if [[ $MODE -eq 0 ]]; then
           rm -rf "$PACK_TARGET"/lib/{Tk.icns,Tk.tiff,tcl8,tcl8.5,tk8.5} \
           "$PACK_TARGET"/conda-meta \
@@ -168,11 +168,12 @@ if [[ $MODE -lt 5 ]]; then
           "$PACK_TARGET"/lib/xsltConf.sh \
           "$PACK_TARGET"/lib/terminfo \
           "$PACK_TARGET"/share \
-          "$PACK_TARGET"/bin/.scikit-learn-post-link.sh
+          "$PACK_TARGET"/bin/.scikit-learn-post-link.sh \
+          "$PACK_TARGET"/lib/python3.8/config-3.8-x86_64-linux-gnu/Makefile
         fi
 
         # Convert symlinks to copies.
-        SYMLINK_SUBDIRS="bin lib"
+        SYMLINK_SUBDIRS="bin lib ssl"
         for subdir in $SYMLINK_SUBDIRS; do
             while read i; do
                 j=`readlink "$i"`
@@ -204,6 +205,8 @@ if [[ $MODE -lt 5 ]]; then
 
         mkdir -p "$TARGET/bin"
         mv "$PACK_TARGET" "$TARGET/bin/$PLATFORM"
+        chmod -R 644 "$TARGET/default" "$TARGET/app.manifest" "$TARGET/LICENSE" "$TARGET/README" "$TARGET/bin/exec_anaconda.py"
+        chmod 755 "$TARGET/default"
         rm -rf "$BUILD_DIR"
         tar czf "${TARGET}.tgz" -C "$BUILD_BASE_DIR" "${APPDIR}_${PLATFORM}"
         echo "[INFO] Build Success"
