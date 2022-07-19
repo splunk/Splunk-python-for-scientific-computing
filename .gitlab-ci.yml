@@ -9,12 +9,12 @@ stages:
   - publish
 
 include:
-  - file: /prodsec/sast_scan-v0.1.0.yml
-    project: ci-cd/templates
-    ref: master
-  - file: /templates/.oss-scan.yml
-    project: prodsec/whitesource
+  - project: 'prodsec/scp-scanning/gitlab-checkmarx'
     ref: latest
+    file: '/templates/.sast_scan.yml'
+  - project: 'prodsec/whitesource'
+    ref: latest
+    file: '/templates/.oss-scan.yml'
 
 
 sast-scanner:
