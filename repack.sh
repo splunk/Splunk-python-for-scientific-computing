@@ -127,7 +127,7 @@ if [[ $MODE -lt 5 ]]; then
 
         # Step 4: clean up the virtualenv and conda cache
         "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES || true
-        "$CONDA" clean -tisy
+        "$CONDA" clean -tiy
 
         # ----------------------- CREATE CONDA-PACK PACKAGE --------------
 

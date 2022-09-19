@@ -4,7 +4,6 @@ ncurses
 tk
 pip
 ld_impl_linux-64
-click
 six
 colorama
 requests
@@ -17,7 +16,4 @@ idna
 pysocks
 cffi
 charset-normalizer
-importlib_metadata
-importlib-metadata
-zipp
 argh

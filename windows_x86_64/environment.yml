@@ -27,6 +27,7 @@ dependencies:
   - mkl=2022.0.0=h0e2418a_796
   - mkl-devel=2022.0.0=h57928b3_797
   - mkl-include=2022.0.0=h0e2418a_796
+  - mlflow=1.28.0
   - msys2-conda-epoch=20160418=1
   - networkx=2.5.1=pyhd8ed1ab_0
   - numpy=1.20.3=py38hec0b029_2

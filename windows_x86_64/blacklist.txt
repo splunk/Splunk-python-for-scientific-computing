@@ -1,6 +1,5 @@
 sqlite
 pip
-click
 six
 colorama
 brotlipy
@@ -12,8 +11,5 @@ idna
 pysocks
 cffi
 charset-normalizer
-importlib_metadata
-importlib-metadata
-zipp
 argh
 menuinst

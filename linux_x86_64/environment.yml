@@ -31,6 +31,7 @@ dependencies:
   - mkl=2022.0.1=h8d4b97c_803
   - mkl-devel=2022.0.1=ha770c72_804
   - mkl-include=2022.0.1=h8d4b97c_803
+  - mlflow=1.28.0
   - networkx=2.5.1=pyhd8ed1ab_0
   - numpy=1.20.3=py38h8246c76_2
   - onnxruntime=1.10.0=py38h46f70af_4

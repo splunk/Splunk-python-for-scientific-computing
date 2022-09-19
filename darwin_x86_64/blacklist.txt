@@ -2,7 +2,6 @@ sqlite
 readline
 tk
 pip
-click
 six
 colorama
 requests
@@ -15,7 +14,4 @@ idna
 pysocks
 cffi
 charset-normalizer
-importlib_metadata
-importlib-metadata
-zipp
 argh
