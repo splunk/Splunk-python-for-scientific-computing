@@ -12,10 +12,6 @@ include:
   - project: 'prodsec/scp-scanning/gitlab-checkmarx'
     ref: latest
     file: '/templates/.sast_scan.yml'
-  - project: 'prodsec/whitesource'
-    ref: latest
-    file: '/templates/.oss-scan.yml'
-
 
 sast-scanner:
   stage: prodsec-review
