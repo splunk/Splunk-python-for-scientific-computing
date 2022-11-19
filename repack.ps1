@@ -89,7 +89,7 @@ $env:Path += ";$($CONDA_ENV_PATH);$(Join-Path $CONDA_ENV_PATH "Scripts");$(Join-
 & conda update -y -n base -c defaults conda
 if ($MODE -eq 0) {
     & conda install -y -c conda-forge conda-pack conda-build
-    & conda config --set ssl_verify_no
+    & conda config --set ssl_verify no
 
     Write-Output "Creating PSC conda environment in $PACK_TARGET and installing packages"
     & conda env create --prefix $PACK_TARGET -f $PACKAGE_LIST_FILE_PATH
