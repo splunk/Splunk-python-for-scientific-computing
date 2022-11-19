@@ -1,74 +1,112 @@
-name: null
+name: C:\Users\Administrator\Splunk-python-for-scientific-computing\build\windows_x86_64\env
 channels:
   - pytorch
   - conda-forge
   - defaults
 dependencies:
-  - blas=2.114=mkl
-  - blas-devel=3.9.0=14_win64_mkl
-  - ca-certificates=2022.5.18.1=h5b45459_0
+  - alembic=1.8.1=pyhd8ed1ab_0
+  - appdirs=1.4.4=pyh9f0ad1d_0
+  - asn1crypto=1.5.1=pyhd8ed1ab_0
+  - blas=2.116=mkl
+  - blas-devel=3.9.0=16_win64_mkl
+  - blinker=1.5=pyhd8ed1ab_0
+  - ca-certificates=2022.9.24=h5b45459_0
+  - click=8.1.3=win_pyhd8ed1ab_2
+  - cloudpickle=2.2.0=pyhd8ed1ab_0
+  - configparser=5.3.0=pyhd8ed1ab_0
   - cpuonly=2.0=0
+  - databricks-cli=0.17.3=pyhd8ed1ab_0
   - dataclasses=0.8=pyhc8e2a94_3
   - decorator=4.4.2=py_0
-  - filelock=3.7.0=pyhd8ed1ab_0
-  - huggingface_hub=0.6.0=pyhd8ed1ab_0
+  - docker-py=5.0.3=py38haa244fe_2
+  - docker-pycreds=0.4.0=py_0
+  - entrypoints=0.4=pyhd8ed1ab_0
+  - filelock=3.8.0=pyhd8ed1ab_0
+  - flask=2.2.2=pyhd8ed1ab_0
+  - gitdb=4.0.9=pyhd8ed1ab_0
+  - gitpython=3.1.29=pyhd8ed1ab_0
+  - greenlet=2.0.1=py38hd3f51b4_0
+  - huggingface_hub=0.11.0=pyhd8ed1ab_0
+  - importlib-metadata=4.11.4=py38haa244fe_0
+  - importlib_metadata=4.11.4=hd8ed1ab_0
+  - importlib_resources=5.10.0=pyhd8ed1ab_0
   - intel-openmp=2022.1.0=h57928b3_3787
-  - joblib=1.1.0=pyhd8ed1ab_0
-  - libblas=3.9.0=14_win64_mkl
-  - libcblas=3.9.0=14_win64_mkl
-  - liblapack=3.9.0=14_win64_mkl
-  - liblapacke=3.9.0=14_win64_mkl
-  - libuv=1.43.0=h8ffe710_0
+  - itsdangerous=2.1.2=pyhd8ed1ab_0
+  - jinja2=3.1.2=pyhd8ed1ab_1
+  - joblib=1.2.0=pyhd8ed1ab_0
+  - libblas=3.9.0=16_win64_mkl
+  - libcblas=3.9.0=16_win64_mkl
+  - liblapack=3.9.0=16_win64_mkl
+  - liblapacke=3.9.0=16_win64_mkl
+  - libprotobuf=3.21.9=h12be248_0
+  - libsqlite=3.40.0=hcfcfb64_0
+  - libuv=1.44.2=h8ffe710_0
+  - libzlib=1.2.13=hcfcfb64_4
   - m2w64-gcc-libgfortran=5.3.0=6
   - m2w64-gcc-libs=5.3.0=7
   - m2w64-gcc-libs-core=5.3.0=7
   - m2w64-gmp=6.1.0=2
   - m2w64-libwinpthread-git=5.0.0.4634.697f757=2
-  - mkl=2022.0.0=h0e2418a_796
-  - mkl-devel=2022.0.0=h57928b3_797
-  - mkl-include=2022.0.0=h0e2418a_796
-  - mlflow=1.28.0
+  - mako=1.2.4=pyhd8ed1ab_0
+  - markupsafe=2.1.1=py38h91455d4_2
+  - mkl=2022.1.0=h6a75c08_874
+  - mkl-devel=2022.1.0=h57928b3_875
+  - mkl-include=2022.1.0=h6a75c08_874
+  - mlflow=1.28.0=py38hdedce57_0
   - msys2-conda-epoch=20160418=1
   - networkx=2.5.1=pyhd8ed1ab_0
   - numpy=1.20.3=py38hec0b029_2
-  - openssl=1.1.1o=h8ffe710_0
+  - oauthlib=3.2.2=pyhd8ed1ab_0
+  - openssl=1.1.1s=hcfcfb64_0
   - packaging=21.3=pyhd8ed1ab_0
   - pandas=1.0.5=py38he6e81aa_0
-  - patsy=0.5.2=pyhd8ed1ab_0
+  - patsy=0.5.3=pyhd8ed1ab_0
+  - prometheus_client=0.15.0=pyhd8ed1ab_0
+  - prometheus_flask_exporter=0.21.0=pyhd8ed1ab_0
+  - protobuf=4.21.9=py38hd3f51b4_0
   - psutil=5.8.0=py38h294d835_2
   - pydantic=1.9.0=py38h294d835_1
-  - pyopenssl=22.0.0=pyhd8ed1ab_0
+  - pyjwt=2.6.0=pyhd8ed1ab_0
+  - pyopenssl=22.1.0=pyhd8ed1ab_0
   - pyparsing=3.0.9=pyhd8ed1ab_0
   - python=3.8.10=h7840368_2_cpython
   - python-dateutil=2.8.2=pyhd8ed1ab_0
   - python_abi=3.8=2_cp38
   - pytorch=1.11.0=py3.8_cpu_0
   - pytorch-mutex=1.0=cpu
-  - pytz=2022.1=pyhd8ed1ab_0
-  - pyyaml=6.0=py38h294d835_4
-  - regex=2022.4.24=py38h294d835_0
-  - requests=2.27.1=pyhd8ed1ab_0
+  - pytz=2022.6=pyhd8ed1ab_0
+  - pywin32=304=py38hd3f51b4_2
+  - pyyaml=6.0=py38h91455d4_5
+  - querystring_parser=1.2.4=py_0s
+  - regex=2022.10.31=py38h91455d4_0
+  - requests=2.28.1=pyhd8ed1ab_1
   - sacremoses=0.0.53=pyhd8ed1ab_0
   - scikit-learn=0.24.2=py38hf11a4ad_1
   - scipy=1.6.2=py38he847743_0
   - setuptools=59.8.0=py38haa244fe_1
+  - smmap=3.0.5=pyh44b312d_0
+  - sqlalchemy=1.4.44=py38h91455d4_0
+  - sqlparse=0.4.3=pyhd8ed1ab_0
   - statsmodels=0.12.2=py38h6f4d8f0_0
-  - tbb=2021.5.0=h2d74725_1
+  - tabulate=0.9.0=pyhd8ed1ab_1
+  - tbb=2021.7.0=h91493d7_0
   - threadpoolctl=3.1.0=pyh8a188c0_0
   - tokenizers=0.10.3=py38h291c280_1
-  - tqdm=4.64.0=pyhd8ed1ab_0
+  - tqdm=4.64.1=pyhd8ed1ab_0
   - transformers=4.16.2=pyhd8ed1ab_0
-  - typing-extensions=4.2.0=hd8ed1ab_1
-  - typing_extensions=4.2.0=pyha770c72_1
-  - ucrt=10.0.20348.0=h57928b3_0
-  - vc=14.2=hb210afc_6
-  - vs2015_runtime=14.29.30037=h902a5da_6
+  - typing-extensions=4.4.0=hd8ed1ab_0
+  - typing_extensions=4.4.0=pyha770c72_0
+  - ucrt=10.0.22621.0=h57928b3_0
+  - vc=14.3=h3d8a991_9
+  - vs2015_runtime=14.32.31332=h1d6e394_9
+  - waitress=2.1.2=pyhd8ed1ab_0
   - watchdog=2.1.7=py38haa244fe_1
-  - wheel=0.37.1=pyhd8ed1ab_0
-  - win_inet_pton=1.1.0=py38haa244fe_4
+  - websocket-client=1.4.2=pyhd8ed1ab_0
+  - werkzeug=2.2.2=pyhd8ed1ab_0
+  - wheel=0.38.4=pyhd8ed1ab_0
+  - win_inet_pton=1.1.0=pyhd8ed1ab_6
   - yaml=0.2.5=h8ffe710_2
+  - zipp=3.10.0=pyhd8ed1ab_0
   - pip:
-    - flatbuffers==2.0
+    - flatbuffers==22.10.26
     - onnxruntime==1.10.0
-    - protobuf==3.20.1
-prefix: C:\Users\Administrator\Splunk-python-for-scientific-computing\build\windows_x86_64\env
