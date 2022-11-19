@@ -212,7 +212,7 @@ if [[ $MODE -lt 5 ]]; then
         "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES || true
         # "$CONDA" list -p "$PACK_TARGET" -e > "$PLATFORM_DIR/requirements.txt" || true # we don't need this anymore
         "$CONDA" env export -p "$PACK_TARGET" > "$PACKAGE_LIST_FILE_PATH"
-        sed -i '' -e '$ d' "$PACKAGE_LIST_FILE_PATH"
+        #sed -i '' -e '$ d' "$PACKAGE_LIST_FILE_PATH"
         git diff "$PACKAGE_LIST_FILE_PATH"
     elif [[ $MODE -eq 2 ]]; then
         "$CONDA" update -y conda
