@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+# set -o xtrace # uncomment to enable command print
 
 APPDIR="Splunk_SA_Scientific_Python"
 VERSION="4.0.0"
@@ -43,27 +44,39 @@ esac
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 BUILD_BASE_DIR="$SCRIPT_DIR/build"
 # See the list from https://repo.anaconda.com/miniconda/
-MINICONDA_VERSION="py38_4.9.2"
-LINUX_MD5="122c8c9beb51e124ab32a0fa6426c656"
-OSX_MD5="cb40e2c1a32dccd6cdd8d5e49977a635"
+MINICONDA_VERSION="py38_4.12.0"
+LINUX_SHA256="3190da6626f86eee8abf1b2fd7a5af492994eb2667357ee4243975cdbb175d7a"
+MAC_X86_SHA256="f930f5b1c85e509ebbf9f28e13c697a082581f21472dc5360c41905d10802c7b"
+MAC_ARM64_SHA256="13b992328ef088a49a685ae84461f132f8719bf0cabc43792fc9009b0421f611"
 
 # Platform detection
 XARGS="xargs -r"
 if [ "`uname`" = "Linux" ]; then
+    MINICONDA_PLATFORM="Linux"
     if [ "`uname -m`" = "x86_64" ]; then
-        MINICONDA_PLATFORM="Linux"
-        PLATFORM="linux_x86_64"
-        MANIFEST_FILE="app.manifest.linux"
+      PLATFORM="linux_x86_64"
+      ARCH="x86_64"
+      MANIFEST_FILE="app.manifest.linux"
     else
-        echo "[ERROR] Unsupported platform \"`uname`\", aborting."
-        exit 1
+      echo "[ERROR] Unsupported platform \"`uname`\", aborting."
+      exit 1
     fi
 elif [ "`uname`" = "Darwin" ]; then
     MINICONDA_PLATFORM="MacOSX"
-    PLATFORM="darwin_x86_64"
-    MANIFEST_FILE="app.manifest.osx"
     export COPYFILE_DISABLE=true
     XARGS="xargs"
+    if [ "`uname -m`" = "x86_64" ]; then
+      PLATFORM="darwin_x86_64"
+      ARCH="x86_64"
+      MANIFEST_FILE="app.manifest.osx"
+    elif [ "`uname -m`" = "arm64" ]; then
+      PLATFORM="darwin_arm64"
+      ARCH="arm64"
+      MANIFEST_FILE="app.manifest.osx"
+    else
+      echo "[ERROR] Unsupported platform \"`uname`\", aborting."
+      exit 1
+    fi
 else
     echo "[ERROR] This script does not support platform \"`uname`\", aborting."
     exit 1
@@ -79,10 +92,11 @@ if [[ $MODE -lt 5 ]]; then
     # ----------------------- MINICONDA ----------------------------
     # Check if miniconda installer is already downloaded
     PACKAGE_LIST_FILE_PATH="$PLATFORM_DIR/environment.yml"
-    MINICONDA_FILE="Miniconda3-${MINICONDA_VERSION}-${MINICONDA_PLATFORM}-x86_64.sh"
+    MINICONDA_FILE="Miniconda3-${MINICONDA_VERSION}-${MINICONDA_PLATFORM}-${ARCH}.sh"
     MINICONDA_PATH="$PLATFORM_DIR/$MINICONDA_FILE"
     if ! test -f "$MINICONDA_PATH"; then
         if command -v curl; then
+          echo $MINICONDA_PATH
             curl -o "$MINICONDA_PATH" "https://repo.anaconda.com/miniconda/$MINICONDA_FILE"
         else
             echo "[ERROR] cURL not installed, can not find miniconda installation file"
@@ -90,19 +104,20 @@ if [[ $MODE -lt 5 ]]; then
         fi
     fi
     if [ "`uname`" = "Linux" ]; then
-        MINICONDA_MD5=$(md5sum < $MINICONDA_PATH | awk '{print $1}')
-        if [ "$MINICONDA_MD5" != "$LINUX_MD5" ]; then
-            echo "[ERROR] checksum of $MINICONDA_PATH is $MINICONDA_MD5, does not match $LINUX_MD5, please check file integrity"
-            exit 1
-        fi
+      TARGET_SHA256=$LINUX_SHA256
     elif [ "`uname`" = "Darwin" ]; then
-        MINICONDA_MD5=$(md5 -q $MINICONDA_PATH)
-        if [ "$MINICONDA_MD5" != "$OSX_MD5" ]; then
-            echo "[ERROR] checksum of $MINICONDA_PATH is $MINICONDA_MD5, does not match $OSX_MD5, please check file integrity"
-            exit 1
-        fi
+      if [ "`uname -m`" = "x86_64" ]; then
+        TARGET_SHA256=$MAC_X86_SHA256
+      elif [ "`uname -m`" = "arm64" ]; then
+        TARGET_SHA256=$MAC_ARM64_SHA256
+      fi
     fi
-    test -f "$PACKAGE_LIST_FILE_PATH"
+    MINICONDA_SHA256=$(sha256sum < $MINICONDA_PATH | awk '{print $1}')
+    if [ "$MINICONDA_SHA256" != "$TARGET_SHA256" ]; then
+        echo "[ERROR] checksum of $MINICONDA_PATH is $MINICONDA_SHA256, does not match $TARGET_SHA256, please check file integrity"
+        exit 1
+    fi
+#    test -f "$PACKAGE_LIST_FILE_PATH"
 
     # Clean up build dir
     rm -rf "$BUILD_BASE_DIR"
@@ -127,7 +142,7 @@ if [[ $MODE -lt 5 ]]; then
 
         # Step 4: clean up the virtualenv and conda cache
         "$CONDA" remove -p "$PACK_TARGET" -y --force $BLACKLISTED_PACKAGES || true
-        "$CONDA" clean -tisy
+        "$CONDA" clean -tiy
 
         # ----------------------- CREATE CONDA-PACK PACKAGE --------------
 
