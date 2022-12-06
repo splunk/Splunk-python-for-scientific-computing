@@ -19,3 +19,4 @@ dependencies:
   - watchdog==2.1.7
   - pip:
     - onnxruntime==1.10.0
+    - onnx==1.12.0

@@ -33,6 +33,7 @@ dependencies:
   - mkl-include=2022.0.1=h8d4b97c_803
   - networkx=2.5.1=pyhd8ed1ab_0
   - numpy=1.20.3=py38h8246c76_2
+  - onnx=1.12.0=py38hc6c4ac6_2
   - onnxruntime=1.10.0=py38h46f70af_4
   - openssl=1.1.1o=h166bdaf_0
   - packaging=21.3=pyhd8ed1ab_0

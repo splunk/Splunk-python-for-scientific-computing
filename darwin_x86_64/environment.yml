@@ -31,6 +31,7 @@ dependencies:
   - ncurses=6.3=h96cf925_1
   - networkx=2.5.1=pyhd8ed1ab_0
   - numpy=1.20.3=py38h5cb586d_2
+  - onnx=1.12.0=py38h20dcd40_2
   - onnxruntime=1.10.0=py38hfe79f92_4
   - openssl=1.1.1o=hfe4f2af_0
   - packaging=21.3=pyhd8ed1ab_0
