@@ -70,6 +70,7 @@ dependencies:
   - ncurses=6.3=h07bb92c_1
   - networkx=2.8.8=pyhd8ed1ab_0
   - numpy=1.23.5=py38h09ac2d9_0
+  - onnx=1.12.0=py38h06e14aa_2.tar.bz2
   - onnxruntime=1.13.1=py38h72c8940_1
   - openssl=1.1.1s=h03a7124_0
   - orc=1.8.0=hef0d403_0
