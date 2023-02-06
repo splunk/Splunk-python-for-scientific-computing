@@ -1,4 +1,4 @@
-# Copyright (C) 2015-2021 Splunk Inc. All Rights Reserved.
+# Copyright (C) 2015-2019 Splunk Inc. All Rights Reserved.
 
 # To be used in accordance with the README file in Python for Scientific
 # Computing (PSC). That is, exec_anaconda.py is available to be copied and
@@ -14,7 +14,7 @@ import sys
 import time
 import traceback
 
-from util.base_util import get_apps_path
+from util import get_apps_path
 
 # NOTE: This file must be Python 2 and 3 compatible until
 # Splunk Enterprise drops support for Python2.
@@ -32,7 +32,7 @@ SUPPORTED_SYSTEMS = {
 def check_python_version():
     if sys.version_info[0] < 3:
         raise Exception(
-            'This software must be run under Python3.'
+            'This version of MLTK must be run under Python3. Please consult MLTK documentation for more information'
         )
 
 
@@ -100,7 +100,6 @@ def exec_anaconda():
         mode = os.stat(python_path).st_mode
         os.chmod(python_path, mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
 
-    print('INFO Running %s' % " ".join([python_path] + sys.argv), sys.stderr)
     sys.stderr.flush()
 
     # In Quake and later PYTHONPATH is removed or not set.
@@ -111,14 +110,14 @@ def exec_anaconda():
     os.environ['SPLUNK_CORE_PYTHONPATH'] = json.dumps(sys.path)
 
     try:
+        os.environ['MKL_NUM_THREADS'] = '4'
         if system[0] == "Windows":
-            os.environ['MKL_NUM_THREADS'] = '1'
             # os.exec* broken on Windows: http://bugs.python.org/issue19066
             subprocess.check_call([python_path] + sys.argv)
             os._exit(0)
         else:
             os.environ['VECLIB_MAXIMUM_THREADS'] = '1'
-            os.environ['OPENBLAS_NUM_THREADS'] = '1'
+            os.environ['OPENBLAS_NUM_THREADS'] = '4'
             os.execl(python_path, python_path, *sys.argv)
     except Exception:
         traceback.print_exc(None, sys.stderr)
@@ -156,7 +155,7 @@ def fix_sys_path():
         try:
             sys.path.remove(spp)
             sys.path.append(spp)
-        except:
+        except Exception:
             pass
 
     # MLA-2136: update environment variable such that subprocesses
@@ -164,3 +163,14 @@ def fix_sys_path():
     # Splunk's builtins.
     if platform.system() == 'Windows':
         os.environ['PYTHONPATH'] = os.pathsep.join(sys.path)
+
+
+def exec_anaconda_or_die():
+    try:
+        exec_anaconda()
+    except Exception as e:
+        print('Failed to activate Conda environment: %r' % e, sys.stderr)
+        import cexc
+
+        cexc.abort(e)
+        sys.exit(1)

@@ -15,6 +15,7 @@ dependencies:
   - pytorch==1.11.0
   - transformers==4.16.2
   - cpuonly=2.0
+  - onnx==1.11.0
   - onnxruntime==1.10.0
   - pydantic==1.9.0
   - watchdog==2.1.7

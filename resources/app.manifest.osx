@@ -4,7 +4,7 @@
     "title": "Python for Scientific Computing (for Mac)",
     "id": {
       "group": null,
-      "name": "Splunk_SA_Scientific_Python_darwin_x86_64",
+      "name": "@app_id@",
       "version": "@version@"
     },
     "author": [

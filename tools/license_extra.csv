@@ -10,6 +10,7 @@ decorator,BSD 2-Clause,https://github.com/micheles/decorator/blob/master/LICENSE
 filelock,,https://github.com/tox-dev/py-filelock/blob/main/LICENSE,A platform independent file lock,
 huggingface_hub,,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,
 icc_rt,proprietary - Intel,https://software.intel.com/en-us/license/intel-simplified-software-license,Intel runtime libraries for C, C++ and Fortran compilers
+icu,,,,
 intel-openmp,BSD 3-clause ,https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10,Math library for Intel and compatible processors,
 joblib,,https://github.com/joblib/joblib/blob/master/LICENSE.txt,Python function as pipeline jobs,
 libblas,,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,
@@ -24,11 +25,15 @@ libgfortran-ng,,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc
 libgfortran4,,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,
 libgfortran5,,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,
 libgomp,GPL-3.0-only WITH GCC-exception-3.1,https://gcc.gnu.org/onlinedocs/gcc-4.2.4/libgomp/Copying.html#Copying,The GCC OpenMP implementation,
+libhwloc,,,,
+libiconv,,,,
 liblapack,,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,
 liblapacke,,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,
 libprotobuf,,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler
+libsqlite,,,,
 libstdcxx-ng,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GNU C++ Runtime Libsrary,
 libuv,,https://github.com/libuv/libuv/blob/v1.x/LICENSE,Cross-platform asynchronous I/O,
+libxml2,,,,
 libzlib,Zlib,http://zlib.net/zlib_license.html,compression library,dependency of python
 llvm-openmp,MIT,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM openmp runtime,
 m2w64-gcc-libgfortran,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library built for windows,
@@ -47,6 +52,7 @@ ncurses,free,https://invisible-island.net/ncurses/ncurses-license.html,Library f
 networkx,BSD 3-clause,https://github.com/networkx/networkx/blob/master/LICENSE.txt,Python package for creating and manipulating complex networks,
 numpy,BSD 3-clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,
 numpy-base,BSD 3-clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,
+onnx,,,,
 onnxruntime,MIT,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform, high performance ML inferencing and training accelerator
 openssl,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,
 packaging,,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,

@@ -16,7 +16,7 @@ platform = os.environ['PLATFORM']
 def scan_installed():
     pkgs_scanned = OrderedDict()
 
-    pkgs_installed = json.loads(conda.cli.python_api.run_command(conda.cli.python_api.Commands.LIST, '-p', os.environ["PACK_TARGET"],  '--json')[0])
+    pkgs_installed = json.loads(conda.cli.python_api.run_command(conda.cli.python_api.Commands.LIST, '-p', os.environ["VENV_BUILD_DIR"],  '--json')[0])
 
     for pkg_installed in pkgs_installed:
         # Example `pkg`:
