@@ -7,7 +7,7 @@ is_set VERSION
 if [ "$OS" = "Linux" ] && [ "$ARCH" = "x86_64" ]; then
   XARGS="xargs -r"
   MANIFEST_FILE="app.manifest.linux"
-elif [ "$OS" = "Darwin" ] && [ "$ARCH" = "x86_64" ]; then
+elif [ "$OS" = "Darwin" ]; then
   XARGS="xargs"
   MANIFEST_FILE="app.manifest.osx"
   export COPYFILE_DISABLE=true

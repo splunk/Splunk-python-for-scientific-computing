@@ -17,6 +17,8 @@ if [ "$OS" = "Linux" ] && [ "$ARCH" = "x86_64" ]; then
   : # pass
 elif [ "$OS" = "Darwin" ] && [ "$ARCH" = "x86_64" ]; then
   : # pass
+elif [ "$OS" = "Darwin" ] && [ "$ARCH" = "arm64" ]; then
+  : # pass
 else
   echo "[ERROR] This script does not support platform \"`uname`\", aborting."
   exit 1

@@ -11,6 +11,9 @@ ifeq ($(PLATFORM), Linux_x86_64)
 else ifeq ($(PLATFORM), Darwin_x86_64)
 	PLATFORM_DIR := darwin_x86_64
 	SCRIPT_DIR := $(POSIX_SCRIPT_DIR)
+else ifeq ($(PLATFORM), Darwin_arm64)
+	PLATFORM_DIR := darwin_arm64
+	SCRIPT_DIR := $(POSIX_SCRIPT_DIR)
 else
 	$(error $(PLATFORM) not supported)
 endif
@@ -42,7 +45,7 @@ freeze: $(FREEZE_TARGET)
 build/miniconda-repack.tar.gz: build/venv $(SCRIPT_DIR)/conda_pack.sh $(COMMON_DEPS)
 	bash $(SCRIPT_DIR)/conda_pack.sh
 
-build/$(BUILD_TARGET): build/miniconda-repack.tar.gz $(SCRIPT_DIR)/build.sh $(shell find package -type f) $(shell find resources -type -f) $(COMMON_DEPS)
+build/$(BUILD_TARGET): build/miniconda-repack.tar.gz $(SCRIPT_DIR)/build.sh $(shell find package -type f) $(shell find resources -type f) $(COMMON_DEPS)
 	VERSION=$(VERSION_TAG) BUILD=$(VERSION_BUILD) bash $(SCRIPT_DIR)/build.sh
 
 build: build/$(BUILD_TARGET)

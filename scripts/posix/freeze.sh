@@ -17,6 +17,10 @@ else
   sed -i '$ d' "$OUTPUT_PACKAGE_LIST_FILE"
 fi
 # Remove the path of the build dir from the end result environment.yml file
-sed -i "s/${PROJECT_DIR//\//\\/}\///" "$OUTPUT_PACKAGE_LIST_FILE"
+if [ "$OS" = "Darwin" ]; then
+  sed -i '' -e "s/${PROJECT_DIR//\//\\/}\///" "$OUTPUT_PACKAGE_LIST_FILE"
+else
+  sed -i "s/${PROJECT_DIR//\//\\/}\///" "$OUTPUT_PACKAGE_LIST_FILE"
+fi
 
 git diff "$OUTPUT_PACKAGE_LIST_FILE"
