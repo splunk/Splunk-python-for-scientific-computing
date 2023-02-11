@@ -8,6 +8,7 @@ cpuonly,,https://anaconda.org/pytorch/cpuonly,meta package for selecting cpu onl
 dataclasses,,https://github.com/ericvsmith/dataclasses/blob/master/LICENSE.txt,An implementation of PEP 557: Data Classes,
 decorator,BSD 2-Clause,https://github.com/micheles/decorator/blob/master/LICENSE.txt,python decorator library,
 filelock,,https://github.com/tox-dev/py-filelock/blob/main/LICENSE,A platform independent file lock,
+flatbuffers,,,,
 huggingface_hub,,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,
 icc_rt,proprietary - Intel,https://software.intel.com/en-us/license/intel-simplified-software-license,Intel runtime libraries for C, C++ and Fortran compilers
 icu,,,,
@@ -62,6 +63,7 @@ pandas,BSD 3-clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,dat
 patsy,BSD 2-clause/PSF,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,
 protobuf,,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format,
 psutil,BSD 3-clause,https://github.com/giampaolo/psutil/blob/master/LICENSE,process manipuation,
+pthreads-win32,,,,
 pydantic,,https://github.com/samuelcolvin/pydantic/blob/master/LICENSE,Data validation and settings management,
 pyopenssl,,https://github.com/pyca/pyopenssl/blob/main/LICENSE,Python wrapper module for openssl,
 pyparsing,,https://svn.code.sf.net/p/pyparsing/code/trunk/src/LICENSE,parsing library,

@@ -3,7 +3,6 @@ source "$SCRIPT_DIR/prereq.sh"
 
 if [ -z "$ENVIRONMENT_FILE" ]; then
   ENVIRONMENT_FILE="$PLATFORM_DIR/environment.yml"
-  NO_PKG_CLEAN=1
 else
   ENVIRONMENT_FILE="$PROJECT_DIR/$ENVIRONMENT_FILE"
 fi

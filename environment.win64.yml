@@ -11,6 +11,7 @@ dependencies:
   - scikit-learn==0.24.2=py38hf11a4ad_1
   - psutil==5.8.0
   - networkx==2.5.1
+  - onnx==1.11.0
   - python==3.8.10
   - pytorch==1.11.0
   - transformers==4.16.2

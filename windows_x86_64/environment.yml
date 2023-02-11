@@ -1,73 +1,78 @@
-name: null
+name: build\venv
 channels:
   - pytorch
   - conda-forge
   - defaults
 dependencies:
-  - blas=2.114=mkl
-  - blas-devel=3.9.0=14_win64_mkl
-  - ca-certificates=2022.5.18.1=h5b45459_0
+  - blas=2.116=mkl
+  - blas-devel=3.9.0=16_win64_mkl
+  - ca-certificates=2022.12.7=h5b45459_0
   - cpuonly=2.0=0
   - dataclasses=0.8=pyhc8e2a94_3
   - decorator=4.4.2=py_0
-  - filelock=3.7.0=pyhd8ed1ab_0
-  - huggingface_hub=0.6.0=pyhd8ed1ab_0
-  - intel-openmp=2022.1.0=h57928b3_3787
-  - joblib=1.1.0=pyhd8ed1ab_0
-  - libblas=3.9.0=14_win64_mkl
-  - libcblas=3.9.0=14_win64_mkl
-  - liblapack=3.9.0=14_win64_mkl
-  - liblapacke=3.9.0=14_win64_mkl
-  - libuv=1.43.0=h8ffe710_0
+  - filelock=3.9.0=pyhd8ed1ab_0
+  - huggingface_hub=0.12.0=pyhd8ed1ab_0
+  - intel-openmp=2023.0.0=h57928b3_25922
+  - joblib=1.2.0=pyhd8ed1ab_0
+  - libblas=3.9.0=16_win64_mkl
+  - libcblas=3.9.0=16_win64_mkl
+  - libhwloc=2.8.0=h039e092_1
+  - libiconv=1.17=h8ffe710_0
+  - liblapack=3.9.0=16_win64_mkl
+  - liblapacke=3.9.0=16_win64_mkl
+  - libprotobuf=3.20.2=h12be248_0
+  - libuv=1.44.2=h8ffe710_0
+  - libxml2=2.10.3=hc3477c8_0
+  - libzlib=1.2.13=hcfcfb64_4
   - m2w64-gcc-libgfortran=5.3.0=6
   - m2w64-gcc-libs=5.3.0=7
   - m2w64-gcc-libs-core=5.3.0=7
   - m2w64-gmp=6.1.0=2
   - m2w64-libwinpthread-git=5.0.0.4634.697f757=2
-  - mkl=2022.0.0=h0e2418a_796
-  - mkl-devel=2022.0.0=h57928b3_797
-  - mkl-include=2022.0.0=h0e2418a_796
+  - mkl=2022.1.0=h6a75c08_874
+  - mkl-devel=2022.1.0=h57928b3_875
+  - mkl-include=2022.1.0=h6a75c08_874
   - msys2-conda-epoch=20160418=1
   - networkx=2.5.1=pyhd8ed1ab_0
   - numpy=1.20.3=py38hec0b029_2
-  - openssl=1.1.1o=h8ffe710_0
-  - packaging=21.3=pyhd8ed1ab_0
+  - onnx=1.11.0=py38h5c4532e_2
+  - openssl=1.1.1t=hcfcfb64_0
+  - packaging=23.0=pyhd8ed1ab_0
   - pandas=1.0.5=py38he6e81aa_0
-  - patsy=0.5.2=pyhd8ed1ab_0
+  - patsy=0.5.3=pyhd8ed1ab_0
+  - protobuf=3.20.2=py38haa244fe_1
   - psutil=5.8.0=py38h294d835_2
+  - pthreads-win32=2.9.1=hfa6e2cd_3
   - pydantic=1.9.0=py38h294d835_1
-  - pyopenssl=22.0.0=pyhd8ed1ab_0
-  - pyparsing=3.0.9=pyhd8ed1ab_0
+  - pyopenssl=23.0.0=pyhd8ed1ab_0
   - python=3.8.10=h7840368_2_cpython
   - python-dateutil=2.8.2=pyhd8ed1ab_0
-  - python_abi=3.8=2_cp38
+  - python_abi=3.8=3_cp38
   - pytorch=1.11.0=py3.8_cpu_0
   - pytorch-mutex=1.0=cpu
-  - pytz=2022.1=pyhd8ed1ab_0
-  - pyyaml=6.0=py38h294d835_4
-  - regex=2022.4.24=py38h294d835_0
-  - requests=2.27.1=pyhd8ed1ab_0
+  - pytz=2022.7.1=pyhd8ed1ab_0
+  - pyyaml=6.0=py38h91455d4_5
+  - regex=2022.10.31=py38h91455d4_0
+  - requests=2.28.2=pyhd8ed1ab_0
   - sacremoses=0.0.53=pyhd8ed1ab_0
   - scikit-learn=0.24.2=py38hf11a4ad_1
   - scipy=1.6.2=py38he847743_0
   - setuptools=59.8.0=py38haa244fe_1
   - statsmodels=0.12.2=py38h6f4d8f0_0
-  - tbb=2021.5.0=h2d74725_1
+  - tbb=2021.7.0=h91493d7_1
   - threadpoolctl=3.1.0=pyh8a188c0_0
   - tokenizers=0.10.3=py38h291c280_1
-  - tqdm=4.64.0=pyhd8ed1ab_0
+  - tqdm=4.64.1=pyhd8ed1ab_0
   - transformers=4.16.2=pyhd8ed1ab_0
-  - typing-extensions=4.2.0=hd8ed1ab_1
-  - typing_extensions=4.2.0=pyha770c72_1
-  - ucrt=10.0.20348.0=h57928b3_0
-  - vc=14.2=hb210afc_6
-  - vs2015_runtime=14.29.30037=h902a5da_6
+  - typing-extensions=4.4.0=hd8ed1ab_0
+  - typing_extensions=4.4.0=pyha770c72_0
+  - ucrt=10.0.22621.0=h57928b3_0
+  - vc=14.3=hb6edc58_10
+  - vs2015_runtime=14.34.31931=h4c5c07a_10
   - watchdog=2.1.7=py38haa244fe_1
-  - wheel=0.37.1=pyhd8ed1ab_0
-  - win_inet_pton=1.1.0=py38haa244fe_4
+  - wheel=0.38.4=pyhd8ed1ab_0
+  - win_inet_pton=1.1.0=pyhd8ed1ab_6
   - yaml=0.2.5=h8ffe710_2
   - pip:
-    - flatbuffers==2.0
-    - onnxruntime==1.10.0
-    - protobuf==3.20.1
-prefix: C:\Users\Administrator\Splunk-python-for-scientific-computing\build\windows_x86_64\env
+      - flatbuffers==23.1.21
+      - onnxruntime==1.10.0

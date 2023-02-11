@@ -97,6 +97,4 @@ rm -f "$DIST_BIN_BUILD_DIR/python.bak"
 echo "[INFO] building distribution manifest"
 (cd "$DIST_BUILD_DIR" && find . -type f,d,l | sed 's/^\.\///g' > "$DIST_BUILD_DIR/build.manifest")
 
-echo "[INFO] creating build tarball"
-tar czf "$APP_BUILD_DIR.tgz" -C "$BASE_BUILD_DIR" "${APP_NAME}_${PLATFORM}"
 echo "[INFO] Build Success"

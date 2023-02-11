@@ -28,12 +28,14 @@ if ! test -f "$MINICONDA_PATH"; then
 fi
 
 if [ "$OS" = "Linux" ] && [ "$ARCH" = "x86_64" ]; then
-  MINICONDA_CHECKSUM=$(sha256sum < "$MINICONDA_PATH" | awk '{print $1}')
   TARGET_CHECKSUM="$LINUX_X86_64_SHA256"
 elif [ "$OS" = "Darwin" ] && [ "$ARCH" = "x86_64" ]; then
-  MINICONDA_CHECKSUM=$(sha256sum < "$MINICONDA_PATH" | awk '{print $1}')
   TARGET_CHECKSUM="$DARWIN_X86_64_SHA256"
+elif [ "$OS" = "Darwin" ] && [ "$ARCH" = "arm64" ]; then
+  TARGET_CHECKSUM="$DARWIN_ARM64_SHA256"
 fi
+
+MINICONDA_CHECKSUM=$(sha256sum < "$MINICONDA_PATH" | awk '{print $1}')
 
 if [ "$MINICONDA_CHECKSUM" != "$TARGET_CHECKSUM" ]; then
   echo "[ERROR] checksum of $MINICONDA_PATH is $MINICONDA_CHECKSUM, does not match $TARGET_CHECKSUM, please check file integrity"
