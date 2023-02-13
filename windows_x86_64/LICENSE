@@ -210,19 +210,16 @@ cpuonly                       	                                    	https://anac
 dataclasses                   	Apache-2.0                          	https://github.com/ericvsmith/dataclasses/blob/master/LICENSE.txt
 decorator                     	BSD 2-Clause                        	https://github.com/micheles/decorator/blob/master/LICENSE.txt
 filelock                      	Unlicense                           	https://github.com/tox-dev/py-filelock/blob/main/LICENSE
-flatbuffers                   	                                    	
+flatbuffers                   	Apache 2.0                          	https://github.com/google/flatbuffers/blob/master/LICENSE
 huggingface_hub               	Apache-2.0                          	https://github.com/huggingface/huggingface_hub/blob/main/LICENSE
 intel-openmp                  	BSD 3-clause                        	https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10
 joblib                        	BSD-3-Clause                        	https://github.com/joblib/joblib/blob/master/LICENSE.txt
 libblas                       	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libcblas                      	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
-libhwloc                      	BSD-3-Clause                        	
-libiconv                      	GPL and LGPL                        	
 liblapack                     	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt
 liblapacke                    	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt
 libprotobuf                   	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
 libuv                         	MIT                                 	https://github.com/libuv/libuv/blob/v1.x/LICENSE
-libxml2                       	MIT                                 	
 libzlib                       	Zlib                                	http://zlib.net/zlib_license.html
 m2w64-gcc-libgfortran         	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 m2w64-gcc-libs                	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
@@ -235,7 +232,7 @@ mkl-include                   	Proprietary Intel                   	https://soft
 msys2-conda-epoch             	                                    	https://anaconda.org/conda-forge/msys2-conda-epoch
 networkx                      	BSD 3-clause                        	https://github.com/networkx/networkx/blob/master/LICENSE.txt
 numpy                         	BSD 3-clause                        	https://github.com/numpy/numpy/blob/master/LICENSE.txt
-onnx                          	MIT                                 	
+onnx                          	Apache-2.0                          	https://github.com/onnx/onnx/blob/main/LICENSE
 onnxruntime                   	MIT                                 	https://github.com/microsoft/onnxruntime/blob/master/LICENSE
 openssl                       	Apache-2.0                          	https://github.com/openssl/openssl/blob/master/LICENSE.txt
 packaging                     	Apache-2.0                          	https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD
@@ -243,7 +240,6 @@ pandas                        	BSD 3-clause                        	https://gith
 patsy                         	BSD 2-clause/PSF                    	https://github.com/pydata/patsy/blob/master/LICENSE.txt
 protobuf                      	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
 psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
-pthreads-win32                	LGPL 2                              	
 pydantic                      	MIT                                 	https://github.com/samuelcolvin/pydantic/blob/master/LICENSE
 pyopenssl                     	Apache-2.0                          	https://github.com/pyca/pyopenssl/blob/main/LICENSE
 python                        	PSF                                 	https://docs.python.org/3/license.html

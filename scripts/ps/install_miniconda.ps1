@@ -17,7 +17,8 @@ if (-Not (Test-Path $MINICONDA_PATH)) {
     Invoke-WebRequest -Uri $url -OutFile "$MINICONDA_PATH"
 }
 
-$WINDOWS_SHA256 = (Get-FileHash $MINICONDA_PATH -Algorithm SHA256).Hash.ToLower()
+$env:PSModulePath = "${PSHOME}/Modules"
+$WINDOWS_SHA256 = $(Get-FileHash $MINICONDA_PATH -Algorithm SHA256).Hash.ToLower()
 if ($WINDOWS_SHA256 -ne $WINDOWS_X86_64_SHA256) {
     throw "$MINICONDA_PATH MD5 is $WINDOWS_SHA256, and does not match $WINDOWS_X86_64_SHA256"
 }

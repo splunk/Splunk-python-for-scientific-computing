@@ -186,7 +186,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright 2020-2022 Splunk Inc.
+   Copyright 2020-2023 Splunk Inc.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -230,6 +230,7 @@ mkl-include                   	Proprietary Intel                   	https://soft
 ncurses                       	free                                	https://invisible-island.net/ncurses/ncurses-license.html
 networkx                      	BSD 3-clause                        	https://github.com/networkx/networkx/blob/master/LICENSE.txt
 numpy                         	BSD 3-clause                        	https://github.com/numpy/numpy/blob/master/LICENSE.txt
+onnx                          	Apache-2.0                          	https://github.com/onnx/onnx/blob/main/LICENSE
 onnxruntime                   	MIT                                 	https://github.com/microsoft/onnxruntime/blob/master/LICENSE
 openssl                       	Apache-2.0                          	https://github.com/openssl/openssl/blob/master/LICENSE.txt
 packaging                     	Apache-2.0                          	https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD
@@ -239,7 +240,6 @@ protobuf                      	BSD-3-Clause                        	https://gith
 psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
 pydantic                      	MIT                                 	https://github.com/samuelcolvin/pydantic/blob/master/LICENSE
 pyopenssl                     	Apache-2.0                          	https://github.com/pyca/pyopenssl/blob/main/LICENSE
-pyparsing                     	MIT                                 	https://svn.code.sf.net/p/pyparsing/code/trunk/src/LICENSE
 python                        	PSF                                 	https://docs.python.org/3/license.html
 python-dateutil               	Apache 2.0                          	https://github.com/dateutil/dateutil/blob/master/LICENSE
 python-flatbuffers            	Apache-2.0                          	https://github.com/google/flatbuffers/blob/master/LICENSE.txt

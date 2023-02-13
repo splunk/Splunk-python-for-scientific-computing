@@ -55,8 +55,19 @@ def pstrip(line, prefix):
 class PSCManage(GeneratingCommand):
 
     def generate(self):
+        capability_found = False
+        user = self.service.users[self._metadata.searchinfo.username]
+        roles = user.roles
+        for role in roles:
+            if 'psc_app_cleanup' in self.service.roles[role].capabilities:
+                capability_found = True
+        if not capability_found:
+            self.write_error("Current user does not have permission to run this command")
+            exit(1)
+
         if len(self.fieldnames) < 0:
             self.write_error("Please specify an option, available options: cleanup, disable, enable")
+            exit(1)
         else:
             manage_option = self.fieldnames[0]
             if manage_option == 'cleanup':

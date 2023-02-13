@@ -13,8 +13,7 @@ dependencies:
   - dataclasses=0.8=pyhc8e2a94_3
   - decorator=4.4.2=py_0
   - filelock=3.9.0=pyhd8ed1ab_0
-  - huggingface_hub=0.11.1=pyhd8ed1ab_0
-  - icu=70.1=h27087fc_0
+  - huggingface_hub=0.12.0=pyhd8ed1ab_0
   - joblib=1.2.0=pyhd8ed1ab_0
   - libblas=3.9.0=16_linux64_mkl
   - libcblas=3.9.0=16_linux64_mkl
@@ -22,15 +21,11 @@ dependencies:
   - libgcc-ng=12.2.0=h65d4601_19
   - libgfortran-ng=12.2.0=h69a702a_19
   - libgfortran5=12.2.0=h337968e_19
-  - libhwloc=2.8.0=h32351e8_1
-  - libiconv=1.17=h166bdaf_0
   - liblapack=3.9.0=16_linux64_mkl
   - liblapacke=3.9.0=16_linux64_mkl
   - libprotobuf=3.19.4=h780b84a_0
-  - libsqlite=3.40.0=h753d276_0
   - libstdcxx-ng=12.2.0=h46fd767_19
   - libuv=1.44.2=h166bdaf_0
-  - libxml2=2.10.3=h7463322_0
   - libzlib=1.2.13=h166bdaf_4
   - llvm-openmp=15.0.7=h0cdce71_0
   - mkl=2022.1.0=h84fe81f_915
@@ -42,7 +37,7 @@ dependencies:
   - onnxruntime=1.10.0=py38h46f70af_4
   - openssl=1.1.1s=h0b41bf4_1
   - packaging=23.0=pyhd8ed1ab_0
-  - pandas=1.0.5=py38hcb8c335_0
+  - pandas=1.1.5=py38h51da96c_0
   - patsy=0.5.3=pyhd8ed1ab_0
   - protobuf=3.19.4=py38h709712a_0
   - psutil=5.8.0=py38h497a2fe_2
@@ -50,7 +45,7 @@ dependencies:
   - pyopenssl=23.0.0=pyhd8ed1ab_0
   - python=3.8.10=hb7a2778_2_cpython
   - python-dateutil=2.8.2=pyhd8ed1ab_0
-  - python-flatbuffers=23.1.4=pyhd8ed1ab_0
+  - python-flatbuffers=23.1.21=pyhd8ed1ab_0
   - python_abi=3.8=3_cp38
   - pytorch=1.11.0=py3.8_cpu_0
   - pytorch-mutex=1.0=cpu
@@ -63,7 +58,7 @@ dependencies:
   - scipy=1.6.2=py38h7b17777_0
   - setuptools=59.8.0=py38h578d9bd_1
   - statsmodels=0.12.2=py38h6c62de6_0
-  - tbb=2021.7.0=h924138e_1
+  - tbb=2021.5.0=h924138e_5
   - threadpoolctl=3.1.0=pyh8a188c0_0
   - tokenizers=0.10.3=py38hb63a372_1
   - tqdm=4.64.1=pyhd8ed1ab_0

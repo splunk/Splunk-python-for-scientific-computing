@@ -217,15 +217,14 @@ libffi                        	libffi license                      	https://gith
 libgfortran                   	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran5                  	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 liblapack                     	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt
-libopenblas                   	BSD-3-Clause                        	
+libopenblas                   	BSD 3-clause                        	https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE
 libprotobuf                   	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
-libsqlite                     	Unlicense                           	
 libzlib                       	Zlib                                	http://zlib.net/zlib_license.html
 llvm-openmp                   	MIT                                 	https://llvm.org/docs/DeveloperPolicy.html#license
 ncurses                       	free                                	https://invisible-island.net/ncurses/ncurses-license.html
 networkx                      	BSD 3-clause                        	https://github.com/networkx/networkx/blob/master/LICENSE.txt
 numpy                         	BSD 3-clause                        	https://github.com/numpy/numpy/blob/master/LICENSE.txt
-onnx                          	MIT                                 	
+onnx                          	Apache-2.0                          	https://github.com/onnx/onnx/blob/main/LICENSE
 onnxruntime                   	MIT                                 	https://github.com/microsoft/onnxruntime/blob/master/LICENSE
 openssl                       	Apache-2.0                          	https://github.com/openssl/openssl/blob/master/LICENSE.txt
 packaging                     	Apache-2.0                          	https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD
@@ -249,7 +248,7 @@ sacremoses                    	MIT                                 	https://gith
 scikit-learn                  	New BSD License                     	https://github.com/scikit-learn/scikit-learn/blob/master/COPYING
 scipy                         	BSD 3-clause                        	https://github.com/scipy/scipy/blob/master/LICENSE.txt
 setuptools                    	MIT                                 	https://github.com/pypa/setuptools/blob/master/LICENSE
-sleef                         	BSL-1.0                             	
+sleef                         	BSL 1.0                             	https://github.com/shibatch/sleef/blob/master/LICENSE.txt
 statsmodels                   	BSD 3-clause                        	https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt
 threadpoolctl                 	BSD 3-clause                        	https://github.com/joblib/threadpoolctl/blob/master/LICENSE
 tokenizers                    	Apache-2.0                          	https://github.com/huggingface/tokenizers/blob/main/LICENSE

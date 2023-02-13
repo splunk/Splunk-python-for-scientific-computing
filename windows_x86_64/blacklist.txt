@@ -1,13 +1,11 @@
 sqlite
 libsqlite
-pip
 click
 six
 colorama
 brotlipy
 urllib3
 pycparser
-certifi
 cryptography
 idna
 pysocks

@@ -13,15 +13,14 @@ libffi,3.4.2,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable
 libgfortran,5.0.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran-5.0.0-11_3_0_hd922786_27,conda-forge,11_3_0_hd922786_27,27
 libgfortran5,11.3.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran5-11.3.0-hdaf2cc0_27,conda-forge,hdaf2cc0_27,27
 liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapack-3.9.0-16_osxarm64_openblas,conda-forge,16_osxarm64_openblas,16
-libopenblas,0.3.21,BSD-3-Clause,,,,libopenblas-0.3.21-openmp_hc731615_3,conda-forge,openmp_hc731615_3,3
+libopenblas,0.3.21,BSD-3-Clause,https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE,An optimized BLAS library based on GotoBLAS2 1.13 BSD version,,libopenblas-0.3.21-openmp_hc731615_3,conda-forge,openmp_hc731615_3,3
 libprotobuf,3.19.4,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler,libprotobuf-3.19.4-hccf11d3_0,conda-forge,hccf11d3_0,0
-libsqlite,3.40.0,Unlicense,,,,libsqlite-3.40.0-h76d750c_0,conda-forge,h76d750c_0,0
 libzlib,1.2.13,Zlib,http://zlib.net/zlib_license.html,compression library,dependency of python,libzlib-1.2.13-h03a7124_4,conda-forge,h03a7124_4,4
 llvm-openmp,15.0.7,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM openmp runtime,,llvm-openmp-15.0.7-h7cfbb63_0,conda-forge,h7cfbb63_0,0
 ncurses,6.3,X11 AND BSD-3-Clause,https://invisible-island.net/ncurses/ncurses-license.html,Library for text-based user interfaces,,ncurses-6.3-h07bb92c_1,conda-forge,h07bb92c_1,1
 networkx,2.5.1,BSD-3-Clause,https://github.com/networkx/networkx/blob/master/LICENSE.txt,Python package for creating and manipulating complex networks,,networkx-2.5.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 numpy,1.20.3,BSD-3-Clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,,numpy-1.20.3-py38he594345_2,conda-forge,py38he594345_2,2
-onnx,1.11.0,MIT,,,,onnx-1.11.0-py38h2060a4d_0,conda-forge,py38h2060a4d_0,0
+onnx,1.11.0,MIT,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.11.0-py38h2060a4d_0,conda-forge,py38h2060a4d_0,0
 onnxruntime,1.10.0,MIT,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform, high performance ML inferencing and training accelerator,onnxruntime-1.10.0-py38h579d7e2_4,conda-forge,py38h579d7e2_4,4
 openssl,1.1.1s,OpenSSL,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-1.1.1s-h03a7124_1,conda-forge,h03a7124_1,1
 packaging,23.0,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-23.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
@@ -45,7 +44,7 @@ sacremoses,0.0.53,LGPL-2.1-or-later,https://github.com/alvations/sacremoses/blob
 scikit-learn,0.24.2,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-0.24.2-py38hfeda2c9_1,conda-forge,py38hfeda2c9_1,1
 scipy,1.6.2,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.6.2-py38hd0c9ec0_0,conda-forge,py38hd0c9ec0_0,0
 setuptools,59.8.0,MIT,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-59.8.0-py38h10201cd_1,conda-forge,py38h10201cd_1,1
-sleef,3.5.1,BSL-1.0,,,,sleef-3.5.1-h156473d_2,conda-forge,h156473d_2,2
+sleef,3.5.1,BSL-1.0,https://github.com/shibatch/sleef/blob/master/LICENSE.txt,SIMD library for evaluating elementary functions,,sleef-3.5.1-h156473d_2,conda-forge,h156473d_2,2
 statsmodels,0.12.2,BSD-3-Clause,https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt,statistics and math library package,,statsmodels-0.12.2-py38h691f20f_0,conda-forge,py38h691f20f_0,0
 threadpoolctl,3.1.0,BSD-3-Clause,https://github.com/joblib/threadpoolctl/blob/master/LICENSE,Python helpers to control the threadpools of native libraries,,threadpoolctl-3.1.0-pyh8a188c0_0,conda-forge,pyh8a188c0_0,0
 tokenizers,0.10.3,Apache-2.0,https://github.com/huggingface/tokenizers/blob/main/LICENSE,tokenizers for machine learning,,tokenizers-0.10.3-py38he82c38c_1,conda-forge,py38he82c38c_1,1

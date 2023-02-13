@@ -14,11 +14,17 @@ $script:MANIFEST_FILE="app.manifest.windows"
 $script:7Z = "C:\Program Files\7-Zip\7z.exe"
 $script:PACK_TAR_FILE_PATH = Join-Path $BASE_BUILD_DIR "miniconda-repack.tar"
 
+# remove pip and certifi from final build because we don't need them
+# but we need them in `windows_x86_64/environment.yml` file for fossa to work
+$env:Path += ";$($MINICONDA_BUILD_DIR);$(Join-Path $MINICONDA_BUILD_DIR "Scripts");$(Join-Path $MINICONDA_BUILD_DIR "Library\bin")"
+& conda remove -p $VENV_BUILD_DIR -y --force pip certifi
+
 Remove-Item -Recurse $APP_BUILD_DIR -ErrorAction Ignore
-$DIST_VERSION_BUILD_DIR = Join-Path $DIST_BUILD_DIR $env:VERSION.replace('.', '_')
+#$DIST_VERSION_BUILD_DIR = Join-Path $DIST_BUILD_DIR $env:VERSION.replace('.', '_')
+$DIST_VERSION_BUILD_DIR = $DIST_BUILD_DIR
 $DIST_BIN_BUILD_DIR= Join-Path $DIST_BUILD_DIR "bin"
 New-Item $DIST_VERSION_BUILD_DIR -ItemType Directory
-New-Item $DIST_BIN_BUILD_DIR -ItemType Directory
+#New-Item $DIST_BIN_BUILD_DIR -ItemType Directory
 Write-Output "[INFO] extracting conda-pack archive"
 & "$7z" x "$PACK_FILE_PATH" -o"$BASE_BUILD_DIR" -y
 & "$7z" x "$PACK_TAR_FILE_PATH" -o"$DIST_VERSION_BUILD_DIR" -y
@@ -49,11 +55,11 @@ foreach ($ITEM in $TO_DELETE_LIST) {
 Copy-Item -Path $(Join-Path $PROJECT_DIR "package\*") -Destination $APP_BUILD_DIR -Recurse -Force
 Copy-Item -Path $(Join-Path $PROJECT_DIR $(Join-Path $PLATFORM "LICENSE")) -Destination $(Join-Path $APP_BUILD_DIR "LICENSE") -Force
 Copy-Item -Path $(Join-Path $PROJECT_DIR $(Join-Path "resources" $MANIFEST_FILE)) -Destination $(Join-Path $APP_BUILD_DIR "app.manifest") -Force
-Copy-Item -Path $(Join-Path $PROJECT_DIR $(Join-Path "shims" "python.bat")) -Destination $(Join-Path $DIST_BIN_BUILD_DIR "python.bat") -Force
+#Copy-Item -Path $(Join-Path $PROJECT_DIR $(Join-Path "shims" "python.bat")) -Destination $(Join-Path $DIST_BIN_BUILD_DIR "python.bat") -Force
 
 ## Update conf files
-(Get-Content -Path "$DIST_BIN_BUILD_DIR\python.bat" | ForEach-Object { $_ -replace "@app_id@", "${APP_NAME}_${PLATFORM}" }) | Set-Content -Path "$DIST_BIN_BUILD_DIR\python.bat"
-(Get-Content -Path "$DIST_BIN_BUILD_DIR\python.bat" | ForEach-Object { $_ -replace "@version_dir@", $env:VERSION.replace('.', '_') }) | Set-Content -Path "$DIST_BIN_BUILD_DIR\python.bat"
+#(Get-Content -Path "$DIST_BIN_BUILD_DIR\python.bat" | ForEach-Object { $_ -replace "@app_id@", "${APP_NAME}_${PLATFORM}" }) | Set-Content -Path "$DIST_BIN_BUILD_DIR\python.bat"
+#(Get-Content -Path "$DIST_BIN_BUILD_DIR\python.bat" | ForEach-Object { $_ -replace "@version_dir@", $env:VERSION.replace('.', '_') }) | Set-Content -Path "$DIST_BIN_BUILD_DIR\python.bat"
 (Get-Content -Path "$APP_BUILD_DIR\default\app.conf" | ForEach-Object { $_ -replace "@app_id@", "${APP_NAME}_${PLATFORM}" }) | Set-Content -Path "$APP_BUILD_DIR\default\app.conf"
 (Get-Content -Path "$APP_BUILD_DIR\default\app.conf" | ForEach-Object { $_ -replace "@version@", "$env:VERSION" }) | Set-Content -Path "$APP_BUILD_DIR\default\app.conf"
 (Get-Content -Path "$APP_BUILD_DIR\default\app.conf" | ForEach-Object { $_ -replace "@build@", "$env:BUILD" }) | Set-Content -Path "$APP_BUILD_DIR\default\app.conf"

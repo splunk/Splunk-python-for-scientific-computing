@@ -10,33 +10,52 @@ This repo builds PSC for 3 platforms:
 * Linux 64-bit: <https://splunkbase.splunk.com/app/2882/>
 * Windows 64-bit: <https://splunkbase.splunk.com/app/2883/>
 
-## Building your own Python for Scientific Computing
+## Building Python for Scientific Computing app
 
-1. Update `packages.txt` in the repo root dir
-    * Always specify your `python` version, keep major version consistent with
-      the target splunk platform. e.g. Splunk 8.0.x ships with python 3.7.x,
-      so put `python==3.7.*` in there or the specific version you need
+1. Update `environment.nix.yml` or `environment.win64.yml` in the repo root dir
     * Fix the major version, leave the minor version flexible, i.e. `pandas==0.25.*`
-    * There's another `packages.txt` inside of each platform's folder, which act
+    * There's another `environment.yml` inside of each platform's folder, which act
       as the lock file to lockdown the specific versions of all dependencies
       (like `pip freeze`).
-2. Run freeze task of the build scripts for each platform and push the updated versions of platform/packages.txt to the repo.
-    * There are two build scripts to be used on different platforms
-        * `repack.sh` for Linux and OSX
-        * `repack.ps1` for Windows
-    * run `bash repack.sh freeze`
-3. If there's any package _*ADDED*_ to existing `packages.txt`, we can run
-   `bash repack.sh analyze` to inspect the package dependency tree
-4. Optional, check licenses, *if you are redistributing this app*, you need
-   to include the proper licenses of the package redistributed, run
-   `bash repack.sh license` to generate a license file
-    * Note you may need to update `license_db.csv` if you included a new package
-5. Update the requirements.txt's content with the linux_x86_64/packages.txt for prodsec-review scans.
-6. Finally, when the platform specific `packages.txt` looks good, run
-   `bash repack.sh build` to build the Python for Scientific Computing app
-7. Copy it to your `$SPLUNK_HOME/etc/apps` folder
-    * Note, due to the size of this app, installing it via web
-      installer/deployer may fail with a timeout error
+2. Run freeze task of the build scripts for each platform.
+    ```
+    make freeze
+    ```
+   the command should update the corresponding `<platform>/environment.yml` in the repo.
+3. If there is any package that is not needed, add them to `<platform>/blacklist.txt`,
+    and run the last step again, so the platform environment file is updated
+4. Build PSC, run
+    ```
+    make build
+    ```
+    this will produce a build under `build/Splunk_SA_Scientific_Python_<platform>`
+5. Package PSC, run
+    ```
+    make dist
+    ```
+    this will produce a tarball of the app in `build` directory
+
+## Analyzing the dependency tree
+If there's any package changes in the environment file, we can run
+```
+make analyze
+```
+to inspect the package dependency tree
+
+## Software license list
+To check licenses, *if you are redistributing this app*, you need
+to include the proper licenses of the package redistributed packages, run
+```
+make license
+```
+to update the LICENSE file and `license_report.csv` file in the platform directory
+* Note you may need to update `tools/license_extra.csv` if you included a new package
+
+## Installing PSC
+Copy it to your `$SPLUNK_HOME/etc/apps` folder
+* Note, due to the size of this app, installing it via web
+  installer/deployer may fail with a timeout error, can try to increase the timeout in
+  `web.conf` to resolve this.
 
 ## Using PSC in dev mode
 You may want to work in PSC environment for development purposes. **For this step, you need to have conda installed on 
@@ -61,20 +80,4 @@ under `$SPLUNK_HOME/etc/apps` location to link MLTK with your custom PSC or uplo
 you refresh MLTK, your changes should be picked automatically.
 6. To deactivate the PSC environment, run `conda deactivate` from the terminal.
 
-## Note on packaging
-There may be unwanted content in the build that will fail the SplunkBase App verification, e.g. hidden files. We can use Splunk Package Toolkit CLI to facilitate the packaging process.
 
-```
-# Get Splunk
-wget http://releases.splunk.com/released_builds/8.0.5/splunk/osx/splunk-8.0.5-a1a6394cc5ae-darwin-64.tgz
-tar -xf splunk-8.0.5-a1a6394cc5ae-darwin-64.tgz
-
-# Run package command on the app folder
-./splunk/bin/slim package ${APPDIR}_${PLATFORM}
-```
-
-## Releasing a new version of Python for Scientific Computing
-If you are releasing a new PSC, you need follow these steps before running the repack scripts: 
-1. Edit the value of `VERSION` variable at the top of the repack scripts.
-2. Set the values of `MINICONDA_VERSION`, `LINUX_MD5`, and `OSX_MD5` variables to the appropriate value. Note that for OSX we use the `.sh` installer and not the `.pkg` installer. For the list of available miniconda versions, their respective package names, and MD5 hash, see https://repo.anaconda.com/miniconda/.
-3. Update the README file under `package` directory with the correct version of included packages.

@@ -1,2 +1,2 @@
 @echo off
-%~dp0\..\@version_dir\python %*
+%~dp0\..\@version_dir@\python %*

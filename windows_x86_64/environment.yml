@@ -7,6 +7,7 @@ dependencies:
   - blas=2.116=mkl
   - blas-devel=3.9.0=16_win64_mkl
   - ca-certificates=2022.12.7=h5b45459_0
+  - certifi=2022.12.7=pyhd8ed1ab_0
   - cpuonly=2.0=0
   - dataclasses=0.8=pyhc8e2a94_3
   - decorator=4.4.2=py_0
@@ -16,13 +17,10 @@ dependencies:
   - joblib=1.2.0=pyhd8ed1ab_0
   - libblas=3.9.0=16_win64_mkl
   - libcblas=3.9.0=16_win64_mkl
-  - libhwloc=2.8.0=h039e092_1
-  - libiconv=1.17=h8ffe710_0
   - liblapack=3.9.0=16_win64_mkl
   - liblapacke=3.9.0=16_win64_mkl
   - libprotobuf=3.20.2=h12be248_0
   - libuv=1.44.2=h8ffe710_0
-  - libxml2=2.10.3=hc3477c8_0
   - libzlib=1.2.13=hcfcfb64_4
   - m2w64-gcc-libgfortran=5.3.0=6
   - m2w64-gcc-libs=5.3.0=7
@@ -40,9 +38,9 @@ dependencies:
   - packaging=23.0=pyhd8ed1ab_0
   - pandas=1.0.5=py38he6e81aa_0
   - patsy=0.5.3=pyhd8ed1ab_0
+  - pip=23.0=pyhd8ed1ab_0
   - protobuf=3.20.2=py38haa244fe_1
   - psutil=5.8.0=py38h294d835_2
-  - pthreads-win32=2.9.1=hfa6e2cd_3
   - pydantic=1.9.0=py38h294d835_1
   - pyopenssl=23.0.0=pyhd8ed1ab_0
   - python=3.8.10=h7840368_2_cpython
@@ -59,7 +57,7 @@ dependencies:
   - scipy=1.6.2=py38he847743_0
   - setuptools=59.8.0=py38haa244fe_1
   - statsmodels=0.12.2=py38h6f4d8f0_0
-  - tbb=2021.7.0=h91493d7_1
+  - tbb=2021.5.0=h91493d7_5
   - threadpoolctl=3.1.0=pyh8a188c0_0
   - tokenizers=0.10.3=py38h291c280_1
   - tqdm=4.64.1=pyhd8ed1ab_0

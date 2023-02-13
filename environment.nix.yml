@@ -13,6 +13,7 @@ dependencies:
   - networkx==2.5.1
   - python==3.8.10
   - pytorch==1.11.0
+  - tbb==2021.5
   - transformers==4.16.2
   - cpuonly=2.0
   - onnx==1.11.0
