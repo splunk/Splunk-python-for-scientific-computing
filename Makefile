@@ -35,7 +35,11 @@ ifneq (,$(filter freeze,$(MAKECMDGOALS)))
 	ifeq ($(OS),Windows_NT)
 		export ENVIRONMENT_FILE = environment.win64.yml
 	else
-		export ENVIRONMENT_FILE = environment.nix.yml
+		ifeq ($(PLATFORM), Darwin_arm64)
+			export ENVIRONMENT_FILE = environment.darwin_arm64.yml
+		else
+			export ENVIRONMENT_FILE = environment.nix.yml
+		endif
 	endif
 else
 	export ENVIRONMENT_FILE = 

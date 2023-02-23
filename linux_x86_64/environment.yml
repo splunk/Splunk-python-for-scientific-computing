@@ -13,7 +13,7 @@ dependencies:
   - dataclasses=0.8=pyhc8e2a94_3
   - decorator=4.4.2=py_0
   - filelock=3.9.0=pyhd8ed1ab_0
-  - huggingface_hub=0.12.0=pyhd8ed1ab_0
+  - huggingface_hub=0.12.1=pyhd8ed1ab_0
   - joblib=1.2.0=pyhd8ed1ab_0
   - libblas=3.9.0=16_linux64_mkl
   - libcblas=3.9.0=16_linux64_mkl
@@ -35,9 +35,9 @@ dependencies:
   - numpy=1.20.3=py38h8246c76_2
   - onnx=1.11.0=py38h64525a8_0
   - onnxruntime=1.10.0=py38h46f70af_4
-  - openssl=1.1.1s=h0b41bf4_1
+  - openssl=1.1.1t=h0b41bf4_0
   - packaging=23.0=pyhd8ed1ab_0
-  - pandas=1.1.5=py38h51da96c_0
+  - pandas=1.0.5=py38hcb8c335_0
   - patsy=0.5.3=pyhd8ed1ab_0
   - protobuf=3.19.4=py38h709712a_0
   - psutil=5.8.0=py38h497a2fe_2
