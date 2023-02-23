@@ -11,14 +11,14 @@ dependencies:
   - dataclasses=0.8=pyhc8e2a94_3
   - decorator=4.4.2=py_0
   - filelock=3.9.0=pyhd8ed1ab_0
-  - huggingface_hub=0.12.0=pyhd8ed1ab_0
+  - huggingface_hub=0.12.1=pyhd8ed1ab_0
   - joblib=1.2.0=pyhd8ed1ab_0
   - libblas=3.9.0=16_osx64_mkl
   - libcblas=3.9.0=16_osx64_mkl
   - libcxx=14.0.6=hccf4f1f_0
   - libffi=3.3=h046ec9c_2
-  - libgfortran=5.0.0=11_3_0_h97931a8_27
-  - libgfortran5=11.3.0=h082f757_27
+  - libgfortran=5.0.0=10_4_0_h97931a8_28
+  - libgfortran5=11.3.0=h082f757_28
   - liblapack=3.9.0=16_osx64_mkl
   - liblapacke=3.9.0=16_osx64_mkl
   - libprotobuf=3.19.4=hcf210ce_0
@@ -35,7 +35,7 @@ dependencies:
   - onnxruntime=1.10.0=py38hfe79f92_4
   - openssl=1.1.1t=hfd90126_0
   - packaging=23.0=pyhd8ed1ab_0
-  - pandas=1.1.5=py38he9f00de_0
+  - pandas=1.0.5=py38h5fc983b_0
   - patsy=0.5.3=pyhd8ed1ab_0
   - protobuf=3.19.4=py38ha048514_0
   - psutil=5.8.0=py38h96a0964_2

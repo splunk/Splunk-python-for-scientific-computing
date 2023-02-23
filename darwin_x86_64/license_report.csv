@@ -6,14 +6,14 @@ cpuonly,2.0,,https://anaconda.org/pytorch/cpuonly,meta package for selecting cpu
 dataclasses,0.8,Apache-2.0,https://github.com/ericvsmith/dataclasses/blob/master/LICENSE.txt,An implementation of PEP 557: Data Classes,,dataclasses-0.8-pyhc8e2a94_3,conda-forge,pyhc8e2a94_3,3
 decorator,4.4.2,BSD 3-Clause,https://github.com/micheles/decorator/blob/master/LICENSE.txt,python decorator library,,decorator-4.4.2-py_0,conda-forge,py_0,0
 filelock,3.9.0,Unlicense,https://github.com/tox-dev/py-filelock/blob/main/LICENSE,A platform independent file lock,,filelock-3.9.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-huggingface_hub,0.12.0,Apache-2.0,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,,huggingface_hub-0.12.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+huggingface_hub,0.12.1,Apache-2.0,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,,huggingface_hub-0.12.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 joblib,1.2.0,BSD-3-Clause,https://github.com/joblib/joblib/blob/master/LICENSE.txt,Python function as pipeline jobs,,joblib-1.2.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 libblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libblas-3.9.0-16_osx64_mkl,conda-forge,16_osx64_mkl,16
 libcblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libcblas-3.9.0-16_osx64_mkl,conda-forge,16_osx64_mkl,16
 libcxx,14.0.6,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,,libcxx-14.0.6-hccf4f1f_0,conda-forge,hccf4f1f_0,0
 libffi,3.3,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,,libffi-3.3-h046ec9c_2,conda-forge,h046ec9c_2,2
-libgfortran,5.0.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran-5.0.0-11_3_0_h97931a8_27,conda-forge,11_3_0_h97931a8_27,27
-libgfortran5,11.3.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran5-11.3.0-h082f757_27,conda-forge,h082f757_27,27
+libgfortran,5.0.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran-5.0.0-10_4_0_h97931a8_28,conda-forge,10_4_0_h97931a8_28,28
+libgfortran5,11.3.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran5-11.3.0-h082f757_28,conda-forge,h082f757_28,28
 liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapack-3.9.0-16_osx64_mkl,conda-forge,16_osx64_mkl,16
 liblapacke,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapacke-3.9.0-16_osx64_mkl,conda-forge,16_osx64_mkl,16
 libprotobuf,3.19.4,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler,libprotobuf-3.19.4-hcf210ce_0,conda-forge,hcf210ce_0,0
@@ -30,7 +30,7 @@ onnx,1.11.0,MIT,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Netwo
 onnxruntime,1.10.0,MIT,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform, high performance ML inferencing and training accelerator,onnxruntime-1.10.0-py38hfe79f92_4,conda-forge,py38hfe79f92_4,4
 openssl,1.1.1t,OpenSSL,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-1.1.1t-hfd90126_0,conda-forge,hfd90126_0,0
 packaging,23.0,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-23.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py38he9f00de_0,conda-forge,py38he9f00de_0,0
+pandas,1.0.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.0.5-py38h5fc983b_0,conda-forge,py38h5fc983b_0,0
 patsy,0.5.3,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-0.5.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 protobuf,3.19.4,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format,,protobuf-3.19.4-py38ha048514_0,conda-forge,py38ha048514_0,0
 psutil,5.8.0,BSD-3-Clause,https://github.com/giampaolo/psutil/blob/master/LICENSE,process manipuation,,psutil-5.8.0-py38h96a0964_2,conda-forge,py38h96a0964_2,2
