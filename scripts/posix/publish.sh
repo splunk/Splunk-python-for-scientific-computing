@@ -1,6 +1,8 @@
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 source "$SCRIPT_DIR/prereq.sh"
 
+set -o xtrace
+
 is_set BUILD
 is_set VERSION
 
@@ -42,8 +44,8 @@ for PLATFORM in "linux_x86_64" "darwin_x86_64" "darwin_arm64" "windows_x86_64"
 do
   APP_PLATFORM="${APP_NAME}_${PLATFORM}"
   if [ -f "$BASE_BUILD_DIR/${APP_PLATFORM}.tgz" ]; then
-    echo "publishing ${APP_PLATFORM} version ${TARGET_FOLDER}"
-    curl --progress-bar -u ${ARTIFACTORY_AUTHORIZATION} -X PUT "${REPO_URL}/${TARGET_FOLDER}/${APP_PLATFORM}.tgz" -T "$BASE_BUILD_DIR/${APP_PLATFORM}.tgz"
+    echo "publishing ${APP_PLATFORM} to ${REPO_URL}/${TARGET_FOLDER}"
+    curl -u ${ARTIFACTORY_AUTHORIZATION} -X PUT "${REPO_URL}/${TARGET_FOLDER}/${APP_PLATFORM}.tgz" -T "$BASE_BUILD_DIR/${APP_PLATFORM}.tgz"
   else
     echo "${APP_PLATFORM} build not found"
   fi
