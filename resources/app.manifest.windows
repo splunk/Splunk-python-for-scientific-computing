@@ -4,8 +4,8 @@
     "title": "Python for Scientific Computing (for Windows 64-bit)",
     "id": {
       "group": null,
-      "name": "Splunk_SA_Scientific_Python_windows_x86_64",
-      "version": "3.0.2"
+      "name": "@app_id@",
+      "version": "@version@"
     },
     "author": [
       {

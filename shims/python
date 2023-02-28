@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+TEST=$("$SPLUNK_HOME/bin/splunk" btool --app=@app_id@ app list | awk -F " = " '/^state / {print $2}')
+if [ $TEST == "disabled" ]; then
+  cat << EOF
+chunked 1.0,66,0
+{ "action": "getinfo", "finished": true, "error": "PSC Disabled"}
+
+EOF
+  exit 1
+fi
+
+exec "${SCRIPT_DIR}/../@version_dir@/bin/python" "$@"
