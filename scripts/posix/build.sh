@@ -33,6 +33,9 @@ find "$DIST_VERSION_BUILD_DIR" -iname "*.pyo" -print0 | $XARGS -0 rm
 find "$DIST_VERSION_BUILD_DIR" -iname "*.a" -print0 | $XARGS -0 rm
 find "$DIST_VERSION_BUILD_DIR" -iname "*.la" -print0 | $XARGS -0 rm
 
+find "$DIST_VERSION_BUILD_DIR" -iname "*.csv" -print0 | $XARGS -0 rm
+find "$DIST_VERSION_BUILD_DIR" -iname "*.csv.gz" -print0 | $XARGS -0 rm
+
 # Remove whl files
 find "$DIST_VERSION_BUILD_DIR" -iname "*.whl" -print0 | $XARGS -0 rm
 find "$DIST_VERSION_BUILD_DIR" -xtype l -print0 | $XARGS -0 rm
