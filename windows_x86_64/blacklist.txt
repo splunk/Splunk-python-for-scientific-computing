@@ -16,3 +16,4 @@ importlib-metadata
 zipp
 argh
 menuinst
+flit-core
