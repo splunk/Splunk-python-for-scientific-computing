@@ -64,6 +64,6 @@ Copy-Item -Path $(Join-Path $PROJECT_DIR $(Join-Path "resources" $MANIFEST_FILE)
 (Get-Content -Path "$APP_BUILD_DIR\default\app.conf" | ForEach-Object { $_ -replace "@version@", "$env:VERSION" }) | Set-Content -Path "$APP_BUILD_DIR\default\app.conf"
 (Get-Content -Path "$APP_BUILD_DIR\default\app.conf" | ForEach-Object { $_ -replace "@build@", "$env:BUILD" }) | Set-Content -Path "$APP_BUILD_DIR\default\app.conf"
 (Get-Content -Path "$APP_BUILD_DIR\app.manifest" | ForEach-Object { $_ -replace "@app_id@", "${APP_NAME}_${PLATFORM}" }) | Set-Content -Path "$APP_BUILD_DIR\app.manifest"
-(Get-Content -Path "$APP_BUILD_DIR\app.manifest" | ForEach-Object { $_ -replace "@version@", "$env:VERSION" }) | Set-Content -Path "$APP_BUILD_DIR\app.manifest"
+(Get-Content -Path "$APP_BUILD_DIR\app.manifest" | ForEach-Object { $_ -replace "@version@", "3.0.3" }) | Set-Content -Path "$APP_BUILD_DIR\app.manifest"
 
 Write-Output "[INFO] Build Successful"
