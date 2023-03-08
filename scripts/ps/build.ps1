@@ -10,6 +10,10 @@ if (-not $env:VERSION) {
     Exit 1
 }
 
+Write-Output "-----------------"
+Write-Output "Building PSC ${env:VERSION} build ${env:BUILD}"
+Write-Output "-----------------"
+
 $script:MANIFEST_FILE="app.manifest.windows"
 $script:7Z = "C:\Program Files\7-Zip\7z.exe"
 $script:PACK_TAR_FILE_PATH = Join-Path $BASE_BUILD_DIR "miniconda-repack.tar"
