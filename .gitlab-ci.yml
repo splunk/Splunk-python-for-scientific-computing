@@ -58,11 +58,6 @@ fossa-scan-mac-x86_64:
   tags:
     - psc-mac-x86_64
 
-fossa-scan-mac-arm64:
-  extends: .fossa-scan
-  tags:
-    - psc-mac-arm64
-
 .build:
   stage: build
   allow_failure: true
@@ -96,13 +91,6 @@ build-mac-x86_64:
     - git clean -xdf
   tags:
     - psc-mac-x86_64
-
-build-mac-arm64:
-  extends: .build
-  before_script:
-    - git clean -xdf
-  tags:
-    - psc-mac-arm64
 
 publish:
   image: ${LINUX_BUILD_IMAGE}
