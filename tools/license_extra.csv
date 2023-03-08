@@ -9,6 +9,7 @@ dataclasses,,https://github.com/ericvsmith/dataclasses/blob/master/LICENSE.txt,A
 decorator,BSD 2-Clause,https://github.com/micheles/decorator/blob/master/LICENSE.txt,python decorator library,
 filelock,,https://github.com/tox-dev/py-filelock/blob/main/LICENSE,A platform independent file lock,
 flatbuffers,Apache 2.0,https://github.com/google/flatbuffers/blob/master/LICENSE,Memory Efficient Serialization Library,
+flit-core,BSD 3-Clause,https://github.com/pypa/flit/blob/main/LICENSE,Simplified packaging of Python modules,
 huggingface_hub,,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,
 icc_rt,proprietary - Intel,https://software.intel.com/en-us/license/intel-simplified-software-license,Intel runtime libraries for C, C++ and Fortran compilers
 intel-openmp,BSD 3-clause ,https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10,Math library for Intel and compatible processors,
