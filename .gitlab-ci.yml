@@ -99,7 +99,6 @@ publish:
     - build-linux
     - build-windows
     - build-mac-x86_64
-    - build-mac-arm64
   before_script:
     - creds-helper init
     - eval $(creds-helper artifactory --eval $GENERIC_DEPLOY_ROLE)
