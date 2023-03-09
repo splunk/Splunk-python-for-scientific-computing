@@ -13,7 +13,6 @@ else
 	BUILD_DEP := $(shell find package -type f) $(shell find resources -type f) $(shell find shims -type f) 
 endif
 
-VERSION := $(shell git describe --tags)
 VERSION_TAG := $(shell git describe --abbrev=0)
 VERSION_BUILD := $(shell git rev-list $(VERSION_TAG)..HEAD --count)
 
@@ -45,8 +44,8 @@ else
 	export ENVIRONMENT_FILE = 
 endif
 
-export VERSION=$(VERSION_TAG)
-export BUILD=$(VERSION_BUILD)
+export VERSION ?= $(VERSION_TAG)
+export BUILD ?= $(VERSION_BUILD)
 
 .PHONY: analyze build clean dist fossa freeze license publish linkapp
 COMMON_DEPS := $(SCRIPT_DIR)/prereq.$(SCRIPT_EXT) Makefile

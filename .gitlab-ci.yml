@@ -3,6 +3,7 @@ variables:
   CREDS_SECRET_ROOT: $CI_PROJECT_DIR
   GENERIC_DEPLOY_PROD_ROLE: artifactory:v2/cloud/role/psc-generic-deployer-role
   GENERIC_DEPLOY_TEST_ROLE: artifactory:v2/cloud/role/psc-generic-test-deployer-role
+  VERSION_OVERRIDE: 4.1.1 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
 
 stages:
   - build
@@ -75,7 +76,11 @@ fossa-scan-mac-arm64:
     - make dist
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      variables:
+        VERSION: $VERSION_OVERRIDE
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      variables:
+        VERSION: $VERSION_OVERRIDE
     - if: $CI_COMMIT_TAG
 
 build-linux:

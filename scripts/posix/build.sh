@@ -4,6 +4,10 @@ source "$SCRIPT_DIR/prereq.sh"
 is_set BUILD
 is_set VERSION
 
+echo "-----------------"
+echo "Building PSC $VERSION build $BUILD"
+echo "-----------------"
+
 if [ "$OS" = "Linux" ] && [ "$ARCH" = "x86_64" ]; then
   XARGS="xargs -r"
   MANIFEST_FILE="app.manifest.linux"
