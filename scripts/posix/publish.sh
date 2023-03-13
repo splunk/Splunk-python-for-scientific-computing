@@ -23,9 +23,6 @@ else
   if [[ -n "$CI_COMMIT_TAG" ]]; then
     # RELEASE TAG
     TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/releases/${VERSION%.*}.x/$VERSION"
-  elif [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
-    # MASTER BRANCH
-    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds/${BUILD_HASH}"
   elif [[ "$CI_PIPELINE_SOURCE" == "merge_request_event" ]]; then
     # MERGE REQUEST
     if [[ -z "$CI_MERGE_REQUEST_IID" || "$CI_MERGE_REQUEST_IID" == " " ]]; then
@@ -34,6 +31,9 @@ else
       exit 1
     fi
     TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds/merge_requests/MR$CI_MERGE_REQUEST_IID/${BUILD_HASH}"
+  elif [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]] || [[ "$CI_COMMIT_REF_PROTECTED" == "true" ]]; then
+    # MASTER BRANCH
+    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds/${BUILD_HASH}"
   else
     echo "No publishing condition met, exiting"
     exit 1

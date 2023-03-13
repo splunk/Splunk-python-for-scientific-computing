@@ -26,6 +26,7 @@ sast-scanner:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
     - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_REF_PROTECTED == "true"
 
 .fossa-scan:
   stage: prodsec-review
@@ -41,6 +42,7 @@ sast-scanner:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
     - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_REF_PROTECTED == "true"
 
 fossa-scan-linux:
   extends: .fossa-scan
@@ -77,6 +79,9 @@ fossa-scan-mac-x86_64:
       variables:
         VERSION: $VERSION_OVERRIDE
     - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_REF_PROTECTED == "true"
+      variables:
+        VERSION: $VERSION_OVERRIDE
 
 build-linux:
   extends: .build
@@ -120,6 +125,10 @@ publish:
         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
         REPO: generic
     - if: $CI_COMMIT_TAG
+      variables:
+        GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
+        REPO: generic
+    - if: $CI_COMMIT_REF_PROTECTED == "true"
       variables:
         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
         REPO: generic
