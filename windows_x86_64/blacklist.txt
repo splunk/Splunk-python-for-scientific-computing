@@ -17,4 +17,3 @@ zipp
 argh
 menuinst
 flit-core
-pip
