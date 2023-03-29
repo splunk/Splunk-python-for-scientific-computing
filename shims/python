@@ -12,7 +12,7 @@ EOF
 fi
 
 # https://splunk.atlassian.net/browse/SPL-237604, ensure execution bit is set on python binary
-chmod +x "${SCRIPT_DIR}/../@version_dir@/bin/python" > /dev/null 2>&1 || true
-chmod +x "${SPLUNK_HOME}/var/run/splunk/noah_tmp/@app_id@/bin/linux_x86_64/@version_dir@/bin/python" > /dev/null 2>&1 || true
+chmod u+x "${SCRIPT_DIR}/../@version_dir@/bin/python" > /dev/null 2>&1 || true
+chmod u+x "${SPLUNK_HOME}/var/run/splunk/noah_tmp/@app_id@/bin/linux_x86_64/@version_dir@/bin/python" > /dev/null 2>&1 || true
 
 exec "${SCRIPT_DIR}/../@version_dir@/bin/python" "$@"

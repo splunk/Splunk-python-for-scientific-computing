@@ -37,15 +37,23 @@ find "$DIST_VERSION_BUILD_DIR" -iname "*.pyo" -print0 | $XARGS -0 rm
 find "$DIST_VERSION_BUILD_DIR" -iname "*.a" -print0 | $XARGS -0 rm
 find "$DIST_VERSION_BUILD_DIR" -iname "*.la" -print0 | $XARGS -0 rm
 
+find "$DIST_VERSION_BUILD_DIR" -iname "*.csv" -print0 | $XARGS -0 rm
+find "$DIST_VERSION_BUILD_DIR" -iname "*.csv.gz" -print0 | $XARGS -0 rm
+
+find "$DIST_VERSION_BUILD_DIR" -iname "Makefile" -print0 | $XARGS -0 rm
+
 # Remove whl files
 find "$DIST_VERSION_BUILD_DIR" -iname "*.whl" -print0 | $XARGS -0 rm
 find "$DIST_VERSION_BUILD_DIR" -xtype l -print0 | $XARGS -0 rm
 # remove all tests folders except networkx's tests folder
 PKG_INCLUDE_TESTS="$DIST_VERSION_BUILD_DIR/*networkx*"
 find "$DIST_VERSION_BUILD_DIR" -type d -iname tests -not -path "$PKG_INCLUDE_TESTS" -print0 | $XARGS -0 rm -rf
+# remove onnx test data files
+find "$DIST_VERSION_BUILD_DIR" -type f -iwholename "*onnx/backend/test/*" -print0 | $XARGS -0 rm
+find "$DIST_VERSION_BUILD_DIR" -type d -iwholename "*onnx/backend/test" -print0 | $XARGS -0 rm -rf
 
 # Remove other unnecessary cruft
-rm -f "$DIST_VERSION_BUILD_DIR"/bin/{sqlite3,tclsh8.5,wish8.5,xmlcatalog,xmllint,xsltproc,smtpd.py,xml2-config,xslt-config,c_rehash}
+#rm -f "$DIST_VERSION_BUILD_DIR"/bin/{sqlite3,tclsh8.5,wish8.5,xmlcatalog,xmllint,xsltproc,smtpd.py,xml2-config,xslt-config,c_rehash}
 if [[ $MODE -eq 0 ]]; then
   rm -rf "$DIST_VERSION_BUILD_DIR"/lib/{Tk.icns,Tk.tiff,tcl8,tcl8.5,tk8.5} \
   "$DIST_VERSION_BUILD_DIR"/conda-meta \
@@ -72,6 +80,12 @@ for subdir in $SYMLINK_SUBDIRS; do
         bash -c "cd \"$d\"; rm \"$b\"; cp -r \"$j\" \"$b\""
     done < <(find "$DIST_VERSION_BUILD_DIR/${subdir}" -type l)
 done
+
+find "$DIST_VERSION_BUILD_DIR/bin/" -type f,l ! '(' -name 'python' -o -name 'openssl' -o -name 'python3-config' -o -name 'protoc' ')' -print0 | $XARGS -0 rm
+
+chmod -x+X -R "$DIST_VERSION_BUILD_DIR/"
+chmod g-w -R "$DIST_VERSION_BUILD_DIR/"
+find "$DIST_VERSION_BUILD_DIR/bin/" -type f -print0 | $XARGS -0 chmod ug+x
 
 echo "[INFO] removing unnecessary metadata"
 if [[ $MODE -eq 0 ]]; then
