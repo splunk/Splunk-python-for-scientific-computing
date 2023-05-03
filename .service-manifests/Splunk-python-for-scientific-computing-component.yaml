@@ -1,0 +1,38 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+    name: splunk-python-for-scientific-computing
+    title: Splunk Python for Scientific Computing
+    functionalDomain:
+        - Machine Learning and Applied Research
+    description: |
+        Anaconda python interpreter and a set of python libraries required for ML applications
+    annotations:
+        backstage.io/source-location: url:https://cd.splunkdev.com/ML/mltk/Splunk-python-for-scientific-computing
+        backstage.io/view-url: ""
+        backstage.io/edit-url: ""
+        splunk.com/slack-url: ""
+        splunk.com/issue-tracker-url: https://jira.splunk.com/projects/MLA-4466
+    links:
+        - title: This is a template title
+          url: http://example.com
+        - title: ERD
+          url: https://docs.google.com/document/d/1CaH3tnVcEuyntyfF65ZkxMyeB_IJnYsq5w3Ivo_dsMQ/edit?usp=sharing
+        - title: ArtifactLink
+          url: https://repo.splunkdev.net:443/artifactory/generic-test/ml/apps/app-sasp/builds/merge_requests/MR42/7c2230e/
+        - title: pp-old-gitrepo0
+          url: https://cd.splunkdev.com/ML/mltk/Splunk-python-for-scientific-computing
+    tags:
+        - prodsec-ingestion
+        - pp-old-emcontact-scai
+        - pp-old-pmcontact-johnr
+        - pp-old-englead-astojanovic
+        - pp-old-prodlead-baleti
+        - pp-old-prodtype-splunk-enterprise-add-on
+        - pp-old-depenv-on-premise
+        - pp-old-citype-gitlab-ci
+        - pp-old-jirakey-mla
+spec:
+    lifecycle: production
+    type: product
+    owner: group:prodsec-ingested
