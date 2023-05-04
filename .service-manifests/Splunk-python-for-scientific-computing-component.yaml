@@ -9,9 +9,9 @@ metadata:
         Anaconda python interpreter and a set of python libraries required for ML applications
     annotations:
         backstage.io/source-location: url:https://cd.splunkdev.com/ML/mltk/Splunk-python-for-scientific-computing
-        backstage.io/view-url: ""
-        backstage.io/edit-url: ""
-        splunk.com/slack-url: ""
+        backstage.io/view-url: https://cd.splunkdev.com/ML/mltk/Splunk-python-for-scientific-computing/-/blob/main/.service-manifests/Splunk-python-for-scientific-computing-component.yaml
+        backstage.io/edit-url: https://cd.splunkdev.com/ML/mltk/Splunk-python-for-scientific-computing/-/edit/main/.service-manifests/Splunk-python-for-scientific-computing-component.yaml
+        splunk.com/slack-url: http://go/replace/me
         splunk.com/issue-tracker-url: https://jira.splunk.com/projects/MLA-4466
     links:
         - title: This is a template title
