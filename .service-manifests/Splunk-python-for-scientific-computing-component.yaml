@@ -19,7 +19,7 @@ metadata:
         - title: ERD
           url: https://docs.google.com/document/d/1CaH3tnVcEuyntyfF65ZkxMyeB_IJnYsq5w3Ivo_dsMQ/edit?usp=sharing
         - title: ArtifactLink
-          url: https://repo.splunkdev.net:443/artifactory/generic-test/ml/apps/app-sasp/builds/merge_requests/MR42/7c2230e/
+          url: https://repo.splunkdev.net:443/artifactory/generic-test/apps/app-sasp/builds/merge_requests/MR42/7c2230e/
         - title: pp-old-gitrepo0
           url: https://cd.splunkdev.com/ML/mltk/Splunk-python-for-scientific-computing
     tags:

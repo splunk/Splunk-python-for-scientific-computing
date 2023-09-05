@@ -52,17 +52,17 @@ fossa-scan-windows:
     - choco install make
   image: ${WINDOWS_BUILD_IMAGE}
   tags:
-    - psc-win64
+    - win64
 
 fossa-scan-mac-x86_64:
   extends: .fossa-scan
   tags:
-    - psc-mac-x86_64
+    - mac-x86_64
 
 fossa-scan-mac-arm64:
   extends: .fossa-scan
   tags:
-    - psc-mac-arm64
+    - mac-arm64
 
 .build:
   stage: build
@@ -114,9 +114,9 @@ publish:
   stage: publish
   dependencies:
     - build-linux
-    - build-windows
-    - build-mac-x86_64
-    - build-mac-arm64
+#    - build-windows
+#    - build-mac-x86_64
+#    - build-mac-arm64
   before_script:
     - creds-helper init
     - eval $(creds-helper artifactory --eval $GENERIC_DEPLOY_ROLE)
