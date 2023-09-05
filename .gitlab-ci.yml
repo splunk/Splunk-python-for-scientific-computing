@@ -52,17 +52,17 @@ fossa-scan-windows:
     - choco install make
   image: ${WINDOWS_BUILD_IMAGE}
   tags:
-    - win64
+    - psc-win64
 
 fossa-scan-mac-x86_64:
   extends: .fossa-scan
   tags:
-    - mac-x86_64
+    - psc-mac-x86_64
 
 fossa-scan-mac-arm64:
   extends: .fossa-scan
   tags:
-    - mac-arm64
+    - psc-mac-arm64
 
 .build:
   stage: build
