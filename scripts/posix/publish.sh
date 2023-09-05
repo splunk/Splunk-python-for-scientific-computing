@@ -14,7 +14,7 @@ fi
 
 REPO=${REPO:-"generic-test"}
 REPO_URL="${ARTIFACTORY_BASE_URL}/${REPO}"
-TARGET_FOLDER_PREFIX="ml/apps/app-sasp"
+TARGET_FOLDER_PREFIX="apps/app-sasp"
 BUILD_HASH=$(git rev-parse --short HEAD)
 if [[ -z "$CI" ]]; then
     # LOCAL
