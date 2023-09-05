@@ -6,7 +6,7 @@ variables:
   VERSION_OVERRIDE: 4.1.2 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
 
 stages:
-#  - build
+  - build
 #  - prodsec-review
   - publish
 
@@ -64,28 +64,28 @@ stages:
 #  tags:
 #    - mac-arm64
 
-#.build:
-#  stage: build
-#  allow_failure: true
-#  artifacts:
-#    paths:
-#      - build/Splunk_SA_Scientific_Python_*.tgz
-#    untracked: false
-#    expire_in: 30 days
-#  script:
-#    - make dist
-#  rules:
-#    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-#      variables:
-#        VERSION: $VERSION_OVERRIDE
-#    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-#      variables:
-#        VERSION: $VERSION_OVERRIDE
-#    - if: $CI_COMMIT_TAG
+.build:
+  stage: build
+  allow_failure: true
+  artifacts:
+    paths:
+      - build/Splunk_SA_Scientific_Python_*.tgz
+    untracked: false
+    expire_in: 30 days
+  script:
+    - make dist
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      variables:
+        VERSION: $VERSION_OVERRIDE
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      variables:
+        VERSION: $VERSION_OVERRIDE
+    - if: $CI_COMMIT_TAG
 
-#build-linux:
-#  extends: .build
-#  image: ${LINUX_BUILD_IMAGE}
+build-linux:
+  extends: .build
+  image: ${LINUX_BUILD_IMAGE}
 
 #build-windows:
 #  extends: .build
@@ -112,8 +112,8 @@ stages:
 publish:
   image: ${LINUX_BUILD_IMAGE}
   stage: publish
-#  dependencies:
-#    - build-linux
+  dependencies:
+    - build-linux
 #    - build-windows
 #    - build-mac-x86_64
 #    - build-mac-arm64
