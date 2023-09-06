@@ -33,7 +33,7 @@ else
       echo "[ERROR] Publish only master branch, merge_requests and tags, tag needs to match build script version too"
       exit 1
     fi
-    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds/merge_requests/MR$CI_MERGE_REQUEST_IID/${BUILD_HASH}"
+    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds/merge_requests/MR$CI_MERGE_REQUEST_IID"
   else
     echo "No publishing condition met, exiting"
     exit 1
