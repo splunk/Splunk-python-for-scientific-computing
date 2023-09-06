@@ -8,7 +8,7 @@ variables:
 stages:
   - build
 #  - prodsec-review
-  - publish
+#  - publish
 
 #include:
 #  - project: 'prodsec/scp-scanning/gitlab-checkmarx'
