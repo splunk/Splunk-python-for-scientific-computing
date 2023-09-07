@@ -14,7 +14,7 @@ fi
 
 REPO=${REPO:-"generic-test"}
 REPO_URL="${ARTIFACTORY_BASE_URL}/${REPO}"
-TARGET_FOLDER_PREFIX="ml/apps/app-sasp"
+TARGET_FOLDER_PREFIX="apps/app-sasp"
 BUILD_HASH=$(git rev-parse --short HEAD)
 if [[ -z "$CI" ]]; then
     # LOCAL
@@ -25,7 +25,7 @@ else
     TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/releases/${VERSION%.*}.x/$VERSION"
   elif [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
     # MASTER BRANCH
-    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds/${BUILD_HASH}"
+    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds"
   elif [[ "$CI_PIPELINE_SOURCE" == "merge_request_event" ]]; then
     # MERGE REQUEST
     if [[ -z "$CI_MERGE_REQUEST_IID" || "$CI_MERGE_REQUEST_IID" == " " ]]; then
@@ -33,7 +33,7 @@ else
       echo "[ERROR] Publish only master branch, merge_requests and tags, tag needs to match build script version too"
       exit 1
     fi
-    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds/merge_requests/MR$CI_MERGE_REQUEST_IID/${BUILD_HASH}"
+    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds/merge_requests/MR$CI_MERGE_REQUEST_IID"
   else
     echo "No publishing condition met, exiting"
     exit 1
