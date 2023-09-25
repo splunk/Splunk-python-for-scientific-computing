@@ -10,5 +10,6 @@ RUN Set-ItemProperty -Path "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\FileSyste
     Set-ExecutionPolicy RemoteSigned -force; `
     .\chocolatey-install.ps1; `
     choco install 7zip git powershell-core -y;
-
+    
+USER splunker
 ENTRYPOINT powershell.exe

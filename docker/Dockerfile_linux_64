@@ -13,4 +13,5 @@ RUN apt-get -qq update -y \
 
 WORKDIR ${PSC_HOME}
 
+USER splunker
 CMD [ "/bin/bash" ]

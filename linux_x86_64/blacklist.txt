@@ -5,15 +5,10 @@ tk
 pip
 ld_impl_linux-64
 click
-six
 colorama
-requests
 brotlipy
-urllib3
 pycparser
-certifi
 cryptography
-idna
 pysocks
 cffi
 charset-normalizer
