@@ -1,13 +1,10 @@
 sqlite
 libsqlite
 click
-six
 colorama
 brotlipy
-urllib3
 pycparser
 cryptography
-idna
 pysocks
 cffi
 charset-normalizer

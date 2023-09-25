@@ -18,10 +18,10 @@ $script:MANIFEST_FILE="app.manifest.windows"
 $script:7Z = "C:\Program Files\7-Zip\7z.exe"
 $script:PACK_TAR_FILE_PATH = Join-Path $BASE_BUILD_DIR "miniconda-repack.tar"
 
-# remove pip and certifi from final build because we don't need them
+# remove pip from final build because we don't need them
 # but we need them in `windows_x86_64/environment.yml` file for fossa to work
 $env:Path += ";$($MINICONDA_BUILD_DIR);$(Join-Path $MINICONDA_BUILD_DIR "Scripts");$(Join-Path $MINICONDA_BUILD_DIR "Library\bin")"
-& conda remove -p $VENV_BUILD_DIR -y --force pip certifi
+& conda remove -p $VENV_BUILD_DIR -y --force pip
 
 Remove-Item -Recurse $APP_BUILD_DIR -ErrorAction Ignore
 #$DIST_VERSION_BUILD_DIR = Join-Path $DIST_BUILD_DIR $env:VERSION.replace('.', '_')
@@ -41,7 +41,7 @@ Get-Childitem -Path "$DIST_VERSION_BUILD_DIR" -Include "*.whl" -Recurse -ErrorAc
 # Remove __pycache__
 Get-Childitem -Directory -Path "$DIST_VERSION_BUILD_DIR" -Name "__pycache__" -Recurse -ErrorAction SilentlyContinue | ForEach-Object { Remove-Item -Recurse -Path "$DIST_VERSION_BUILD_DIR\$_" -ErrorAction Ignore}
 
-# Remove all tests folders except networkx's tests folder
+# Remove all tests folders except networkx's and onnx's tests folder
 $script:TEST_DIRS = ("test", "tests")
 Get-ChildItem -Path "$DIST_VERSION_BUILD_DIR" -Directory -Recurse  |
     Where-Object { $_.FullName -inotmatch 'networkx'} |

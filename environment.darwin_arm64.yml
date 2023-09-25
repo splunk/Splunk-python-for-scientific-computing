@@ -3,16 +3,22 @@ channels:
   - pytorch
   - conda-forge
 dependencies:
-  - python=3.8
+  - boto3==1.17
+  - botocore==1.20
+  - bottle==0.12.13
+  - chardet==3.0.4
+  - fastdtw==0.3.4
+  - future==0.18.2
   - pandas==1.1.5
+  - psutil==5.8.0
+  - python==3.8.10
+  - pytorch==1.11.0
+  - networkx==2.5.1
   - numpy==1.20.3
   - scipy==1.6.2
   - statsmodels==0.12.2
   - scikit-learn==0.24.2
-  - psutil==5.8.0
-  - networkx==2.5.1
-  - python==3.8.10
-  - pytorch==1.11.0
+  - stumpy==1.12.0
   - tbb==2021.5
   - transformers==4.16.2
   - cpuonly=2.0

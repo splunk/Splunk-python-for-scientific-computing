@@ -4,9 +4,9 @@ $script:SCRIPT_DIR=$PSScriptRoot
 $script:BLACKLISTED_PACKAGES = Get-Content $(Join-Path $PLATFORM_DIR "blacklist.txt")
 $env:Path += ";$($MINICONDA_BUILD_DIR);$(Join-Path $MINICONDA_BUILD_DIR "Scripts");$(Join-Path $MINICONDA_BUILD_DIR "Library\bin")"
 
-# remove pip and certifi from final build because we don't need them
+# remove pip from final build because we don't need them
 # but we need them in `windows_x86_64/environment.yml` file for fossa to work
-& conda remove -p $VENV_BUILD_DIR -y --force pip certifi
+& conda remove -p $VENV_BUILD_DIR -y --force pip
 
 $env:PLATFORM=$PLATFORM
 $env:BLACKLISTED_PACKAGES=$BLACKLISTED_PACKAGES

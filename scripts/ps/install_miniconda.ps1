@@ -30,4 +30,4 @@ Start-Process -FilePath "$MINICONDA_PATH" -ArgumentList "/S /InstallationType=Ju
 $env:Path += ";$($MINICONDA_PATH);$(Join-Path $MINICONDA_BUILD_DIR "Scripts");$(Join-Path $MINICONDA_BUILD_DIR "Library\bin")"
 # initialize the conda environment to use powershell
 & conda init powershell
-& conda install -y -c conda-forge conda-pack conda-tree conda-build
+& conda install -y -c conda-forge conda-pack conda-tree conda-build libarchive
