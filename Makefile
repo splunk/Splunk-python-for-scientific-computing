@@ -91,3 +91,6 @@ clean:
 
 linkapp:
 	ln -s $$PWD/build/Splunk_SA_Scientific_Python_$(PLATFORM_DIR) $$SPLUNK_HOME/etc/apps/Splunk_SA_Scientific_Python_$(PLATFORM_DIR)
+
+copyartifacts:
+	$(SCRIPT_DIR)/copy.sh

@@ -6,126 +6,150 @@ variables:
   VERSION_OVERRIDE: 4.2.0 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
 
 stages:
-  - build
-  - prodsec-review
-  - publish
+  # - build
+  # - prodsec-review
+  # - publish
+  - copyartifacts
 
-include:
-  - project: 'prodsec/scp-scanning/gitlab-checkmarx'
-    ref: latest
-    file: '/templates/.sast_scan.yml'
+# include:
+#   - project: 'prodsec/scp-scanning/gitlab-checkmarx'
+#     ref: latest
+#     file: '/templates/.sast_scan.yml'
 
-sast-scanner:
-  stage: prodsec-review
-  extends: .sast_scan
-  variables:
-    SAST_SCANNER: "Semgrep"
-    alert_mode: "on" # Alert mode turned off
-  allow_failure: False
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_TAG
+# sast-scanner:
+#   stage: prodsec-review
+#   extends: .sast_scan
+#   variables:
+#     SAST_SCANNER: "Semgrep"
+#     alert_mode: "on" # Alert mode turned off
+#   allow_failure: False
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#     - if: $CI_COMMIT_TAG
 
-.fossa-scan:
-  stage: prodsec-review
-  allow_failure: true
-  retry: 0
-  timeout: 60m
-  dependencies: []
-  variables:
-    FOSSA_API_KEY: "${FOSSA_API_KEY_D04082022}"
-  script:
-    - make fossa
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_TAG
+# .fossa-scan:
+#   stage: prodsec-review
+#   allow_failure: true
+#   retry: 0
+#   timeout: 60m
+#   dependencies: []
+#   variables:
+#     FOSSA_API_KEY: "${FOSSA_API_KEY_D04082022}"
+#   script:
+#     - make fossa
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#     - if: $CI_COMMIT_TAG
 
-fossa-scan-linux:
-  extends: .fossa-scan
+# fossa-scan-linux:
+#   extends: .fossa-scan
+#   image: ${LINUX_BUILD_IMAGE}
+
+# fossa-scan-windows:
+#   extends: .fossa-scan
+#   before_script:
+#     - choco install make
+#   image: ${WINDOWS_BUILD_IMAGE}
+#   tags:
+#     - psc-win64
+
+# fossa-scan-mac-x86_64:
+#   extends: .fossa-scan
+#   tags:
+#     - psc-mac-x86_64
+
+# fossa-scan-mac-arm64:
+#   extends: .fossa-scan
+#   tags:
+#     - psc-mac-arm64
+
+# .build:
+#   stage: build
+#   allow_failure: true
+#   artifacts:
+#     paths:
+#       - build/Splunk_SA_Scientific_Python_*.tgz
+#     untracked: false
+#     expire_in: 30 days
+#   script:
+#     - make dist
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+#       variables:
+#         VERSION: $VERSION_OVERRIDE
+#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#       variables:
+#         VERSION: $VERSION_OVERRIDE
+#     - if: $CI_COMMIT_TAG
+
+# build-linux:
+#   extends: .build
+#   image: ${LINUX_BUILD_IMAGE}
+
+# build-windows:
+#   extends: .build
+#   before_script:
+#     - choco install make
+#   image: ${WINDOWS_BUILD_IMAGE}
+#   tags:
+#     - psc-win64
+
+# build-mac-x86_64:
+#   extends: .build
+#   before_script:
+#     - git clean -xdf
+#   tags:
+#     - psc-mac-x86_64
+
+# build-mac-arm64:
+#   extends: .build
+#   before_script:
+#     - git clean -xdf
+#   tags:
+#     - psc-mac-arm64
+
+# publish:
+#   image: ${LINUX_BUILD_IMAGE}
+#   stage: publish
+#   dependencies:
+#     - build-linux
+#     - build-windows
+#     - build-mac-x86_64
+#     - build-mac-arm64
+#   before_script:
+#     - creds-helper init
+#     - eval $(creds-helper artifactory --eval $GENERIC_DEPLOY_ROLE)
+#   script:
+#     - make publish
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+#       when: manual
+#       allow_failure: true
+#       variables:
+#         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_TEST_ROLE
+#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#       variables:
+#         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
+#         REPO: generic
+#     - if: $CI_COMMIT_TAG
+#       variables:
+#         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
+#         REPO: generic
+
+
+copyartifacts:
   image: ${LINUX_BUILD_IMAGE}
-
-fossa-scan-windows:
-  extends: .fossa-scan
-  before_script:
-    - choco install make
-  image: ${WINDOWS_BUILD_IMAGE}
-  tags:
-    - psc-win64
-
-fossa-scan-mac-x86_64:
-  extends: .fossa-scan
-  tags:
-    - psc-mac-x86_64
-
-fossa-scan-mac-arm64:
-  extends: .fossa-scan
-  tags:
-    - psc-mac-arm64
-
-.build:
-  stage: build
-  allow_failure: true
-  artifacts:
-    paths:
-      - build/Splunk_SA_Scientific_Python_*.tgz
-    untracked: false
-    expire_in: 30 days
-  script:
-    - make dist
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-      variables:
-        VERSION: $VERSION_OVERRIDE
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      variables:
-        VERSION: $VERSION_OVERRIDE
-    - if: $CI_COMMIT_TAG
-
-build-linux:
-  extends: .build
-  image: ${LINUX_BUILD_IMAGE}
-
-build-windows:
-  extends: .build
-  before_script:
-    - choco install make
-  image: ${WINDOWS_BUILD_IMAGE}
-  tags:
-    - psc-win64
-
-build-mac-x86_64:
-  extends: .build
-  before_script:
-    - git clean -xdf
-  tags:
-    - psc-mac-x86_64
-
-build-mac-arm64:
-  extends: .build
-  before_script:
-    - git clean -xdf
-  tags:
-    - psc-mac-arm64
-
-publish:
-  image: ${LINUX_BUILD_IMAGE}
-  stage: publish
-  dependencies:
-    - build-linux
-    - build-windows
-    - build-mac-x86_64
-    - build-mac-arm64
+  stage: copyartifacts
   before_script:
     - creds-helper init
     - eval $(creds-helper artifactory --eval $GENERIC_DEPLOY_ROLE)
   script:
-    - make publish
+    - make copyartifacts
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       when: manual
-      allow_failure: true
       variables:
         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_TEST_ROLE
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
