@@ -160,3 +160,4 @@ copyartifacts:
       variables:
         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
         REPO: generic
+
