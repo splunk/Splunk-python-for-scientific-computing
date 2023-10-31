@@ -151,7 +151,7 @@ copyartifacts:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       when: manual
       variables:
-        GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_TEST_ROLE
+        GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       variables:
         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
