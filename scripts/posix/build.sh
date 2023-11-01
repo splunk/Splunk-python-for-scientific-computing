@@ -97,7 +97,7 @@ fi
 echo "[INFO] building app configs"
 cp -a "$PROJECT_DIR/package/." "$APP_BUILD_DIR/"
 cp "$PROJECT_DIR/shims/python" "$DIST_BIN_BUILD_DIR/python"
-cp -r "$PLATFORM_DIR/LICENSE" "$APP_BUILD_DIR/LICENSE"
+#cp -r "$PLATFORM_DIR/LICENSE" "$APP_BUILD_DIR/LICENSE"
 cp "$PROJECT_DIR/resources/$MANIFEST_FILE" "$APP_BUILD_DIR/app.manifest"
 
 # Update conf files

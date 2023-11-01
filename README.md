@@ -1,7 +1,8 @@
 # Python for Scientific Computing (PSC)
 
-The Python for Scientific Computing app is an app that bundles Miniconda (a
-commercial binary distribution of Python) and some common Python libraries
+The Python for Scientific Computing app is an app that bundles Miniconda® © 2015-2022, Anaconda, Inc.
+(All rights reserved under the 3-clause BSD License, https://legal.anaconda.com/policies/en?name=offering-specific-terms#miniconda, 
+a binary distribution of Python) and some common Python libraries
 for scientific computing: numpy, scipy, pandas, scikit-learn, statsmodels.
 
 This repo builds PSC for 3 platforms:
