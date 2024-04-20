@@ -136,3 +136,7 @@ publish:
       variables:
         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
         REPO: generic
+  id_tokens:
+    CI_JOB_JWT:
+      aud: $CICD_VAULT_ADDR
+
