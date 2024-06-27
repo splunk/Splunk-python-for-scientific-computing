@@ -11,6 +11,8 @@ ENVIRONMENT_FILE="$PROJECT_DIR/environment.darwin_arm64.yml"
 
 echo "ENVIRONMENT_FILE: $ENVIRONMENT_FILE"
 
+echo "VENV_BUILD_DIR: $VENV_BUILD_DIR"
+
 BLACKLISTED_PACKAGES=$(cat "$PLATFORM_DIR/blacklist.txt" | tr "\n" " ")
 
 rm -r "$VENV_BUILD_DIR"
