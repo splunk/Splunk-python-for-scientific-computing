@@ -7,6 +7,10 @@ else
   ENVIRONMENT_FILE="$PROJECT_DIR/$ENVIRONMENT_FILE"
 fi
 
+ENVIRONMENT_FILE="$PROJECT_DIR/environment.darwin_arm64.yml"
+
+echo "ENVIRONMENT_FILE: $ENVIRONMENT_FILE"
+
 BLACKLISTED_PACKAGES=$(cat "$PLATFORM_DIR/blacklist.txt" | tr "\n" " ")
 
 rm -r "$VENV_BUILD_DIR"
