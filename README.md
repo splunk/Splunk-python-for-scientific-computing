@@ -80,5 +80,3 @@ under `$SPLUNK_HOME/etc/apps` location to link MLTK with your custom PSC or uplo
 5. You can install additional packages now using `conda install` or `pip install` and once 
 you refresh MLTK, your changes should be picked automatically.
 6. To deactivate the PSC environment, run `conda deactivate` from the terminal.
-
-
