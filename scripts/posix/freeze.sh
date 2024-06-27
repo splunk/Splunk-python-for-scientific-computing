@@ -8,6 +8,12 @@ source "$SCRIPT_DIR/prereq.sh"
 
 OUTPUT_PACKAGE_LIST_FILE="$PLATFORM_DIR/environment.yml"
 
+"$CONDA" activate "$VENV_BUILD_DIR"
+
+"$CONDA" list --explicit > "$PLATFORM_DIR/requirements.txt"
+
+sed -i -E "s/^(.*\=.*)(\=.*)/\1/" "$PLATFORM_DIR/requirements.txt"
+
 "$CONDA" env export -p "$VENV_BUILD_DIR" > "$OUTPUT_PACKAGE_LIST_FILE"
 # remove the last line in the newly generated environment.yml file, since it has
 # information specific to the build system, and it's not being used by conda
