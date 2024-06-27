@@ -8,7 +8,7 @@ source "$SCRIPT_DIR/prereq.sh"
 
 OUTPUT_PACKAGE_LIST_FILE="$PLATFORM_DIR/environment.yml"
 
-"$CONDA" activate "$VENV_BUILD_DIR"
+#"$CONDA" activate "$VENV_BUILD_DIR"
 
 "$CONDA" list --explicit > "$PLATFORM_DIR/requirements.txt"
 
