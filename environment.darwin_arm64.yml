@@ -5,13 +5,12 @@ channels:
 dependencies:
   - boto3==1.17
   - botocore==1.20
-  - bottle==0.12.13
   - chardet==3.0.4
   - fastdtw==0.3.4
   - future==0.18.2
   - pandas==1.1.5
   - psutil==5.8.0
-  - python==3.8.10
+  - python==3.8.12
   - pytorch==1.13.1
   - networkx==2.5.1
   - numpy==1.22.0
@@ -22,7 +21,9 @@ dependencies:
   - tbb==2021.5
   - transformers==4.38.0
   - cpuonly=2.0
-  - onnx==1.11.0
-  - onnxruntime==1.10.0
+  - onnx==1.14.0
+  - onnxruntime==1.15.1
   - pydantic==1.10.13
   - watchdog==2.1.7
+  - pip:
+      - bottle==0.12.20
