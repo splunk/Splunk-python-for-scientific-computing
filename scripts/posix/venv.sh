@@ -9,6 +9,9 @@ fi
 
 BLACKLISTED_PACKAGES=$(cat "$PLATFORM_DIR/blacklist.txt" | tr "\n" " ")
 
+echo "Location of ENVIRONMENT_FILE: $ENVIRONMENT_FILE"
+echo "Location of VENV_BUILD_DIR: $VENV_BUILD_DIR"
+
 rm -r "$VENV_BUILD_DIR"
 "$CONDA" env create --prefix "$VENV_BUILD_DIR" -f "$ENVIRONMENT_FILE"
 eval "$($CONDA shell.bash hook)"
