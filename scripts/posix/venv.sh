@@ -9,6 +9,9 @@ fi
 
 BLACKLISTED_PACKAGES=$(cat "$PLATFORM_DIR/blacklist.txt" | tr "\n" " ")
 
+echo "Location of ENVIRONMENT_FILE: $ENVIRONMENT_FILE"
+echo "Location of VENV_BUILD_DIR: $VENV_BUILD_DIR"
+
 rm -r "$VENV_BUILD_DIR"
 "$CONDA" install --prefix "$VENV_BUILD_DIR" -n base conda-libmamba-solver
 "$CONDA" config --prefix "$VENV_BUILD_DIR" --set solver libmamba
