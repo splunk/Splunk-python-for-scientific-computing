@@ -29,6 +29,8 @@ dependencies:
   - freetype=2.12.1=h267a509_2
   - fsspec=2024.6.1=pyhff2d567_0
   - future=0.18.3=pyhd8ed1ab_0
+  - gmp=6.3.0=hac33072_2
+  - gmpy2=2.1.5=py38h6a1700d_1
   - huggingface_hub=0.23.4=pyhd8ed1ab_0
   - humanfriendly=10.0=pyhd8ed1ab_6
   - idna=3.7=pyhd8ed1ab_0
@@ -46,7 +48,7 @@ dependencies:
   - libbrotlienc=1.1.0=hd590300_1
   - libcblas=3.9.0=22_linux64_mkl
   - libdeflate=1.20=hd590300_0
-  - libffi=3.2.1=he1b5a44_1007
+  - libffi=3.4.2=h7f98852_5
   - libgcc-ng=14.1.0=h77fa898_0
   - libgfortran-ng=14.1.0=h69a702a_0
   - libgfortran5=14.1.0=hc5f4f2c_0
@@ -67,6 +69,8 @@ dependencies:
   - mkl=2024.1.0=ha957f24_693
   - mkl-devel=2024.1.0=ha770c72_693
   - mkl-include=2024.1.0=ha957f24_693
+  - mpc=1.3.1=hfe3b2da_0
+  - mpfr=4.2.1=h9458935_1
   - mpmath=1.3.0=pyhd8ed1ab_0
   - munkres=1.1.4=pyh9f0ad1d_0
   - networkx=2.6.1=pyhd8ed1ab_1
@@ -87,10 +91,10 @@ dependencies:
   - pthread-stubs=0.4=h36c2ea0_1001
   - pydantic=1.10.13=py38h01eb140_1
   - pyparsing=3.1.2=pyhd8ed1ab_0
-  - python=3.8.0=h357f687_5
+  - python=3.8.10=hb7a2778_2_cpython
   - python-dateutil=2.9.0=pyhd8ed1ab_0
   - python-flatbuffers=24.3.25=pyh59ac667_0
-  - python_abi=3.8=2_cp38
+  - python_abi=3.8=4_cp38
   - pytorch=1.13.1=py3.8_cpu_0
   - pytorch-mutex=1.0=cpu
   - pytz=2024.1=pyhd8ed1ab_0
@@ -105,7 +109,7 @@ dependencies:
   - six=1.16.0=pyh6c4a22f_0
   - statsmodels=0.12.2=py38h6c62de6_0
   - stumpy=1.12.0=pyhd8ed1ab_0
-  - sympy=1.12.1=pyh04b8f61_3
+  - sympy=1.12.1=pypyh2585a3b_103
   - tbb=2021.5.0=h924138e_5
   - threadpoolctl=3.5.0=pyhc1e730c_0
   - tokenizers=0.10.3=py38hb63a372_1
