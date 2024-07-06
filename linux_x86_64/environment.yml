@@ -81,7 +81,7 @@ dependencies:
   - openjpeg=2.5.2=h488ebb8_0
   - openssl=1.1.1w=hd590300_0
   - packaging=24.1=pyhd8ed1ab_0
-  - pandas=1.1.0=py38h950e882_0
+  - pandas=1.1.0=py38he6710b0_0
   - patsy=0.5.6=pyhd8ed1ab_0
   - pillow=10.3.0=py38h9e66945_0
   - platformdirs=4.2.2=pyhd8ed1ab_0
@@ -105,7 +105,7 @@ dependencies:
   - sacremoses=0.0.53=pyhd8ed1ab_0
   - scikit-learn=0.24.2=py38hacb3eff_1
   - scipy=1.10.0=py38h10c12cc_2
-  - setuptools=59.8.0=py38h578d9bd_1
+  - setuptools=65.5.1=pyhd8ed1ab_0
   - six=1.16.0=pyh6c4a22f_0
   - statsmodels=0.13.2=py38h71d37f0_0
   - stumpy=1.12.0=pyhd8ed1ab_0
