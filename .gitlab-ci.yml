@@ -15,6 +15,25 @@ include:
     ref: latest
     file: '/templates/.sast_scan.yml'
 
+  - project: 'ci-cd/templates'
+    ref: master
+    file: '/prodsec/.binary-scan.yml'
+
+binary-scan:
+  extends: .binary-scan
+  variables:
+    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic/apps/app-sasp/releases/4.2.x/4.2.0/Splunk_SA_Scientific_Python_*.tgz"
+  dependencies:
+    - build-linux
+    - build-windows
+    - build-mac-x86_64
+    - build-mac-arm64
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_TAG
+
+
 sast-scanner:
   stage: prodsec-review
   extends: .sast_scan
