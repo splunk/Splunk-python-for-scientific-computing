@@ -20,9 +20,10 @@ include:
     file: '/prodsec/.binary-scan.yml'
 
 binary-scan:
+  stage: prodsec-review
   extends: .binary-scan
   variables:
-    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic/apps/app-sasp/releases/4.2.x/4.2.0/Splunk_SA_Scientific_Python_*.tgz"
+    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic/apps/app-sasp/releases/4.2.x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_*.tgz"
   dependencies:
     - build-linux
     - build-windows
