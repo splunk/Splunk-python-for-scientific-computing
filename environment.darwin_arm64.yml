@@ -8,10 +8,10 @@ dependencies:
   - bottle==0.12.23
   - chardet==3.0.4
   - fastdtw==0.3.4
-  - future==0.18.3
+  - future==0.18.2
   - pandas==1.1.5
   - psutil==5.8.0
-  - python==3.8.19
+  - python==3.8.12
   - pytorch==1.13.1
   - networkx==3.0
   - numpy==1.23.0
@@ -25,7 +25,6 @@ dependencies:
   - onnx==1.15.0
   - onnxruntime==1.17.1
   - pydantic==1.10.13
-  - ruptures==1.1.9
   - watchdog==2.1.7
   - pip:
-      - setuptools==69.5.1
+      - setuptools==65.5.1
