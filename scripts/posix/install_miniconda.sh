@@ -46,4 +46,4 @@ fi
 rm -rf "$MINICONDA_BUILD_DIR"
 
 bash "$MINICONDA_PATH" -b -p "$MINICONDA_BUILD_DIR"
-"$CONDA" install -y -c conda-forge conda-pack conda-tree
+"$CONDA" install -y -c conda-forge conda-pack conda-tree --solver=libmamba
