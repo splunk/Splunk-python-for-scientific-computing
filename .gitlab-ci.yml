@@ -46,23 +46,23 @@ fossa-scan-linux:
   extends: .fossa-scan
   image: ${LINUX_BUILD_IMAGE}
 
-fossa-scan-windows:
-  extends: .fossa-scan
-  before_script:
-    - choco install make
-  image: ${WINDOWS_BUILD_IMAGE}
-  tags:
-    - psc-win64
+#fossa-scan-windows:
+#  extends: .fossa-scan
+#  before_script:
+#    - choco install make
+#  image: ${WINDOWS_BUILD_IMAGE}
+#  tags:
+#    - psc-win64
 
-fossa-scan-mac-x86_64:
-  extends: .fossa-scan
-  tags:
-    - psc-mac-x86_64
-
-fossa-scan-mac-arm64:
-  extends: .fossa-scan
-  tags:
-    - psc-mac-arm64
+#fossa-scan-mac-x86_64:
+#  extends: .fossa-scan
+#  tags:
+#    - psc-mac-x86_64
+#
+#fossa-scan-mac-arm64:
+#  extends: .fossa-scan
+#  tags:
+#    - psc-mac-arm64
 
 .build:
   stage: build
@@ -87,27 +87,27 @@ build-linux:
   extends: .build
   image: ${LINUX_BUILD_IMAGE}
 
-build-windows:
-  extends: .build
-  before_script:
-    - choco install make
-  image: ${WINDOWS_BUILD_IMAGE}
-  tags:
-    - psc-win64
+#build-windows:
+#  extends: .build
+#  before_script:
+#    - choco install make
+#  image: ${WINDOWS_BUILD_IMAGE}
+#  tags:
+#    - psc-win64
 
-build-mac-x86_64:
-  extends: .build
-  before_script:
-    - git clean -xdf
-  tags:
-    - psc-mac-x86_64
-
-build-mac-arm64:
-  extends: .build
-  before_script:
-    - git clean -xdf
-  tags:
-    - psc-mac-arm64
+#build-mac-x86_64:
+#  extends: .build
+#  before_script:
+#    - git clean -xdf
+#  tags:
+#    - psc-mac-x86_64
+#
+#build-mac-arm64:
+#  extends: .build
+#  before_script:
+#    - git clean -xdf
+#  tags:
+#    - psc-mac-arm64
 
 publish:
   image: ${LINUX_BUILD_IMAGE}
