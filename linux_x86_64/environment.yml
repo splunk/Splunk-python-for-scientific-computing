@@ -36,6 +36,7 @@ dependencies:
   - libprotobuf=4.25.3=he621ea3_0
   - libstdcxx-ng=14.1.0=hc0a3c3a_0
   - libzlib=1.2.13=h4ab18f5_6
+  - lz4-c=1.9.4=h6a678d5_1
   - mkl=2021.4.0=h06a4308_640
   - mpc=1.1.0=h10f8cd9_1
   - mpfr=4.0.2=hb69a4c5_1
@@ -43,7 +44,7 @@ dependencies:
   - networkx=3.0=pyhd8ed1ab_0
   - numpy=1.23.0=py38h3a7f9d9_0
   - onnx=1.15.0=py38h4281a0f_4
-  - onnxruntime=1.14.1=py38hc8f4463_0
+  - onnxruntime=1.17.1=py38hf70ce4d_0
   - openssl=3.3.1=h4ab18f5_1
   - packaging=24.1=py38h06a4308_0
   - pandas=1.1.0=py38he6710b0_0
@@ -72,3 +73,4 @@ dependencies:
   - wheel=0.43.0=py38h06a4308_0
   - xz=5.4.6=h5eee18b_1
   - zlib=1.2.13=h4ab18f5_6
+  - zstd=1.5.5=hc292b87_2
