@@ -38,6 +38,7 @@ libsqlite
 readline
 tk
 pip
+pooch
 pyarrow
 pyarrow-core
 pyarrow-hotfix

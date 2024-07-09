@@ -4,41 +4,24 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - aiohttp=3.9.5=py38h336bac9_0
-  - aiosignal=1.3.1=pyhd8ed1ab_0
-  - async-timeout=4.0.3=pyhd8ed1ab_0
-  - attrs=23.2.0=pyh71513ae_0
-  - aws-c-auth=0.7.3=h109ad1a_1
-  - aws-c-cal=0.6.1=hb406d48_1
-  - aws-c-common=0.9.0=hb547adb_0
-  - aws-c-compression=0.2.17=he70778a_2
-  - aws-c-event-stream=0.3.1=hcf14f3f_4
-  - aws-c-http=0.7.11=hcbec455_4
-  - aws-c-io=0.13.32=he8ad1d2_1
-  - aws-c-mqtt=0.9.3=hf45dd20_1
-  - aws-c-s3=0.3.14=hf0e1321_1
-  - aws-c-sdkutils=0.1.12=he70778a_1
-  - aws-checksums=0.1.17=he70778a_1
-  - aws-crt-cpp=0.21.0=hda227cd_5
-  - aws-sdk-cpp=1.10.57=h1190f42_19
   - boto3=1.17.0=pyhd8ed1ab_0
   - botocore=1.20.0=pyhd8ed1ab_0
-  - brotli-python=1.0.9=py38h2b1e499_9
+  - bottle=0.12.23=pyhd8ed1ab_0
+  - brotli-python=1.1.0=py38he333c0f_1
   - bzip2=1.0.8=h93a5062_5
   - c-ares=1.28.1=h93a5062_0
-  - ca-certificates=2024.6.2=hf0a4a13_0
-  - certifi=2024.6.2=pyhd8ed1ab_0
+  - ca-certificates=2024.7.4=hf0a4a13_0
+  - certifi=2024.7.4=pyhd8ed1ab_0
   - chardet=3.0.4=py38h045b1e1_1008
   - coloredlogs=15.0.1=pyhd8ed1ab_3
   - cpuonly=2.0=0
   - datasets=2.19.2=pyhd8ed1ab_0
-  - decorator=4.4.2=py_0
   - dill=0.3.8=pyhd8ed1ab_0
-  - fastdtw=0.3.4=py38hbe17736_3
+  - fastdtw=0.3.4=py38h472928c_4
   - filelock=3.15.4=pyhd8ed1ab_0
   - frozenlist=1.4.1=py38h336bac9_0
   - fsspec=2024.3.1=pyhca7485f_0
-  - future=0.18.2=pyhd8ed1ab_6
+  - future=0.18.3=pyhd8ed1ab_0
   - gflags=2.2.2=hc88da5d_1004
   - glog=0.6.0=h6da1cb0_0
   - gmp=6.3.0=h7bae524_2
@@ -48,13 +31,11 @@ dependencies:
   - idna=3.7=pyhd8ed1ab_0
   - jmespath=0.10.0=pyh9f0ad1d_0
   - joblib=1.4.2=pyhd8ed1ab_0
-  - krb5=1.21.3=h237132a_0
   - libabseil=20230125.3=cxx17_h13dd4ca_0
-  - libarrow=12.0.1=hb74b275_8_cpu
   - libblas=3.9.0=20_osxarm64_openblas
-  - libbrotlicommon=1.0.9=h1a8c8d9_9
-  - libbrotlidec=1.0.9=h1a8c8d9_9
-  - libbrotlienc=1.0.9=h1a8c8d9_9
+  - libbrotlicommon=1.1.0=hb547adb_1
+  - libbrotlidec=1.1.0=hb547adb_1
+  - libbrotlienc=1.1.0=hb547adb_1
   - libcblas=3.9.0=20_osxarm64_openblas
   - libcrc32c=1.1.2=hbdafb3b_0
   - libcurl=8.8.0=h7b6f9a7_1
@@ -65,19 +46,17 @@ dependencies:
   - libffi=3.4.2=h3422bc3_5
   - libgfortran=5.0.0=13_2_0_hd922786_3
   - libgfortran5=13.2.0=hf226fd6_3
-  - libgoogle-cloud=2.12.0=h05652e3_1
-  - libgrpc=1.56.2=h9075ed4_1
   - liblapack=3.9.0=20_osxarm64_openblas
   - libllvm11=11.1.0=hfa12f05_5
   - libnghttp2=1.58.0=ha4dd798_1
   - libopenblas=0.3.25=openmp_h6c19121_0
   - libprotobuf=4.23.3=hf32f9b9_1
   - libssh2=1.11.0=h7a5bd25_0
-  - libthrift=0.18.1=ha061701_2
+  - libthrift=0.19.0=h026a170_1
   - libutf8proc=2.8.0=h1a8c8d9_0
-  - libzlib=1.2.13=hfb2fe0b_6
+  - libzlib=1.3.1=hfb2fe0b_1
   - llvm-openmp=18.1.8=hde57baf_0
-  - llvmlite=0.38.1=py38h8a5a59d_0
+  - llvmlite=0.39.1=py38he6bf707_1
   - lz4-c=1.9.4=hb7217d7_0
   - mpc=1.3.1=h91ba8db_0
   - mpfr=4.2.1=h41d338b_1
@@ -85,9 +64,9 @@ dependencies:
   - multidict=6.0.5=py38hb991d35_0
   - multiprocess=0.70.16=py38h336bac9_0
   - ncurses=6.5=hb89a1cb_0
-  - networkx=2.5.1=pyhd8ed1ab_0
-  - numba=0.55.2=py38h25e2f74_0
-  - numpy=1.22.0=py38h9d822b3_1
+  - networkx=3.0=pyhd8ed1ab_0
+  - numba=0.56.4=py38hfb5a544_1
+  - numpy=1.23.0=py38he1fcd3f_0
   - onnx=1.14.0=py38h358a680_1
   - onnxruntime=1.15.1=py38h71df508_3_cpu
   - openssl=3.3.1=hfb2fe0b_1
@@ -96,11 +75,8 @@ dependencies:
   - pandas=1.1.5=py38h9b9bf68_0
   - patsy=0.5.6=pyhd8ed1ab_0
   - platformdirs=4.2.2=pyhd8ed1ab_0
-  - pooch=1.8.2=pyhd8ed1ab_0
   - protobuf=4.23.3=py38hfca1a1f_0
   - psutil=5.8.0=py38hea4295b_2
-  - pyarrow=12.0.1=py38h5809dd6_8_cpu
-  - pyarrow-hotfix=0.6=pyhd8ed1ab_0
   - pydantic=1.10.13=py38h336bac9_1
   - python=3.8.12=hd949e87_3_cpython
   - python-dateutil=2.9.0=pyhd8ed1ab_0
@@ -118,7 +94,6 @@ dependencies:
   - safetensors=0.4.3=py38h51b07bf_0
   - scikit-learn=0.24.2=py38hfeda2c9_1
   - scipy=1.10.0=py38h7b4f323_2
-  - setuptools=59.8.0=py38h10201cd_1
   - six=1.16.0=pyh6c4a22f_0
   - snappy=1.1.10=hd04f947_1
   - statsmodels=0.13.2=py38hd91e067_0
@@ -128,7 +103,7 @@ dependencies:
   - threadpoolctl=3.5.0=pyhc1e730c_0
   - tokenizers=0.15.2=py38hd6ed179_0
   - tqdm=4.66.4=pyhd8ed1ab_0
-  - transformers=4.38.0=pyhd8ed1ab_0
+  - transformers=4.38.1=pyhd8ed1ab_0
   - typing-extensions=4.12.2=hd8ed1ab_0
   - typing_extensions=4.12.2=pyha770c72_0
   - urllib3=1.26.19=pyhd8ed1ab_0
@@ -138,7 +113,6 @@ dependencies:
   - xz=5.2.6=h57fd34a_0
   - yaml=0.2.5=h3422bc3_2
   - yarl=1.9.4=py38h336bac9_0
-  - zlib=1.2.13=hfb2fe0b_6
   - zstd=1.5.6=hb46c0d2_0
   - pip:
-      - bottle==0.12.20
+      - setuptools==65.5.1
