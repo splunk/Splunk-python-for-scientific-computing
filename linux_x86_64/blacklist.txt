@@ -3,6 +3,7 @@ readline
 ncurses
 tk
 pip
+pooch
 ld_impl_linux-64
 click
 colorama
