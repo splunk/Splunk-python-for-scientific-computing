@@ -34,7 +34,6 @@ libgoogle-cloud
 libgoogle-cloud-storage
 libgrpc
 libiconv
-liblapack
 libsqlite
 readline
 tk
@@ -43,9 +42,6 @@ pooch
 pyarrow
 pyarrow-core
 pyarrow-hotfix
-click
-colorama
-brotlipy
 pycparser
 cryptography
 pysocks
