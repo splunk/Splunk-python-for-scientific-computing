@@ -50,6 +50,7 @@ dependencies:
   - libgcc-ng=14.1.0=h77fa898_0
   - libgfortran-ng=14.1.0=h69a702a_0
   - libgfortran5=14.1.0=hc5f4f2c_0
+  - liblapack=3.9.0=22_linux64_mkl
   - libllvm11=11.1.0=he0ac6c6_5
   - libnghttp2=1.58.0=h47da74e_1
   - libnsl=2.0.1=hd590300_0

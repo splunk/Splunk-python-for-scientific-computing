@@ -34,7 +34,6 @@ libgoogle-cloud
 libgoogle-cloud-storage
 libgrpc
 libiconv
-liblapack
 libsqlite
 readline
 ncurses
