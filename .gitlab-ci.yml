@@ -54,15 +54,15 @@ fossa-scan-linux:
 #  tags:
 #    - psc-win64
 
-fossa-scan-mac-x86_64:
-  extends: .fossa-scan
-  tags:
-    - psc-mac-x86_64
-
-fossa-scan-mac-arm64:
-  extends: .fossa-scan
-  tags:
-    - psc-mac-arm64
+#fossa-scan-mac-x86_64:
+#  extends: .fossa-scan
+#  tags:
+#    - psc-mac-x86_64
+#
+#fossa-scan-mac-arm64:
+#  extends: .fossa-scan
+#  tags:
+#    - psc-mac-arm64
 
 .build:
   stage: build
@@ -95,28 +95,28 @@ build-linux:
 #  tags:
 #    - psc-win64
 
-build-mac-x86_64:
-  extends: .build
-  before_script:
-    - git clean -xdf
-  tags:
-    - psc-mac-x86_64
-
-build-mac-arm64:
-  extends: .build
-  before_script:
-    - git clean -xdf
-  tags:
-    - psc-mac-arm64
+#build-mac-x86_64:
+#  extends: .build
+#  before_script:
+#    - git clean -xdf
+#  tags:
+#    - psc-mac-x86_64
+#
+#build-mac-arm64:
+#  extends: .build
+#  before_script:
+#    - git clean -xdf
+#  tags:
+#    - psc-mac-arm64
 
 publish:
   image: ${LINUX_BUILD_IMAGE}
   stage: publish
   dependencies:
     - build-linux
-    - build-windows
-    - build-mac-x86_64
-    - build-mac-arm64
+    #- build-windows
+    #- build-mac-x86_64
+    #- build-mac-arm64
   before_script:
     - creds-helper init
     - eval $(creds-helper artifactory --eval $GENERIC_DEPLOY_ROLE)
