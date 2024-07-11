@@ -39,7 +39,7 @@ dependencies:
   - libcblas=3.9.0=20_osxarm64_openblas
   - libcrc32c=1.1.2=hbdafb3b_0
   - libcurl=8.8.0=h7b6f9a7_1
-  - libcxx=17.0.6=h0812c0d_3
+  - libcxx=18.1.8=h167917d_0
   - libedit=3.1.20191231=hc8eb9b7_2
   - libev=4.33=h93a5062_2
   - libevent=2.1.12=h2757513_1
@@ -78,7 +78,7 @@ dependencies:
   - protobuf=4.23.3=py38hfca1a1f_0
   - psutil=5.8.0=py38hea4295b_2
   - pydantic=1.10.13=py38h336bac9_1
-  - python=3.8.12=hd949e87_3_cpython
+  - python=3.8.19=h2469fbe_0_cpython
   - python-dateutil=2.9.0=pyhd8ed1ab_0
   - python-flatbuffers=24.3.25=pyh59ac667_0
   - python-xxhash=3.4.1=py38hb192615_0
