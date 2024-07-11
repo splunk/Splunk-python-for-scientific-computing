@@ -57,7 +57,7 @@ foreach ($ITEM in $TO_DELETE_LIST) {
 }
 
 Copy-Item -Path $(Join-Path $PROJECT_DIR "package\*") -Destination $APP_BUILD_DIR -Recurse -Force
-Copy-Item -Path $(Join-Path $PROJECT_DIR $(Join-Path $PLATFORM "LICENSE")) -Destination $(Join-Path $APP_BUILD_DIR "LICENSE") -Force
+#Copy-Item -Path $(Join-Path $PROJECT_DIR $(Join-Path $PLATFORM "LICENSE")) -Destination $(Join-Path $APP_BUILD_DIR "LICENSE") -Force
 Copy-Item -Path $(Join-Path $PROJECT_DIR $(Join-Path "resources" $MANIFEST_FILE)) -Destination $(Join-Path $APP_BUILD_DIR "app.manifest") -Force
 #Copy-Item -Path $(Join-Path $PROJECT_DIR $(Join-Path "shims" "python.bat")) -Destination $(Join-Path $DIST_BIN_BUILD_DIR "python.bat") -Force
 
