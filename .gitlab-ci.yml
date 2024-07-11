@@ -73,6 +73,7 @@ fossa-scan-mac-arm64:
     untracked: false
     expire_in: 30 days
   script:
+    - make freeze
     - make dist
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
