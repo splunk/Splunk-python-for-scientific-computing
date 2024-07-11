@@ -26,7 +26,6 @@ binary-scan:
   variables:
     ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic/apps/app-sasp/releases/4.2.x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_*.tgz"
 
-
 sast-scanner:
   stage: prodsec-review
   extends: .sast_scan
@@ -148,3 +147,6 @@ publish:
       variables:
         GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
         REPO: generic
+  id_tokens:
+    CI_JOB_JWT:
+      aud: $CICD_VAULT_ADDR
