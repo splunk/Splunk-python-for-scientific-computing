@@ -83,17 +83,17 @@ fossa-scan-mac-arm64:
         VERSION: $VERSION_OVERRIDE
     - if: $CI_COMMIT_TAG
 
-build-linux:
-  extends: .build
-  image: ${LINUX_BUILD_IMAGE}
-
-build-windows:
-  extends: .build
-  before_script:
-    - choco install make
-  image: ${WINDOWS_BUILD_IMAGE}
-  tags:
-    - psc-win64
+#build-linux:
+#  extends: .build
+#  image: ${LINUX_BUILD_IMAGE}
+#
+#build-windows:
+#  extends: .build
+#  before_script:
+#    - choco install make
+#  image: ${WINDOWS_BUILD_IMAGE}
+#  tags:
+#    - psc-win64
 
 build-mac-x86_64:
   extends: .build
