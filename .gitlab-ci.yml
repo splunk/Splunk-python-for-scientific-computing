@@ -16,7 +16,6 @@ include:
     file: '/templates/.sast_scan.yml'
 
   - project: 'ci-cd/templates'
-    stage: prodsec-review
     ref: master
     file: '/prodsec/.binary-scan.yml'
 
