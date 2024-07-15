@@ -1,6 +1,7 @@
 name: build/venv
 channels:
   - conda-forge
+  - defaults
 dependencies:
   - blas=2.116=openblas
   - blas-devel=3.9.0=16_osx64_openblas
