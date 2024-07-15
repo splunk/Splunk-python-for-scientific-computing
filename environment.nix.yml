@@ -5,16 +5,18 @@ channels:
 dependencies:
   - boto3==1.17
   - botocore==1.20
-  - bottle==0.12.13
+  - bottle==0.12.23
   - chardet==3.0.4
-  - future==0.18.2
-  - networkx==2.5.1
-  - numpy==1.20.3
-  - python==3.8.10
-  - pandas==1.0.5
+  - future==0.18.3
+  - mkl=2021.4.0
+  - networkx==3.0
+  - numpy==1.23
+  - python==3.8.12
+  - pandas==1.1
   - psutil==5.8.0
-  - scipy==1.6.2
-  - statsmodels==0.12.2
+  - scipy==1.10
+  - statsmodels==0.13.2
   - scikit-learn==0.24.2
-  - onnx==1.11.0
-  - onnxruntime=1.10.0
+  - onnx==1.15.0
+  - onnxruntime=1.17.1
+  - openssl==3.3.1
