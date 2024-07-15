@@ -73,7 +73,6 @@ packaging                     	Apache-2.0                          	https://gith
 pandas                        	BSD 3-clause                        	https://github.com/pandas-dev/pandas/blob/master/LICENSE
 patsy                         	BSD 2-clause/PSF                    	https://github.com/pydata/patsy/blob/master/LICENSE.txt
 platformdirs                  	MIT                                 	
-pooch                         	BSD-3-Clause                        	
 protobuf                      	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
 psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
 pydantic                      	MIT                                 	https://github.com/samuelcolvin/pydantic/blob/master/LICENSE
@@ -89,11 +88,11 @@ pyyaml                        	MIT                                 	https://gith
 re2                           	BSD-3-Clause                        	https://github.com/google/re2/blob/main/LICENSE
 regex                         	Python-2.0 and Apache 2.0           	https://bitbucket.org/mrabarnett/mrab-regex/src/hg/LICENSE.txt
 requests                      	Apache-2.0                          	https://github.com/psf/requests/blob/main/LICENSE
-ruptures                      	BSD-2-Clause                        	
 s3transfer                    	Apache-2.0                          	
 safetensors                   	Apache-2.0                          	
 scikit-learn                  	New BSD License                     	https://github.com/scikit-learn/scikit-learn/blob/master/COPYING
 scipy                         	BSD 3-clause                        	https://github.com/scipy/scipy/blob/master/LICENSE.txt
+setuptools                    	MIT                                 	https://github.com/pypa/setuptools/blob/master/LICENSE
 six                           	MIT                                 	https://github.com/benjaminp/six/blob/master/LICENSE
 snappy                        	BSD-3-Clause                        	
 statsmodels                   	BSD 3-clause                        	https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt
