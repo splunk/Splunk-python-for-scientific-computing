@@ -21,6 +21,7 @@ sast-scanner:
   variables:
     SAST_SCANNER: "Semgrep"
     alert_mode: "on" # Alert mode turned off
+    jira_automation: "true"
   allow_failure: False
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
