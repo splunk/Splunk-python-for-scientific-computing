@@ -8,8 +8,8 @@ dependencies:
   - botocore=1.20.0=pyhd8ed1ab_0
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py38he333c0f_1
-  - bzip2=1.0.8=h93a5062_5
-  - c-ares=1.28.1=h93a5062_0
+  - bzip2=1.0.8=h99b78c6_7
+  - c-ares=1.32.2=h99b78c6_0
   - ca-certificates=2024.7.4=hf0a4a13_0
   - certifi=2024.7.4=pyhd8ed1ab_0
   - chardet=3.0.4=py38h045b1e1_1008
@@ -31,7 +31,7 @@ dependencies:
   - idna=3.7=pyhd8ed1ab_0
   - jmespath=0.10.0=pyh9f0ad1d_0
   - joblib=1.4.2=pyhd8ed1ab_0
-  - libabseil=20240116.2=cxx17_hebf3989_0
+  - libabseil=20240116.2=cxx17_h00cdb27_1
   - libblas=3.9.0=20_osxarm64_openblas
   - libbrotlicommon=1.1.0=hb547adb_1
   - libbrotlidec=1.1.0=hb547adb_1
@@ -50,13 +50,13 @@ dependencies:
   - libllvm11=11.1.0=hfa12f05_5
   - libnghttp2=1.58.0=ha4dd798_1
   - libopenblas=0.3.25=openmp_h6c19121_0
-  - libparquet=16.1.0=hcf52c46_13_cpu
+  - libparquet=16.1.0=hcf52c46_14_cpu
   - libprotobuf=4.25.3=hbfab5d5_0
   - libre2-11=2023.09.01=h7b2c953_2
   - libssh2=1.11.0=h7a5bd25_0
   - libthrift=0.19.0=h026a170_1
   - libutf8proc=2.8.0=h1a8c8d9_0
-  - libxml2=2.12.7=ha661575_1
+  - libxml2=2.12.7=h01dff8b_4
   - libzlib=1.3.1=hfb2fe0b_1
   - llvm-openmp=18.1.8=hde57baf_0
   - llvmlite=0.39.1=py38he6bf707_1
@@ -78,6 +78,7 @@ dependencies:
   - pandas=1.1.5=py38h9b9bf68_0
   - patsy=0.5.6=pyhd8ed1ab_0
   - platformdirs=4.2.2=pyhd8ed1ab_0
+  - pooch=1.8.2=pyhd8ed1ab_0
   - protobuf=4.25.3=py38hbcffe97_0
   - psutil=5.8.0=py38hea4295b_2
   - pydantic=1.10.13=py38h336bac9_1
@@ -101,7 +102,7 @@ dependencies:
   - snappy=1.2.1=hd02b534_0
   - statsmodels=0.13.2=py38hd91e067_0
   - stumpy=1.12.0=pyhd8ed1ab_0
-  - sympy=1.12.1=pypyh2585a3b_103
+  - sympy=1.13.0=pypyh2585a3b_103
   - tbb=2021.5.0=hffc8910_5
   - threadpoolctl=3.5.0=pyhc1e730c_0
   - tokenizers=0.15.2=py38hd6ed179_0

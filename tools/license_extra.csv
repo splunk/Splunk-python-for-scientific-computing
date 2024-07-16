@@ -103,6 +103,7 @@ packaging,,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.co
 pandas,BSD 3-clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,
 patsy,BSD 2-clause/PSF,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,
 platformdirs,,,,
+pooch,,,,
 protobuf,,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format,
 psutil,BSD 3-clause,https://github.com/giampaolo/psutil/blob/master/LICENSE,process manipuation,
 pydantic,,https://github.com/samuelcolvin/pydantic/blob/master/LICENSE,Data validation and settings management,

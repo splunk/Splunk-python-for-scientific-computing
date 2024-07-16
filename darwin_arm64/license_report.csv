@@ -3,8 +3,8 @@ boto3,1.17.0,Apache-2.0,,,,boto3-1.17.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 botocore,1.20.0,Apache-2.0,,,,botocore-1.20.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 bottle,0.12.23,MIT,,,,bottle-0.12.23-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 brotli-python,1.1.0,MIT,,,,brotli-python-1.1.0-py38he333c0f_1,conda-forge,py38he333c0f_1,1
-bzip2,1.0.8,bzip2-1.0.6,,,,bzip2-1.0.8-h93a5062_5,conda-forge,h93a5062_5,5
-c-ares,1.28.1,MIT,,,,c-ares-1.28.1-h93a5062_0,conda-forge,h93a5062_0,0
+bzip2,1.0.8,bzip2-1.0.6,,,,bzip2-1.0.8-h99b78c6_7,conda-forge,h99b78c6_7,7
+c-ares,1.32.2,MIT,,,,c-ares-1.32.2-h99b78c6_0,conda-forge,h99b78c6_0,0
 ca-certificates,2024.7.4,ISC,https://github.com/conda-forge/ca-certificates-feedstock,Certificates for use with other packages,,ca-certificates-2024.7.4-hf0a4a13_0,conda-forge,hf0a4a13_0,0
 certifi,2024.7.4,ISC,,,,certifi-2024.7.4-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 chardet,3.0.4,LGPL-2.1-only,,,,chardet-3.0.4-py38h045b1e1_1008,conda-forge,py38h045b1e1_1008,1008
@@ -26,7 +26,7 @@ humanfriendly,10.0,MIT,,,,humanfriendly-10.0-pyhd8ed1ab_6,conda-forge,pyhd8ed1ab
 idna,3.7,BSD-3-Clause,,,,idna-3.7-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 jmespath,0.10.0,MIT,,,,jmespath-0.10.0-pyh9f0ad1d_0,conda-forge,pyh9f0ad1d_0,0
 joblib,1.4.2,BSD-3-Clause,https://github.com/joblib/joblib/blob/master/LICENSE.txt,Python function as pipeline jobs,,joblib-1.4.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-libabseil,20240116.2,Apache-2.0,,,,libabseil-20240116.2-cxx17_hebf3989_0,conda-forge,cxx17_hebf3989_0,0
+libabseil,20240116.2,Apache-2.0,,,,libabseil-20240116.2-cxx17_h00cdb27_1,conda-forge,cxx17_h00cdb27_1,1
 libblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libblas-3.9.0-20_osxarm64_openblas,conda-forge,20_osxarm64_openblas,20
 libbrotlicommon,1.1.0,MIT,,,,libbrotlicommon-1.1.0-hb547adb_1,conda-forge,hb547adb_1,1
 libbrotlidec,1.1.0,MIT,,,,libbrotlidec-1.1.0-hb547adb_1,conda-forge,hb547adb_1,1
@@ -45,13 +45,13 @@ liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebr
 libllvm11,11.1.0,Apache-2.0 WITH LLVM-exception,,,,libllvm11-11.1.0-hfa12f05_5,conda-forge,hfa12f05_5,5
 libnghttp2,1.58.0,MIT,,,,libnghttp2-1.58.0-ha4dd798_1,conda-forge,ha4dd798_1,1
 libopenblas,0.3.25,BSD-3-Clause,https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE,An optimized BLAS library based on GotoBLAS2 1.13 BSD version,,libopenblas-0.3.25-openmp_h6c19121_0,conda-forge,openmp_h6c19121_0,0
-libparquet,16.1.0,Apache-2.0,,,,libparquet-16.1.0-hcf52c46_13_cpu,conda-forge,hcf52c46_13_cpu,13
+libparquet,16.1.0,Apache-2.0,,,,libparquet-16.1.0-hcf52c46_14_cpu,conda-forge,hcf52c46_14_cpu,14
 libprotobuf,4.25.3,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler,libprotobuf-4.25.3-hbfab5d5_0,conda-forge,hbfab5d5_0,0
 libre2-11,2023.09.01,BSD-3-Clause,,,,libre2-11-2023.09.01-h7b2c953_2,conda-forge,h7b2c953_2,2
 libssh2,1.11.0,BSD-3-Clause,,,,libssh2-1.11.0-h7a5bd25_0,conda-forge,h7a5bd25_0,0
 libthrift,0.19.0,Apache-2.0,,,,libthrift-0.19.0-h026a170_1,conda-forge,h026a170_1,1
 libutf8proc,2.8.0,MIT,,,,libutf8proc-2.8.0-h1a8c8d9_0,conda-forge,h1a8c8d9_0,0
-libxml2,2.12.7,MIT,,,,libxml2-2.12.7-ha661575_1,conda-forge,ha661575_1,1
+libxml2,2.12.7,MIT,,,,libxml2-2.12.7-h01dff8b_4,conda-forge,h01dff8b_4,4
 libzlib,1.3.1,Zlib,http://zlib.net/zlib_license.html,compression library,dependency of python,libzlib-1.3.1-hfb2fe0b_1,conda-forge,hfb2fe0b_1,1
 llvm-openmp,18.1.8,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM openmp runtime,,llvm-openmp-18.1.8-hde57baf_0,conda-forge,hde57baf_0,0
 llvmlite,0.39.1,BSD-2-Clause,,,,llvmlite-0.39.1-py38he6bf707_1,conda-forge,py38he6bf707_1,1
@@ -73,6 +73,7 @@ packaging,24.1,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|ht
 pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py38h9b9bf68_0,conda-forge,py38h9b9bf68_0,0
 patsy,0.5.6,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-0.5.6-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 platformdirs,4.2.2,MIT,,,,platformdirs-4.2.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+pooch,1.8.2,BSD-3-Clause,,,,pooch-1.8.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 protobuf,4.25.3,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format,,protobuf-4.25.3-py38hbcffe97_0,conda-forge,py38hbcffe97_0,0
 psutil,5.8.0,BSD-3-Clause,https://github.com/giampaolo/psutil/blob/master/LICENSE,process manipuation,,psutil-5.8.0-py38hea4295b_2,conda-forge,py38hea4295b_2,2
 pydantic,1.10.13,MIT,https://github.com/samuelcolvin/pydantic/blob/master/LICENSE,Data validation and settings management,,pydantic-1.10.13-py38h336bac9_1,conda-forge,py38h336bac9_1,1
@@ -92,12 +93,11 @@ s3transfer,0.3.7,Apache-2.0,,,,s3transfer-0.3.7-pyhd8ed1ab_0,conda-forge,pyhd8ed
 safetensors,0.4.3,Apache-2.0,,,,safetensors-0.4.3-py38h51b07bf_0,conda-forge,py38h51b07bf_0,0
 scikit-learn,0.24.2,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-0.24.2-py38hfeda2c9_1,conda-forge,py38hfeda2c9_1,1
 scipy,1.10.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.10.0-py38h7b4f323_2,conda-forge,py38h7b4f323_2,2
-setuptools,59.8.0,MIT,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-59.8.0-py38h10201cd_1,conda-forge,py38h10201cd_1,1
 six,1.16.0,MIT,https://github.com/benjaminp/six/blob/master/LICENSE,backwards compatibility utility package,,six-1.16.0-pyh6c4a22f_0,conda-forge,pyh6c4a22f_0,0
 snappy,1.2.1,BSD-3-Clause,,,,snappy-1.2.1-hd02b534_0,conda-forge,hd02b534_0,0
 statsmodels,0.13.2,BSD-3-Clause,https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt,statistics and math library package,,statsmodels-0.13.2-py38hd91e067_0,conda-forge,py38hd91e067_0,0
 stumpy,1.12.0,BSD-3-Clause,,,,stumpy-1.12.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-sympy,1.12.1,BSD-3-Clause,,,,sympy-1.12.1-pypyh2585a3b_103,conda-forge,pypyh2585a3b_103,103
+sympy,1.13.0,BSD-3-Clause,,,,sympy-1.13.0-pypyh2585a3b_103,conda-forge,pypyh2585a3b_103,103
 tbb,2021.5.0,Apache-2.0,https://github.com/oneapi-src/oneTBB/blob/master/LICENSE.txt,threading library,,tbb-2021.5.0-hffc8910_5,conda-forge,hffc8910_5,5
 threadpoolctl,3.5.0,BSD-3-Clause,https://github.com/joblib/threadpoolctl/blob/master/LICENSE,Python helpers to control the threadpools of native libraries,,threadpoolctl-3.5.0-pyhc1e730c_0,conda-forge,pyhc1e730c_0,0
 tokenizers,0.15.2,Apache-2.0,https://github.com/huggingface/tokenizers/blob/main/LICENSE,tokenizers for machine learning,,tokenizers-0.15.2-py38hd6ed179_0,conda-forge,py38hd6ed179_0,0
