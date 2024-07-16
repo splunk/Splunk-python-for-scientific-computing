@@ -94,7 +94,6 @@ s3transfer                    	Apache-2.0                          	https://gith
 safetensors                   	Apache-2.0                          	
 scikit-learn                  	New BSD License                     	https://github.com/scikit-learn/scikit-learn/blob/master/COPYING
 scipy                         	BSD 3-clause                        	https://github.com/scipy/scipy/blob/master/LICENSE.txt
-setuptools                    	MIT                                 	https://github.com/pypa/setuptools/blob/master/LICENSE
 six                           	MIT                                 	https://github.com/benjaminp/six/blob/master/LICENSE
 snappy                        	BSD-3-Clause                        	
 statsmodels                   	BSD 3-clause                        	https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt
