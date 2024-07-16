@@ -218,6 +218,7 @@ gmp                           	GPL-2.0-or-later AND LGPL-3.0-or-later
 gmpy2                         	LGPL-3.0-or-later
 humanfriendly                 	MIT
 idna                          	BSD-3-Clause
+intel-openmp                  	BSD 3-clause                        	https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10
 jmespath                      	MIT
 joblib                        	BSD-3-Clause                        	https://github.com/joblib/joblib/blob/master/LICENSE.txt
 libabseil                     	Apache-2.0
@@ -231,8 +232,10 @@ liblapack                     	BSD-3-Clause                        	https://netl
 liblapacke                    	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt
 libopenblas                   	BSD 3-clause                        	https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE
 libprotobuf                   	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
+libzlib                       	Zlib                                	http://zlib.net/zlib_license.html
 llvm-openmp                   	MIT                                 	https://llvm.org/docs/DeveloperPolicy.html#license
 lz4-c                         	BSD-2-Clause
+mkl                           	Proprietary  Intel                  	https://software.intel.com/en-us/mkl/license-faq
 mpc                           	LGPL 3
 mpfr                          	LGPL-3.0-only
 mpmath                        	BSD-3-Clause
@@ -246,7 +249,6 @@ packaging                     	Apache-2.0 or BSD-2-Clause          	https://gith
 pandas                        	BSD 3-clause                        	https://github.com/pandas-dev/pandas/blob/master/LICENSE
 patsy                         	BSD 2-clause/PSF                    	https://github.com/pydata/patsy/blob/master/LICENSE.txt
 platformdirs                  	MIT
-pooch                         	BSD-3-Clause
 protobuf                      	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
 psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
 pyopenssl                     	Apache-2.0                          	https://github.com/pyca/pyopenssl/blob/main/LICENSE
@@ -256,7 +258,6 @@ python-flatbuffers            	Apache-2.0                          	https://gith
 python_abi                    	BSD-3-Clause                        	https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt
 pytz                          	MIT                                 	https://github.com/newvem/pytz/blob/master/LICENSE.txt
 requests                      	Apache-2.0                          	https://github.com/psf/requests/blob/main/LICENSE
-ruptures                      	BSD-2-Clause
 s3transfer                    	Apache-2.0
 scikit-learn                  	New BSD License                     	https://github.com/scikit-learn/scikit-learn/blob/master/COPYING
 scipy                         	BSD 3-clause                        	https://github.com/scipy/scipy/blob/master/LICENSE.txt
