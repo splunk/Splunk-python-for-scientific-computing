@@ -8,7 +8,7 @@ dependencies:
   - bottle==0.12.23
   - chardet==3.0.4
   - future==0.18.3
-  - mkl=2021.4.0
+#  - mkl=2021.4.0
   - networkx==3.0
   - numpy==1.23
   - python==3.8.12
