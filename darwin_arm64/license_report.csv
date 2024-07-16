@@ -89,10 +89,12 @@ pyyaml,6.0.1,MIT,https://github.com/yaml/pyyaml/blob/master/LICENSE,YAML parser,
 re2,2023.09.01,BSD-3-Clause,https://github.com/google/re2/blob/main/LICENSE,regular expression library,,re2-2023.09.01-h4cba328_2,conda-forge,h4cba328_2,2
 regex,2024.5.15,Python-2.0,https://bitbucket.org/mrabarnett/mrab-regex/src/hg/LICENSE.txt,regular expression library,,regex-2024.5.15-py38h3237794_0,conda-forge,py38h3237794_0,0
 requests,2.32.3,Apache-2.0,https://github.com/psf/requests/blob/main/LICENSE,HTTP Library for Python,,requests-2.32.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+ruptures,1.1.9,BSD-2-Clause,,,,ruptures-1.1.9-py38h9f76b62_1,conda-forge,py38h9f76b62_1,1
 s3transfer,0.3.7,Apache-2.0,,,,s3transfer-0.3.7-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 safetensors,0.4.3,Apache-2.0,,,,safetensors-0.4.3-py38h51b07bf_0,conda-forge,py38h51b07bf_0,0
 scikit-learn,0.24.2,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-0.24.2-py38hfeda2c9_1,conda-forge,py38hfeda2c9_1,1
 scipy,1.10.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.10.0-py38h7b4f323_2,conda-forge,py38h7b4f323_2,2
+setuptools,59.8.0,MIT,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-59.8.0-py38h10201cd_1,conda-forge,py38h10201cd_1,1
 six,1.16.0,MIT,https://github.com/benjaminp/six/blob/master/LICENSE,backwards compatibility utility package,,six-1.16.0-pyh6c4a22f_0,conda-forge,pyh6c4a22f_0,0
 snappy,1.2.1,BSD-3-Clause,,,,snappy-1.2.1-hd02b534_0,conda-forge,hd02b534_0,0
 statsmodels,0.13.2,BSD-3-Clause,https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt,statistics and math library package,,statsmodels-0.13.2-py38hd91e067_0,conda-forge,py38hd91e067_0,0
