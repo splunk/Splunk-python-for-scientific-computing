@@ -39,7 +39,6 @@ readline
 ncurses
 tk
 pip
-pooch
 pyarrow
 pyarrow-core
 pyarrow-hotfix
