@@ -1,6 +1,6 @@
 name: build/venv
 channels:
-  - defaults
+  - pytorch
   - conda-forge
 dependencies:
   - boto3==1.17
@@ -13,10 +13,10 @@ dependencies:
   - python==3.8.19
   - pandas==1.1.5
   - psutil==5.8.0
+  - ruptures==1.1.9
   - scipy==1.10
   - statsmodels==0.13.2
   - scikit-learn==0.24.2
   - onnx==1.15.0
   - onnxruntime=1.17.1
   - openssl==3.3.1
-  - ruptures==1.1.9

@@ -1,6 +1,5 @@
 name: build/venv
 channels:
-  - defaults
   - conda-forge
 dependencies:
   - boto3==1.17
