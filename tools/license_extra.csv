@@ -4,8 +4,8 @@ _openmp_mutex,,https://github.com/conda-forge/_openmp_mutex-feedstock/blob/maste
 blas,,https://anaconda.org/conda-forge/blas,Meta package to select the BLAS variant,
 blas-devel,,https://anaconda.org/conda-forge/blas-devel,Meta package to select the BLAS variant,
 boto3,Apache-2.0,https://github.com/boto/boto3/blob/develop/LICENSE,Amazon Web Services SDK for Python,
-botocore,Apache-2.0,https://github.com/boto/botocore/blob/develop/LICENSE.txt,Low-level, data-driven core of boto 3,
-bottle,MIT,https://bottlepy.org/docs/dev/,a fast, simple and lightweight WSGI micro web-framework for Python,
+botocore,Apache-2.0,https://github.com/boto/botocore/blob/develop/LICENSE.txt,Low-level data-driven core of boto 3,
+bottle,MIT,https://bottlepy.org/docs/dev/,a fast simple and lightweight WSGI micro web-framework for Python,
 brotli-python,,,,
 ca-certificates,MPL-2.0,https://github.com/conda-forge/ca-certificates-feedstock,Certificates for use with other packages,
 certifi,MPL-2.0,https://github.com/certifi/python-certifi/blob/master/LICENSE,Mozilla’s collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts,
@@ -22,7 +22,7 @@ gmp,,,,
 gmpy2,,,,
 humanfriendly,MIT,https://github.com/xolox/python-humanfriendly/blob/master/LICENSE.txt,Human friendly output for text interfaces using Python.
 huggingface_hub,,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,
-icc_rt,proprietary - Intel,https://software.intel.com/en-us/license/intel-simplified-software-license,Intel runtime libraries for C, C++ and Fortran compilers
+icc_rt,proprietary - Intel,https://software.intel.com/en-us/license/intel-simplified-software-license,Intel runtime libraries for C C++ and Fortran compilers
 idna,,,,
 intel-openmp,BSD 3-clause ,https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10,Math library for Intel and compatible processors,
 jmespath,MIT,https://github.com/jmespath/jmespath.py,Allows you to declaratively specify how to extract elements from a JSON document,
@@ -32,7 +32,7 @@ libblas,MIT Apache 2 BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear 
 libcblas,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,
 libcxx,MIT,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,
 libcxxabi,MIT,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,
-libedit,BSD 3-clause,http://thrysoee.dk/editline|http://www.netbsd.org/about/redistribution.html,Command line editor library provides generic line editing, history
+libedit,BSD 3-clause,http://thrysoee.dk/editline|http://www.netbsd.org/about/redistribution.html,Command line editor library provides generic line editing history
 libffi,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,
 libgcc-ng,GPL-3.0-only WITH GCC-exception-3.1n,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GCC low-level runtime library,
 libgfortran-ng,,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,
@@ -41,10 +41,10 @@ libgomp,GPL-3.0-only WITH GCC-exception-3.1,https://gcc.gnu.org/onlinedocs/gcc-4
 liblapack,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,
 liblapacke,,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,
 libopenblas,BSD 3-clause,https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE,An optimized BLAS library based on GotoBLAS2 1.13 BSD version,
-libprotobuf,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler
+libprotobuf,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc the protobuf compiler
 libstdcxx-ng,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GNU C++ Runtime Libsrary,
 libuv,,https://github.com/libuv/libuv/blob/v1.x/LICENSE,Cross-platform asynchronous I/O,
-libzlib,Zlib,http://zlib.net/zlib_license.html,compression library,dependency of python
+libzlib,Zlib,http://zlib.net/zlib_license.html,compression library dependency of python
 llvm-openmp,MIT,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM openmp runtime,
 lz4-c,,,,
 m2w64-gcc-libgfortran,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library built for windows,
@@ -66,7 +66,7 @@ ncurses,free,https://invisible-island.net/ncurses/ncurses-license.html,Library f
 networkx,BSD 3-clause,https://github.com/networkx/networkx/blob/master/LICENSE.txt,Python package for creating and manipulating complex networks,
 numpy,BSD 3-clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,
 onnx,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,
-onnxruntime,MIT,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform, high performance ML inferencing and training accelerator
+onnxruntime,MIT,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform high performance ML inferencing and training accelerator
 openblas,,,
 openssl,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,
 orc,,,,
@@ -89,7 +89,7 @@ python_abi,BSD-3-Clause,https://github.com/conda-forge/python_abi-feedstock/blob
 pytorch,,https://github.com/pytorch/pytorch/blob/master/LICENSE,deep learning library,
 pytorch-mutex,,https://anaconda.org/pytorch/pytorch-mutex,Meta package to select the PyTorch variant,
 pytz,MIT,https://github.com/newvem/pytz/blob/master/LICENSE.txt,dependency,
-pywin32,PSF/Custom,https://github.com/mhammond/pywin32/blob/main/setup.py#L2512|https://github.com/mhammond/pywin32/blob/main/win32/License.txt,Python for Win32 extensions,package meta data state it's under PSF. source code has other licenses
+pywin32,PSF/Custom,https://github.com/mhammond/pywin32/blob/main/setup.py#L2512|https://github.com/mhammond/pywin32/blob/main/win32/License.txt,Python for Win32 extensions package meta data state it's under PSF. source code has other licenses
 pyyaml,,https://github.com/yaml/pyyaml/blob/master/LICENSE,YAML parser,
 re2,,https://github.com/google/re2/blob/main/LICENSE,regular expression library,
 regex,Python-2.0 and Apache 2.0,https://bitbucket.org/mrabarnett/mrab-regex/src/hg/LICENSE.txt,regular expression library,
@@ -111,7 +111,7 @@ transformers,Apache-2.0,https://github.com/huggingface/transformers/blob/main/LI
 typing-extensions,PSF-2.0,https://github.com/python/typing/blob/master/typing_extensions/LICENSE,type hinting library for python,
 typing_extensions,PSF-2.0,https://github.com/python/typing/blob/master/typing_extensions/LICENSE,Type Hints for Python,
 ucrt,Proprietary Microsoft,https://docs.microsoft.com/en-us/legal/windows-sdk/license-terms-ewdk,Windows Software Developer Kit for Windows 10,
-urllib3,MIT,https://github.com/urllib3/urllib3/blob/main/LICENSE.txt,HTTP library with thread-safe connection pooling, file post, and more,
+urllib3,MIT,https://github.com/urllib3/urllib3/blob/main/LICENSE.txt,HTTP library with thread-safe connection pooling file postgit status and more,
 vc,Modified BSD 3-clause,https://github.com/conda/conda/wiki/VC-features,Meta package for selecting VS runtime options,
 vc14_runtime,Proprietary-Microsoft,https://visualstudio.microsoft.com/downloads/,
 vs2015_runtime,BSD-3-Clause,https://github.com/conda-forge/vc-feedstock?tab=BSD-3-Clause-1-ov-file#readme14,MSVC runtimes,
