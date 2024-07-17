@@ -1,7 +1,5 @@
 Splunk_SA_Scientific_Python - Python for Scientific Computing in Splunk
 
-*** Powered by Anaconda! See http://continuum.io/ ***
-
 This package contains a Python interpreter bundled with the following
 Python scientific and machine learning libraries (see LICENSE for the list
 of libraries included)
