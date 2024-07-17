@@ -1,7 +1,6 @@
 name: psc
 channels:
   - pytorch
-  - defaults
   - conda-forge
 dependencies:
   - boto3==1.17
