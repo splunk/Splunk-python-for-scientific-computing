@@ -48,13 +48,13 @@ fossa-scan-linux:
   extends: .fossa-scan
   image: ${LINUX_BUILD_IMAGE}
 
-fossa-scan-windows:
-  extends: .fossa-scan
-  before_script:
-    - choco install make
-  image: ${WINDOWS_BUILD_IMAGE}
-  tags:
-    - psc-win64
+#fossa-scan-windows:
+#  extends: .fossa-scan
+#  before_script:
+#    - choco install make
+#  image: ${WINDOWS_BUILD_IMAGE}
+#  tags:
+#    - psc-win64
 
 fossa-scan-mac-x86_64:
   extends: .fossa-scan
@@ -87,13 +87,13 @@ build-linux:
   extends: .build
   image: ${LINUX_BUILD_IMAGE}
 
-build-windows:
-  extends: .build
-  before_script:
-    - choco install make
-  image: ${WINDOWS_BUILD_IMAGE}
-  tags:
-    - psc-win64
+#build-windows:
+#  extends: .build
+#  before_script:
+#    - choco install make
+#  image: ${WINDOWS_BUILD_IMAGE}
+#  tags:
+#    - psc-win64
 
 build-mac-x86_64:
   extends: .build
@@ -107,7 +107,7 @@ publish:
   stage: publish
   dependencies:
     - build-linux
-    - build-windows
+    #- build-windows
     - build-mac-x86_64
   before_script:
     - creds-helper init
