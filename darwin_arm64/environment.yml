@@ -99,7 +99,6 @@ dependencies:
   - safetensors=0.4.3=py38h51b07bf_0
   - scikit-learn=0.24.2=py38hfeda2c9_1
   - scipy=1.10.0=py38h7b4f323_2
-  - setuptools=59.8.0=py38h10201cd_1
   - six=1.16.0=pyh6c4a22f_0
   - snappy=1.2.1=hd02b534_0
   - statsmodels=0.13.2=py38hd91e067_0
@@ -121,3 +120,5 @@ dependencies:
   - yaml=0.2.5=h3422bc3_2
   - yarl=1.9.4=py38h336bac9_0
   - zstd=1.5.6=hb46c0d2_0
+  - pip:
+      - setuptools==69.5.1
