@@ -4,12 +4,12 @@ channels:
 dependencies:
   - boto3==1.17
   - botocore==1.20
-  - bottle==0.12.13
+  - bottle==0.12.23
   - chardet==3.0.4
   - future==0.18.3
   - networkx==3.0
   - numpy==1.23.0
-  - onnx==1.15
+  - onnx==1.15.0
   - openssl==3.3.1
   - pandas==1.1.5
   - psutil==5.8.0

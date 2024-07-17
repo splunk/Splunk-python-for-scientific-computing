@@ -98,10 +98,7 @@ def generate_license_report(pkgs_scanned):
 
 def generate_app_license_file(pkgs_scanned):
     license_content = ""
-    with open(os.path.join(script_dir, "..", "NOTICE")) as f:
-        # current_year = date.today().year
-        # license_content = f.read().replace("@year@", str(current_year))
-        # license_content += "\n\n========================================================================\n"
+    with open(os.path.join(script_dir, "..", "LICENSE")) as f:
         license_packages = "Package licenses:\n"
         for name, pkg in get_packages(pkgs_scanned):
             pkg_extra_info = license_extra_info.get(name)
