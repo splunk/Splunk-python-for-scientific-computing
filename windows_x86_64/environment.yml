@@ -10,8 +10,8 @@ dependencies:
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.0.9=py38hd77b12b_8
   - bzip2=1.0.8=h2bbff1b_6
-  - c-ares=1.28.1=hcfcfb64_0
-  - ca-certificates=2024.3.11=haa95532_0
+  - c-ares=1.32.2=h2466b09_0
+  - ca-certificates=2024.7.2=haa95532_0
   - certifi=2024.7.4=py38haa95532_0
   - chardet=3.0.4=py38haa95532_1003
   - cpuonly=2.0=0
@@ -48,7 +48,7 @@ dependencies:
   - libssh2=1.11.0=h291bd65_0
   - libthrift=0.19.0=ha2b3283_1
   - libutf8proc=2.8.0=h82a8f57_0
-  - libuv=1.44.2=h2bbff1b_0
+  - libuv=1.48.0=h827c3e9_0
   - libzlib=1.2.13=h2466b09_6
   - llvmlite=0.39.1=py38h23ce68f_0
   - lz4-c=1.9.4=h2bbff1b_1
@@ -60,7 +60,7 @@ dependencies:
   - numba=0.56.4=py38hf11a4ad_0
   - numpy=1.23.0=py38h223ccf5_0
   - onnx=1.15.0=py38hec9b54c_4
-  - openssl=3.3.1=h2466b09_1
+  - openssl=3.3.1=h2466b09_2
   - orc=2.0.0=heb0c069_0
   - packaging=24.1=py38haa95532_0
   - pandas=1.1.5=py38hf11a4ad_0
@@ -81,6 +81,7 @@ dependencies:
   - re2=2023.09.01=hd3b24a8_2
   - regex=2023.10.3=py38h2bbff1b_0
   - requests=2.32.2=py38haa95532_0
+  - ruptures=1.1.9=py38haf47d59_1
   - s3transfer=0.3.6=pyhd3eb1b0_0
   - safetensors=0.4.2=py38h9e6c545_1
   - scikit-learn=0.24.2=py38hf11a4ad_1
