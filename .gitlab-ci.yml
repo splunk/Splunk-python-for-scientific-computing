@@ -25,12 +25,11 @@ binary-scan:
   variables:
     ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic/apps/app-sasp/releases/4.2.x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_*.tgz"
   script:
+    - echo "Starting binary scan.."
     - echo "Current working directory:"
     - pwd
     - echo "Listing files in current directory:"
     - ls -la
-    - echo "Checking network connectivity to artifact repository:"
-    - ping -c 4 repo.splunkdev.net
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
