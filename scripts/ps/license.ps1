@@ -12,4 +12,4 @@ $env:PLATFORM=$PLATFORM
 $env:BLACKLISTED_PACKAGES=$BLACKLISTED_PACKAGES
 $env:VENV_BUILD_DIR=$VENV_BUILD_DIR
 & $(Join-Path $MINICONDA_BUILD_DIR "python") $(Join-Path $PROJECT_DIR $(Join-Path "tools" "license.py"))
-Write-Output "`r`n[INFO] License file ${PLATFORM_DIR}/LICENSE updated"
+Write-Output "`r`n[INFO] Notice file ${PLATFORM_DIR}/NOTICE updated"

@@ -96,28 +96,27 @@ def generate_license_report(pkgs_scanned):
     write_license_csv(os.path.join(script_dir, "..", os.environ['PLATFORM'], "license_report.csv"), pkg_report, fieldnames)
        
 
-def generate_app_license_file(pkgs_scanned):
+def generate_app_notice_file(pkgs_scanned):
     license_content = ""
-    with open(os.path.join(script_dir, "..", "LICENSE")) as f:
-        license_packages = "Package licenses:\n"
-        for name, pkg in get_packages(pkgs_scanned):
-            pkg_extra_info = license_extra_info.get(name)
-            license = pkg.get('license')
-            if license is None:
-                license = ""
-            if pkg_extra_info['license_override'] != "":
-                license = pkg_extra_info['license_override']
-            if pkg_extra_info is None:
-                license_url = ""
-            else:
-                license_url = pkg_extra_info.get('license_url')
-            license_packages += f"{name.ljust(30)}\t{license.ljust(36)}\t{license_url}\n"
-        license_content += license_packages
+    license_packages = "Package licenses:\n"
+    for name, pkg in get_packages(pkgs_scanned):
+        pkg_extra_info = license_extra_info.get(name)
+        license = pkg.get('license')
+        if license is None:
+            license = ""
+        if pkg_extra_info['license_override'] != "":
+            license = pkg_extra_info['license_override']
+        if pkg_extra_info is None:
+            license_url = ""
+        else:
+            license_url = pkg_extra_info.get('license_url')
+        license_packages += f"{name.ljust(30)}\t{license.ljust(36)}\t{license_url}\n"
+    license_content += license_packages
     # Write to platform's NOTICE file
     with open(os.path.join(script_dir, "..", platform, "NOTICE"), "w") as f:
         f.write(license_content)
 
 pkgs_scanned = scan_installed()
 update_license_extra(pkgs_scanned)
-generate_app_license_file(pkgs_scanned)
+generate_app_notice_file(pkgs_scanned)
 generate_license_report(pkgs_scanned)
