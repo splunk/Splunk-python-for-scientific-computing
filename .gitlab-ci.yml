@@ -25,15 +25,10 @@ binary-scan:
   variables:
     ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic/apps/app-sasp/releases/4.2.x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_*.tgz"
   script:
-    - echo "Starting binary scan..."
-    - echo "Artifact Path: $ARTIFACT_PATH"
-    # Print current working directory to ensure we are in the expected directory
     - echo "Current working directory:"
     - pwd
-    # List files in the current directory to verify expected files are in place
     - echo "Listing files in current directory:"
     - ls -la
-    # Check network connectivity to the artifact repository
     - echo "Checking network connectivity to artifact repository:"
     - ping -c 4 repo.splunkdev.net
   rules:
