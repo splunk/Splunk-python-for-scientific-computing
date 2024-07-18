@@ -1,0 +1,71 @@
+Package licenses:
+_libgcc_mutex                 	None                                	https://anaconda.org/conda-forge/_libgcc_mutex
+_openmp_mutex                 	BSD-3-Clause                        	https://github.com/conda-forge/_openmp_mutex-feedstock/blob/master/LICENSE.txt
+blas                          	BSD 3-clause                        	https://anaconda.org/conda-forge/blas
+boto3                         	Apache-2.0                          	
+botocore                      	Apache-2.0                          	
+bottle                        	MIT                                 	
+brotli-python                 	MIT                                 	
+ca-certificates               	MPL-2.0                             	https://github.com/conda-forge/ca-certificates-feedstock
+certifi                       	MPL-2.0                             	
+chardet                       	LGPL2                               	
+coloredlogs                   	MIT                                 	
+future                        	MIT                                 	
+gmp                           	GPL-2.0-or-later AND LGPL-3.0-or-later	
+gmpy2                         	LGPL-3.0-or-later                   	
+humanfriendly                 	MIT                                 	
+idna                          	BSD-3-Clause                        	
+jmespath                      	MIT                                 	
+joblib                        	BSD-3-Clause                        	https://github.com/joblib/joblib/blob/master/LICENSE.txt
+libabseil                     	Apache-2.0                          	
+libblas                       	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
+libcblas                      	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
+libffi                        	libffi license                      	https://github.com/libffi/libffi/blob/master/LICENSE
+libgcc-ng                     	GPL-3.0-only WITH GCC-exception-3.1n	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libgfortran-ng                	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libgfortran5                  	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libgomp                       	GPL-3.0-only WITH GCC-exception-3.1 	https://gcc.gnu.org/onlinedocs/gcc-4.2.4/libgomp/Copying.html#Copying
+liblapack                     	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt
+libopenblas                   	BSD 3-clause                        	https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE
+libprotobuf                   	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
+libstdcxx-ng                  	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+lz4-c                         	BSD-2-Clause                        	
+mpc                           	LGPL 3                              	
+mpfr                          	LGPL-3.0-only                       	
+mpmath                        	BSD-3-Clause                        	
+networkx                      	BSD 3-clause                        	https://github.com/networkx/networkx/blob/master/LICENSE.txt
+numpy                         	BSD 3-clause                        	https://github.com/numpy/numpy/blob/master/LICENSE.txt
+onnx                          	Apache-2.0                          	https://github.com/onnx/onnx/blob/main/LICENSE
+onnxruntime                   	MIT                                 	https://github.com/microsoft/onnxruntime/blob/master/LICENSE
+openblas                      	BSD-3-Clause                        	
+openssl                       	Apache-2.0                          	https://github.com/openssl/openssl/blob/master/LICENSE.txt
+packaging                     	Apache-2.0 or BSD-2-Clause          	https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD
+pandas                        	BSD 3-clause                        	https://github.com/pandas-dev/pandas/blob/master/LICENSE
+patsy                         	BSD 2-clause/PSF                    	https://github.com/pydata/patsy/blob/master/LICENSE.txt
+platformdirs                  	MIT                                 	
+pooch                         	BSD-3-Clause                        	
+protobuf                      	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
+psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
+pyopenssl                     	Apache-2.0                          	https://github.com/pyca/pyopenssl/blob/main/LICENSE
+python                        	PSF                                 	https://docs.python.org/3/license.html
+python-dateutil               	Apache 2.0                          	https://github.com/dateutil/dateutil/blob/master/LICENSE
+python-flatbuffers            	Apache-2.0                          	https://github.com/google/flatbuffers/blob/master/LICENSE.txt
+python_abi                    	BSD-3-Clause                        	https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt
+pytz                          	MIT                                 	https://github.com/newvem/pytz/blob/master/LICENSE.txt
+requests                      	Apache-2.0                          	https://github.com/psf/requests/blob/main/LICENSE
+ruptures                      	BSD-2-Clause                        	
+s3transfer                    	Apache-2.0                          	
+scikit-learn                  	New BSD License                     	https://github.com/scikit-learn/scikit-learn/blob/master/COPYING
+scipy                         	BSD 3-clause                        	https://github.com/scipy/scipy/blob/master/LICENSE.txt
+setuptools                    	MIT                                 	https://github.com/pypa/setuptools/blob/master/LICENSE
+six                           	MIT                                 	https://github.com/benjaminp/six/blob/master/LICENSE
+statsmodels                   	BSD 3-clause                        	https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt
+sympy                         	BSD-3-Clause AND MIT                	
+threadpoolctl                 	BSD 3-clause                        	https://github.com/joblib/threadpoolctl/blob/master/LICENSE
+typing-extensions             	PSF-2.0                             	https://github.com/python/typing/blob/master/typing_extensions/LICENSE
+typing_extensions             	PSF-2.0                             	https://github.com/python/typing/blob/master/typing_extensions/LICENSE
+urllib3                       	MIT                                 	
+wheel                         	MIT                                 	https://github.com/pypa/wheel/blob/master/LICENSE.txt
+xz                            	LGPLv2.1/GPLv2                      	https://git.tukaani.org/?p=xz.git;a=blob_plain;f=COPYING;hb=HEAD
+zlib                          	Zlib                                	http://zlib.net/zlib_license.html
+zstd                          	BSD-3-Clause AND GPL-2.0-or-later   	
