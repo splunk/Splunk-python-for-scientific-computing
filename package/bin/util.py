@@ -8,7 +8,7 @@ import fnmatch
 # Note: the following functions do NOT work with Search Head
 # Pooling/shared storage.
 def get_splunkhome_path():
-    return os.path.normpath(os.environ['SPLUNK_HOME'])
+    return os.path.normpath(os.environ["SPLUNK_HOME"])
 
 
 def make_splunkhome_path(p):
@@ -16,7 +16,7 @@ def make_splunkhome_path(p):
 
 
 def get_etc_path():
-    return os.environ.get('SPLUNK_ETC', os.path.join(get_splunkhome_path(), 'etc'))
+    return os.environ.get("SPLUNK_ETC", os.path.join(get_splunkhome_path(), "etc"))
 
 
 def get_apps_path(bundle_path=None):
@@ -31,11 +31,11 @@ def get_apps_path(bundle_path=None):
 
     """
     full_path_to_apps_dir = bundle_path if bundle_path else get_etc_path()
-    return os.path.normpath(os.path.join(full_path_to_apps_dir, 'apps'))
+    return os.path.normpath(os.path.join(full_path_to_apps_dir, "apps"))
 
 
 def get_staging_area_path():
-    staging_path = os.path.join('var', 'run', 'splunk', 'lookup_tmp')
+    staging_path = os.path.join("var", "run", "splunk", "lookup_tmp")
     return os.path.normpath(os.path.join(get_splunkhome_path(), staging_path))
 
 
@@ -47,7 +47,7 @@ def is_valid_identifier(name):
     that name can be used as a filename without risk of directory
     traversal.
     """
-    return re.match('^[a-zA-Z_][a-zA-Z0-9_]*$', name) is not None
+    return re.match("^[a-zA-Z_][a-zA-Z0-9_]*$", name) is not None
 
 
 def match_field_globs(input_fields, requested_fields):
@@ -63,10 +63,12 @@ def match_field_globs(input_fields, requested_fields):
     output_fields = []
 
     for f in requested_fields:
-        if '*' in f:  # f contains a glob
+        if "*" in f:  # f contains a glob
             pat = re.compile(fnmatch.translate(f))
             matches = [
-                x for x in list(input_fields) if not x.startswith('__mv_') and pat.match(x)
+                x
+                for x in list(input_fields)
+                if not x.startswith("__mv_") and pat.match(x)
             ]
             if len(matches) == 0:
                 output_fields.append(f)

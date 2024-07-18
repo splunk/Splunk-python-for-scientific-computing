@@ -23,6 +23,7 @@ try:
 except ImportError:
     from splunklib.six import StringIO
 
+
 class EventWriter(object):
     """``EventWriter`` writes events and error messages to Splunk from a modular input.
     Its two important methods are ``writeEvent``, which takes an ``Event`` object,
@@ -37,7 +38,7 @@ class EventWriter(object):
     ERROR = "ERROR"
     FATAL = "FATAL"
 
-    def __init__(self, output = sys.stdout, error = sys.stderr):
+    def __init__(self, output=sys.stdout, error=sys.stderr):
         """
         :param output: Where to write the output; defaults to sys.stdout.
         :param error: Where to write any errors; defaults to sys.stderr.
@@ -83,5 +84,5 @@ class EventWriter(object):
     def close(self):
         """Write the closing </stream> tag to make this XML well formed."""
         if self.header_written:
-          self._out.write("</stream>")
+            self._out.write("</stream>")
         self._out.flush()

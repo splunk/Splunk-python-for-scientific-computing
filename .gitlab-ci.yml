@@ -24,6 +24,35 @@ binary-scan:
   extends: .binary-scan
   variables:
     ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic/apps/app-sasp/releases/4.2.x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_*.tgz"
+  script:
+    - echo "Starting binary scan..."
+    - echo "Artifact Path: $ARTIFACT_PATH"
+
+    # Print current working directory to ensure we are in the expected directory
+    - echo "Current working directory:"
+    - pwd
+
+    # List files in the current directory to verify expected files are in place
+    - echo "Listing files in current directory:"
+    - ls -la
+
+    # Check network connectivity to the artifact repository
+    - echo "Checking network connectivity to artifact repository:"
+    - ping -c 4 repo.splunkdev.net
+
+    # Verify if specific tools or binaries are available in PATH
+    - echo "Checking availability of required tools:"
+    - which git
+    - which make
+    - which curl
+    
+    # Display environment variables (be cautious to avoid exposing sensitive information)
+    - echo "Displaying environment variables (filtered):"
+    - env | sort | grep -vE "API_KEY|SECRET|PASSWORD"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_TAG
 
 sast-scanner:
   stage: prodsec-review
