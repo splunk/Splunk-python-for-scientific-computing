@@ -67,7 +67,7 @@ numba,0.56.4,BSD-2-Clause,,,,numba-0.56.4-py38hfb5a544_1,conda-forge,py38hfb5a54
 numpy,1.23.0,BSD-3-Clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,,numpy-1.23.0-py38he1fcd3f_0,conda-forge,py38he1fcd3f_0,0
 onnx,1.15.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.15.0-py38h9fb39b1_4,conda-forge,py38h9fb39b1_4,4
 onnxruntime,1.17.1,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform, high performance ML inferencing and training accelerator,onnxruntime-1.17.1-py38h5e566b3_2_cpu,conda-forge,py38h5e566b3_2_cpu,2
-openssl,3.3.1,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.3.1-hfb2fe0b_1,conda-forge,hfb2fe0b_1,1
+openssl,3.3.1,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.3.1-hfb2fe0b_2,conda-forge,hfb2fe0b_2,2
 orc,2.0.1,Apache-2.0,,,,orc-2.0.1-h47ade37_1,conda-forge,h47ade37_1,1
 packaging,24.1,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-24.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py38h9b9bf68_0,conda-forge,py38h9b9bf68_0,0
@@ -94,7 +94,7 @@ s3transfer,0.3.7,Apache-2.0,,,,s3transfer-0.3.7-pyhd8ed1ab_0,conda-forge,pyhd8ed
 safetensors,0.4.3,Apache-2.0,,,,safetensors-0.4.3-py38h51b07bf_0,conda-forge,py38h51b07bf_0,0
 scikit-learn,0.24.2,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-0.24.2-py38hfeda2c9_1,conda-forge,py38hfeda2c9_1,1
 scipy,1.10.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.10.0-py38h7b4f323_2,conda-forge,py38h7b4f323_2,2
-setuptools,59.8.0,MIT,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-59.8.0-py38h10201cd_1,conda-forge,py38h10201cd_1,1
+setuptools,65.5.1,,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-65.5.1-pypi_0,pypi,,0
 six,1.16.0,MIT,https://github.com/benjaminp/six/blob/master/LICENSE,backwards compatibility utility package,,six-1.16.0-pyh6c4a22f_0,conda-forge,pyh6c4a22f_0,0
 snappy,1.2.1,BSD-3-Clause,,,,snappy-1.2.1-hd02b534_0,conda-forge,hd02b534_0,0
 statsmodels,0.13.2,BSD-3-Clause,https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt,statistics and math library package,,statsmodels-0.13.2-py38hd91e067_0,conda-forge,py38hd91e067_0,0

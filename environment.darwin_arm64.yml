@@ -8,7 +8,7 @@ dependencies:
   - bottle==0.12.23
   - chardet==3.0.4
   - fastdtw==0.3.4
-  - future==0.18.2
+  - future==0.18.3
   - pandas==1.1.5
   - psutil==5.8.0
   - python==3.8.19
@@ -22,8 +22,8 @@ dependencies:
   - tbb==2021.5
   - transformers==4.38.1
   - cpuonly=2.0
-  - onnx==1.14.0
-  - onnxruntime==1.15.1
+  - onnx==1.15
+  - onnxruntime==1.17.1
   - pydantic==1.10.13
   - ruptures==1.1.9
   - watchdog==2.1.7
