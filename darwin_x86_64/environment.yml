@@ -2,6 +2,7 @@ name: build/venv
 channels:
   - pytorch
   - conda-forge
+  - defaults
 dependencies:
   - blas=2.120=mkl
   - blas-devel=3.9.0=20_osx64_mkl
