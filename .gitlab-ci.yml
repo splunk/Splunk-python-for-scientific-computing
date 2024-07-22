@@ -36,7 +36,7 @@ sast-scanner:
   variables:
     FOSSA_API_KEY: "${FOSSA_API_KEY_D04082022}"
   script:
-    - echo $FOSSA_API_KEY
+    - echo ${FOSSA_API_KEY_D04082022}
     - make fossa
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
