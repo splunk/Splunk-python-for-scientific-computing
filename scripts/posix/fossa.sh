@@ -20,7 +20,7 @@ echo "ARCH=$ARCH, ARM64=$ARM64, PLATFORM=$PLATFORM"
 if [ -z "$CI" ]; then
   if [ "$ARCH" == "$ARM64" ]; then
     echo "Found ${ARCH} build, Running fossa using Rosseta"
-    arch "-$AMD64" fossa analyze --only-target "conda" --only-path $PLATFORM --team "FOSSA Sandbox" --title "PSC Test"
+    arch "-$ARM64" fossa analyze --only-target "conda" --only-path $PLATFORM --team "FOSSA Sandbox" --title "PSC Test"
   else
     fossa analyze --only-target "conda" --only-path $PLATFORM --team "FOSSA Sandbox" --title "PSC Test"
   fi
