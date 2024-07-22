@@ -15,8 +15,6 @@ then
   curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.sh | bash
 fi
 
-echo "ARCH=$ARCH, ARM64=$ARM64, PLATFORM=$PLATFORM"
-
 if [ -z "$CI" ]; then
   if [ "$ARCH" == "$ARM64" ]; then
     echo "Found ${ARCH} build, Running fossa using Rosseta"
