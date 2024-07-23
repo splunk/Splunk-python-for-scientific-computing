@@ -21,14 +21,14 @@ dependencies:
   - jmespath=0.10.0=pyhd3eb1b0_0
   - joblib=1.4.2=py38h06a4308_0
   - libabseil=20240116.2=cxx17_h6a678d5_0
-  - libblas=3.9.0=22_linux64_openblas
-  - libcblas=3.9.0=22_linux64_openblas
+  - libblas=3.9.0=23_linux64_openblas
+  - libcblas=3.9.0=23_linux64_openblas
   - libffi=3.4.4=h6a678d5_1
   - libgcc-ng=14.1.0=h77fa898_0
   - libgfortran-ng=14.1.0=h69a702a_0
   - libgfortran5=14.1.0=hc5f4f2c_0
   - libgomp=14.1.0=h77fa898_0
-  - liblapack=3.9.0=22_linux64_openblas
+  - liblapack=3.9.0=23_linux64_openblas
   - libopenblas=0.3.27=pthreads_hac2b453_1
   - libprotobuf=4.25.3=he621ea3_0
   - libstdcxx-ng=14.1.0=hc0a3c3a_0
@@ -40,7 +40,7 @@ dependencies:
   - numpy=1.23.0=py38h3a7f9d9_0
   - onnx=1.15.0=py38h4281a0f_4
   - onnxruntime=1.17.1=py38hf70ce4d_0
-  - openssl=3.3.1=h4ab18f5_1
+  - openssl=3.3.1=h4bc722e_2
   - packaging=24.1=py38h06a4308_0
   - pandas=1.1.5=py38ha9443f7_0
   - patsy=0.5.6=py38h06a4308_0
@@ -54,12 +54,12 @@ dependencies:
   - python-flatbuffers=2.0=pyhd3eb1b0_0
   - python_abi=3.8=2_cp38
   - pytz=2024.1=py38h06a4308_0
-  - requests=2.32.2=py38h06a4308_0
+  - requests=2.32.3=py38h06a4308_0
   - ruptures=1.1.9=py38he82f83a_1
   - s3transfer=0.3.6=pyhd3eb1b0_0
   - scikit-learn=0.24.2=py38ha9443f7_0
   - scipy=1.10.0=py38h32ae08f_1
-  - setuptools=69.5.1=py38h06a4308_0
+  - setuptools=70.0.0=pyhd8ed1ab_0
   - six=1.16.0=pyhd3eb1b0_1
   - statsmodels=0.13.2=py38h7f8727e_0
   - sympy=1.12=py38h06a4308_0

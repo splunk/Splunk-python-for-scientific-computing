@@ -1,7 +1,7 @@
 name,version,license,license_url,functionality,notes,dist_name,channel,build,build_number
 _libgcc_mutex,0.1,None,https://anaconda.org/conda-forge/_libgcc_mutex,meta package,,_libgcc_mutex-0.1-conda_forge,conda-forge,conda_forge,0
 _openmp_mutex,4.5,BSD-3-Clause,https://github.com/conda-forge/_openmp_mutex-feedstock/blob/master/LICENSE.txt,meta package,,_openmp_mutex-4.5-2_gnu,conda-forge,2_gnu,16
-blas,1.0,BSD 3-clause,https://anaconda.org/conda-forge/blas,Meta package to select the BLAS variant,,blas-1.0-openblas,conda-forge,openblas,0
+blas,1.0,,https://anaconda.org/conda-forge/blas,Meta package to select the BLAS variant,,blas-1.0-openblas,pkgs/main,openblas,7
 boto3,1.17.0,Apache-2.0,,,,boto3-1.17.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 botocore,1.20.0,Apache-2.0,,,,botocore-1.20.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 bottle,0.12.23,MIT,,,,bottle-0.12.23-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
@@ -18,14 +18,14 @@ idna,3.7,BSD-3-Clause,,,,idna-3.7-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 jmespath,0.10.0,MIT,,,,jmespath-0.10.0-pyhd3eb1b0_0,pkgs/main,pyhd3eb1b0_0,0
 joblib,1.4.2,BSD-3-Clause,https://github.com/joblib/joblib/blob/master/LICENSE.txt,Python function as pipeline jobs,,joblib-1.4.2-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 libabseil,20240116.2,Apache-2.0,,,,libabseil-20240116.2-cxx17_h6a678d5_0,pkgs/main,cxx17_h6a678d5_0,0
-libblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libblas-3.9.0-22_linux64_openblas,conda-forge,22_linux64_openblas,22
-libcblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libcblas-3.9.0-22_linux64_openblas,conda-forge,22_linux64_openblas,22
+libblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libblas-3.9.0-23_linux64_openblas,conda-forge,23_linux64_openblas,23
+libcblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libcblas-3.9.0-23_linux64_openblas,conda-forge,23_linux64_openblas,23
 libffi,3.4.4,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,,libffi-3.4.4-h6a678d5_1,pkgs/main,h6a678d5_1,1
 libgcc-ng,14.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GCC low-level runtime library,,libgcc-ng-14.1.0-h77fa898_0,conda-forge,h77fa898_0,0
 libgfortran-ng,14.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran-ng-14.1.0-h69a702a_0,conda-forge,h69a702a_0,0
 libgfortran5,14.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran5-14.1.0-hc5f4f2c_0,conda-forge,hc5f4f2c_0,0
 libgomp,14.1.0,GPL-3.0-only WITH GCC-exception-3.1,https://gcc.gnu.org/onlinedocs/gcc-4.2.4/libgomp/Copying.html#Copying,The GCC OpenMP implementation,,libgomp-14.1.0-h77fa898_0,conda-forge,h77fa898_0,0
-liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapack-3.9.0-22_linux64_openblas,conda-forge,22_linux64_openblas,22
+liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapack-3.9.0-23_linux64_openblas,conda-forge,23_linux64_openblas,23
 libopenblas,0.3.27,BSD-3-Clause,https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE,An optimized BLAS library based on GotoBLAS2 1.13 BSD version,,libopenblas-0.3.27-pthreads_hac2b453_1,conda-forge,pthreads_hac2b453_1,1
 libprotobuf,4.25.3,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler,libprotobuf-4.25.3-he621ea3_0,pkgs/main,he621ea3_0,0
 libstdcxx-ng,14.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GNU C++ Runtime Libsrary,,libstdcxx-ng-14.1.0-hc0a3c3a_0,conda-forge,hc0a3c3a_0,0
@@ -37,8 +37,7 @@ networkx,3.0,BSD-3-Clause,https://github.com/networkx/networkx/blob/master/LICEN
 numpy,1.23.0,BSD-3-Clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,,numpy-1.23.0-py38h3a7f9d9_0,conda-forge,py38h3a7f9d9_0,0
 onnx,1.15.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.15.0-py38h4281a0f_4,conda-forge,py38h4281a0f_4,4
 onnxruntime,1.17.1,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform, high performance ML inferencing and training accelerator,onnxruntime-1.17.1-py38hf70ce4d_0,pkgs/main,py38hf70ce4d_0,0
-openblas,0.3.27,BSD-3-Clause,,,,openblas-0.3.27-pthreads_h9eca1d5_1,conda-forge,pthreads_h9eca1d5_1,1
-openssl,3.3.1,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.3.1-h4ab18f5_1,conda-forge,h4ab18f5_1,1
+openssl,3.3.1,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.3.1-h4bc722e_2,conda-forge,h4bc722e_2,2
 packaging,24.1,Apache-2.0 or BSD-2-Clause,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-24.1-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py38ha9443f7_0,pkgs/main,py38ha9443f7_0,0
 patsy,0.5.6,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-0.5.6-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
@@ -52,12 +51,12 @@ python-dateutil,2.9.0post0,BSD-3-Clause and Apache-2.0,https://github.com/dateut
 python-flatbuffers,2.0,Apache-2.0,https://github.com/google/flatbuffers/blob/master/LICENSE.txt,library for use with the Flatbuffers serialization format,,python-flatbuffers-2.0-pyhd3eb1b0_0,pkgs/main,pyhd3eb1b0_0,0
 python_abi,3.8,BSD-3-Clause,https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt,Meta package to select python implementation,,python_abi-3.8-2_cp38,conda-forge,2_cp38,2
 pytz,2024.1,MIT,https://github.com/newvem/pytz/blob/master/LICENSE.txt,dependency,,pytz-2024.1-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
-requests,2.32.2,Apache-2.0,https://github.com/psf/requests/blob/main/LICENSE,HTTP Library for Python,,requests-2.32.2-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
+requests,2.32.3,Apache-2.0,https://github.com/psf/requests/blob/main/LICENSE,HTTP Library for Python,,requests-2.32.3-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 ruptures,1.1.9,BSD-2-Clause,,,,ruptures-1.1.9-py38he82f83a_1,conda-forge,py38he82f83a_1,1
 s3transfer,0.3.6,Apache-2.0,,,,s3transfer-0.3.6-pyhd3eb1b0_0,pkgs/main,pyhd3eb1b0_0,0
 scikit-learn,0.24.2,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-0.24.2-py38ha9443f7_0,pkgs/main,py38ha9443f7_0,0
 scipy,1.10.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.10.0-py38h32ae08f_1,pkgs/main,py38h32ae08f_1,1
-setuptools,69.5.1,MIT,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-69.5.1-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
+setuptools,70.0.0,MIT,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-70.0.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 six,1.16.0,MIT,https://github.com/benjaminp/six/blob/master/LICENSE,backwards compatibility utility package,,six-1.16.0-pyhd3eb1b0_1,pkgs/main,pyhd3eb1b0_1,1
 statsmodels,0.13.2,BSD-3-Clause,https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt,statistics and math library package,,statsmodels-0.13.2-py38h7f8727e_0,pkgs/main,py38h7f8727e_0,0
 sympy,1.12,BSD-3-Clause AND MIT,,,,sympy-1.12-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
