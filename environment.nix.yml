@@ -17,7 +17,7 @@ dependencies:
   - numpy==1.23
   - ruptures==1.1.9
   - scipy==1.10
-  - setuptools==65.5.1
+  - setuptools==70.0.0
   - statsmodels==0.13.2
   - scikit-learn==0.24.2
   - stumpy==1.12.0

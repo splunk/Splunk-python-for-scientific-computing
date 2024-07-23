@@ -28,18 +28,18 @@ dependencies:
   - glog=0.7.1=hbabe93e_0
   - gmp=6.3.0=hac33072_2
   - gmpy2=2.1.5=py38h6a1700d_1
-  - huggingface_hub=0.23.4=pyhd8ed1ab_0
+  - huggingface_hub=0.23.5=pyhd8ed1ab_0
   - humanfriendly=10.0=pyhd8ed1ab_6
   - idna=3.7=pyhd8ed1ab_0
   - jmespath=0.10.0=pyh9f0ad1d_0
   - joblib=1.4.2=pyhd8ed1ab_0
   - keyutils=1.6.1=h166bdaf_0
   - libabseil=20240116.2=cxx17_he02047a_1
-  - libblas=3.9.0=22_linux64_mkl
+  - libblas=3.9.0=23_linux64_mkl
   - libbrotlicommon=1.1.0=hd590300_1
   - libbrotlidec=1.1.0=hd590300_1
   - libbrotlienc=1.1.0=hd590300_1
-  - libcblas=3.9.0=22_linux64_mkl
+  - libcblas=3.9.0=23_linux64_mkl
   - libcrc32c=1.1.2=h9c3ff4c_0
   - libcurl=8.8.0=hca28451_1
   - libedit=3.1.20191231=he28a2e2_2
@@ -49,11 +49,11 @@ dependencies:
   - libgcc-ng=14.1.0=h77fa898_0
   - libgfortran-ng=14.1.0=h69a702a_0
   - libgfortran5=14.1.0=hc5f4f2c_0
-  - liblapack=3.9.0=22_linux64_mkl
+  - liblapack=3.9.0=23_linux64_mkl
   - libllvm11=11.1.0=he0ac6c6_5
   - libnghttp2=1.58.0=h47da74e_1
   - libnsl=2.0.1=hd590300_0
-  - libparquet=16.1.0=h9e5060d_14_cpu
+  - libparquet=17.0.0=h9e5060d_0_cpu
   - libprotobuf=4.25.3=h08a7969_0
   - libre2-11=2023.09.01=h5a48ba9_2
   - libssh2=1.11.0=h0841786_0
@@ -67,7 +67,7 @@ dependencies:
   - llvm-openmp=18.1.8=hf5423f3_0
   - llvmlite=0.39.1=py38h38d86a4_1
   - lz4-c=1.9.4=hcb278e6_0
-  - mkl=2024.2.0=ha957f24_664
+  - mkl=2024.2.0=ha957f24_665
   - mpc=1.3.1=hfe3b2da_0
   - mpfr=4.2.1=h9458935_1
   - mpmath=1.3.0=pyhd8ed1ab_0
@@ -78,7 +78,7 @@ dependencies:
   - numpy=1.23.0=py38h3a7f9d9_0
   - onnx=1.15.0=py38h4281a0f_4
   - onnxruntime=1.17.1=py38h9ba3ee4_2_cpu
-  - openssl=3.3.1=h4ab18f5_1
+  - openssl=3.3.1=h4bc722e_2
   - orc=2.0.1=h17fec99_1
   - packaging=24.1=pyhd8ed1ab_0
   - pandas=1.1.5=py38ha9443f7_0
@@ -106,7 +106,7 @@ dependencies:
   - safetensors=0.4.3=py38h0cc4f7c_0
   - scikit-learn=0.24.2=py38hacb3eff_1
   - scipy=1.10.0=py38h10c12cc_2
-  - setuptools=65.5.1=pyhd8ed1ab_0
+  - setuptools=70.0.0=pyhd8ed1ab_0
   - six=1.16.0=pyh6c4a22f_0
   - snappy=1.2.1=ha2e4443_0
   - statsmodels=0.13.2=py38h71d37f0_0
