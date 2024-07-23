@@ -52,7 +52,7 @@ dependencies:
   - liblapacke=3.9.0=20_osx64_mkl
   - libllvm11=11.1.0=h8fb7429_5
   - libnghttp2=1.58.0=h64cf6d3_1
-  - libparquet=16.1.0=h904a336_14_cpu
+  - libparquet=17.0.0=h904a336_0_cpu
   - libprotobuf=4.25.3=h4e4d658_0
   - libre2-11=2023.09.01=h81f5012_2
   - libssh2=1.11.0=hd019ec5_0
@@ -103,7 +103,7 @@ dependencies:
   - safetensors=0.4.3=py38he5c5b91_0
   - scikit-learn=0.24.2=py38h1021539_1
   - scipy=1.10.0=py38hfb8b963_2
-  - setuptools=65.5.1=pyhd8ed1ab_0
+  - setuptools=70.0.0=pyhd8ed1ab_0
   - six=1.16.0=pyh6c4a22f_0
   - snappy=1.2.1=he1e6707_0
   - statsmodels=0.13.2=py38hc1426ef_0
