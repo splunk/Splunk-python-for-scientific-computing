@@ -50,7 +50,7 @@ dependencies:
   - libllvm11=11.1.0=hfa12f05_5
   - libnghttp2=1.58.0=ha4dd798_1
   - libopenblas=0.3.25=openmp_h6c19121_0
-  - libparquet=16.1.0=hcf52c46_14_cpu
+  - libparquet=17.0.0=hcf52c46_0_cpu
   - libprotobuf=4.25.3=hbfab5d5_0
   - libre2-11=2023.09.01=h7b2c953_2
   - libssh2=1.11.0=h7a5bd25_0
@@ -121,4 +121,4 @@ dependencies:
   - yarl=1.9.4=py38h336bac9_0
   - zstd=1.5.6=hb46c0d2_0
   - pip:
-      - setuptools==65.5.1
+      - setuptools==70.0.0
