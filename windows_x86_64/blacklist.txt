@@ -6,6 +6,7 @@ brotlipy
 pycparser
 cryptography
 idna
+pip
 pysocks
 cffi
 charset-normalizer

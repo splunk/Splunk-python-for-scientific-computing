@@ -1,65 +1,74 @@
 name: build\venv
 channels:
   - conda-forge
+  - defaults
 dependencies:
-  - blas=1.0=mkl
   - boto3=1.17.0=pyhd8ed1ab_0
   - botocore=1.20.0=pyhd8ed1ab_0
   - bottle=0.12.23=pyhd8ed1ab_0
-  - brotli-python=1.0.9=py38hd77b12b_8
-  - ca-certificates=2024.7.2=haa95532_0
-  - certifi=2024.7.4=py38haa95532_0
-  - chardet=3.0.4=py38haa95532_1003
-  - future=0.18.3=py38haa95532_0
-  - icc_rt=2022.1.0=h6049295_2
-  - intel-openmp=2021.4.0=haa95532_3556
-  - jmespath=0.10.0=pyhd3eb1b0_0
-  - joblib=1.4.2=py38haa95532_0
-  - libabseil=20240116.2=cxx17_h5da7b33_0
-  - libblas=3.9.0=12_win64_mkl
-  - libcblas=3.9.0=12_win64_mkl
-  - libffi=3.4.4=hd77b12b_1
-  - liblapack=3.9.0=12_win64_mkl
-  - libprotobuf=4.25.3=hf2fb9eb_0
-  - mkl=2021.4.0=h0e2418a_729
-  - mkl-service=2.4.0=py38h2bbff1b_0
+  - brotli-python=1.1.0=py38hd3f51b4_1
+  - bzip2=1.0.8=h2466b09_7
+  - ca-certificates=2024.7.4=h56e8100_0
+  - certifi=2024.7.4=pyhd8ed1ab_0
+  - chardet=3.0.4=py38h9bdc248_1008
+  - future=0.18.3=pyhd8ed1ab_0
+  - intel-openmp=2024.2.0=h57928b3_980
+  - jmespath=0.10.0=pyh9f0ad1d_0
+  - joblib=1.4.2=pyhd8ed1ab_0
+  - libabseil=20240116.2=cxx17_he0c23c2_1
+  - libblas=3.9.0=23_win64_mkl
+  - libcblas=3.9.0=23_win64_mkl
+  - libffi=3.4.2=h8ffe710_5
+  - libhwloc=2.11.1=default_h8125262_1000
+  - libiconv=1.17=hcfcfb64_2
+  - liblapack=3.9.0=23_win64_mkl
+  - libprotobuf=4.25.3=h503648d_0
+  - libxml2=2.12.7=h0f24e4e_4
+  - libzlib=1.3.1=h2466b09_1
+  - m2w64-gcc-libgfortran=5.3.0=6
+  - m2w64-gcc-libs=5.3.0=7
+  - m2w64-gcc-libs-core=5.3.0=7
+  - m2w64-gmp=6.1.0=2
+  - m2w64-libwinpthread-git=5.0.0.4634.697f757=2
+  - mkl=2024.1.0=h66d3029_694
+  - msys2-conda-epoch=20160418=1
   - networkx=3.0=pyhd8ed1ab_0
   - numpy=1.23.0=py38h223ccf5_0
   - onnx=1.15.0=py38hec9b54c_4
-  - openssl=3.3.1=h2466b09_1
-  - packaging=24.1=py38haa95532_0
+  - openssl=3.3.1=h2466b09_2
+  - packaging=24.1=pyhd8ed1ab_0
   - pandas=1.1.5=py38hf11a4ad_0
-  - patsy=0.5.6=py38haa95532_0
-  - pip=24.0=py38haa95532_0
-  - platformdirs=3.10.0=py38haa95532_0
-  - pooch=1.7.0=py38haa95532_0
-  - protobuf=4.25.3=py38h958608f_0
-  - psutil=5.8.0=py38h2bbff1b_1
-  - pyopenssl=24.0.0=py38haa95532_0
-  - python=3.8.19=h1aa4202_0
-  - python-dateutil=2.9.0post0=py38haa95532_2
-  - python_abi=3.8=2_cp38
-  - pytz=2024.1=py38haa95532_0
-  - requests=2.32.2=py38haa95532_0
-  - ruptures=1.1.9=py38haf47d59_1
-  - s3transfer=0.3.6=pyhd3eb1b0_0
-  - scikit-learn=0.24.2=py38hf11a4ad_2
-  - scipy=1.10.0=py38h321e85e_1
-  - setuptools=69.5.1=py38haa95532_0
-  - six=1.16.0=pyhd3eb1b0_1
-  - statsmodels=0.13.2=py38h2bbff1b_0
-  - tbb=2021.8.0=h59b6b97_0
-  - threadpoolctl=3.5.0=py38h9909e9c_0
-  - typing-extensions=4.11.0=py38haa95532_0
-  - typing_extensions=4.11.0=py38haa95532_0
-  - ucrt=10.0.20348.0=haa95532_0
-  - urllib3=1.26.19=py38haa95532_0
-  - vc=14.2=h2eaa2aa_4
+  - patsy=0.5.6=pyhd8ed1ab_0
+  - platformdirs=4.2.2=pyhd8ed1ab_0
+  - pooch=1.8.2=pyhd8ed1ab_0
+  - protobuf=4.25.3=py38h0f53e27_0
+  - psutil=5.8.0=py38h294d835_2
+  - pthreads-win32=2.9.1=hfa6e2cd_3
+  - python=3.8.19=h4de0772_0_cpython
+  - python-dateutil=2.9.0=pyhd8ed1ab_0
+  - python_abi=3.8=4_cp38
+  - pytz=2024.1=pyhd8ed1ab_0
+  - requests=2.32.3=pyhd8ed1ab_0
+  - ruptures=1.1.9=py38haf47d59_2
+  - s3transfer=0.3.7=pyhd8ed1ab_0
+  - scikit-learn=0.24.2=py38h8224a6f_1
+  - scipy=1.10.0=py38h0f6ee2a_2
+  - setuptools=70.0.0=pyhd8ed1ab_0
+  - six=1.16.0=pyh6c4a22f_0
+  - statsmodels=0.13.2=py38hbdcd294_0
+  - tbb=2021.12.0=hc790b64_3
+  - threadpoolctl=3.5.0=pyhc1e730c_0
+  - tk=8.6.13=h5226925_1
+  - typing-extensions=4.12.2=hd8ed1ab_0
+  - typing_extensions=4.12.2=pyha770c72_0
+  - ucrt=10.0.22621.0=h57928b3_0
+  - urllib3=1.26.19=pyhd8ed1ab_0
+  - vc=14.3=h8a93ad2_20
   - vc14_runtime=14.40.33810=ha82c5b3_20
   - vs2015_runtime=14.40.33810=h3bf8584_20
-  - wheel=0.43.0=py38haa95532_0
-  - win_inet_pton=1.1.0=py38haa95532_0
-  - zlib=1.2.13=h8cc25b3_1
+  - wheel=0.43.0=pyhd8ed1ab_1
+  - win_inet_pton=1.1.0=pyhd8ed1ab_6
+  - xz=5.2.6=h8d14728_0
   - pip:
       - coloredlogs==15.0.1
       - flatbuffers==24.3.25
@@ -67,4 +76,4 @@ dependencies:
       - mpmath==1.3.0
       - onnxruntime==1.17.1
       - pyreadline3==3.4.1
-      - sympy==1.13.0
+      - sympy==1.13.1

@@ -17,6 +17,7 @@ dependencies:
   - ruptures==1.1.9
   - scipy==1.10
   - scikit-learn==0.24.2
+  - setuptools==70.0.0
   - statsmodels==0.13.2
   - pip:
     - onnxruntime==1.17.1
