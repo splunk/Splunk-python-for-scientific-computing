@@ -34,7 +34,7 @@ libgoogle-cloud-storage
 libgrpc
 libsqlite
 menuinst
-pooch
+pip
 pyarrow
 pycparser
 pysocks

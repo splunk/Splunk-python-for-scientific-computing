@@ -16,6 +16,7 @@ dependencies:
   - networkx==3.0
   - numpy==1.23.0
   - scipy==1.10
+  - setuptools==70.0.0
   - statsmodels==0.13.2
   - scikit-learn==0.24.2=py38hf11a4ad_1
   - stumpy==1.12.0
