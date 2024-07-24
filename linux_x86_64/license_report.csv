@@ -17,7 +17,6 @@ humanfriendly,10.0,MIT,,,,humanfriendly-10.0-py38h06a4308_1,pkgs/main,py38h06a43
 idna,3.7,BSD-3-Clause,,,,idna-3.7-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 jmespath,0.10.0,MIT,,,,jmespath-0.10.0-pyhd3eb1b0_0,pkgs/main,pyhd3eb1b0_0,0
 joblib,1.4.2,BSD-3-Clause,https://github.com/joblib/joblib/blob/master/LICENSE.txt,Python function as pipeline jobs,,joblib-1.4.2-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
-libabseil,20240116.2,Apache-2.0,,,,libabseil-20240116.2-cxx17_h6a678d5_0,pkgs/main,cxx17_h6a678d5_0,0
 libblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libblas-3.9.0-23_linux64_openblas,conda-forge,23_linux64_openblas,23
 libcblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libcblas-3.9.0-23_linux64_openblas,conda-forge,23_linux64_openblas,23
 libffi,3.4.4,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,,libffi-3.4.4-h6a678d5_1,pkgs/main,h6a678d5_1,1
@@ -27,23 +26,22 @@ libgfortran5,14.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licen
 libgomp,14.1.0,GPL-3.0-only WITH GCC-exception-3.1,https://gcc.gnu.org/onlinedocs/gcc-4.2.4/libgomp/Copying.html#Copying,The GCC OpenMP implementation,,libgomp-14.1.0-h77fa898_0,conda-forge,h77fa898_0,0
 liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapack-3.9.0-23_linux64_openblas,conda-forge,23_linux64_openblas,23
 libopenblas,0.3.27,BSD-3-Clause,https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE,An optimized BLAS library based on GotoBLAS2 1.13 BSD version,,libopenblas-0.3.27-pthreads_hac2b453_1,conda-forge,pthreads_hac2b453_1,1
-libprotobuf,4.25.3,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler,libprotobuf-4.25.3-he621ea3_0,pkgs/main,he621ea3_0,0
+libprotobuf,3.20.3,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler,libprotobuf-3.20.3-he621ea3_0,pkgs/main,he621ea3_0,0
 libstdcxx-ng,14.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GNU C++ Runtime Libsrary,,libstdcxx-ng-14.1.0-hc0a3c3a_0,conda-forge,hc0a3c3a_0,0
-lz4-c,1.9.4,BSD-2-Clause,,,,lz4-c-1.9.4-h6a678d5_1,pkgs/main,h6a678d5_1,1
 mpc,1.1.0,LGPL 3,,,,mpc-1.1.0-h10f8cd9_1,pkgs/main,h10f8cd9_1,1
 mpfr,4.0.2,LGPL-3.0-only,,,,mpfr-4.0.2-hb69a4c5_1,pkgs/main,hb69a4c5_1,1
 mpmath,1.3.0,BSD-3-Clause,,,,mpmath-1.3.0-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 networkx,3.0,BSD-3-Clause,https://github.com/networkx/networkx/blob/master/LICENSE.txt,Python package for creating and manipulating complex networks,,networkx-3.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 numpy,1.23.0,BSD-3-Clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,,numpy-1.23.0-py38h3a7f9d9_0,conda-forge,py38h3a7f9d9_0,0
-onnx,1.15.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.15.0-py38h4281a0f_4,conda-forge,py38h4281a0f_4,4
-onnxruntime,1.17.1,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform, high performance ML inferencing and training accelerator,onnxruntime-1.17.1-py38hf70ce4d_0,pkgs/main,py38hf70ce4d_0,0
+onnx,1.16.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.16.0-py38h12ddb61_0,pkgs/main,py38h12ddb61_0,0
+onnxruntime,1.18.1,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform, high performance ML inferencing and training accelerator,onnxruntime-1.18.1-py38h851ba94_0_cpu,conda-forge,py38h851ba94_0_cpu,0
 openssl,3.3.1,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.3.1-h4bc722e_2,conda-forge,h4bc722e_2,2
 packaging,24.1,Apache-2.0 or BSD-2-Clause,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-24.1-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py38ha9443f7_0,pkgs/main,py38ha9443f7_0,0
 patsy,0.5.6,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-0.5.6-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 platformdirs,3.10.0,MIT,,,,platformdirs-3.10.0-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 pooch,1.7.0,BSD-3-Clause,,,,pooch-1.7.0-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
-protobuf,4.25.3,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format,,protobuf-4.25.3-py38h12ddb61_0,pkgs/main,py38h12ddb61_0,0
+protobuf,3.20.3,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format,,protobuf-3.20.3-py38h6a678d5_0,pkgs/main,py38h6a678d5_0,0
 psutil,5.8.0,BSD-3-Clause,https://github.com/giampaolo/psutil/blob/master/LICENSE,process manipuation,,psutil-5.8.0-py38h27cfd23_1,pkgs/main,py38h27cfd23_1,1
 pyopenssl,24.0.0,Apache-2.0,https://github.com/pyca/pyopenssl/blob/main/LICENSE,Python wrapper module for openssl,,pyopenssl-24.0.0-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 python,3.8.19,PSF-2.0,https://docs.python.org/3/license.html,python runtime,,python-3.8.19-h955ad1f_0,pkgs/main,h955ad1f_0,0
@@ -52,7 +50,7 @@ python-flatbuffers,2.0,Apache-2.0,https://github.com/google/flatbuffers/blob/mas
 python_abi,3.8,BSD-3-Clause,https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt,Meta package to select python implementation,,python_abi-3.8-2_cp38,conda-forge,2_cp38,2
 pytz,2024.1,MIT,https://github.com/newvem/pytz/blob/master/LICENSE.txt,dependency,,pytz-2024.1-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 requests,2.32.3,Apache-2.0,https://github.com/psf/requests/blob/main/LICENSE,HTTP Library for Python,,requests-2.32.3-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
-ruptures,1.1.9,BSD-2-Clause,,,,ruptures-1.1.9-py38he82f83a_1,conda-forge,py38he82f83a_1,1
+ruptures,1.1.9,BSD-2-Clause,,,,ruptures-1.1.9-py38haee39ac_2,conda-forge,py38haee39ac_2,2
 s3transfer,0.3.6,Apache-2.0,,,,s3transfer-0.3.6-pyhd3eb1b0_0,pkgs/main,pyhd3eb1b0_0,0
 scikit-learn,0.24.2,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-0.24.2-py38ha9443f7_0,pkgs/main,py38ha9443f7_0,0
 scipy,1.10.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.10.0-py38h32ae08f_1,pkgs/main,py38h32ae08f_1,1
@@ -67,4 +65,3 @@ urllib3,1.26.19,MIT,,,,urllib3-1.26.19-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 wheel,0.43.0,MIT,https://github.com/pypa/wheel/blob/master/LICENSE.txt,package distribution,,wheel-0.43.0-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 xz,5.4.6,LGPL-2.1-or-later and GPL-2.0-or-later and 0BSD,https://git.tukaani.org/?p=xz.git;a=blob_plain;f=COPYING;hb=HEAD,Data compression software with high compression ratio,,xz-5.4.6-h5eee18b_1,pkgs/main,h5eee18b_1,1
 zlib,1.2.13,Zlib,http://zlib.net/zlib_license.html,compression library,,zlib-1.2.13-h5eee18b_1,pkgs/main,h5eee18b_1,1
-zstd,1.5.5,BSD-3-Clause AND GPL-2.0-or-later,,,,zstd-1.5.5-hc292b87_2,pkgs/main,hc292b87_2,2

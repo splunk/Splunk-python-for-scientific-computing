@@ -17,7 +17,6 @@ humanfriendly                 	MIT
 idna                          	BSD-3-Clause
 jmespath                      	MIT
 joblib                        	BSD-3-Clause                        	https://github.com/joblib/joblib/blob/master/LICENSE.txt
-libabseil                     	Apache-2.0
 libblas                       	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libcblas                      	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libffi                        	libffi license                      	https://github.com/libffi/libffi/blob/master/LICENSE
@@ -29,7 +28,6 @@ liblapack                     	BSD-3-Clause                        	https://netl
 libopenblas                   	BSD 3-clause                        	https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE
 libprotobuf                   	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
 libstdcxx-ng                  	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
-lz4-c                         	BSD-2-Clause
 mpc                           	LGPL 3
 mpfr                          	LGPL-3.0-only
 mpmath                        	BSD-3-Clause
@@ -67,4 +65,3 @@ urllib3                       	MIT
 wheel                         	MIT                                 	https://github.com/pypa/wheel/blob/master/LICENSE.txt
 xz                            	LGPLv2.1/GPLv2                      	https://git.tukaani.org/?p=xz.git;a=blob_plain;f=COPYING;hb=HEAD
 zlib                          	Zlib                                	http://zlib.net/zlib_license.html
-zstd                          	BSD-3-Clause AND GPL-2.0-or-later
