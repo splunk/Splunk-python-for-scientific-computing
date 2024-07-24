@@ -31,6 +31,7 @@ msys2-conda-epoch             	                                    	https://anac
 networkx                      	BSD 3-clause                        	https://github.com/networkx/networkx/blob/master/LICENSE.txt
 numpy                         	BSD 3-clause                        	https://github.com/numpy/numpy/blob/master/LICENSE.txt
 onnx                          	Apache-2.0                          	https://github.com/onnx/onnx/blob/main/LICENSE
+onnxruntime                   	MIT                                 	https://github.com/microsoft/onnxruntime/blob/master/LICENSE
 openssl                       	Apache-2.0                          	https://github.com/openssl/openssl/blob/master/LICENSE.txt
 packaging                     	Apache-2.0                          	https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD
 pandas                        	BSD 3-clause                        	https://github.com/pandas-dev/pandas/blob/master/LICENSE
