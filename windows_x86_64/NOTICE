@@ -62,6 +62,7 @@ networkx                      	BSD 3-clause                        	https://gith
 numba                         	BSD-2-Clause                        	https://github.com/numba/numba?tab=BSD-2-Clause-1-ov-file#readme
 numpy                         	BSD 3-clause                        	https://github.com/numpy/numpy/blob/master/LICENSE.txt
 onnx                          	Apache-2.0                          	https://github.com/onnx/onnx/blob/main/LICENSE
+onnxruntime                   	MIT                                 	https://github.com/microsoft/onnxruntime/blob/master/LICENSE
 openssl                       	Apache-2.0                          	https://github.com/openssl/openssl/blob/master/LICENSE.txt
 orc                           	Apache-2.0                          	https://github.com/apache/orc/blob/main/LICENSE
 packaging                     	Apache-2.0                          	https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD
