@@ -2,6 +2,7 @@ name: build/venv
 channels:
   - pytorch
   - conda-forge
+  - defaults
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=2_kmp_llvm
@@ -104,7 +105,7 @@ dependencies:
   - s2n=1.4.17=he19d79f_0
   - s3transfer=0.3.7=pyhd8ed1ab_0
   - safetensors=0.4.3=py38h0cc4f7c_0
-  - scikit-learn=0.24.2=py38hacb3eff_1
+  - scikit-learn=1.0.1=py38h1561384_3
   - scipy=1.10.0=py38h10c12cc_2
   - setuptools=70.0.0=pyhd8ed1ab_0
   - six=1.16.0=pyh6c4a22f_0
