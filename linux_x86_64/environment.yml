@@ -28,7 +28,7 @@ dependencies:
   - glog=0.7.1=hbabe93e_0
   - gmp=6.3.0=hac33072_2
   - gmpy2=2.1.5=py38h6a1700d_1
-  - huggingface_hub=0.24.0=pyhd8ed1ab_0
+  - huggingface_hub=0.24.2=pyhd8ed1ab_0
   - humanfriendly=10.0=pyhd8ed1ab_6
   - idna=3.7=pyhd8ed1ab_0
   - jmespath=0.10.0=pyh9f0ad1d_0
@@ -53,7 +53,7 @@ dependencies:
   - libllvm11=11.1.0=he0ac6c6_5
   - libnghttp2=1.58.0=h47da74e_1
   - libnsl=2.0.1=hd590300_0
-  - libparquet=17.0.0=h9e5060d_0_cpu
+  - libparquet=17.0.0=h9e5060d_1_cpu
   - libprotobuf=4.25.3=h08a7969_0
   - libre2-11=2023.09.01=h5a48ba9_2
   - libssh2=1.11.0=h0841786_0
@@ -77,7 +77,7 @@ dependencies:
   - numba=0.56.4=py38hefa3cd7_1
   - numpy=1.23.0=py38h3a7f9d9_0
   - onnx=1.16.0=py38h0a8854b_1
-  - onnxruntime=1.18.0=py38ha056214_2_cpu
+  - onnxruntime=1.18.1=py38h851ba94_0_cpu
   - openssl=3.3.1=h4bc722e_2
   - orc=2.0.1=h17fec99_1
   - packaging=24.1=pyhd8ed1ab_0
@@ -98,7 +98,7 @@ dependencies:
   - pytz=2024.1=pyhd8ed1ab_0
   - pyyaml=6.0.1=py38h01eb140_1
   - re2=2023.09.01=h7f4b329_2
-  - regex=2024.5.15=py38hfb59056_0
+  - regex=2024.7.24=py38h2019614_0
   - requests=2.32.3=pyhd8ed1ab_0
   - ruptures=1.1.9=py38haee39ac_2
   - s2n=1.4.17=he19d79f_0
