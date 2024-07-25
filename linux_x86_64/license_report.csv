@@ -52,7 +52,7 @@ pytz,2024.1,MIT,https://github.com/newvem/pytz/blob/master/LICENSE.txt,dependenc
 requests,2.32.3,Apache-2.0,https://github.com/psf/requests/blob/main/LICENSE,HTTP Library for Python,,requests-2.32.3-py38h06a4308_0,pkgs/main,py38h06a4308_0,0
 ruptures,1.1.9,BSD-2-Clause,,,,ruptures-1.1.9-py38haee39ac_2,conda-forge,py38haee39ac_2,2
 s3transfer,0.3.6,Apache-2.0,,,,s3transfer-0.3.6-pyhd3eb1b0_0,pkgs/main,pyhd3eb1b0_0,0
-scikit-learn,0.24.2,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-0.24.2-py38ha9443f7_0,pkgs/main,py38ha9443f7_0,0
+scikit-learn,1.0.1,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-1.0.1-py38h51133e4_0,pkgs/main,py38h51133e4_0,0
 scipy,1.10.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.10.0-py38h32ae08f_1,pkgs/main,py38h32ae08f_1,1
 setuptools,70.0.0,MIT,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-70.0.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 six,1.16.0,MIT,https://github.com/benjaminp/six/blob/master/LICENSE,backwards compatibility utility package,,six-1.16.0-pyhd3eb1b0_1,pkgs/main,pyhd3eb1b0_1,1

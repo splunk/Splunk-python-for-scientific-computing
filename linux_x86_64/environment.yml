@@ -56,7 +56,7 @@ dependencies:
   - requests=2.32.3=py38h06a4308_0
   - ruptures=1.1.9=py38haee39ac_2
   - s3transfer=0.3.6=pyhd3eb1b0_0
-  - scikit-learn=0.24.2=py38ha9443f7_0
+  - scikit-learn=1.0.1=py38h51133e4_0
   - scipy=1.10.0=py38h32ae08f_1
   - setuptools=70.0.0=pyhd8ed1ab_0
   - six=1.16.0=pyhd3eb1b0_1
