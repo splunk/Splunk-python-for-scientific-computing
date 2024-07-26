@@ -11,16 +11,17 @@ dependencies:
   - future==0.18.3
   - pandas==1.1.5
   - psutil==5.8.0
-  - python==3.8.19
+  - python==3.9.19
   - pytorch==1.13.1
   - networkx==3.0
   - numpy==1.23.0
   - scipy==1.10
-  - setuptools==70.0.0
+  - setuptools==71.0.4
   - statsmodels==0.13.2
-  - scikit-learn==0.24.2=py38hf11a4ad_1
+  - scikit-learn==1.5.1
   - stumpy==1.12.0
   - onnx==1.16.0
+  - onnxruntime==1.18.1
   - tbb==2021.5
   - transformers==4.38.1
   - cpuonly=2.0
@@ -28,5 +29,3 @@ dependencies:
   - watchdog==2.1.7
   - openssl==3.3.1
   - ruptures==1.1.9
-  - pip:
-    - onnxruntime==1.18.0

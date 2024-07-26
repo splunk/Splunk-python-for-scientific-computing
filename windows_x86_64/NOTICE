@@ -10,16 +10,17 @@ c-ares                        	MIT                                 	https://gith
 ca-certificates               	MPL2                                	https://github.com/conda-forge/ca-certificates-feedstock
 certifi                       	MPL2                                	https://github.com/certifi/python-certifi/blob/master/LICENSE
 chardet                       	LGPL2.1-only                        	https://github.com/chardet/chardet?tab=LGPL-2.1-1-ov-file#readme
+coloredlogs                   	MIT                                 	https://github.com/xolox/python-coloredlogs/blob/master/LICENSE.txt
 cpuonly                       	                                    	https://anaconda.org/pytorch/cpuonly
 datasets                      	Apache-2.0                          	https://github.com/huggingface/datasets?tab=Apache-2.0-1-ov-file#readme
 dill                          	BSD-3-Clause                        	https://github.com/uqfoundation/dill?tab=License-1-ov-file#readme
 fastdtw                       	MIT                                 	https://github.com/slaypni/fastdtw?tab=MIT-1-ov-file#readme
 filelock                      	Unlicense                           	https://github.com/tox-dev/py-filelock/blob/main/LICENSE
-flatbuffers                   	Apache-2.0                          	https://github.com/google/flatbuffers/blob/master/LICENSE
 frozenlist                    	Apache-2.0                          	https://github.com/aio-libs/frozenlist?tab=Apache-2.0-1-ov-file#readme
 fsspec                        	BSD-3-Clause                        	https://github.com/fsspec/filesystem_spec/blob/master/LICENSE
 future                        	MIT                                 	https://github.com/PythonCharmers/python-future
 huggingface_hub               	Apache-2.0                          	https://github.com/huggingface/huggingface_hub/blob/main/LICENSE
+humanfriendly                 	MIT                                 	https://github.com/xolox/python-humanfriendly/blob/master/LICENSE.txt
 idna                          	BSD-3-Clause                        	https://github.com/kjd/idna
 intel-openmp                  	BSD 3-clause                        	https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10
 jmespath                      	MIT                                 	https://github.com/jmespath/jmespath.py
@@ -55,6 +56,7 @@ m2w64-libwinpthread-git       	MIT, BSD
 mkl                           	Proprietary  Intel                  	https://software.intel.com/en-us/mkl/license-faq
 mkl-devel                     	Proprietary Intel                   	https://software.intel.com/en-us/mkl/license-faq
 mkl-include                   	Proprietary Intel                   	https://software.intel.com/en-us/mkl/license-faq
+mpmath                        	BSD-3-Clause                        	https://github.com/mpmath/mpmath/blob/master/LICENSE
 msys2-conda-epoch
 multidict                     	Apache-2.0                          	https://github.com/aio-libs/multidict?tab=License-1-ov-file#readme
 multiprocess                  	BSD-3-Clause                        	https://github.com/uqfoundation/multiprocess
@@ -75,8 +77,10 @@ psutil                        	BSD 3-clause                        	https://gith
 pyarrow-core                  	Apache-2.0
 pyarrow-hotfix                	Apache-2.0
 pydantic                      	MIT                                 	https://github.com/samuelcolvin/pydantic/blob/master/LICENSE
+pyreadline3                   	BSD-3-Clause
 python                        	PSF                                 	https://docs.python.org/3/license.html
 python-dateutil               	Apache 2.0                          	https://github.com/dateutil/dateutil/blob/master/LICENSE
+python-flatbuffers            	Apache-2.0                          	https://github.com/google/flatbuffers/blob/master/LICENSE.txt
 python-xxhash                 	BSD-2-Clause                        	https://github.com/ifduyue/python-xxhash?tab=BSD-2-Clause-1-ov-file#readme
 python_abi                    	BSD-3-Clause                        	https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt
 pytorch                       	BSD 3-Clause                        	https://github.com/pytorch/pytorch/blob/master/LICENSE
