@@ -140,4 +140,3 @@ publish:
   id_tokens:
     CI_JOB_JWT:
       aud: $CICD_VAULT_ADDR
-
