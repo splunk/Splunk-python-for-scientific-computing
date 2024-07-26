@@ -11,7 +11,7 @@ dependencies:
   - future==0.18.3
   - pandas==1.1.5
   - psutil==5.8.0
-  - python==3.8.19
+  - python==3.9.19
   - pytorch==1.13.1
   - networkx==3.0
   - numpy==1.23
@@ -19,7 +19,7 @@ dependencies:
   - scipy==1.10
   - setuptools==70.0.0
   - statsmodels==0.13.2
-  - scikit-learn==1.0.1
+  - scikit-learn==1.5.1
   - stumpy==1.12.0
   - tbb==2021.5
   - transformers==4.38.1
