@@ -49,7 +49,7 @@ liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebr
 libllvm11,11.1.0,Apache-2.0 WITH LLVM-exception,,,,libllvm11-11.1.0-he0ac6c6_5,conda-forge,he0ac6c6_5,5
 libnghttp2,1.58.0,MIT,,,,libnghttp2-1.58.0-h47da74e_1,conda-forge,h47da74e_1,1
 libnsl,2.0.1,LGPL-2.1-only,,,,libnsl-2.0.1-hd590300_0,conda-forge,hd590300_0,0
-libparquet,17.0.0,Apache-2.0,,,,libparquet-17.0.0-h9e5060d_1_cpu,conda-forge,h9e5060d_1_cpu,1
+libparquet,17.0.0,Apache-2.0,,,,libparquet-17.0.0-h9e5060d_2_cpu,conda-forge,h9e5060d_2_cpu,2
 libprotobuf,4.25.3,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler,libprotobuf-4.25.3-h08a7969_0,conda-forge,h08a7969_0,0
 libre2-11,2023.09.01,BSD-3-Clause,,,,libre2-11-2023.09.01-h5a48ba9_2,conda-forge,h5a48ba9_2,2
 libssh2,1.11.0,BSD-3-Clause,,,,libssh2-1.11.0-h0841786_0,conda-forge,h0841786_0,0
@@ -100,7 +100,7 @@ ruptures,1.1.9,BSD-2-Clause,,,,ruptures-1.1.9-py39h988be6c_2,conda-forge,py39h98
 s2n,1.4.17,Apache-2.0,,,,s2n-1.4.17-he19d79f_0,conda-forge,he19d79f_0,0
 s3transfer,0.3.7,Apache-2.0,,,,s3transfer-0.3.7-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 safetensors,0.4.3,Apache-2.0,,,,safetensors-0.4.3-py39h9fdd4d6_0,conda-forge,py39h9fdd4d6_0,0
-scikit-learn,1.5.0,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-1.5.0-py39h40c85ba_1,conda-forge,py39h40c85ba_1,1
+scikit-learn,1.5.1,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-1.5.1-py39hf7b0125_0,conda-forge,py39hf7b0125_0,0
 scipy,1.10.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.10.0-py39h7360e5f_2,conda-forge,py39h7360e5f_2,2
 setuptools,70.0.0,MIT,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-70.0.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 six,1.16.0,MIT,https://github.com/benjaminp/six/blob/master/LICENSE,backwards compatibility utility package,,six-1.16.0-pyh6c4a22f_0,conda-forge,pyh6c4a22f_0,0

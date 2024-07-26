@@ -54,7 +54,7 @@ dependencies:
   - libllvm11=11.1.0=he0ac6c6_5
   - libnghttp2=1.58.0=h47da74e_1
   - libnsl=2.0.1=hd590300_0
-  - libparquet=17.0.0=h9e5060d_1_cpu
+  - libparquet=17.0.0=h9e5060d_2_cpu
   - libprotobuf=4.25.3=h08a7969_0
   - libre2-11=2023.09.01=h5a48ba9_2
   - libssh2=1.11.0=h0841786_0
@@ -105,7 +105,7 @@ dependencies:
   - s2n=1.4.17=he19d79f_0
   - s3transfer=0.3.7=pyhd8ed1ab_0
   - safetensors=0.4.3=py39h9fdd4d6_0
-  - scikit-learn=1.5.0=py39h40c85ba_1
+  - scikit-learn=1.5.1=py39hf7b0125_0
   - scipy=1.10.0=py39h7360e5f_2
   - setuptools=70.0.0=pyhd8ed1ab_0
   - six=1.16.0=pyh6c4a22f_0
