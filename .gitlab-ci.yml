@@ -23,7 +23,7 @@ binary-scan-linux:
   stage: prodsec-review
   extends: .binary-scan
   variables:
-    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/4.2.x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_linux_x86_64.tgz"
+    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_linux_x86_64.tgz"
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
@@ -33,7 +33,7 @@ binary-scan-mac-arm64:
   stage: prodsec-review
   extends: .binary-scan
   variables:
-    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/4.2.x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_arm64.tgz"
+    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_arm64.tgz"
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
@@ -43,7 +43,7 @@ binary-scan-mac-x86_64:
   stage: prodsec-review
   extends: .binary-scan
   variables:
-    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/4.2.x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_x86_64.tgz"
+    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_x86_64.tgz"
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
@@ -53,7 +53,7 @@ binary-scan-mac-x86_64:
 #   stage: prodsec-review
 #   extends: .binary-scan
 #   variables:
-#     ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/4.2.x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_windows_x86_64.tgz"
+#     ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_windows_x86_64.tgz"
 #   rules:
 #     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
 #     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
