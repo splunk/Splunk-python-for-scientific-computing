@@ -27,6 +27,8 @@ gmpy2                         	LGPL-3.0-or-later
 huggingface_hub               	Apache-2.0                          	https://github.com/huggingface/huggingface_hub/blob/main/LICENSE
 humanfriendly                 	MIT                                 	
 idna                          	BSD-3-Clause                        	
+intel-openmp                  	BSD 3-clause                        	https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10
+jinja2                        	BSD-3-Clause                        	
 jmespath                      	MIT                                 	
 joblib                        	BSD-3-Clause                        	https://github.com/joblib/joblib/blob/master/LICENSE.txt
 keyutils                      	LGPL-2.1-or-later                   	
@@ -45,6 +47,7 @@ libffi                        	libffi license                      	https://gith
 libgcc-ng                     	GPL-3.0-only WITH GCC-exception-3.1n	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran-ng                	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran5                  	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libgomp                       	GPL-3.0-only WITH GCC-exception-3.1 	https://gcc.gnu.org/onlinedocs/gcc-4.2.4/libgomp/Copying.html#Copying
 liblapack                     	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt
 libllvm11                     	Apache-2.0 WITH LLVM-exception      	
 libnghttp2                    	MIT                                 	
@@ -63,6 +66,7 @@ libzlib                       	Zlib                                	http://zlib.
 llvm-openmp                   	MIT                                 	https://llvm.org/docs/DeveloperPolicy.html#license
 llvmlite                      	BSD-2-Clause                        	
 lz4-c                         	BSD-2-Clause                        	
+markupsafe                    	BSD-3-Clause                        	
 mkl                           	Proprietary  Intel                  	https://software.intel.com/en-us/mkl/license-faq
 mpc                           	LGPL-3.0-or-later                   	
 mpfr                          	LGPL-3.0-only                       	

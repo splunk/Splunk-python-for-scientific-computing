@@ -23,6 +23,7 @@ huggingface_hub               	Apache-2.0                          	https://gith
 humanfriendly                 	MIT                                 	https://github.com/xolox/python-humanfriendly/blob/master/LICENSE.txt
 idna                          	BSD-3-Clause                        	https://github.com/kjd/idna
 intel-openmp                  	BSD 3-clause                        	https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10
+jinja2                        	BSD-3-Clause
 jmespath                      	MIT                                 	https://github.com/jmespath/jmespath.py
 joblib                        	BSD-3-Clause                        	https://github.com/joblib/joblib/blob/master/LICENSE.txt
 krb5                          	MIT
@@ -53,6 +54,7 @@ m2w64-gcc-libs                	GPL3+, partial:GCCRLE, partial:LGPL2+
 m2w64-gcc-libs-core           	GPL3+, partial:GCCRLE, partial:LGPL2+
 m2w64-gmp                     	LGPL3
 m2w64-libwinpthread-git       	MIT, BSD
+markupsafe                    	BSD-3-Clause
 mkl                           	Proprietary  Intel                  	https://software.intel.com/en-us/mkl/license-faq
 mkl-devel                     	Proprietary Intel                   	https://software.intel.com/en-us/mkl/license-faq
 mkl-include                   	Proprietary Intel                   	https://software.intel.com/en-us/mkl/license-faq

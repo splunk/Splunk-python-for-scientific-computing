@@ -28,9 +28,10 @@ dependencies:
   - glog=0.7.1=h2790a97_0
   - gmp=6.3.0=hf036a51_2
   - gmpy2=2.1.5=py39h87b48b1_1
-  - huggingface_hub=0.24.2=pyhd8ed1ab_0
+  - huggingface_hub=0.24.3=pyhd8ed1ab_0
   - humanfriendly=10.0=pyhd8ed1ab_6
   - idna=3.7=pyhd8ed1ab_0
+  - jinja2=3.1.4=pyhd8ed1ab_0
   - jmespath=0.10.0=pyh9f0ad1d_0
   - joblib=1.4.2=pyhd8ed1ab_0
   - libabseil=20240116.2=cxx17_hf036a51_1
@@ -41,7 +42,7 @@ dependencies:
   - libcblas=3.9.0=20_osx64_mkl
   - libcrc32c=1.1.2=he49afe7_0
   - libcurl=8.9.0=hfcf2730_0
-  - libcxx=18.1.8=hef8daea_0
+  - libcxx=18.1.8=hef8daea_1
   - libedit=3.1.20191231=h0678c8f_2
   - libev=4.33=h10d778d_2
   - libevent=2.1.12=ha90c15b_1
@@ -52,7 +53,7 @@ dependencies:
   - liblapacke=3.9.0=20_osx64_mkl
   - libllvm11=11.1.0=h8fb7429_5
   - libnghttp2=1.58.0=h64cf6d3_1
-  - libparquet=17.0.0=h904a336_2_cpu
+  - libparquet=17.0.0=h2adadb3_3_cpu
   - libprotobuf=4.25.3=h4e4d658_0
   - libre2-11=2023.09.01=h81f5012_2
   - libssh2=1.11.0=hd019ec5_0
@@ -63,11 +64,12 @@ dependencies:
   - llvm-openmp=18.1.8=h15ab845_0
   - llvmlite=0.39.1=py39had167e2_1
   - lz4-c=1.9.4=hf0c8a7f_0
+  - markupsafe=2.1.5=py39ha09f3b3_0
   - mkl=2023.2.0=h54c2260_50500
   - mkl-devel=2023.2.0=h694c41f_50500
   - mkl-include=2023.2.0=h6bab518_50500
   - mpc=1.3.1=h81bd1dd_0
-  - mpfr=4.2.1=h4f6b447_1
+  - mpfr=4.2.1=hc80595b_2
   - mpmath=1.3.0=pyhd8ed1ab_0
   - multidict=6.0.5=py39ha30fb19_0
   - multiprocess=0.70.16=py39ha09f3b3_0
@@ -91,7 +93,7 @@ dependencies:
   - python-flatbuffers=24.3.25=pyh59ac667_0
   - python-xxhash=3.4.1=py39hdc70f33_0
   - python_abi=3.9=4_cp39
-  - pytorch=1.13.1=py3.9_0
+  - pytorch=2.2.2=py3.9_0
   - pytorch-mutex=1.0=cpu
   - pytz=2024.1=pyhd8ed1ab_0
   - pyyaml=6.0.1=py39hdc70f33_1
