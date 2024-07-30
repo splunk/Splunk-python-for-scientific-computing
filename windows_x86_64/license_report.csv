@@ -19,10 +19,11 @@ filelock,3.15.4,Unlicense,https://github.com/tox-dev/py-filelock/blob/main/LICEN
 frozenlist,1.4.1,Apache-2.0,https://github.com/aio-libs/frozenlist?tab=Apache-2.0-1-ov-file#readme,A list-like structure which implements collections.abc.MutableSequence,,frozenlist-1.4.1-py39ha55989b_0,conda-forge,py39ha55989b_0,0
 fsspec,2024.5.0,BSD-3-Clause,https://github.com/fsspec/filesystem_spec/blob/master/LICENSE,A specification for pythonic filesystems,,fsspec-2024.5.0-pyhff2d567_0,conda-forge,pyhff2d567_0,0
 future,0.18.3,MIT,https://github.com/PythonCharmers/python-future,Missing compatibility layer between Python 2 and Python 3,,future-0.18.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-huggingface_hub,0.24.2,Apache-2.0,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,,huggingface_hub-0.24.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+huggingface_hub,0.24.3,Apache-2.0,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,,huggingface_hub-0.24.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 humanfriendly,10.0,MIT,https://github.com/xolox/python-humanfriendly/blob/master/LICENSE.txt,Human friendly output for text interfaces using Python,,humanfriendly-10.0-py39hcbf5309_5,conda-forge,py39hcbf5309_5,5
 idna,3.7,BSD-3-Clause,https://github.com/kjd/idna,Internationalized Domain Names in Applications (IDNA),,idna-3.7-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 intel-openmp,2024.2.0,LicenseRef-IntelSimplifiedSoftwareOct2022,https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10,Math library for Intel and compatible processors,,intel-openmp-2024.2.0-h57928b3_980,conda-forge,h57928b3_980,980
+jinja2,3.1.4,BSD-3-Clause,,,,jinja2-3.1.4-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 jmespath,0.10.0,MIT,https://github.com/jmespath/jmespath.py,Allows you to declaratively specify how to extract elements from a JSON document,,jmespath-0.10.0-pyh9f0ad1d_0,conda-forge,pyh9f0ad1d_0,0
 joblib,1.4.2,BSD-3-Clause,https://github.com/joblib/joblib/blob/master/LICENSE.txt,Python function as pipeline jobs,,joblib-1.4.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 krb5,1.21.3,MIT,,,,krb5-1.21.3-hdf4eb48_0,conda-forge,hdf4eb48_0,0
@@ -38,7 +39,7 @@ libevent,2.1.12,BSD-3-Clause,https://github.com/libevent/libevent?tab=License-1-
 libffi,3.4.2,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,,libffi-3.4.2-h8ffe710_5,conda-forge,h8ffe710_5,5
 liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapack-3.9.0-23_win64_mkl,conda-forge,23_win64_mkl,23
 liblapacke,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapacke-3.9.0-23_win64_mkl,conda-forge,23_win64_mkl,23
-libparquet,17.0.0,Apache-2.0,https://github.com/apache/arrow?tab=Apache-2.0-1-ov-file#readme,C++ libraries for Apache Parquet,,libparquet-17.0.0-h178134c_1_cpu,conda-forge,h178134c_1_cpu,1
+libparquet,17.0.0,Apache-2.0,https://github.com/apache/arrow?tab=Apache-2.0-1-ov-file#readme,C++ libraries for Apache Parquet,,libparquet-17.0.0-h178134c_3_cpu,conda-forge,h178134c_3_cpu,3
 libprotobuf,4.25.3,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler,libprotobuf-4.25.3-h503648d_0,conda-forge,h503648d_0,0
 libre2-11,2023.09.01,BSD-3-Clause,https://github.com/google/re2/?tab=BSD-3-Clause-1-ov-file#readme,alternative to backtracking regular expression engines like those used in PCRE Perl and Python,,libre2-11-2023.09.01-hf8d8778_2,conda-forge,hf8d8778_2,2
 libssh2,1.11.0,BSD-3-Clause,https://github.com/libssh2/libssh2?tab=BSD-3-Clause-1-ov-file#readme,a library implementing the SSH2 protocol,,libssh2-1.11.0-h7dfc565_0,conda-forge,h7dfc565_0,0
@@ -53,6 +54,7 @@ m2w64-gcc-libs,5.3.0,"GPL3+, partial:GCCRLE, partial:LGPL2+",,,,m2w64-gcc-libs-5
 m2w64-gcc-libs-core,5.3.0,"GPL3+, partial:GCCRLE, partial:LGPL2+",,,,m2w64-gcc-libs-core-5.3.0-7,conda-forge,7,7
 m2w64-gmp,6.1.0,LGPL3,,,,m2w64-gmp-6.1.0-2,conda-forge,2,2
 m2w64-libwinpthread-git,5.0.0.4634.697f757,"MIT, BSD",,,,m2w64-libwinpthread-git-5.0.0.4634.697f757-2,conda-forge,2,2
+markupsafe,2.1.5,BSD-3-Clause,,,,markupsafe-2.1.5-py39ha55989b_0,conda-forge,py39ha55989b_0,0
 mkl,2024.1.0,LicenseRef-IntelSimplifiedSoftwareOct2022,https://software.intel.com/en-us/mkl/license-faq,Math library for Intel and compatible processors,,mkl-2024.1.0-h66d3029_694,conda-forge,h66d3029_694,694
 mkl-devel,2024.1.0,LicenseRef-IntelSimplifiedSoftwareOct2022,https://software.intel.com/en-us/mkl/license-faq,Math library for Intel and compatible processors,,mkl-devel-2024.1.0-h57928b3_694,conda-forge,h57928b3_694,694
 mkl-include,2024.1.0,LicenseRef-IntelSimplifiedSoftwareOct2022,https://software.intel.com/en-us/mkl/license-faq,MKL headers for developing software that uses MKL,,mkl-include-2024.1.0-h66d3029_694,conda-forge,h66d3029_694,694
@@ -83,7 +85,7 @@ python-dateutil,2.9.0,Apache-2.0,https://github.com/dateutil/dateutil/blob/maste
 python-flatbuffers,24.3.25,Apache-2.0,https://github.com/google/flatbuffers/blob/master/LICENSE.txt,library for use with the Flatbuffers serialization format,,python-flatbuffers-24.3.25-pyh59ac667_0,conda-forge,pyh59ac667_0,0
 python-xxhash,3.4.1,BSD-2-Clause,https://github.com/ifduyue/python-xxhash?tab=BSD-2-Clause-1-ov-file#readme,Python binding for xxHash,,python-xxhash-3.4.1-py39ha55989b_0,conda-forge,py39ha55989b_0,0
 python_abi,3.9,BSD-3-Clause,https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt,Meta package to select python implementation,,python_abi-3.9-4_cp39,conda-forge,4_cp39,4
-pytorch,1.13.1,BSD 3-Clause,https://github.com/pytorch/pytorch/blob/master/LICENSE,deep learning library,,pytorch-1.13.1-py3.9_cpu_0,pytorch,py3.9_cpu_0,0
+pytorch,2.2.2,BSD 3-Clause,https://github.com/pytorch/pytorch/blob/master/LICENSE,deep learning library,,pytorch-2.2.2-py3.9_cpu_0,pytorch,py3.9_cpu_0,0
 pytorch-mutex,1.0,,https://anaconda.org/pytorch/pytorch-mutex,Meta package to select the PyTorch variant,,pytorch-mutex-1.0-cpu,pytorch,cpu,0
 pytz,2024.1,MIT,https://github.com/newvem/pytz/blob/master/LICENSE.txt,dependency,,pytz-2024.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 pyyaml,6.0.1,MIT,https://github.com/yaml/pyyaml/blob/master/LICENSE,YAML parser,,pyyaml-6.0.1-py39ha55989b_1,conda-forge,py39ha55989b_1,1

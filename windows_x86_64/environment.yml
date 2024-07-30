@@ -24,10 +24,11 @@ dependencies:
   - frozenlist=1.4.1=py39ha55989b_0
   - fsspec=2024.5.0=pyhff2d567_0
   - future=0.18.3=pyhd8ed1ab_0
-  - huggingface_hub=0.24.2=pyhd8ed1ab_0
+  - huggingface_hub=0.24.3=pyhd8ed1ab_0
   - humanfriendly=10.0=py39hcbf5309_5
   - idna=3.7=pyhd8ed1ab_0
   - intel-openmp=2024.2.0=h57928b3_980
+  - jinja2=3.1.4=pyhd8ed1ab_0
   - jmespath=0.10.0=pyh9f0ad1d_0
   - joblib=1.4.2=pyhd8ed1ab_0
   - krb5=1.21.3=hdf4eb48_0
@@ -43,7 +44,7 @@ dependencies:
   - libffi=3.4.2=h8ffe710_5
   - liblapack=3.9.0=23_win64_mkl
   - liblapacke=3.9.0=23_win64_mkl
-  - libparquet=17.0.0=h178134c_1_cpu
+  - libparquet=17.0.0=h178134c_3_cpu
   - libprotobuf=4.25.3=h503648d_0
   - libre2-11=2023.09.01=hf8d8778_2
   - libssh2=1.11.0=h7dfc565_0
@@ -58,6 +59,7 @@ dependencies:
   - m2w64-gcc-libs-core=5.3.0=7
   - m2w64-gmp=6.1.0=2
   - m2w64-libwinpthread-git=5.0.0.4634.697f757=2
+  - markupsafe=2.1.5=py39ha55989b_0
   - mkl=2024.1.0=h66d3029_694
   - mkl-devel=2024.1.0=h57928b3_694
   - mkl-include=2024.1.0=h66d3029_694
@@ -88,7 +90,7 @@ dependencies:
   - python-flatbuffers=24.3.25=pyh59ac667_0
   - python-xxhash=3.4.1=py39ha55989b_0
   - python_abi=3.9=4_cp39
-  - pytorch=1.13.1=py3.9_cpu_0
+  - pytorch=2.2.2=py3.9_cpu_0
   - pytorch-mutex=1.0=cpu
   - pytz=2024.1=pyhd8ed1ab_0
   - pyyaml=6.0.1=py39ha55989b_1
