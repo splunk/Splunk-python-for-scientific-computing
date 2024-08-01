@@ -1,9 +1,12 @@
 variables:
   # Vault-required variable: path of the cwd to allow docker-based operations to work
   CREDS_SECRET_ROOT: $CI_PROJECT_DIR
+  ARTIFACTORY_URL: "https://repo.splunkdev.net/artifactory"
+  ARTIFACTORY_FOLDER: "apps/app-sasp"
   GENERIC_DEPLOY_PROD_ROLE: artifactory:v2/cloud/role/psc-protected-role
   GENERIC_DEPLOY_TEST_ROLE: artifactory:v2/cloud/role/psc-unprotected-role
   VERSION_OVERRIDE: 4.2.1 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
+  SUB_SUB_FOLDER_NAME: "${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}"
 
 stages:
   - build
@@ -22,8 +25,14 @@ include:
 binary-scan-linux:
   stage: prodsec-review
   extends: .binary-scan
-  variables:
-    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_linux_x86_64.tgz"
+  # variables:
+  #   ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_linux_x86_64.tgz"
+  before_script:
+    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
+        export ARTIFACT_PATH="https://repo.splunkdev.net/ui/native/generic-test/apps/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}/Splunk_SA_Scientific_Python_linux_x86_64.tgz";
+      else
+        export ARTIFACT_PATH="${ARTIFACTORY_URL}/${ARTIFACTORY_FOLDER}/releases/${SUB_SUB_FOLDER_NAME}/Splunk_SA_Scientific_Python_linux_x86_64.tgz";
+      fi
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
@@ -32,8 +41,14 @@ binary-scan-linux:
 binary-scan-mac-arm64:
   stage: prodsec-review
   extends: .binary-scan
-  variables:
-    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_arm64.tgz"
+  # variables:
+  #   ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_arm64.tgz"
+  before_script:
+    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
+        export ARTIFACT_PATH="https://repo.splunkdev.net/ui/native/generic-test/apps/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}/Splunk_SA_Scientific_Python_darwin_arm64.tgz";
+      else
+        export ARTIFACT_PATH="${ARTIFACTORY_URL}/${ARTIFACTORY_FOLDER}/releases/${SUB_SUB_FOLDER_NAME}/Splunk_SA_Scientific_Python_darwin_arm64.tgz";
+      fi
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
@@ -42,8 +57,14 @@ binary-scan-mac-arm64:
 binary-scan-mac-x86_64:
   stage: prodsec-review
   extends: .binary-scan
-  variables:
-    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_x86_64.tgz"
+  # variables:
+  #   ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_x86_64.tgz"
+  before_script:
+    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
+        export ARTIFACT_PATH="https://repo.splunkdev.net/ui/native/generic-test/apps/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}/Splunk_SA_Scientific_Python_darwin_x86_64.tgz";
+      else
+        export ARTIFACT_PATH="${ARTIFACTORY_URL}/${ARTIFACTORY_FOLDER}/releases/${SUB_SUB_FOLDER_NAME}/Splunk_SA_Scientific_Python_darwin_x86_64.tgz";
+      fi
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
@@ -52,8 +73,14 @@ binary-scan-mac-x86_64:
 binary-scan-windows:
   stage: prodsec-review
   extends: .binary-scan
-  variables:
-    ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_windows_x86_64.tgz"
+  # variables:
+  #   ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_windows_x86_64.tgz"
+  before_script:
+    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
+        export ARTIFACT_PATH="https://repo.splunkdev.net/ui/native/generic-test/apps/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}/Splunk_SA_Scientific_Python_windows_x86_64.tgz";
+      else
+        export ARTIFACT_PATH="${ARTIFACTORY_URL}/${ARTIFACTORY_FOLDER}/releases/${SUB_SUB_FOLDER_NAME}/Splunk_SA_Scientific_Python_windows_x86_64.tgz";
+      fi
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
