@@ -51,3 +51,4 @@ importlib-metadata
 zipp
 argh
 ninja
+setuptools

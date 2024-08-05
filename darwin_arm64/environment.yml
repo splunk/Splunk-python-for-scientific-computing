@@ -25,7 +25,7 @@ dependencies:
   - glog=0.7.1=heb240a5_0
   - gmp=6.3.0=h7bae524_2
   - gmpy2=2.1.5=py39h9bb7c0c_1
-  - huggingface_hub=0.24.3=pyhd8ed1ab_0
+  - huggingface_hub=0.24.5=pyhd8ed1ab_0
   - humanfriendly=10.0=pyhd8ed1ab_6
   - idna=3.7=pyhd8ed1ab_0
   - jinja2=3.1.4=pyhd8ed1ab_0
@@ -38,8 +38,8 @@ dependencies:
   - libbrotlienc=1.1.0=hb547adb_1
   - libcblas=3.9.0=20_osxarm64_openblas
   - libcrc32c=1.1.2=hbdafb3b_0
-  - libcurl=8.9.0=hfd8ffcc_0
-  - libcxx=18.1.8=h167917d_1
+  - libcurl=8.9.1=hfd8ffcc_0
+  - libcxx=18.1.8=h167917d_2
   - libedit=3.1.20191231=hc8eb9b7_2
   - libev=4.33=h93a5062_2
   - libevent=2.1.12=h2757513_1
@@ -108,18 +108,16 @@ dependencies:
   - tbb=2021.5.0=hffc8910_5
   - threadpoolctl=3.5.0=pyhc1e730c_0
   - tokenizers=0.15.2=py39heb7857c_0
-  - tqdm=4.66.4=pyhd8ed1ab_0
+  - tqdm=4.66.5=pyhd8ed1ab_0
   - transformers=4.38.1=pyhd8ed1ab_0
   - typing-extensions=4.12.2=hd8ed1ab_0
   - typing_extensions=4.12.2=pyha770c72_0
   - tzdata=2024a=h0c530f3_0
   - urllib3=1.26.19=pyhd8ed1ab_0
   - watchdog=2.1.7=py39hb18efdd_1
-  - wheel=0.43.0=pyhd8ed1ab_1
+  - wheel=0.44.0=pyhd8ed1ab_0
   - xxhash=0.8.2=hb547adb_0
   - xz=5.2.6=h57fd34a_0
   - yaml=0.2.5=h3422bc3_2
   - yarl=1.9.4=py39h17cfd9d_0
   - zstd=1.5.6=hb46c0d2_0
-  - pip:
-      - setuptools==70.0.0
