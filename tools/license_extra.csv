@@ -34,7 +34,7 @@ humanfriendly,MIT,https://github.com/xolox/python-humanfriendly/blob/master/LICE
 icc_rt,proprietary - Intel,https://software.intel.com/en-us/license/intel-simplified-software-license,Intel runtime libraries for C, C++ and Fortran compilers
 idna,BSD-3-Clause,https://github.com/kjd/idna,Internationalized Domain Names in Applications (IDNA),
 intel-openmp,BSD 3-clause ,https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10,Math library for Intel and compatible processors,
-jinja2,BSD 3-clause,https://github.com/pallets/jinja/,Jinja is a fast, expressive, extensible templating engine.,
+jinja2,BSD 3-clause,https://github.com/pallets/jinja/,Jinja is a fast, expressive
 jmespath,MIT,https://github.com/jmespath/jmespath.py,Allows you to declaratively specify how to extract elements from a JSON document,
 joblib,,https://github.com/joblib/joblib/blob/master/LICENSE.txt,Python function as pipeline jobs,
 keyutils,LGPL-2.1-or-later,https://kernel.googlesource.com/pub/scm/linux/kernel/git/dhowells/keyutils/+/refs/heads/pipe-watch/LICENCE.LGPL,Linux Key Management Utilities,
@@ -49,7 +49,7 @@ libcrc32c,BSD-3-Clause,https://github.com/google/crc32c?tab=BSD-3-Clause-1-ov-fi
 libcurl,curl,https://github.com/curl/curl?tab=License-1-ov-file#readme,tool and library for transferring data with URL syntax,
 libcxx,MIT,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,
 libedit,BSD-3-Clause,http://thrysoee.dk/editline|http://www.netbsd.org/about/redistribution.html,Command line editor library provides generic line editing, history
-libev,BSD-2-Clause,http://software.schmorp.de/pkg/libev.html,A full-featured and high-performance event loop that is loosely modeled after libevent, but without its limitations and bugs.,
+libev,BSD-2-Clause,http://software.schmorp.de/pkg/libev.html,A full-featured and high-performance event loop that is loosely modeled after libevent, but without its limitations and bugs.
 libevent,BSD-3-Clause,https://github.com/libevent/libevent?tab=License-1-ov-file#readme,An event notification library,
 libffi,libffi license,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,
 libgcc-ng,GPL-3.0-only WITH GCC-exception-3.1n,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GCC low-level runtime library,
@@ -60,6 +60,7 @@ liblapack,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACK
 liblapacke,,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,
 libllvm11,Apache-2.0 WITH LLVM-exception,https://github.com/llvm-mirror/llvm?tab=License-1-ov-file#readme,Development headers and libraries for LLVM,
 libnghttp2,MIT,https://github.com/nghttp2/nghttp2/blob/master/COPYING,This is an implementation of Hypertext Transfer Protocol version 2,
+libnsl,,,,
 libopenblas,BSD 3-clause,https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE,An optimized BLAS library based on GotoBLAS2 1.13 BSD version,
 libparquet,Apache-2.0,https://github.com/apache/arrow?tab=Apache-2.0-1-ov-file#readme,C++ libraries for Apache Parquet,
 libprotobuf,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler

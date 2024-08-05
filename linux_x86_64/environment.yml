@@ -2,13 +2,13 @@ name: build/venv
 channels:
   - pytorch
   - conda-forge
-  - defaults
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
-  - _openmp_mutex=4.5=2_gnu
-  - blas=1.0=mkl
+  - _openmp_mutex=4.5=2_kmp_llvm
+  - blas=2.116=mkl
+  - blas-devel=3.9.0=16_linux64_mkl
   - boto3=1.17.0=pyhd8ed1ab_0
-  - botocore=1.20.0=pyhd8ed1ab_0
+  - botocore=1.20.112=pyhd8ed1ab_0
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py39h3d6467e_1
   - bzip2=1.0.8=h4bc722e_7
@@ -29,10 +29,9 @@ dependencies:
   - glog=0.7.1=hbabe93e_0
   - gmp=6.3.0=hac33072_2
   - gmpy2=2.1.5=py39h048c657_1
-  - huggingface_hub=0.24.3=pyhd8ed1ab_0
+  - huggingface_hub=0.24.5=pyhd8ed1ab_0
   - humanfriendly=10.0=pyhd8ed1ab_6
   - idna=3.7=pyhd8ed1ab_0
-  - intel-openmp=2022.0.1=h06a4308_3633
   - jinja2=3.1.4=pyhd8ed1ab_0
   - jmespath=0.10.0=pyh9f0ad1d_0
   - joblib=1.4.2=pyhd8ed1ab_0
@@ -44,7 +43,7 @@ dependencies:
   - libbrotlienc=1.1.0=hd590300_1
   - libcblas=3.9.0=16_linux64_mkl
   - libcrc32c=1.1.2=h9c3ff4c_0
-  - libcurl=8.9.0=hdb1bdb2_0
+  - libcurl=8.9.1=hdb1bdb2_0
   - libedit=3.1.20191231=he28a2e2_2
   - libev=4.33=hd590300_2
   - libevent=2.1.12=hf998b51_1
@@ -52,8 +51,8 @@ dependencies:
   - libgcc-ng=14.1.0=h77fa898_0
   - libgfortran-ng=14.1.0=h69a702a_0
   - libgfortran5=14.1.0=hc5f4f2c_0
-  - libgomp=14.1.0=h77fa898_0
   - liblapack=3.9.0=16_linux64_mkl
+  - liblapacke=3.9.0=16_linux64_mkl
   - libllvm11=11.1.0=he0ac6c6_5
   - libnghttp2=1.58.0=h47da74e_1
   - libnsl=2.0.1=hd590300_0
@@ -72,7 +71,9 @@ dependencies:
   - llvmlite=0.39.1=py39h7d9a04d_1
   - lz4-c=1.9.4=hcb278e6_0
   - markupsafe=2.1.5=py39hd1e30aa_0
-  - mkl=2022.1.0=hc2b9512_224
+  - mkl=2022.1.0=h84fe81f_915
+  - mkl-devel=2022.1.0=ha770c72_916
+  - mkl-include=2022.1.0=h84fe81f_915
   - mpc=1.3.1=hfe3b2da_0
   - mpfr=4.2.1=h38ae2d0_2
   - mpmath=1.3.0=pyhd8ed1ab_0
@@ -86,7 +87,7 @@ dependencies:
   - openssl=3.3.1=h4bc722e_2
   - orc=2.0.1=h17fec99_1
   - packaging=24.1=pyhd8ed1ab_0
-  - pandas=1.1.5=py39ha9443f7_0
+  - pandas=1.1.5=py39hde0f152_0
   - patsy=0.5.6=pyhd8ed1ab_0
   - platformdirs=4.2.2=pyhd8ed1ab_0
   - pooch=1.8.2=pyhd8ed1ab_0
@@ -111,7 +112,6 @@ dependencies:
   - safetensors=0.4.3=py39h9fdd4d6_0
   - scikit-learn=1.5.1=py39hf7b0125_0
   - scipy=1.10.0=py39h7360e5f_2
-  - setuptools=70.0.0=pyhd8ed1ab_0
   - six=1.16.0=pyh6c4a22f_0
   - snappy=1.2.1=ha2e4443_0
   - statsmodels=0.13.2=py39hd257fcd_0
@@ -120,14 +120,14 @@ dependencies:
   - tbb=2021.5.0=h924138e_5
   - threadpoolctl=3.5.0=pyhc1e730c_0
   - tokenizers=0.15.2=py39hc62d755_0
-  - tqdm=4.66.4=pyhd8ed1ab_0
+  - tqdm=4.66.5=pyhd8ed1ab_0
   - transformers=4.38.1=pyhd8ed1ab_0
   - typing-extensions=4.12.2=hd8ed1ab_0
   - typing_extensions=4.12.2=pyha770c72_0
   - tzdata=2024a=h0c530f3_0
   - urllib3=1.26.19=pyhd8ed1ab_0
   - watchdog=2.1.7=py39hf3d152e_1
-  - wheel=0.43.0=pyhd8ed1ab_1
+  - wheel=0.44.0=pyhd8ed1ab_0
   - xxhash=0.8.2=hd590300_0
   - xz=5.2.6=h166bdaf_0
   - yaml=0.2.5=h7f98852_2
