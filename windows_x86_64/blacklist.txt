@@ -40,3 +40,4 @@ pycparser
 pysocks
 sqlite
 zipp
+setuptools
