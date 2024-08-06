@@ -4,10 +4,11 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - aiohappyeyeballs=2.3.2=pyhd8ed1ab_0
   - blas=2.120=mkl
   - blas-devel=3.9.0=20_osx64_mkl
   - boto3=1.17.0=pyhd8ed1ab_0
-  - botocore=1.20.0=pyhd8ed1ab_0
+  - botocore=1.20.112=pyhd8ed1ab_0
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py39h840bb9f_1
   - bzip2=1.0.8=hfdf4475_7
@@ -28,7 +29,7 @@ dependencies:
   - glog=0.7.1=h2790a97_0
   - gmp=6.3.0=hf036a51_2
   - gmpy2=2.1.5=py39h87b48b1_1
-  - huggingface_hub=0.24.3=pyhd8ed1ab_0
+  - huggingface_hub=0.24.5=pyhd8ed1ab_0
   - humanfriendly=10.0=pyhd8ed1ab_6
   - idna=3.7=pyhd8ed1ab_0
   - jinja2=3.1.4=pyhd8ed1ab_0
@@ -41,8 +42,8 @@ dependencies:
   - libbrotlienc=1.1.0=h0dc2134_1
   - libcblas=3.9.0=20_osx64_mkl
   - libcrc32c=1.1.2=he49afe7_0
-  - libcurl=8.9.0=hfcf2730_0
-  - libcxx=18.1.8=hef8daea_1
+  - libcurl=8.9.1=hfcf2730_0
+  - libcxx=18.1.8=heced48a_2
   - libedit=3.1.20191231=h0678c8f_2
   - libev=4.33=h10d778d_2
   - libevent=2.1.12=ha90c15b_1
@@ -81,7 +82,7 @@ dependencies:
   - openssl=3.3.1=h87427d6_2
   - orc=2.0.1=hf43e91b_1
   - packaging=24.1=pyhd8ed1ab_0
-  - pandas=1.1.5=py39hb2f4e1b_0
+  - pandas=1.1.5=py39h089d6f7_0
   - patsy=0.5.6=pyhd8ed1ab_0
   - platformdirs=4.2.2=pyhd8ed1ab_0
   - pooch=1.8.2=pyhd8ed1ab_0
@@ -105,7 +106,6 @@ dependencies:
   - safetensors=0.4.3=py39hef70336_0
   - scikit-learn=1.5.1=py39hf6a2366_0
   - scipy=1.10.0=py39h8a15683_2
-  - setuptools=70.0.0=pyhd8ed1ab_0
   - six=1.16.0=pyh6c4a22f_0
   - snappy=1.2.1=he1e6707_0
   - statsmodels=0.13.2=py39h15b18c7_0
@@ -114,14 +114,14 @@ dependencies:
   - tbb=2021.5.0=hb8565cd_5
   - threadpoolctl=3.5.0=pyhc1e730c_0
   - tokenizers=0.15.2=py39h10f3356_0
-  - tqdm=4.66.4=pyhd8ed1ab_0
+  - tqdm=4.66.5=pyhd8ed1ab_0
   - transformers=4.38.1=pyhd8ed1ab_0
   - typing-extensions=4.12.2=hd8ed1ab_0
   - typing_extensions=4.12.2=pyha770c72_0
   - tzdata=2024a=h0c530f3_0
   - urllib3=1.26.19=pyhd8ed1ab_0
   - watchdog=2.1.7=py39h147bbb7_1
-  - wheel=0.43.0=pyhd8ed1ab_1
+  - wheel=0.44.0=pyhd8ed1ab_0
   - xxhash=0.8.2=h4140336_0
   - xz=5.2.6=h775f41a_0
   - yaml=0.2.5=h0d85af4_2
