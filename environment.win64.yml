@@ -3,7 +3,6 @@ channels:
   - conda-forge
 dependencies:
   - boto3==1.17
-  - botocore==1.20
   - bottle==0.12.23
   - chardet==3.0.4
   - future==0.18.3
@@ -18,5 +17,4 @@ dependencies:
   - ruptures==1.1.9
   - scipy==1.10
   - scikit-learn==1.5.1
-  - setuptools==71.0.4
   - statsmodels==0.13.2

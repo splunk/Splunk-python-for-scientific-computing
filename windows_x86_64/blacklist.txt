@@ -16,3 +16,4 @@ zipp
 argh
 menuinst
 flit-core
+setuptools

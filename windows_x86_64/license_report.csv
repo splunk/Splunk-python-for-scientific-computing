@@ -1,6 +1,6 @@
 name,version,license,license_url,functionality,notes,dist_name,channel,build,build_number
 boto3,1.17.0,Apache-2.0,https://github.com/boto/boto3/blob/develop/LICENSE,Amazon Web Services SDK for Python,,boto3-1.17.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-botocore,1.20.0,Apache-2.0,https://github.com/boto/botocore/blob/develop/LICENSE.txt,Low-level data-driven core of boto 3,,botocore-1.20.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+botocore,1.20.112,Apache-2.0,https://github.com/boto/botocore/blob/develop/LICENSE.txt,Low-level data-driven core of boto 3,,botocore-1.20.112-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 bottle,0.12.23,MIT,https://bottlepy.org/docs/dev/,a fast simple and lightweight WSGI micro web-framework for Python,,bottle-0.12.23-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 brotli-python,1.1.0,MIT,https://github.com/google/brotli?tab=MIT-1-ov-file#readme,Brotli compression format,,brotli-python-1.1.0-py39h99910a6_1,conda-forge,py39h99910a6_1,1
 bzip2,1.0.8,bzip2-1.0.6,,,,bzip2-1.0.8-h2466b09_7,conda-forge,h2466b09_7,7
@@ -36,7 +36,7 @@ onnx,1.16.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neura
 onnxruntime,1.18.1,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform high performance ML inferencing and training accelerator,,onnxruntime-1.18.1-py39hc8505ec_0_cpu,conda-forge,py39hc8505ec_0_cpu,0
 openssl,3.3.1,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.3.1-h2466b09_2,conda-forge,h2466b09_2,2
 packaging,24.1,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-24.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py39hf11a4ad_0,pkgs/main,py39hf11a4ad_0,0
+pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py39h2e25243_0,conda-forge,py39h2e25243_0,0
 patsy,0.5.6,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-0.5.6-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 platformdirs,4.2.2,MIT,https://github.com/platformdirs/platformdirs,Will help you choose an appropriate directory structure,,platformdirs-4.2.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 pooch,1.8.2,BSD-3-Clause,https://github.com/fatiando/pooch,a Python library that can manage data by downloading files from a server (only when needed) and storing them locally in a data cache,,pooch-1.8.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
@@ -54,7 +54,6 @@ ruptures,1.1.9,BSD-2-Clause,https://github.com/deepcharles/ruptures,Python libra
 s3transfer,0.3.7,Apache-2.0,https://github.com/boto/s3transfer,An Amazon S3 transfer manager,,s3transfer-0.3.7-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 scikit-learn,1.5.1,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-1.5.1-py39hdd013cc_0,conda-forge,py39hdd013cc_0,0
 scipy,1.10.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.10.0-py39hfbf2dce_2,conda-forge,py39hfbf2dce_2,2
-setuptools,71.0.4,MIT,https://github.com/pypa/setuptools/blob/master/LICENSE,dependency of python,,setuptools-71.0.4-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 six,1.16.0,MIT,https://github.com/benjaminp/six/blob/master/LICENSE,backwards compatibility utility package,,six-1.16.0-pyh6c4a22f_0,conda-forge,pyh6c4a22f_0,0
 statsmodels,0.13.2,BSD-3-Clause,https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt,statistics and math library package,,statsmodels-0.13.2-py39h5d4886f_0,conda-forge,py39h5d4886f_0,0
 sympy,1.13.0,BSD-3-Clause,https://github.com/sympy/sympy/blob/master/LICENSE,Python Library for Symbolic Mathematics,,sympy-1.13.0-pyh04b8f61_3,conda-forge,pyh04b8f61_3,3
@@ -69,6 +68,6 @@ urllib3,1.26.19,MIT,https://github.com/urllib3/urllib3/blob/main/LICENSE.txt,HTT
 vc,14.3,BSD-3-Clause,https://github.com/conda/conda/wiki/VC-features,Meta package for selecting VS runtime options,,vc-14.3-h8a93ad2_20,conda-forge,h8a93ad2_20,20
 vc14_runtime,14.40.33810,LicenseRef-ProprietaryMicrosoft,https://visualstudio.microsoft.com/downloads/,,,vc14_runtime-14.40.33810-ha82c5b3_20,conda-forge,ha82c5b3_20,20
 vs2015_runtime,14.40.33810,BSD-3-Clause,https://github.com/conda-forge/vc-feedstock?tab=BSD-3-Clause-1-ov-file#readme14,MSVC runtimes,,vs2015_runtime-14.40.33810-h3bf8584_20,conda-forge,h3bf8584_20,20
-wheel,0.43.0,MIT,https://github.com/pypa/wheel/blob/master/LICENSE.txt,package distribution,,wheel-0.43.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
+wheel,0.44.0,MIT,https://github.com/pypa/wheel/blob/master/LICENSE.txt,package distribution,,wheel-0.44.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 win_inet_pton,1.1.0,PUBLIC-DOMAIN,https://github.com/hickeroar/win_inet_pton/blob/master/LICENSE,inet_pton and inet_ntop implementation for Python on Windows,,win_inet_pton-1.1.0-pyhd8ed1ab_6,conda-forge,pyhd8ed1ab_6,6
 xz,5.2.6,LGPL-2.1 and GPL-2.0,https://git.tukaani.org/?p=xz.git;a=blob_plain;f=COPYING;hb=HEAD,Data compression software with high compression ratio,,xz-5.2.6-h8d14728_0,conda-forge,h8d14728_0,0
