@@ -52,3 +52,4 @@ importlib_metadata
 importlib-metadata
 zipp
 argh
+setuptools
