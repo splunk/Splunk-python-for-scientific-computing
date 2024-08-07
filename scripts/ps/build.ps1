@@ -16,12 +16,7 @@ Write-Output "-----------------"
 
 $script:MANIFEST_FILE="app.manifest.windows"
 $script:7Z = "C:\Program Files\7-Zip\7z.exe"
-$script:PACK_TAR_FILE_PATH = Join-Path $BASE_BUILD_DIR "miniconda-repack.tar"
-
-# remove pip from final build because we don't need them
-# but we need them in `windows_x86_64/environment.yml` file for fossa to work
-$env:Path += ";$($MINICONDA_BUILD_DIR);$(Join-Path $MINICONDA_BUILD_DIR "Scripts");$(Join-Path $MINICONDA_BUILD_DIR "Library\bin")"
-& conda remove -p $VENV_BUILD_DIR -y --force pip
+$script:PACK_TAR_FILE_PATH = Join-Path $BASE_BUILD_DIR "repack.tar"
 
 Remove-Item -Recurse $APP_BUILD_DIR -ErrorAction Ignore
 #$DIST_VERSION_BUILD_DIR = Join-Path $DIST_BUILD_DIR $env:VERSION.replace('.', '_')

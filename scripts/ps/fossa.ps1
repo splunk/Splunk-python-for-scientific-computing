@@ -1,7 +1,6 @@
 $script:SCRIPT_DIR=$PSScriptRoot
 . $(Join-Path "$SCRIPT_DIR" "prereq.ps1")
 
-$env:Path += ";$($MINICONDA_BUILD_DIR);$(Join-Path $MINICONDA_BUILD_DIR "Scripts");$(Join-Path $MINICONDA_BUILD_DIR "Library\bin")"
 # Warning for CI gitlab runner (when using shell executor) 
 # - Make sure you have fossa installed in the instance otherwise you'll hit `fossa` cmd not found error
 # - You can use scoop to download `fossa` on the instance. Ref. https://github.com/fossas/fossa-cli#windows-with-powershell

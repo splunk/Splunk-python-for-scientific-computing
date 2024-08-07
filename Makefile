@@ -50,10 +50,10 @@ export BUILD ?= $(VERSION_BUILD)
 .PHONY: analyze build clean dist fossa freeze license publish linkapp
 COMMON_DEPS := $(SCRIPT_DIR)/prereq.$(SCRIPT_EXT) Makefile
 
-build/miniconda:
-	$(SCRIPT_DIR)/install_miniconda.$(SCRIPT_EXT)
+build/base:
+	$(SCRIPT_DIR)/install_base.$(SCRIPT_EXT)
 
-build/venv: build/miniconda $(ENVIRONMENT_FILE) $(BLACKLIST) $(SCRIPT_DIR)/venv.$(SCRIPT_EXT) $(COMMON_DEPS)
+build/venv: build/base $(ENVIRONMENT_FILE) $(BLACKLIST) $(SCRIPT_DIR)/venv.$(SCRIPT_EXT) $(COMMON_DEPS)
 	$(SCRIPT_DIR)/venv.$(SCRIPT_EXT)
 
 $(FREEZE_TARGET): build/venv $(SCRIPT_DIR)/freeze.$(SCRIPT_EXT) $(COMMON_DEPS)
@@ -64,7 +64,7 @@ freeze: $(FREEZE_TARGET)
 build/miniconda-repack.tar.gz: build/venv $(SCRIPT_DIR)/conda_pack.$(SCRIPT_EXT) $(COMMON_DEPS)
 	$(SCRIPT_DIR)/conda_pack.$(SCRIPT_EXT)
 
-build/$(BUILD_TARGET): build/miniconda-repack.tar.gz $(SCRIPT_DIR)/build.$(SCRIPT_EXT) $(BUILD_DEP) $(COMMON_DEPS)
+build/$(BUILD_TARGET): build/repack.tar.gz $(SCRIPT_DIR)/build.$(SCRIPT_EXT) $(COMMON_DEPS)
 	$(SCRIPT_DIR)/build.$(SCRIPT_EXT)
 
 build: build/$(BUILD_TARGET)

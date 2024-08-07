@@ -1,5 +1,6 @@
 aiohttp
 aiosignal
+aiohappyeyeballs
 argh
 async-timeout
 attrs
@@ -16,15 +17,8 @@ aws-c-sdkutils
 aws-checksums
 aws-crt-cpp
 aws-sdk-cpp
-brotlipy
-cffi
 charset-normalizer
-click
 colorama
-cryptography
-flit-core
-importlib_metadata
-importlib-metadata
 libarrow
 libarrow-acero
 libarrow-dataset
@@ -33,10 +27,7 @@ libgoogle-cloud
 libgoogle-cloud-storage
 libgrpc
 libsqlite
-menuinst
 pip
 pyarrow
-pycparser
 pysocks
-sqlite
-zipp
+setuptools

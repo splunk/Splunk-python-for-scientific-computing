@@ -8,14 +8,12 @@ if ( -not $env:ENVIRONMENT_FILE ) {
 }
 
 Remove-Item -Recurse $VENV_BUILD_DIR -Force -ErrorAction Ignore
+New-Item $VENV_BUILD_DIR -ItemType Directory
 
 $script:BLACKLISTED_PACKAGES = Get-Content $(Join-Path $PLATFORM_DIR "blacklist.txt")
-$env:Path += ";$($MINICONDA_BUILD_DIR);$(Join-Path $MINICONDA_BUILD_DIR "Scripts");$(Join-Path $MINICONDA_BUILD_DIR "Library\bin")"
 
-
-Write-Output "Creating PSC conda environment in $VENV_BUILD_DIR and installing packages"
-& conda install --prefix $VENV_BUILD_DIR -n base conda-libmamba-solver
-& conda config --prefix $VENV_BUILD_DIR --set solver libmamba
-& conda env create --prefix $VENV_BUILD_DIR -f $env:ENVIRONMENT_FILE
-& conda remove -p $VENV_BUILD_DIR -y --force @BLACKLISTED_PACKAGES
-& conda build purge-all
+Write-Output "Creating PSC virtual environment in $VENV_BUILD_DIR and installing packages"
+(& $Env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -p $Env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression
+& $Env:MAMBA_EXE 'create' -n tools -y -c conda-forge conda-pack conda-tree
+& $Env:MAMBA_EXE 'create' -f $env:ENVIRONMENT_FILE -y
+& $Env:MAMBA_EXE 'remove' -n 'psc' -y --force @BLACKLISTED_PACKAGES
