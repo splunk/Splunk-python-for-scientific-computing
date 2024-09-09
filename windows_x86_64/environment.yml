@@ -6,15 +6,15 @@ dependencies:
   - boto3=1.17.0=pyhd8ed1ab_0
   - botocore=1.20.112=pyhd8ed1ab_0
   - bottle=0.12.23=pyhd8ed1ab_0
-  - brotli-python=1.1.0=py39h99910a6_1
+  - brotli-python=1.1.0=py39ha51f57c_2
   - bzip2=1.0.8=h2466b09_7
-  - ca-certificates=2024.7.4=h56e8100_0
-  - certifi=2024.7.4=pyhd8ed1ab_0
+  - ca-certificates=2024.8.30=h56e8100_0
+  - certifi=2024.8.30=pyhd8ed1ab_0
   - chardet=3.0.4=py39h467e6f4_1008
   - coloredlogs=15.0.1=pyhd8ed1ab_3
   - future=0.18.3=pyhd8ed1ab_0
   - humanfriendly=10.0=py39hcbf5309_5
-  - intel-openmp=2024.2.0=h57928b3_980
+  - intel-openmp=2024.2.1=h57928b3_1083
   - jmespath=0.10.0=pyh9f0ad1d_0
   - joblib=1.4.2=pyhd8ed1ab_0
   - libabseil=20240116.2=cxx17_he0c23c2_1
@@ -38,21 +38,21 @@ dependencies:
   - networkx=3.0=pyhd8ed1ab_0
   - numpy=1.23.0=py39h1a62c8c_0
   - onnx=1.16.0=py39h9169dfa_1
-  - onnxruntime=1.18.1=py39hc8505ec_0_cpu
-  - openssl=3.3.1=h2466b09_2
+  - onnxruntime=1.18.1=py39h17ad4c1_1_cpu
+  - openssl=3.3.2=h2466b09_0
   - packaging=24.1=pyhd8ed1ab_0
   - pandas=1.1.5=py39h2e25243_0
   - patsy=0.5.6=pyhd8ed1ab_0
-  - platformdirs=4.2.2=pyhd8ed1ab_0
+  - platformdirs=4.3.2=pyhd8ed1ab_0
   - pooch=1.8.2=pyhd8ed1ab_0
-  - protobuf=4.25.3=py39h018ea92_0
+  - protobuf=4.25.3=py39h434d6e0_1
   - psutil=5.8.0=py39hb82d6ee_2
   - pthreads-win32=2.9.1=hfa6e2cd_3
-  - pyreadline3=3.4.1=py39hcbf5309_3
+  - pyreadline3=3.4.1=py39hcbf5309_4
   - python=3.9.19=h4de0772_0_cpython
   - python-dateutil=2.9.0=pyhd8ed1ab_0
   - python-flatbuffers=24.3.25=pyh59ac667_0
-  - python_abi=3.9=4_cp39
+  - python_abi=3.9=5_cp39
   - pytz=2024.1=pyhd8ed1ab_0
   - requests=2.32.3=pyhd8ed1ab_0
   - ruptures=1.1.9=py39h4b0a98a_2
@@ -61,17 +61,17 @@ dependencies:
   - scipy=1.10.0=py39hfbf2dce_2
   - six=1.16.0=pyh6c4a22f_0
   - statsmodels=0.13.2=py39h5d4886f_0
-  - sympy=1.13.0=pyh04b8f61_3
-  - tbb=2021.12.0=hc790b64_3
+  - sympy=1.13.2=pyh04b8f61_3
+  - tbb=2021.13.0=hc790b64_0
   - threadpoolctl=3.5.0=pyhc1e730c_0
   - tk=8.6.13=h5226925_1
   - typing-extensions=4.12.2=hd8ed1ab_0
   - typing_extensions=4.12.2=pyha770c72_0
-  - tzdata=2024a=h0c530f3_0
+  - tzdata=2024a=h8827d51_1
   - ucrt=10.0.22621.0=h57928b3_0
   - urllib3=1.26.19=pyhd8ed1ab_0
   - vc=14.3=h8a93ad2_20
-  - vc14_runtime=14.40.33810=ha82c5b3_20
+  - vc14_runtime=14.40.33810=hcc2c482_20
   - vs2015_runtime=14.40.33810=h3bf8584_20
   - wheel=0.44.0=pyhd8ed1ab_0
   - win_inet_pton=1.1.0=pyhd8ed1ab_6
