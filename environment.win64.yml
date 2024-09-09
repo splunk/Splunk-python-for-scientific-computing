@@ -10,7 +10,7 @@ dependencies:
   - numpy==1.23.0
   - onnx==1.16.0
   - onnxruntime==1.18.1
-  - openssl==3.3.1
+  - openssl==3.3.2
   - pandas==1.1.5
   - psutil==5.8.0
   - python==3.9.19
