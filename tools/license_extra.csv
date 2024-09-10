@@ -1,6 +1,7 @@
 name,license_override,license_url,functionality,notes
 _libgcc_mutex,,https://anaconda.org/conda-forge/_libgcc_mutex,meta package,
 _openmp_mutex,,https://github.com/conda-forge/_openmp_mutex-feedstock/blob/master/LICENSE.txt,meta package,
+aiohappyeyeballs,,,,
 appdirs,MIT,https://github.com/ActiveState/appdirs?tab=MIT-1-ov-file#readme,,
 blas,,https://anaconda.org/conda-forge/blas,Meta package to select the BLAS variant,
 blas-devel,,https://anaconda.org/conda-forge/blas-devel,Meta package to select the BLAS variant,
