@@ -1,4 +1,5 @@
 Package licenses:
+aiohappyeyeballs              	PSF-2.0                             	
 boto3                         	Apache-2.0                          	https://github.com/boto/boto3/blob/develop/LICENSE
 botocore                      	Apache-2.0                          	https://github.com/boto/botocore/blob/develop/LICENSE.txt
 bottle                        	MIT                                 	https://bottlepy.org/docs/dev/
@@ -58,8 +59,8 @@ llvm-openmp                   	MIT                                 	https://llvm
 llvmlite                      	BSD-2-Clause                        	https://github.com/numba/llvmlite/blob/main/LICENSE
 lz4-c                         	BSD-2-Clause                        	https://github.com/lz4/lz4?tab=License-1-ov-file#readme
 markupsafe                    	BSD-3-Clause                        	https://github.com/pallets/markupsafe
-mpc                           	LGPL-3                              	
-mpfr                          	LGPL-3                              	
+mpc                           	LGPL-3.0                            	https://gitlab.inria.fr/mpc/mpc/-/blob/master/COPYING.LESSER
+mpfr                          	LGPL-3.0                            	https://gitlab.inria.fr/mpfr/mpfr/-/blob/master/COPYING
 mpmath                        	BSD-3-Clause                        	https://github.com/mpmath/mpmath/blob/master/LICENSE
 multidict                     	Apache-2.0                          	https://github.com/aio-libs/multidict?tab=License-1-ov-file#readme
 multiprocess                  	BSD-3-Clause                        	https://github.com/uqfoundation/multiprocess

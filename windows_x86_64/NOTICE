@@ -24,14 +24,14 @@ huggingface_hub               	Apache-2.0                          	https://gith
 humanfriendly                 	MIT                                 	https://github.com/xolox/python-humanfriendly/blob/master/LICENSE.txt
 idna                          	BSD-3-Clause                        	https://github.com/kjd/idna
 intel-openmp                  	BSD 3-clause                        	https://www.openmprtl.org/licensing|https://www.openmprtl.org/faq/10
-jinja2                        	BSD-3-Clause                        	
+jinja2                        	BSD 3-clause                        	https://github.com/pallets/jinja/
 jmespath                      	MIT                                 	https://github.com/jmespath/jmespath.py
 joblib                        	BSD-3-Clause                        	https://github.com/joblib/joblib/blob/master/LICENSE.txt
-krb5                          	MIT                                 	
+krb5                          	MIT
 libabseil                     	Apache-2.0                          	https://github.com/abseil/abseil-cpp?tab=Apache-2.0-1-ov-file
 libblas                       	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libbrotlicommon               	MIT                                 	https://github.com/google/brotli?tab=MIT-1-ov-file#readme
-libbrotlidec                  	MIT                                 	
+libbrotlidec                  	MIT
 libbrotlienc                  	MIT                                 	https://github.com/google/brotli?tab=MIT-1-ov-file#readme
 libcblas                      	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libcrc32c                     	BSD-3-Clause                        	https://github.com/google/crc32c?tab=BSD-3-Clause-1-ov-file#readme
@@ -50,17 +50,17 @@ libuv                         	MIT                                 	https://gith
 libzlib                       	Zlib                                	http://zlib.net/zlib_license.html
 llvmlite                      	BSD-2-Clause                        	https://github.com/numba/llvmlite/blob/main/LICENSE
 lz4-c                         	BSD-2-Clause                        	https://github.com/lz4/lz4?tab=License-1-ov-file#readme
-m2w64-gcc-libgfortran         	GPL, LGPL, FDL, custom              	
-m2w64-gcc-libs                	GPL3+, partial:GCCRLE, partial:LGPL2+	
-m2w64-gcc-libs-core           	GPL3+, partial:GCCRLE, partial:LGPL2+	
-m2w64-gmp                     	LGPL3                               	
-m2w64-libwinpthread-git       	MIT, BSD                            	
-markupsafe                    	BSD-3-Clause                        	
+m2w64-gcc-libgfortran         	GPL, LGPL, FDL, custom
+m2w64-gcc-libs                	GPL3+, partial:GCCRLE, partial:LGPL2+
+m2w64-gcc-libs-core           	GPL3+, partial:GCCRLE, partial:LGPL2+
+m2w64-gmp                     	LGPL3
+m2w64-libwinpthread-git       	MIT, BSD
+markupsafe                    	BSD-3-Clause                        	https://github.com/pallets/markupsafe
 mkl                           	Proprietary  Intel                  	https://software.intel.com/en-us/mkl/license-faq
 mkl-devel                     	Proprietary Intel                   	https://software.intel.com/en-us/mkl/license-faq
 mkl-include                   	Proprietary Intel                   	https://software.intel.com/en-us/mkl/license-faq
 mpmath                        	BSD-3-Clause                        	https://github.com/mpmath/mpmath/blob/master/LICENSE
-msys2-conda-epoch             	                                    	
+msys2-conda-epoch
 multidict                     	Apache-2.0                          	https://github.com/aio-libs/multidict?tab=License-1-ov-file#readme
 multiprocess                  	BSD-3-Clause                        	https://github.com/uqfoundation/multiprocess
 networkx                      	BSD 3-clause                        	https://github.com/networkx/networkx/blob/master/LICENSE.txt
@@ -74,7 +74,7 @@ packaging                     	Apache-2.0                          	https://gith
 pandas                        	BSD 3-clause                        	https://github.com/pandas-dev/pandas/blob/master/LICENSE
 patsy                         	BSD 2-clause/PSF                    	https://github.com/pydata/patsy/blob/master/LICENSE.txt
 platformdirs                  	MIT                                 	https://github.com/platformdirs/platformdirs?tab=MIT-1-ov-file#readme
-pooch                         	BSD-3-Clause                        	
+pooch                         	BSD-3-Clause                        	https://github.com/fatiando/pooch
 protobuf                      	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
 psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
 pyarrow-core                  	Apache-2.0                          	
