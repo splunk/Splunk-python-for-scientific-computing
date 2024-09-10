@@ -24,6 +24,5 @@ dependencies:
   - cpuonly
   - onnx==1.16
   - onnxruntime==1.18.1
-  - openssl==3.3.2
   - pydantic==1.10.13
   - watchdog==2.1.7
