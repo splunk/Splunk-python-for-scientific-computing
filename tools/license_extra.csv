@@ -52,6 +52,7 @@ libedit,BSD-3-Clause,http://thrysoee.dk/editline|http://www.netbsd.org/about/red
 libev,BSD-2-Clause,http://software.schmorp.de/pkg/libev.html,A full-featured and high-performance event loop that is loosely modeled after libevent, but without its limitations and bugs.
 libevent,BSD-3-Clause,https://github.com/libevent/libevent?tab=License-1-ov-file#readme,An event notification library,
 libffi,libffi license,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,
+libgcc,,,,
 libgcc-ng,GPL-3.0-only WITH GCC-exception-3.1n,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GCC low-level runtime library,
 libgfortran,,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,
 libgfortran-ng,,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,
@@ -67,6 +68,7 @@ libparquet,Apache-2.0,https://github.com/apache/arrow?tab=Apache-2.0-1-ov-file#r
 libprotobuf,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler
 libre2-11,BSD-3-Clause,https://github.com/google/re2/?tab=BSD-3-Clause-1-ov-file#readme,alternative to backtracking regular expression engines like those used in PCRE Perl and Python,
 libssh2,BSD-3-Clause,https://github.com/libssh2/libssh2?tab=BSD-3-Clause-1-ov-file#readme,a library implementing the SSH2 protocol,
+libstdcxx,,,,
 libstdcxx-ng,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GNU C++ Runtime Libsrary,
 libthrift,Apache-2.0,https://github.com/apache/thrift?tab=Apache-2.0-1-ov-file#readme,Compiler and C++ libraries and headers for the Apache Thrift RPC system,
 libutf8proc,MIT,https://github.com/JuliaStrings/utf8proc?tab=License-1-ov-file#readme,a clean C library for processing UTF-8 Unicode data,
@@ -83,8 +85,8 @@ mkl,Proprietary  Intel,https://software.intel.com/en-us/mkl/license-faq,Math lib
 mkl-devel,Proprietary Intel,https://software.intel.com/en-us/mkl/license-faq,Math library for Intel and compatible processors,
 mkl-include,Proprietary Intel,https://software.intel.com/en-us/mkl/license-faq,MKL headers for developing software that uses MKL,
 mkl-service,,https://github.com/IntelPython/mkl-service/blob/master/LICENSE.txt,Python hooks for Intel(R) Math Kernel Library runtime control settings,
-mpc,LGPL-3.0,https://gitlab.inria.fr/mpc/mpc/-/blob/master/COPYING.LESSER,GNU C library for arithmetic of complex numbers with arbitrarily high precision and correct rounding
-mpfr,LGPL-3.0,https://gitlab.inria.fr/mpfr/mpfr/-/blob/master/COPYING,a C library for multiple-precision floating-point computations with correct rounding
+mpc,LGPL-3.0,https://gitlab.inria.fr/mpc/mpc/-/blob/master/COPYING.LESSER,GNU C library for arithmetic of complex numbers with arbitrarily high precision and correct rounding,
+mpfr,LGPL-3.0,https://gitlab.inria.fr/mpfr/mpfr/-/blob/master/COPYING,a C library for multiple-precision floating-point computations with correct rounding,
 mpmath,BSD-3-Clause,https://github.com/mpmath/mpmath/blob/master/LICENSE,A Python library for arbitrary-precision floating-point arithmetic,
 multidict,Apache-2.0,https://github.com/aio-libs/multidict?tab=License-1-ov-file#readme,multidict implementation,
 multiprocess,BSD-3-Clause,https://github.com/uqfoundation/multiprocess,better multiprocessing and multithreading in python,

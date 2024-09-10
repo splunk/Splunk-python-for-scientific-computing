@@ -21,7 +21,9 @@ libabseil                     	Apache-2.0                          	https://gith
 libblas                       	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libcblas                      	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libffi                        	libffi license                      	https://github.com/libffi/libffi/blob/master/LICENSE
+libgcc                        	GPL-3.0-only WITH GCC-exception-3.1
 libgcc-ng                     	GPL-3.0-only WITH GCC-exception-3.1n	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
+libgfortran                   	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran-ng                	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran5                  	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgomp                       	GPL-3.0-only WITH GCC-exception-3.1 	https://gcc.gnu.org/onlinedocs/gccint/Libgcc.html
@@ -29,6 +31,7 @@ liblapack                     	BSD-3-Clause                        	https://netl
 libnsl                        	LGPL-2.1                            	https://github.com/thkukuk/libnsl?tab=LGPL-2.1-1-ov-file#readme
 libopenblas                   	BSD 3-clause                        	https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE
 libprotobuf                   	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
+libstdcxx                     	GPL-3.0-only WITH GCC-exception-3.1
 libstdcxx-ng                  	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libuuid                       	BSD-3-Clause                        	https://sourceforge.net/projects/libuuid/
 libxcrypt                     	LGPL-2.1                            	https://github.com/besser82/libxcrypt?tab=LGPL-2.1-1-ov-file#readme
