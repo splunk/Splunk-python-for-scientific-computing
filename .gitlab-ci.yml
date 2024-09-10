@@ -158,6 +158,8 @@ fossa-scan-mac-arm64:
 build-linux:
   extends: .build
   image: ${LINUX_BUILD_IMAGE}
+  tags:
+    - psc-nix
 
 build-windows:
   extends: .build
