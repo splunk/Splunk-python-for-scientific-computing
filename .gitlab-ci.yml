@@ -3,7 +3,7 @@ variables:
   CREDS_SECRET_ROOT: $CI_PROJECT_DIR
   GENERIC_DEPLOY_PROD_ROLE: artifactory:v2/cloud/role/psc-protected-role
   GENERIC_DEPLOY_TEST_ROLE: artifactory:v2/cloud/role/psc-unprotected-role
-  VERSION_OVERRIDE: 3.2.1 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
+  VERSION_OVERRIDE: 3.2.2 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
 
 stages:
   - build
