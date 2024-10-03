@@ -1,5 +1,5 @@
 name,version,license,license_url,functionality,notes,dist_name,channel,build,build_number
-aiohappyeyeballs,2.4.0,PSF-2.0,,,,aiohappyeyeballs-2.4.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+aiohappyeyeballs,2.4.0,PSF-2.0,https://github.com/aio-libs/aiohappyeyeballs/blob/main/LICENSE,Helps connects using Happy Eyeballs with pre-resolved addrinfo,,aiohappyeyeballs-2.4.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 blas,2.123,BSD-3-Clause,https://anaconda.org/conda-forge/blas,Meta package to select the BLAS variant,,blas-2.123-mkl,conda-forge,mkl,23
 blas-devel,3.9.0,BSD-3-Clause,https://anaconda.org/conda-forge/blas-devel,Meta package to select the BLAS variant,,blas-devel-3.9.0-23_win64_mkl,conda-forge,23_win64_mkl,23
 boto3,1.17.0,Apache-2.0,https://github.com/boto/boto3/blob/develop/LICENSE,Amazon Web Services SDK for Python,,boto3-1.17.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
@@ -53,7 +53,7 @@ lz4-c,1.9.4,BSD-2-Clause,https://github.com/lz4/lz4?tab=License-1-ov-file#readme
 m2w64-gcc-libgfortran,5.3.0,"GPL, LGPL, FDL, custom",,,,m2w64-gcc-libgfortran-5.3.0-6,conda-forge,6,6
 m2w64-gcc-libs,5.3.0,"GPL3+, partial:GCCRLE, partial:LGPL2+",,,,m2w64-gcc-libs-5.3.0-7,conda-forge,7,7
 m2w64-gcc-libs-core,5.3.0,"GPL3+, partial:GCCRLE, partial:LGPL2+",,,,m2w64-gcc-libs-core-5.3.0-7,conda-forge,7,7
-m2w64-gmp,6.1.0,LGPL3,,,,m2w64-gmp-6.1.0-2,conda-forge,2,2
+m2w64-gmp,6.1.0,LGPL3,https://www.gnu.org/licenses/lgpl.html,library for arbitrary precision arithmetic,,m2w64-gmp-6.1.0-2,conda-forge,2,2
 m2w64-libwinpthread-git,5.0.0.4634.697f757,"MIT, BSD",,,,m2w64-libwinpthread-git-5.0.0.4634.697f757-2,conda-forge,2,2
 markupsafe,2.1.5,BSD-3-Clause,https://github.com/pallets/markupsafe,Safely add untrusted strings to HTML/XML markup.,,markupsafe-2.1.5-py39ha55e580_1,conda-forge,py39ha55e580_1,1
 mkl,2024.1.0,LicenseRef-IntelSimplifiedSoftwareOct2022,https://software.intel.com/en-us/mkl/license-faq,Math library for Intel and compatible processors,,mkl-2024.1.0-h66d3029_694,conda-forge,h66d3029_694,694
@@ -80,7 +80,7 @@ psutil,5.8.0,BSD-3-Clause,https://github.com/giampaolo/psutil/blob/master/LICENS
 pyarrow-core,17.0.0,Apache-2.0,,,,pyarrow-core-17.0.0-py39h7a8928a_1_cpu,conda-forge,py39h7a8928a_1_cpu,1
 pyarrow-hotfix,0.6,Apache-2.0,,,,pyarrow-hotfix-0.6-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 pydantic,1.10.13,MIT,https://github.com/samuelcolvin/pydantic/blob/master/LICENSE,Data validation and settings management,,pydantic-1.10.13-py39ha55989b_1,conda-forge,py39ha55989b_1,1
-pyreadline3,3.4.1,BSD-3-Clause,,,,pyreadline3-3.4.1-py39hcbf5309_4,conda-forge,py39hcbf5309_4,4
+pyreadline3,3.4.1,BSD-3-Clause,https://github.com/pyreadline3/pyreadline3/blob/master/LICENSE.md,t is based on the ctypes based UNC readline package by Gary Bishop.,,pyreadline3-3.4.1-py39hcbf5309_4,conda-forge,py39hcbf5309_4,4
 python,3.9.19,Python-2.0,https://docs.python.org/3/license.html,python runtime,,python-3.9.19-h4de0772_0_cpython,conda-forge,h4de0772_0_cpython,0
 python-dateutil,2.9.0,Apache-2.0,https://github.com/dateutil/dateutil/blob/master/LICENSE,Extensions to the standard Python datetime module,,python-dateutil-2.9.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 python-flatbuffers,24.3.25,Apache-2.0,https://github.com/google/flatbuffers/blob/master/LICENSE.txt,library for use with the Flatbuffers serialization format,,python-flatbuffers-24.3.25-pyh59ac667_0,conda-forge,pyh59ac667_0,0

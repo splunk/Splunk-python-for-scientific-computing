@@ -1,7 +1,7 @@
 name,license_override,license_url,functionality,notes
 _libgcc_mutex,,https://anaconda.org/conda-forge/_libgcc_mutex,meta package,
 _openmp_mutex,,https://github.com/conda-forge/_openmp_mutex-feedstock/blob/master/LICENSE.txt,meta package,
-aiohappyeyeballs,,,,
+aiohappyeyeballs,PSF-2.0,https://github.com/aio-libs/aiohappyeyeballs/blob/main/LICENSE,Helps connects using Happy Eyeballs with pre-resolved addrinfo,
 appdirs,MIT,https://github.com/ActiveState/appdirs?tab=MIT-1-ov-file#readme,,
 blas,,https://anaconda.org/conda-forge/blas,Meta package to select the BLAS variant,
 blas-devel,,https://anaconda.org/conda-forge/blas-devel,Meta package to select the BLAS variant,
@@ -53,7 +53,7 @@ libedit,BSD-3-Clause,http://thrysoee.dk/editline|http://www.netbsd.org/about/red
 libev,BSD-2-Clause,http://software.schmorp.de/pkg/libev.html,A full-featured and high-performance event loop that is loosely modeled after libevent, but without its limitations and bugs.
 libevent,BSD-3-Clause,https://github.com/libevent/libevent?tab=License-1-ov-file#readme,An event notification library,
 libffi,libffi license,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,
-libgcc,,,,
+libgcc,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GCC low-level runtime library,
 libgcc-ng,GPL-3.0-only WITH GCC-exception-3.1n,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GCC low-level runtime library,
 libgfortran,,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,
 libgfortran-ng,,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,
@@ -69,7 +69,7 @@ libparquet,Apache-2.0,https://github.com/apache/arrow?tab=Apache-2.0-1-ov-file#r
 libprotobuf,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc, the protobuf compiler
 libre2-11,BSD-3-Clause,https://github.com/google/re2/?tab=BSD-3-Clause-1-ov-file#readme,alternative to backtracking regular expression engines like those used in PCRE Perl and Python,
 libssh2,BSD-3-Clause,https://github.com/libssh2/libssh2?tab=BSD-3-Clause-1-ov-file#readme,a library implementing the SSH2 protocol,
-libstdcxx,,,,
+libstdcxx,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GNU C++ Runtime Libsrary,
 libstdcxx-ng,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GNU C++ Runtime Libsrary,
 libthrift,Apache-2.0,https://github.com/apache/thrift?tab=Apache-2.0-1-ov-file#readme,Compiler and C++ libraries and headers for the Apache Thrift RPC system,
 libutf8proc,MIT,https://github.com/JuliaStrings/utf8proc?tab=License-1-ov-file#readme,a clean C library for processing UTF-8 Unicode data,

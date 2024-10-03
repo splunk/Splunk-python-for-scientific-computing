@@ -1,5 +1,5 @@
 name,version,license,license_url,functionality,notes,dist_name,channel,build,build_number
-aiohappyeyeballs,2.4.0,PSF-2.0,,,,aiohappyeyeballs-2.4.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+aiohappyeyeballs,2.4.0,PSF-2.0,https://github.com/aio-libs/aiohappyeyeballs/blob/main/LICENSE,Helps connects using Happy Eyeballs with pre-resolved addrinfo,,aiohappyeyeballs-2.4.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 blas,2.120,BSD-3-Clause,https://anaconda.org/conda-forge/blas,Meta package to select the BLAS variant,,blas-2.120-mkl,conda-forge,mkl,20
 blas-devel,3.9.0,BSD-3-Clause,https://anaconda.org/conda-forge/blas-devel,Meta package to select the BLAS variant,,blas-devel-3.9.0-20_osx64_mkl,conda-forge,20_osx64_mkl,20
 boto3,1.17.0,Apache-2.0,https://github.com/boto/boto3/blob/develop/LICENSE,Amazon Web Services SDK for Python,,boto3-1.17.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
