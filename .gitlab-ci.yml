@@ -3,13 +3,43 @@ variables:
   CREDS_SECRET_ROOT: $CI_PROJECT_DIR
   ARTIFACTORY_URL: "https://repo.splunkdev.net/artifactory"
   ARTIFACTORY_FOLDER: "apps/app-sasp"
-  GENERIC_DEPLOY_PROD_ROLE: artifactory:v2/cloud/role/psc-protected-role
-  GENERIC_DEPLOY_TEST_ROLE: artifactory:v2/cloud/role/psc-unprotected-role
-  VERSION_OVERRIDE: 4.2.2 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
-  SUB_SUB_FOLDER_NAME: "${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}"
+  PSC_UNPROTECTED_ROLE: artifactory:v2/cloud/role/psc-unprotected-role
+  PSC_PROTECTED_ROLE: artifactory:v2/cloud/role/psc-protected-role
+  PROD_REPO: "generic-west-local"
+  NON_PROD_REPO: "generic-test-west-local"
+  LINUX_SUFFIX: "linux_x86_64"
+  DARWIN_SUFFIX: "darwin_x86_64"
+  DARWIN_ARM_SUFFIX: "darwin_arm64"
+  WINDOWS_SUFFIX: "windows_x86_64"
+  PACKAGE_NAME: "Splunk_SA_Scientific_Python"
+  PACKAGE_NAME_LINUX_x86_64: "${PACKAGE_NAME}_${LINUX_SUFFIX}"
+  PACKAGE_NAME_DARWIN_x86_64: "${PACKAGE_NAME}_${DARWIN_SUFFIX}"
+  PACKAGE_NAME_DARWIN_ARM64: "${PACKAGE_NAME}_${DARWIN_ARM_SUFFIX}"
+  PACKAGE_NAME_WINDOWS_x86_64: "${PACKAGE_NAME}_${WINDOWS_SUFFIX}"
+  APP_CERT_FOLDER: "app_cert"
+  VERSION_OVERRIDE: 4.2.3 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      variables:
+        PSC_ROLE: $PSC_UNPROTECTED_ROLE
+        VERSION: $VERSION_OVERRIDE
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      variables:
+        PSC_ROLE: $PSC_PROTECTED_ROLE
+        VERSION: $VERSION_OVERRIDE
+        REPO: generic
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH =~ /^release\//'
+      variables:
+        PSC_ROLE: $PSC_PROTECTED_ROLE
+        SUB_FOLDER_NAME: release
+        REPO: generic
+
 
 stages:
   - build
+  - upload
   - prodsec-review
   - publish
 
@@ -22,69 +52,144 @@ include:
     ref: master
     file: '/prodsec/.binary-scan.yml'
 
-binary-scan-linux:
-  stage: prodsec-review
-  extends: .binary-scan
-  # variables:
-  #   ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_linux_x86_64.tgz"
+.image-app-template:
+  image : docker.repo.splunkdev.net/mltk/ml-docker-images/python3-builder-linux64:20210818-1
   before_script:
-    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
-        export ARTIFACT_PATH="https://repo.splunkdev.net/ui/native/generic-test/apps/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}/Splunk_SA_Scientific_Python_linux_x86_64.tgz";
-      else
-        export ARTIFACT_PATH="${ARTIFACTORY_URL}/${ARTIFACTORY_FOLDER}/releases/${SUB_SUB_FOLDER_NAME}/Splunk_SA_Scientific_Python_linux_x86_64.tgz";
-      fi
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_TAG
+    - /usr/local/bin/python3 -m pip install --upgrade pip
+    - export PATH="/home/pyuser/.local/bin:$PATH"
 
-binary-scan-mac-arm64:
-  stage: prodsec-review
-  extends: .binary-scan
-  # variables:
-  #   ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_arm64.tgz"
-  before_script:
-    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
-        export ARTIFACT_PATH="https://repo.splunkdev.net/ui/native/generic-test/apps/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}/Splunk_SA_Scientific_Python_darwin_arm64.tgz";
-      else
-        export ARTIFACT_PATH="${ARTIFACTORY_URL}/${ARTIFACTORY_FOLDER}/releases/${SUB_SUB_FOLDER_NAME}/Splunk_SA_Scientific_Python_darwin_arm64.tgz";
-      fi
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_TAG
 
-binary-scan-mac-x86_64:
+.x_ray_scan_template:
   stage: prodsec-review
   extends: .binary-scan
-  # variables:
-  #   ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_darwin_x86_64.tgz"
-  before_script:
-    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
-        export ARTIFACT_PATH="https://repo.splunkdev.net/ui/native/generic-test/apps/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}/Splunk_SA_Scientific_Python_darwin_x86_64.tgz";
-      else
-        export ARTIFACT_PATH="${ARTIFACTORY_URL}/${ARTIFACTORY_FOLDER}/releases/${SUB_SUB_FOLDER_NAME}/Splunk_SA_Scientific_Python_darwin_x86_64.tgz";
-      fi
+  allow_failure: True
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      variables:
+        ARTIFACT_BASE_PATH_TO_BUCKET: "${ARTIFACTORY_URL}/${NON_PROD_REPO}/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}"
+        ARTIFACT_PATH:  "${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}.tgz"
+        
+    
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_TAG
+      variables:
+        ARTIFACT_BASE_PATH_TO_BUCKET: "${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/builds"
+        ARTIFACT_PATH: "${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}.tgz"
 
-binary-scan-windows:
+
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH =~ /^release\//'
+      variables:
+        ARTIFACT_BASE_PATH_TO_BUCKET: "${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/release"
+        ARTIFACT_PATH: "${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}.tgz"
+
+
+.appinpect_template:
   stage: prodsec-review
-  extends: .binary-scan
-  # variables:
-  #   ARTIFACT_PATH: "https://repo.splunkdev.net/artifactory/generic-west-local/apps/app-sasp/releases/${VERSION_OVERRIDE%?}x/${VERSION_OVERRIDE}/Splunk_SA_Scientific_Python_windows_x86_64.tgz"
+  extends:
+    - .image-app-template
+  script:
+    - pip uninstall python-magic
+    - pip install splunk-appinspect
+    - pip install python-magic-debian-bin==0.4.25
+    - export PATH="/home/pyuser/.local/bin:$PATH"
+    - cd "${CI_PROJECT_DIR}"
+    - bash "./scripts/posix/appcert_prereq.sh" "${ARTIFACT_NAME}"
+    - splunk-appinspect inspect "${CI_PROJECT_DIR}/app_cert/${ARTIFACT_NAME}" --included-tags cloud --mode precert --data-format json --output-file "${CI_PROJECT_DIR}/app_cert/results_${VERSION_OVERRIDE//./}_${SUFFIX}_copy.json" --max-messages all
+    - echo "Appinspect stage complete.."
+  artifacts:
+    paths:
+      - app_cert/*
+  allow_failure: True
+
+.upload_template:
+  image: ${LINUX_BUILD_IMAGE}
+  dependencies:
+    - build-linux
+    - build-windows
+    - build-mac-x86_64
+    - build-mac-arm64
   before_script:
-    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
-        export ARTIFACT_PATH="https://repo.splunkdev.net/ui/native/generic-test/apps/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}/Splunk_SA_Scientific_Python_windows_x86_64.tgz";
-      else
-        export ARTIFACT_PATH="${ARTIFACTORY_URL}/${ARTIFACTORY_FOLDER}/releases/${SUB_SUB_FOLDER_NAME}/Splunk_SA_Scientific_Python_windows_x86_64.tgz";
-      fi
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_TAG
+    - creds-helper init
+    - eval $(creds-helper artifactory --eval $PSC_ROLE)
+  script:
+    - make publish
+  id_tokens:
+    CI_JOB_JWT:
+      aud: $CICD_VAULT_ADDR
+
+
+xray-scan-linux:
+  stage: prodsec-review
+  extends: .x_ray_scan_template
+  variables:
+    ARTIFACT_NAME: $PACKAGE_NAME_LINUX_x86_64
+    
+
+
+xray-scan-mac-arm64:
+  stage: prodsec-review
+  extends: .x_ray_scan_template
+  variables:
+    ARTIFACT_NAME: $PACKAGE_NAME_DARWIN_ARM64
+    
+
+            
+xray-scan-mac-x86_64:
+  stage: prodsec-review
+  extends: .x_ray_scan_template
+  variables:
+    ARTIFACT_NAME: $PACKAGE_NAME_DARWIN_x86_64
+        
+    
+
+xray-scan-windows:
+  stage: prodsec-review
+  extends: .x_ray_scan_template
+  variables:
+    ARTIFACT_NAME: $PACKAGE_NAME_WINDOWS_x86_64
+
+
+appinspect-linux:
+  stage: prodsec-review
+  extends:
+    - .appinpect_template
+  variables:
+    ARTIFACT_NAME: $PACKAGE_NAME_LINUX_x86_64
+    SUFFIX: $LINUX_SUFFIX
+  dependencies:
+      - build-linux
+
+
+appinspect-windows:
+  stage: prodsec-review
+  extends:
+    - .appinpect_template
+  variables:
+    ARTIFACT_NAME: $PACKAGE_NAME_WINDOWS_x86_64
+    SUFFIX: $WINDOWS_SUFFIX
+  dependencies:
+      - build-windows
+
+
+appinspect-mac-x86_64:
+  stage: prodsec-review
+  extends:
+    - .appinpect_template
+  variables:
+    ARTIFACT_NAME: $PACKAGE_NAME_DARWIN_x86_64
+    SUFFIX: $DARWIN_SUFFIX
+  dependencies:
+      - build-mac-x86_64
+
+
+appinspect-mac-arm64:
+  stage: prodsec-review
+  extends:
+    - .appinpect_template
+  variables:
+    ARTIFACT_NAME: $PACKAGE_NAME_DARWIN_ARM64
+    SUFFIX: $DARWIN_ARM_SUFFIX
+  dependencies:
+      - build-mac-arm64
 
 sast-scanner:
   stage: prodsec-review
@@ -94,10 +199,6 @@ sast-scanner:
     alert_mode: "on" # Alert mode turned off
     jira_automation: "true"
   allow_failure: False
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_TAG
 
 .fossa-scan:
   stage: prodsec-review
@@ -109,20 +210,31 @@ sast-scanner:
     FOSSA_API_KEY: "${FOSSA_API_KEY_D04082022}"
   script:
     - make fossa
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_COMMIT_TAG
 
 fossa-scan-linux:
   extends: .fossa-scan
   image: ${LINUX_BUILD_IMAGE}
+
+fossa-scan-windows_artifact:
+  extends: .fossa-scan
+  before_script:
+    - choco install make
+  script:
+    - make fossa_ci
+  image: ${WINDOWS_BUILD_IMAGE}
+  timeout: 3 hour
+  tags:
+    - psc-win64
+  dependencies:
+    - build-windows
+
 
 fossa-scan-windows:
   extends: .fossa-scan
   before_script:
     - choco install make
   image: ${WINDOWS_BUILD_IMAGE}
+  timeout: 4 hour
   tags:
     - psc-win64
 
@@ -136,24 +248,18 @@ fossa-scan-mac-arm64:
   tags:
     - psc-mac-arm64
 
+
 .build:
   stage: build
   allow_failure: true
   artifacts:
     paths:
       - build/Splunk_SA_Scientific_Python_*.tgz
+      - build/venv
     untracked: false
     expire_in: 30 days
   script:
     - make dist
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-      variables:
-        VERSION: $VERSION_OVERRIDE
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      variables:
-        VERSION: $VERSION_OVERRIDE
-    - if: $CI_COMMIT_TAG
 
 build-linux:
   extends: .build
@@ -166,6 +272,7 @@ build-windows:
   image: ${WINDOWS_BUILD_IMAGE}
   tags:
     - psc-win64
+  timeout: 4 hour
 
 build-mac-x86_64:
   extends: .build
@@ -181,34 +288,18 @@ build-mac-arm64:
   tags:
     - psc-mac-arm64
 
+
+upload-psc:
+  extends: .upload_template
+  stage: upload
+
 publish:
-  image: ${LINUX_BUILD_IMAGE}
+  extends: .upload_template
   stage: publish
-  dependencies:
-    - build-linux
-    - build-windows
-    - build-mac-x86_64
-    - build-mac-arm64
-  before_script:
-    - creds-helper init
-    - eval $(creds-helper artifactory --eval $GENERIC_DEPLOY_ROLE)
-  script:
-    - make publish
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       when: manual
       allow_failure: true
-      variables:
-        GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_TEST_ROLE
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      variables:
-        GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
-        REPO: generic
-    - if: $CI_COMMIT_TAG
-      variables:
-        GENERIC_DEPLOY_ROLE: $GENERIC_DEPLOY_PROD_ROLE
-        REPO: generic
-  id_tokens:
-    CI_JOB_JWT:
-      aud: $CICD_VAULT_ADDR
+    - when: always
+  
 

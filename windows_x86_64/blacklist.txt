@@ -1,8 +1,3 @@
-aiohttp
-aiosignal
-argh
-async-timeout
-attrs
 aws-c-auth
 aws-c-cal
 aws-c-common
@@ -19,7 +14,6 @@ aws-sdk-cpp
 brotlipy
 cffi
 charset-normalizer
-click
 colorama
 cryptography
 flit-core

@@ -80,11 +80,14 @@ analyze: build/venv $(SCRIPT_DIR)/analyze.$(SCRIPT_EXT) $(COMMON_DEPS)
 fossa: build/venv $(SCRIPT_DIR)/fossa.$(SCRIPT_EXT) $(COMMON_DEPS)
 	$(SCRIPT_DIR)/fossa.$(SCRIPT_EXT)
 
+fossa_ci:
+	$(SCRIPT_DIR)/fossa.$(SCRIPT_EXT)
+
 license: build/venv $(SCRIPT_DIR)/license.$(SCRIPT_EXT) tools/license.py $(COMMON_DEPS)
 	$(SCRIPT_DIR)/license.$(SCRIPT_EXT)
 
 publish:
-	$(SCRIPT_DIR)/publish.sh
+	$(SCRIPT_DIR)/publish.sh $(SUB_FOLDER_NAME)
 
 clean:
 	$(SCRIPT_DIR)/clean.$(SCRIPT_EXT)

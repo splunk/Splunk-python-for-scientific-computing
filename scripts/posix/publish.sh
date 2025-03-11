@@ -1,6 +1,7 @@
+SUB_FOLDER_NAME=$1
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 source "$SCRIPT_DIR/prereq.sh"
-
+echo "The SUB_FOLDER_NAME variable is ${SUB_FOLDER_NAME}"
 set -o xtrace
 
 is_set BUILD
@@ -22,10 +23,17 @@ if [[ -z "$CI" ]]; then
 else
   if [[ -n "$CI_COMMIT_TAG" ]]; then
     # RELEASE TAG
-    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/releases/${VERSION%.*}.x/$VERSION"
-  elif [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
-    # MASTER BRANCH
-    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds"
+    
+    if [[ -z "$SUB_FOLDER_NAME" || "$SUB_FOLDER_NAME" == " " ]]; then
+      echo "SUB_FOLDER_NAME cannot be empty with COMMMIT TAG"
+      exit 1
+    fi
+    
+    if [[ "$SUB_FOLDER_NAME" ==  "releases" ]]; then
+      TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/releases/${VERSION%.*}.x/$VERSION"
+    else
+      TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/release"
+    fi  
   elif [[ "$CI_PIPELINE_SOURCE" == "merge_request_event" ]]; then
     # MERGE REQUEST
     if [[ -z "$CI_MERGE_REQUEST_IID" || "$CI_MERGE_REQUEST_IID" == " " ]]; then
@@ -34,6 +42,9 @@ else
       exit 1
     fi
     TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds/merge_requests/MR$CI_MERGE_REQUEST_IID"
+  elif [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]] || [[ "$CI_COMMIT_REF_PROTECTED" == "true" ]]; then
+    # MASTER BRANCH
+    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/builds"
   else
     echo "No publishing condition met, exiting"
     exit 1
@@ -50,4 +61,3 @@ do
     echo "${APP_PLATFORM} build not found"
   fi
 done
-
