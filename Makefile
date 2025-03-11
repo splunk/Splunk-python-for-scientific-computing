@@ -78,7 +78,7 @@ license: build/venv $(SCRIPT_DIR)/license.$(SCRIPT_EXT) tools/license.py $(COMMO
 	$(SCRIPT_DIR)/license.$(SCRIPT_EXT)
 
 publish:
-	$(SCRIPT_DIR)/publish.sh
+	$(SCRIPT_DIR)/publish.sh $(SUB_FOLDER_NAME)
 
 clean:
 	$(SCRIPT_DIR)/clean.$(SCRIPT_EXT)

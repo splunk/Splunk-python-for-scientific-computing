@@ -8,6 +8,7 @@ ca-certificates               	MPL2                                	https://gith
 certifi                       	MPL2                                	https://github.com/certifi/python-certifi/blob/master/LICENSE
 chardet                       	LGPL2.1-only                        	https://github.com/chardet/chardet?tab=LGPL-2.1-1-ov-file#readme
 coloredlogs                   	MIT                                 	https://github.com/xolox/python-coloredlogs/blob/master/LICENSE.txt
+cpython                       	Python-2.0                          	
 future                        	MIT                                 	https://github.com/PythonCharmers/python-future
 gmp                           	BSD-3-Clause                        	https://github.com/ncw/gmp/blob/master/LICENSE
 gmpy2                         	LGPL-3.0-or-later                   	https://github.com/aleaxit/gmpy/blob/master/COPYING.LESSER
@@ -23,6 +24,7 @@ libffi                        	libffi license                      	https://gith
 libgfortran                   	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran5                  	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 liblapack                     	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt
+liblzma                       	0BSD                                	https://anaconda.org/conda-forge/liblzma
 libopenblas                   	BSD 3-clause                        	https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE
 libprotobuf                   	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
 libzlib                       	Zlib                                	http://zlib.net/zlib_license.html
@@ -44,7 +46,7 @@ protobuf                      	BSD-3-Clause                        	https://gith
 psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
 python                        	PSF                                 	https://docs.python.org/3/license.html
 python-dateutil               	Apache 2.0                          	https://github.com/dateutil/dateutil/blob/master/LICENSE
-python-flatbuffers            	Apache-2.0                          	https://github.com/google/flatbuffers/blob/master/LICENSE.txt
+python-flatbuffers            	Apache 2.0                          	https://github.com/google/flatbuffers/blob/master/LICENSE.txt
 python_abi                    	BSD-3-Clause                        	https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt
 pytz                          	MIT                                 	https://github.com/newvem/pytz/blob/master/LICENSE.txt
 requests                      	Apache-2.0                          	https://github.com/psf/requests/blob/main/LICENSE
@@ -56,9 +58,6 @@ six                           	MIT                                 	https://gith
 statsmodels                   	BSD 3-clause                        	https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt
 sympy                         	BSD License                         	https://github.com/sympy/sympy/blob/master/LICENSE
 threadpoolctl                 	BSD 3-clause                        	https://github.com/joblib/threadpoolctl/blob/master/LICENSE
-typing-extensions             	PSF-2.0                             	https://github.com/python/typing/blob/master/typing_extensions/LICENSE
-typing_extensions             	PSF-2.0                             	https://github.com/python/typing/blob/master/typing_extensions/LICENSE
 tzdata                        	LicenseRef-Public-Domain            	https://github.com/eggert/tz?tab=License-1-ov-file#readme
 urllib3                       	MIT                                 	https://github.com/urllib3/urllib3/blob/main/LICENSE.txt
 wheel                         	MIT                                 	https://github.com/pypa/wheel/blob/master/LICENSE.txt
-xz                            	LGPLv2.1/GPLv2                      	https://git.tukaani.org/?p=xz.git;a=blob_plain;f=COPYING;hb=HEAD

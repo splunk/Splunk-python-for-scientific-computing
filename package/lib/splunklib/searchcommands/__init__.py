@@ -139,7 +139,7 @@
   2. `Create Custom Search Commands with commands.conf.spec <http://docs.splunk.com/Documentation/Splunk/latest/Admin/Commandsconf>`_
 
   3. `Configure seach assistant with searchbnf.conf <https://docs.splunk.com/Documentation/Splunk/latest/Admin/Searchbnfconf>`_
-
+  
   4. `Control search distribution with distsearch.conf <https://docs.splunk.com/Documentation/Splunk/latest/Admin/Distsearchconf>`_
 
 """

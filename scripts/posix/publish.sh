@@ -1,6 +1,7 @@
+SUB_FOLDER_NAME=$1
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 source "$SCRIPT_DIR/prereq.sh"
-
+echo "The SUB_FOLDER_NAME variable is ${SUB_FOLDER_NAME}"
 set -o xtrace
 
 is_set BUILD
@@ -22,7 +23,11 @@ if [[ -z "$CI" ]]; then
 else
   if [[ -n "$CI_COMMIT_TAG" ]]; then
     # RELEASE TAG
-    TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/releases/${VERSION%.*}.x/$VERSION"
+    if [[ "$SUB_FOLDER_NAME" ==  "releases" ]]; then
+      TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/releases/${VERSION%.*}.x/$VERSION"
+    else
+      TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/release"
+    fi  
   elif [[ "$CI_PIPELINE_SOURCE" == "merge_request_event" ]]; then
     # MERGE REQUEST
     if [[ -z "$CI_MERGE_REQUEST_IID" || "$CI_MERGE_REQUEST_IID" == " " ]]; then

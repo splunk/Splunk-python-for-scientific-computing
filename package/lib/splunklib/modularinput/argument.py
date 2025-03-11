@@ -21,7 +21,7 @@ except ImportError:
 class Argument(object):
     """Class representing an argument to a modular input kind.
 
-    ``Argument`` is meant to be used with ``Scheme`` to generate an XML
+    ``Argument`` is meant to be used with ``Scheme`` to generate an XML 
     definition of the modular input kind that Splunk understands.
 
     ``name`` is the only required parameter for the constructor.
