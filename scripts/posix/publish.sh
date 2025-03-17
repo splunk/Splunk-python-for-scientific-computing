@@ -1,4 +1,3 @@
-SUB_FOLDER_NAME=$1
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 source "$SCRIPT_DIR/prereq.sh"
 echo "The SUB_FOLDER_NAME variable is ${SUB_FOLDER_NAME}"
@@ -24,15 +23,10 @@ else
   if [[ -n "$CI_COMMIT_TAG" ]]; then
     # RELEASE TAG
     
-    if [[ -z "$SUB_FOLDER_NAME" || "$SUB_FOLDER_NAME" == " " ]]; then
-      echo "SUB_FOLDER_NAME cannot be empty with COMMMIT TAG"
-      exit 1
-    fi
-    
-    if [[ "$SUB_FOLDER_NAME" ==  "releases" ]]; then
-      TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/releases/${VERSION%.*}.x/$VERSION"
-    else
+    if [[ "$UPLOAD" ==  "true" ]]; then
       TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/release"
+    else
+      TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/releases/${VERSION%.*}.x/$VERSION"
     fi  
   elif [[ "$CI_PIPELINE_SOURCE" == "merge_request_event" ]]; then
     # MERGE REQUEST
@@ -51,12 +45,19 @@ else
   fi
 fi
 
+
 for PLATFORM in "linux_x86_64" "darwin_x86_64" "darwin_arm64" "windows_x86_64"
 do
   APP_PLATFORM="${APP_NAME}_${PLATFORM}"
+  if [[ $UPLOAD == "true" ]]; then
+    TAR_NAME="${APP_PLATFORM}_${LAST_COMMIT_HASH}"
+  else
+    TAR_NAME=$APP_PLATFORM
+  fi
+  
   if [ -f "$BASE_BUILD_DIR/${APP_PLATFORM}.tgz" ]; then
     echo "publishing ${APP_PLATFORM} to ${REPO_URL}/${TARGET_FOLDER}"
-    curl -u ${ARTIFACTORY_AUTHORIZATION} -X PUT "${REPO_URL}/${TARGET_FOLDER}/${APP_PLATFORM}.tgz" -T "$BASE_BUILD_DIR/${APP_PLATFORM}.tgz"
+    curl -u ${ARTIFACTORY_AUTHORIZATION} -X PUT "${REPO_URL}/${TARGET_FOLDER}/${TAR_NAME}.tgz" -T "$BASE_BUILD_DIR/${APP_PLATFORM}.tgz"
   else
     echo "${APP_PLATFORM} build not found"
   fi

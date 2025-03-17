@@ -63,29 +63,29 @@ include:
   stage: prodsec-review
   extends: .binary-scan
   allow_failure: True
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-      variables:
-        ARTIFACT_BASE_PATH_TO_BUCKET: "${ARTIFACTORY_URL}/${NON_PROD_REPO}/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}"
-        ARTIFACT_PATH:  "${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}.tgz"
-        
-    
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      variables:
-        ARTIFACT_BASE_PATH_TO_BUCKET: "${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/builds"
-        ARTIFACT_PATH: "${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}.tgz"
-
-
-    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH =~ /^release\//'
-      variables:
-        ARTIFACT_BASE_PATH_TO_BUCKET: "${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/release"
-        ARTIFACT_PATH: "${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}.tgz"
+  before_script:
+    - export LAST_COMMIT_HASH=$(git log -1 --format=%H)
+    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
+        export ARTIFACT_BASE_PATH_TO_BUCKET="${ARTIFACTORY_URL}/${NON_PROD_REPO}/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}";
+        export ARTIFACT_PATH="${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}_${LAST_COMMIT_HASH}.tgz";
+      elif [[ $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH ]]; then
+        export ARTIFACT_BASE_PATH_TO_BUCKET="${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/builds";
+        export ARTIFACT_PATH="${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}_${LAST_COMMIT_HASH}.tgz";
+      elif [[ -n $CI_COMMIT_TAG || $CI_COMMIT_BRANCH =~ /^release\// ]]; then
+        export ARTIFACT_BASE_PATH_TO_BUCKET="${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/release";
+        export ARTIFACT_PATH="${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}_${LAST_COMMIT_HASH}.tgz";
+      else
+        echo "Not a valid event for running XRay scan";
+      fi
+    - echo "The ARTIFACT PATH is ${ARTIFACT_PATH}"
 
 
 .appinpect_template:
   stage: prodsec-review
   extends:
     - .image-app-template
+  except:
+    - schedules
   script:
     - pip uninstall python-magic
     - pip install splunk-appinspect
@@ -110,6 +110,7 @@ include:
   before_script:
     - creds-helper init
     - eval $(creds-helper artifactory --eval $PSC_ROLE)
+    - export LAST_COMMIT_HASH=$(git log -1 --format=%H)
   script:
     - make publish
   id_tokens:
@@ -120,6 +121,8 @@ include:
 xray-scan-linux:
   stage: prodsec-review
   extends: .x_ray_scan_template
+  except:
+    - schedules
   variables:
     ARTIFACT_NAME: $PACKAGE_NAME_LINUX_x86_64
     
@@ -128,6 +131,8 @@ xray-scan-linux:
 xray-scan-mac-arm64:
   stage: prodsec-review
   extends: .x_ray_scan_template
+  except:
+    - schedules
   variables:
     ARTIFACT_NAME: $PACKAGE_NAME_DARWIN_ARM64
     
@@ -136,6 +141,8 @@ xray-scan-mac-arm64:
 xray-scan-mac-x86_64:
   stage: prodsec-review
   extends: .x_ray_scan_template
+  except:
+    - schedules
   variables:
     ARTIFACT_NAME: $PACKAGE_NAME_DARWIN_x86_64
         
@@ -144,6 +151,8 @@ xray-scan-mac-x86_64:
 xray-scan-windows:
   stage: prodsec-review
   extends: .x_ray_scan_template
+  except:
+    - schedules
   variables:
     ARTIFACT_NAME: $PACKAGE_NAME_WINDOWS_x86_64
 
@@ -194,6 +203,8 @@ appinspect-mac-arm64:
 sast-scanner:
   stage: prodsec-review
   extends: .sast_scan
+  except:
+    - schedules
   variables:
     SAST_SCANNER: "Semgrep"
     alert_mode: "on" # Alert mode turned off
@@ -203,6 +214,8 @@ sast-scanner:
 .fossa-scan:
   stage: prodsec-review
   allow_failure: true
+  except:
+    - schedules
   retry: 0
   timeout: 60m
   dependencies: []
@@ -252,6 +265,8 @@ fossa-scan-mac-arm64:
 .build:
   stage: build
   allow_failure: true
+  except:
+    - schedules
   artifacts:
     paths:
       - build/Splunk_SA_Scientific_Python_*.tgz
@@ -262,8 +277,18 @@ fossa-scan-mac-arm64:
     - make dist
 
 build-linux:
-  extends: .build
   image: ${LINUX_BUILD_IMAGE}
+  stage: build
+  allow_failure: true
+  artifacts:
+    paths:
+      - build/Splunk_SA_Scientific_Python_*.tgz
+      - build/venv
+    untracked: false
+    expire_in: never
+  script:
+    - make dist
+  
 
 build-windows:
   extends: .build
@@ -292,6 +317,10 @@ build-mac-arm64:
 upload-psc:
   extends: .upload_template
   stage: upload
+  except:
+    - schedules
+  variables:
+    UPLOAD: "true"
 
 publish:
   extends: .upload_template
@@ -300,6 +329,21 @@ publish:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       when: manual
       allow_failure: true
-    - when: always
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "schedule"'
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH =~ /^release\//'
+
+
+
+x_ray_scan_scheduled_linux:
+  stage: prodsec-review
+  extends: .x_ray_scan_template
+  variables:
+    ARTIFACT_NAME: $PACKAGE_NAME_LINUX_x86_64
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  dependencies:
+    - build-linux
+
+
   
 
