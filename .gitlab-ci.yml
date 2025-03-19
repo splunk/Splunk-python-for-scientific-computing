@@ -62,24 +62,20 @@ include:
   extends: .binary-scan
   allow_failure: True
   before_script:
+    - export LAST_COMMIT_HASH=$(git log -1 --format=%H)
+    - if [[ $CI_PIPELINE_SOURCE == "merge_request_event" ]]; then
+        export ARTIFACT_BASE_PATH_TO_BUCKET="${ARTIFACTORY_URL}/${NON_PROD_REPO}/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}";
+        export ARTIFACT_PATH="${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}_${LAST_COMMIT_HASH}.tgz";
+      elif [[ $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH || $CI_COMMIT_REF_PROTECTED == "true" ]]; then
+        export ARTIFACT_BASE_PATH_TO_BUCKET="${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/builds";
+        export ARTIFACT_PATH="${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}_${LAST_COMMIT_HASH}.tgz";
+      elif [[ -n $CI_COMMIT_TAG || $CI_COMMIT_BRANCH =~ /^release\// ]]; then
+        export ARTIFACT_BASE_PATH_TO_BUCKET="${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/release";
+        export ARTIFACT_PATH="${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}_${LAST_COMMIT_HASH}.tgz";
+      else
+        echo "Not a valid event for running XRay scan";
+      fi
     - echo "The ARTIFACT PATH is ${ARTIFACT_PATH}"
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-      variables:
-        ARTIFACT_BASE_PATH_TO_BUCKET: "${ARTIFACTORY_URL}/${NON_PROD_REPO}/${ARTIFACTORY_FOLDER}/builds/merge_requests/MR${CI_MERGE_REQUEST_IID}"
-        ARTIFACT_PATH:  "${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}.tgz"
-        
-    
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH || $CI_COMMIT_REF_PROTECTED == "true"
-      variables:
-        ARTIFACT_BASE_PATH_TO_BUCKET: "${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/builds"
-        ARTIFACT_PATH: "${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}.tgz"
-
-
-    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH =~ /^release\//'
-      variables:
-        ARTIFACT_BASE_PATH_TO_BUCKET: "${ARTIFACTORY_URL}/${PROD_REPO}/${ARTIFACTORY_FOLDER}/release"
-        ARTIFACT_PATH: "${ARTIFACT_BASE_PATH_TO_BUCKET}/${ARTIFACT_NAME}.tgz"
 
 .appinspect_template:
   stage: prodsec-review
@@ -108,6 +104,7 @@ include:
   before_script:
     - creds-helper init
     - eval $(creds-helper artifactory --eval $PSC_ROLE)
+    - export LAST_COMMIT_HASH=$(git log -1 --format=%H)
   script:
     - make publish
   id_tokens:
@@ -240,6 +237,8 @@ build-mac-x86_64:
 upload-psc:
   extends: .upload_template
   stage: upload
+  variables:
+    UPLOAD: "true"
 
 
 publish:
