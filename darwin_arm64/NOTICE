@@ -75,7 +75,9 @@ libprotobuf                   	BSD-3-Clause                        	https://gith
 libre2-11                     	BSD-3-Clause                        	https://github.com/google/re2/?tab=BSD-3-Clause-1-ov-file#readme
 libssh2                       	BSD-3-Clause                        	https://github.com/libssh2/libssh2?tab=BSD-3-Clause-1-ov-file#readme
 libthrift                     	Apache-2.0                          	https://github.com/apache/thrift?tab=Apache-2.0-1-ov-file#readme
+libtorch                      	BSD-3-Clause                        	
 libutf8proc                   	MIT                                 	https://github.com/JuliaStrings/utf8proc?tab=License-1-ov-file#readme
+libuv                         	MIT                                 	https://github.com/libuv/libuv/blob/v1.x/LICENSE
 libxml2                       	MIT                                 	https://gitlab.gnome.org/GNOME/libxml2/
 libzlib                       	Zlib                                	http://zlib.net/zlib_license.html
 litellm                       	MIT                                 	https://github.com/BerriAI/litellm/blob/main/LICENSE
@@ -91,12 +93,14 @@ multiprocess                  	BSD-3-Clause                        	https://gith
 ncurses                       	free                                	https://invisible-island.net/ncurses/ncurses-license.html
 networkx                      	BSD 3-clause                        	https://github.com/networkx/networkx/blob/master/LICENSE.txt
 nlohmann_json                 	MIT                                 	https://github.com/nlohmann/json/blob/develop/LICENSE.MIT
+nomkl                         	BSD-3-Clause                        	
 numba                         	BSD-2-Clause                        	https://github.com/numba/numba?tab=BSD-2-Clause-1-ov-file#readme
 numpy                         	BSD 3-clause                        	https://github.com/numpy/numpy/blob/master/LICENSE.txt
 onnx                          	Apache-2.0                          	https://github.com/onnx/onnx/blob/main/LICENSE
 onnxruntime                   	MIT                                 	https://github.com/microsoft/onnxruntime/blob/master/LICENSE
 openai                        	Apache-2.0                          	https://github.com/openai/openai-python/blob/main/LICENSE
 openssl                       	Apache-2.0                          	https://github.com/openssl/openssl/blob/master/LICENSE.txt
+optree                        	Apache-2.0                          	
 orc                           	Apache-2.0                          	https://github.com/apache/orc/blob/main/LICENSE
 packaging                     	Apache-2.0                          	https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD
 pandas                        	BSD 3-clause                        	https://github.com/pandas-dev/pandas/blob/master/LICENSE
@@ -108,15 +112,17 @@ prometheus-cpp                	MIT                                 	https://gith
 propcache                     	Apache-2.0                          	https://github.com/aio-libs/propcache/blob/master/LICENSE
 protobuf                      	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
 psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
+pybind11                      	BSD-3-Clause                        	
+pybind11-global               	BSD-3-Clause                        	
 pydantic                      	MIT                                 	https://github.com/samuelcolvin/pydantic/blob/master/LICENSE
 pydantic-core                 	MIT                                 	https://pypi.org/project/pydantic-core/
 python                        	PSF                                 	https://docs.python.org/3/license.html
 python-dateutil               	Apache 2.0                          	https://github.com/dateutil/dateutil/blob/master/LICENSE
 python-dotenv                 	BSD 3-clause                        	https://github.com/theskumar/python-dotenv/blob/main/LICENSE
-python-flatbuffers            	Apache-2.0                          	https://github.com/google/flatbuffers/blob/master/LICENSE.txt
+python-flatbuffers            	Apache 2.0                          	https://github.com/google/flatbuffers/blob/master/LICENSE.txt
 python-xxhash                 	BSD-2-Clause                        	https://github.com/ifduyue/python-xxhash?tab=BSD-2-Clause-1-ov-file#readme
 python_abi                    	BSD 3-clause                        	https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt
-pytorch                       	BSD 3-Clause                        	https://github.com/pytorch/pytorch/blob/master/LICENSE
+pytorch                       	BSD-3-Clause                        	https://github.com/pytorch/pytorch/blob/master/LICENSE
 pytorch-mutex                 	                                    	https://anaconda.org/pytorch/pytorch-mutex
 pytz                          	MIT                                 	https://github.com/newvem/pytz/blob/master/LICENSE.txt
 pyyaml                        	MIT                                 	https://github.com/yaml/pyyaml/blob/master/LICENSE
@@ -131,6 +137,7 @@ safetensors                   	Apache-2.0                          	https://gith
 scikit-learn                  	New BSD License                     	https://github.com/scikit-learn/scikit-learn/blob/master/COPYING
 scipy                         	BSD 3-clause                        	https://github.com/scipy/scipy/blob/master/LICENSE.txt
 six                           	MIT                                 	https://github.com/benjaminp/six/blob/master/LICENSE
+sleef                         	BSL 1.0                             	https://github.com/shibatch/sleef/tree/master?tab=BSL-1.0-1-ov-file#readme
 snappy                        	BSD-3-Clause                        	https://github.com/golang/snappy/blob/master/LICENSE
 sniffio                       	Apache-2.0                          	https://github.com/python-trio/sniffio/blob/master/LICENSE
 statsmodels                   	BSD 3-clause                        	https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt
