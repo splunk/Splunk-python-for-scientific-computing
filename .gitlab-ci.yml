@@ -193,7 +193,7 @@ fossa-scan-windows:
   before_script:
     - choco install make
   image: ${WINDOWS_BUILD_IMAGE}
-  timeout: 3 hour
+  timeout: 5 hour
   tags:
     - psc-win64
 
