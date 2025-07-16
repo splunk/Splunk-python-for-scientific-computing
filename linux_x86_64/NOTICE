@@ -10,7 +10,7 @@ ca-certificates               	MPL2                                	https://gith
 certifi                       	MPL2                                	https://github.com/certifi/python-certifi/blob/master/LICENSE
 chardet                       	LGPL2.1-only                        	https://github.com/chardet/chardet?tab=LGPL-2.1-1-ov-file#readme
 coloredlogs                   	MIT                                 	https://github.com/xolox/python-coloredlogs/blob/master/LICENSE.txt
-cpython                       	Python-2.0                          	
+cpython                       	Python-2.0
 future                        	MIT                                 	https://github.com/PythonCharmers/python-future
 gmp                           	BSD-3-Clause                        	https://github.com/ncw/gmp/blob/master/LICENSE
 gmpy2                         	LGPL-3.0-or-later                   	https://github.com/aleaxit/gmpy/blob/master/COPYING.LESSER
@@ -67,6 +67,7 @@ six                           	MIT                                 	https://gith
 statsmodels                   	BSD 3-clause                        	https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt
 sympy                         	BSD License                         	https://github.com/sympy/sympy/blob/master/LICENSE
 threadpoolctl                 	BSD 3-clause                        	https://github.com/joblib/threadpoolctl/blob/master/LICENSE
+typing_extensions             	PSF-2.0                             	https://github.com/python/typing/blob/master/typing_extensions/LICENSE
 tzdata                        	LicenseRef-Public-Domain            	https://github.com/eggert/tz?tab=License-1-ov-file#readme
 urllib3                       	MIT                                 	https://github.com/urllib3/urllib3/blob/main/LICENSE.txt
 wheel                         	MIT                                 	https://github.com/pypa/wheel/blob/master/LICENSE.txt
