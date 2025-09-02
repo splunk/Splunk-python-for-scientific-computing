@@ -17,7 +17,7 @@ variables:
   PACKAGE_NAME_DARWIN_ARM64: "${PACKAGE_NAME}_${DARWIN_ARM_SUFFIX}"
   PACKAGE_NAME_WINDOWS_x86_64: "${PACKAGE_NAME}_${WINDOWS_SUFFIX}"
   APP_CERT_FOLDER: "app_cert"
-  VERSION_OVERRIDE: 4.2.3 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
+  VERSION_OVERRIDE: 4.2.4 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
 
 workflow:
   rules:
@@ -235,7 +235,7 @@ fossa-scan-windows_artifact:
   script:
     - make fossa_ci
   image: ${WINDOWS_BUILD_IMAGE}
-  timeout: 3 hour
+  timeout: 4 hour
   tags:
     - psc-win64
   dependencies:
