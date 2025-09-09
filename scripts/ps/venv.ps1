@@ -6,7 +6,7 @@ if ( -not $env:ENVIRONMENT_FILE ) {
     $SOLVER = "libmamba"
 } else {
     $env:ENVIRONMENT_FILE = Join-Path $PROJECT_DIR $env:ENVIRONMENT_FILE
-    $SOLVER = "classic"
+    $SOLVER = "libmamba"
     
 }
 
@@ -17,6 +17,8 @@ $env:Path += ";$($MINICONDA_BUILD_DIR);$(Join-Path $MINICONDA_BUILD_DIR "Scripts
 
 
 Write-Output "Creating PSC conda environment in $VENV_BUILD_DIR and installing packages"
+Write-Output "SOLVER  $SOLVER for installing packages"
+
 & conda install --prefix $VENV_BUILD_DIR -n base conda-libmamba-solver
 #& conda config --prefix $VENV_BUILD_DIR --set solver libmamba
 & conda env create --prefix $VENV_BUILD_DIR -f $env:ENVIRONMENT_FILE "--solver=$SOLVER"
