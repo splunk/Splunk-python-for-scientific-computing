@@ -20,10 +20,8 @@ Write-Output "Creating PSC conda environment in $VENV_BUILD_DIR and installing p
 Write-Output "SOLVER  $SOLVER for installing packages"
 
 
-& conda clean -tipy
 & conda install --prefix $VENV_BUILD_DIR -n base conda-libmamba-solver
 #& conda config --prefix $VENV_BUILD_DIR --set solver libmamba
 & conda env create --prefix $VENV_BUILD_DIR -f $env:ENVIRONMENT_FILE "--solver=$SOLVER"
-& conda clean -tipy
 & conda remove -p $VENV_BUILD_DIR -y --force @BLACKLISTED_PACKAGES
 & conda build purge-all

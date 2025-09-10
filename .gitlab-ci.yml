@@ -235,7 +235,7 @@ fossa-scan-windows_artifact:
   script:
     - make fossa_ci
   image: ${WINDOWS_BUILD_IMAGE}
-  timeout: 10 hour
+  timeout: 6 hour
   tags:
     - psc-win64
   dependencies:
@@ -247,7 +247,7 @@ fossa-scan-windows:
   before_script:
     - choco install make
   image: ${WINDOWS_BUILD_IMAGE}
-  timeout: 10 hour
+  timeout: 6 hour
   tags:
     - psc-win64
 
@@ -296,7 +296,7 @@ build-windows:
   image: ${WINDOWS_BUILD_IMAGE}
   tags:
     - psc-win64
-  timeout: 10 hour
+  timeout: 2 hour
 
 build-mac-x86_64:
   extends: .build
