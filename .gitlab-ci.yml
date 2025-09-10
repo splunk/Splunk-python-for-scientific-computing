@@ -261,7 +261,6 @@ fossa-scan-mac-arm64:
   tags:
     - psc-mac-arm64
 
-
 .build:
   stage: build
   allow_failure: true
