@@ -294,7 +294,6 @@ build-windows:
   extends: .build
   before_script:
     - choco install make
-    - conda clean -tipy
   image: ${WINDOWS_BUILD_IMAGE}
   tags:
     - psc-win64
