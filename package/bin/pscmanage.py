@@ -4,12 +4,33 @@ exec_anaconda_or_die()
 import os
 import sys
 import time
+import platform
 
 script_dir = os.path.dirname(__file__)
 sys.path.insert(0, os.path.join(script_dir, "..", "lib"))
 from splunklib.searchcommands import dispatch, GeneratingCommand, Configuration
 
 import psutil
+
+SUPPORTED_SYSTEMS = {
+    ('Linux', 'x86_64'): 'linux_x86_64',
+    ('Darwin', 'x86_64'): 'darwin_x86_64',
+    ('Darwin', 'arm64'): 'darwin_arm64'
+}
+PSC_PATH_PREFIX = 'Splunk_SA_Scientific_Python_'
+
+
+def get_system_paths():
+    system = ((platform.system(), "arm64") if platform.system() == "Darwin" and "ARM64" in platform.version()
+              else (platform.system(), platform.machine()))
+
+    if system not in SUPPORTED_SYSTEMS:
+        raise Exception(f'Unsupported platform: {system}')
+
+    return f"{PSC_PATH_PREFIX}{SUPPORTED_SYSTEMS[system]}", system
+
+
+psc_folder, system = get_system_paths()
 
 
 def get_psc_process_count():
@@ -19,7 +40,7 @@ def get_psc_process_count():
         try:
             # Get process name & pid from process object.
             processID = proc.cmdline()
-            if len(processID) >= 1 and 'Splunk_SA_Scientific_Python_linux_x86_64' in processID[0] and 'pscmanage.py' not in processID[1]:
+            if len(processID) >= 1 and psc_folder in processID[0] and 'pscmanage.py' not in processID[1]:
                 psc_process_count += 1
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
             pass
@@ -72,7 +93,7 @@ class PSCManage(GeneratingCommand):
             manage_option = self.fieldnames[0]
             if manage_option == 'cleanup':
                 print('cleanup', file=sys.stderr)
-                build_dir = os.path.join(script_dir, 'linux_x86_64')
+                build_dir = os.path.join(script_dir, SUPPORTED_SYSTEMS[system])
                 with open(os.path.join(build_dir, 'build.manifest')) as f:
                     print(f"open file", file=sys.stderr)
                     files_in_manifest = list(map(lambda x: x.strip(), f.readlines()))
