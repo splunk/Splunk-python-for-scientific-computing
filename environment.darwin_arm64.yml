@@ -7,12 +7,12 @@ dependencies:
   - bottle==0.12.23
   - chardet==3.0.4
   - fastdtw==0.3.4
-  - future==1.0.0
+  - future==0.18.3
   - jinja2==3.1.6
   - litellm==1.73.6
   - pandas==1.1.5
   - psutil==5.8.0
-  - python==3.9.23
+  - python==3.9.21
   - networkx==3.0
   - numpy==1.23.0
   - scipy==1.10.0
@@ -30,5 +30,3 @@ dependencies:
   - fastapi==0.116.1
   - protobuf==6.31.1
   - requests==2.32.5
-
-
