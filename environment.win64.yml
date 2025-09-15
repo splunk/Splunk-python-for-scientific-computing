@@ -5,7 +5,7 @@ dependencies:
   - boto3==1.36
   - bottle==0.12.23
   - chardet==3.0.4
-  - future==0.18.3
+  - future==1.0.0
   - networkx==3.0
   - numpy==1.23.0
   - onnx==1.18
@@ -19,4 +19,5 @@ dependencies:
   - scikit-learn==1.5.1
   - statsmodels==0.13.2
   - protobuf==6.31.1
+  - requests==2.32.5
 
