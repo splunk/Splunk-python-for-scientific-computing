@@ -9,9 +9,9 @@ dependencies:
   - botocore=1.36.26=pyge38_1234567_0
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py39hf88036b_3
-  - bzip2=1.0.8=h4bc722e_7
-  - ca-certificates=2025.7.14=hbd8a1cb_0
-  - certifi=2025.7.14=pyhd8ed1ab_0
+  - bzip2=1.0.8=hda65f42_8
+  - ca-certificates=2025.8.3=hbd8a1cb_0
+  - certifi=2025.8.3=pyhd8ed1ab_0
   - chardet=3.0.4=py39h079e4ff_1008
   - coloredlogs=15.0.1=pyhd8ed1ab_4
   - cpython=3.9.23=py39hd8ed1ab_0
@@ -26,20 +26,20 @@ dependencies:
   - libblas=3.9.0=20_linux64_openblas
   - libcblas=3.9.0=20_linux64_openblas
   - libffi=3.4.6=h2dba641_1
-  - libgcc=15.1.0=h767d61c_3
-  - libgcc-ng=15.1.0=h69a702a_3
-  - libgfortran=15.1.0=h69a702a_3
-  - libgfortran-ng=15.1.0=h69a702a_3
-  - libgfortran5=15.1.0=hcea5267_3
-  - libgomp=15.1.0=h767d61c_3
+  - libgcc=15.1.0=h767d61c_5
+  - libgcc-ng=15.1.0=h69a702a_5
+  - libgfortran=15.1.0=h69a702a_5
+  - libgfortran-ng=15.1.0=h69a702a_5
+  - libgfortran5=15.1.0=hcea5267_5
+  - libgomp=15.1.0=h767d61c_5
   - liblapack=3.9.0=20_linux64_openblas
   - liblzma=5.8.1=hb9d3cd8_2
   - libnsl=2.0.1=hb9d3cd8_1
   - libopenblas=0.3.25=pthreads_h413a1c8_0
   - libprotobuf=6.31.1=h9ef548d_1
-  - libstdcxx=15.1.0=h8f9b012_3
-  - libstdcxx-ng=15.1.0=h4852527_3
-  - libuuid=2.38.1=h0b41bf4_0
+  - libstdcxx=15.1.0=h8f9b012_5
+  - libstdcxx-ng=15.1.0=h4852527_5
+  - libuuid=2.41.1=he9a06e4_0
   - libxcrypt=4.4.36=hd590300_1
   - libzlib=1.3.1=hb9d3cd8_2
   - mpc=1.3.1=h24ddda3_1
@@ -54,20 +54,20 @@ dependencies:
   - pandas=1.1.5=py39hde0f152_0
   - patsy=1.0.1=pyhd8ed1ab_1
   - platformdirs=4.3.8=pyhe01879c_0
-  - pooch=1.8.2=pyhd8ed1ab_1
+  - pooch=1.8.2=pyhd8ed1ab_3
   - protobuf=6.31.1=py39h2f5525a_0
   - psutil=5.8.0=py39h3811e60_2
   - python=3.9.21=h9c0c6dc_1_cpython
   - python-dateutil=2.9.0.post0=pyhe01879c_2
   - python-flatbuffers=25.2.10=pyhbc23db3_0
-  - python_abi=3.9=7_cp39
+  - python_abi=3.9=8_cp39
   - pytz=2025.2=pyhd8ed1ab_0
-  - requests=2.32.4=pyhd8ed1ab_0
+  - requests=2.32.5=pyhd8ed1ab_0
   - ruptures=1.1.9=py39h988be6c_2
   - s3transfer=0.11.3=pyhd8ed1ab_0
   - scikit-learn=1.5.1=py39h4b7350c_1
   - scipy=1.10.0=py39h7360e5f_2
-  - six=1.17.0=pyhd8ed1ab_0
+  - six=1.17.0=pyhe01879c_1
   - statsmodels=0.13.2=py39hd257fcd_0
   - sympy=1.14.0=pyh2585a3b_105
   - threadpoolctl=3.6.0=pyhecae5ae_0
