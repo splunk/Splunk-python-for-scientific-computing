@@ -45,7 +45,6 @@ stages:
 
 include:
   - project: 'ci-cd/templates'
-    ref: master
     file: '/prodsec/.sast-scan.yml'
 
   - project: 'ci-cd/templates'
