@@ -98,7 +98,7 @@ class PSCManage(GeneratingCommand):
                     print(f"open file", file=sys.stderr)
                     files_in_manifest = list(map(lambda x: x.strip(), f.readlines()))
                     files_in_build = get_dir_content(build_dir)
-                    files_in_manifest.remove('.')
+                    files_in_manifest = [f for f in files_in_manifest if f != '.']
                     for y in files_in_build:
                         print(f"file in build", file=sys.stderr)
                         if y not in files_in_manifest:

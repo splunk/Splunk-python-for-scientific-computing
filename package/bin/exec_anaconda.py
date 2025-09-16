@@ -29,6 +29,23 @@ SUPPORTED_SYSTEMS = {
     ('Windows', 'AMD64'): 'windows_x86_64',
 }
 
+def get_system_paths():
+    if platform.system() == "Darwin" and "ARM64" in platform.version():
+        system = (platform.system(), "arm64")
+    else:
+        system = (platform.system(), platform.machine())
+    if system not in SUPPORTED_SYSTEMS:
+        raise Exception(f'Unsupported platform: {system}')
+
+    sa_scipy = f"{PSC_PATH_PREFIX}{SUPPORTED_SYSTEMS[system]}"
+
+    sa_path = os.path.join(get_apps_path(), sa_scipy)
+
+    if not os.path.isdir(sa_path):
+        raise Exception(f'Failed to find Python for Scientific Computing Add-on ({sa_scipy})')
+
+    return sa_path, system
+
 
 def check_python_version():
     if sys.version_info[0] < 3:
@@ -70,7 +87,9 @@ def exec_anaconda():
 
     check_python_version()
 
-    system = (platform.system(), platform.machine())
+    # system = (platform.system(), platform.machine())
+    sa_path, system = get_system_paths()
+
     if system not in SUPPORTED_SYSTEMS:
         raise Exception('Unsupported platform: %s %s' % (system))
 
