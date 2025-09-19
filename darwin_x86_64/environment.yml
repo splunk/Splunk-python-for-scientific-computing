@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - aiohappyeyeballs=2.6.1=pyhd8ed1ab_0
   - boto3=1.36.0=pyhd8ed1ab_0
   - botocore=1.36.26=pyge38_1234567_0
   - bottle=0.12.23=pyhd8ed1ab_0
@@ -13,7 +14,7 @@ dependencies:
   - chardet=3.0.4=py39h2c36a5b_1008
   - coloredlogs=15.0.1=pyhd8ed1ab_4
   - cpython=3.9.23=py39hd8ed1ab_0
-  - future=0.18.3=pyhd8ed1ab_0
+  - frozenlist=1.7.0=py39h262b9f6_0
   - gmp=6.3.0=hf036a51_2
   - gmpy2=2.2.1=py39h127c8af_0
   - humanfriendly=10.0=pyh707e725_8
@@ -24,6 +25,7 @@ dependencies:
   - libblas=3.9.0=20_osx64_openblas
   - libcblas=3.9.0=20_osx64_openblas
   - libcxx=21.1.1=h3d58e20_0
+  - libexpat=2.7.1=h21dd04a_0
   - libffi=3.4.6=h281671d_1
   - libgfortran=15.1.0=h5f6db21_1
   - libgfortran5=15.1.0=hfa3c126_1
@@ -36,20 +38,22 @@ dependencies:
   - mpc=1.3.1=h9d8efa1_1
   - mpfr=4.2.1=haed47dc_3
   - mpmath=1.3.0=pyhd8ed1ab_1
+  - multidict=6.6.3=py39h781ac47_0
   - networkx=3.0=pyhd8ed1ab_0
   - numpy=1.23.0=py39hda39a74_0
   - onnx=1.18.0=np2py39h9df0071_1
   - onnxruntime=1.19.2=py39he9c89a5_0_cpu
-  - openssl=3.4.1=hc426f3f_0
+  - openssl=3.5.3=h230baf5_0
   - packaging=25.0=pyh29332c3_1
   - pandas=1.1.5=py39h089d6f7_0
   - patsy=1.0.1=pyhd8ed1ab_1
   - platformdirs=4.3.8=pyhe01879c_0
   - pooch=1.8.2=pyhd8ed1ab_3
+  - propcache=0.3.1=py39hd18e689_0
   - protobuf=6.31.1=py39hd3b17bb_0
   - psutil=5.8.0=py39h89e85a6_2
-  - python=3.9.21=h7fafba3_1_cpython
-  - python-dateutil=2.9.0post0=py39hecd8cb5_2
+  - python=3.9.23=h8a7f3fd_0_cpython
+  - python-dateutil=2.9.0.post0=pyhe01879c_2
   - python-flatbuffers=25.2.10=pyhbc23db3_0
   - python_abi=3.9=8_cp39
   - pytz=2025.2=pyhd8ed1ab_0
@@ -62,7 +66,9 @@ dependencies:
   - statsmodels=0.13.2=py39h15b18c7_0
   - sympy=1.14.0=pyh2585a3b_105
   - threadpoolctl=3.6.0=pyhecae5ae_0
+  - typing-extensions=4.14.1=h4440ef1_0
   - typing_extensions=4.14.1=pyhe01879c_0
   - tzdata=2025b=h78e105d_0
   - urllib3=1.26.19=pyhd8ed1ab_0
   - wheel=0.45.1=pyhd8ed1ab_1
+  - yarl=1.20.1=py39hd18e689_0

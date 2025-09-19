@@ -1,4 +1,9 @@
 Package licenses:
+aiohappyeyeballs              	PSF-2.0
+aiohttp                       	MIT AND Apache-2.0
+aiosignal                     	Apache-2.0
+async-timeout                 	Apache-2.0
+attrs                         	MIT
 boto3                         	Apache-2.0                          	https://github.com/boto/boto3/blob/develop/LICENSE
 botocore                      	Apache-2.0                          	https://github.com/boto/botocore/blob/develop/LICENSE.txt
 bottle                        	MIT                                 	https://bottlepy.org/docs/dev/
@@ -7,13 +12,14 @@ bzip2                         	bzip2 License v1.0.6                	https://gitl
 ca-certificates               	MPL2                                	https://github.com/conda-forge/ca-certificates-feedstock
 chardet                       	LGPL2.1-only                        	https://github.com/chardet/chardet?tab=LGPL-2.1-1-ov-file#readme
 coloredlogs                   	MIT                                 	https://github.com/xolox/python-coloredlogs/blob/master/LICENSE.txt
-future                        	MIT                                 	https://github.com/PythonCharmers/python-future
+frozenlist                    	Apache-2.0                          	https://github.com/aio-libs/frozenlist?tab=Apache-2.0-1-ov-file#readme
 humanfriendly                 	MIT                                 	https://github.com/xolox/python-humanfriendly/blob/master/LICENSE.txt
 jmespath                      	MIT                                 	https://github.com/jmespath/jmespath.py
 joblib                        	BSD-3-Clause                        	https://github.com/joblib/joblib/blob/master/LICENSE.txt
 libabseil                     	Apache-2.0                          	https://github.com/abseil/abseil-cpp?tab=Apache-2.0-1-ov-file
 libblas                       	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libcblas                      	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
+libexpat                      	MIT
 libffi                        	libffi license                      	https://github.com/libffi/libffi/blob/master/LICENSE
 liblapack                     	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt
 liblzma                       	0BSD                                	https://anaconda.org/conda-forge/liblzma
@@ -28,6 +34,7 @@ m2w64-libwinpthread-git       	MIT                                 	https://anac
 mkl                           	Proprietary  Intel                  	https://software.intel.com/en-us/mkl/license-faq
 mpmath                        	BSD-3-Clause                        	https://github.com/mpmath/mpmath/blob/master/LICENSE
 msys2-conda-epoch             	                                    	https://anaconda.org/conda-forge/msys2-conda-epoch
+multidict                     	Apache-2.0                          	https://github.com/aio-libs/multidict?tab=License-1-ov-file#readme
 networkx                      	BSD 3-clause                        	https://github.com/networkx/networkx/blob/master/LICENSE.txt
 numpy                         	BSD 3-clause                        	https://github.com/numpy/numpy/blob/master/LICENSE.txt
 onnx                          	Apache-2.0                          	https://github.com/onnx/onnx/blob/main/LICENSE
@@ -38,6 +45,7 @@ pandas                        	BSD 3-clause                        	https://gith
 patsy                         	BSD 2-clause/PSF                    	https://github.com/pydata/patsy/blob/master/LICENSE.txt
 platformdirs                  	MIT                                 	https://github.com/platformdirs/platformdirs?tab=MIT-1-ov-file#readme
 pooch                         	BSD-3-Clause                        	https://github.com/fatiando/pooch
+propcache                     	Apache-2.0
 protobuf                      	BSD-3-Clause                        	https://github.com/protocolbuffers/protobuf/blob/main/LICENSE
 psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
 pyreadline3                   	BSD-3-Clause                        	https://anaconda.org/conda-forge/pyreadline3
@@ -57,6 +65,7 @@ sympy                         	BSD License                         	https://gith
 tbb                           	Apache-2.0                          	https://github.com/oneapi-src/oneTBB/blob/master/LICENSE.txt
 threadpoolctl                 	BSD 3-clause                        	https://github.com/joblib/threadpoolctl/blob/master/LICENSE
 tk                            	TCL                                 	https://anaconda.org/conda-forge/tk
+typing-extensions             	PSF-2.0                             	https://github.com/python/typing/blob/master/typing_extensions/LICENSE
 typing_extensions             	PSF-2.0                             	https://github.com/python/typing/blob/master/typing_extensions/LICENSE
 tzdata                        	LicenseRef-Public-Domain            	https://github.com/eggert/tz?tab=License-1-ov-file#readme
 ucrt                          	Proprietary Microsoft               	https://docs.microsoft.com/en-us/legal/windows-sdk/license-terms-ewdk
@@ -67,3 +76,4 @@ vcomp14                       	LicenseRef-MicrosoftVisualCpp2015-2022Runtime
 vs2015_runtime                	BSD-3-Clause                        	https://anaconda.org/anaconda/vs2015_runtime
 wheel                         	MIT                                 	https://github.com/pypa/wheel/blob/master/LICENSE.txt
 win_inet_pton                 	LicenseRef-Public-Domain            	https://github.com/hickeroar/win_inet_pton/blob/master/LICENSE
+yarl                          	Apache-2.0                          	https://github.com/aio-libs/yarl/blob/master/LICENSE
