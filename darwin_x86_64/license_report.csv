@@ -11,7 +11,7 @@ boto3,1.36.0,Apache-2.0,https://github.com/boto/boto3/blob/develop/LICENSE,Amazo
 botocore,1.36.0,Apache-2.0,https://github.com/boto/botocore/blob/develop/LICENSE.txt,Low-level data driven core of boto3,,botocore-1.36.0-pyge38_1234567_0,conda-forge,pyge38_1234567_0,0
 bottle,0.12.23,MIT,https://bottlepy.org/docs/dev/,a fast simple and lightweight WSGI micro web-framework for Python,,bottle-0.12.23-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 brotli-python,1.1.0,MIT,https://github.com/google/brotli?tab=MIT-1-ov-file#readme,Brotli compression format,,brotli-python-1.1.0-py39hdf37715_3,conda-forge,py39hdf37715_3,3
-bzip2,1.0.8,bzip2-1.0.6,https://gitlab.com/bzip2/bzip2/-/blob/master/COPYING,high quality data compressor,,bzip2-1.0.8-hfdf4475_7,conda-forge,hfdf4475_7,7
+bzip2,1.0.8,bzip2-1.0.6,https://gitlab.com/bzip2/bzip2/-/blob/master/COPYING,high quality data compressor,,bzip2-1.0.8-h500dc9f_8,conda-forge,h500dc9f_8,8
 ca-certificates,2025.8.3,ISC,https://github.com/conda-forge/ca-certificates-feedstock,Certificates for use with other packages,,ca-certificates-2025.8.3-hbd8a1cb_0,conda-forge,hbd8a1cb_0,0
 certifi,2025.8.3,ISC,https://github.com/certifi/python-certifi/blob/master/LICENSE,Mozilla’s collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts,,certifi-2025.8.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 chardet,3.0.4,LGPL-2.1-only,https://github.com/chardet/chardet?tab=LGPL-2.1-1-ov-file#readme,Universal character encoding detector,,chardet-3.0.4-py39h2c36a5b_1008,conda-forge,py39h2c36a5b_1008,1008
@@ -30,7 +30,6 @@ fastdtw,0.3.4,MIT,https://github.com/slaypni/fastdtw?tab=MIT-1-ov-file#readme,Dy
 filelock,3.19.1,Unlicense,https://github.com/tox-dev/py-filelock/blob/main/LICENSE,A platform independent file lock,,filelock-3.19.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 frozenlist,1.7.0,Apache-2.0,https://github.com/aio-libs/frozenlist?tab=Apache-2.0-1-ov-file#readme,A list-like structure which implements collections.abc.MutableSequence,,frozenlist-1.7.0-py39h262b9f6_0,conda-forge,py39h262b9f6_0,0
 fsspec,2025.7.0,BSD-3-Clause,https://github.com/fsspec/filesystem_spec/blob/master/LICENSE,A specification for pythonic filesystems,,fsspec-2025.7.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-future,0.18.3,MIT,https://github.com/PythonCharmers/python-future,Missing compatibility layer between Python 2 and Python 3,,future-0.18.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 gmp,6.3.0,GPL-2.0-or-later OR LGPL-3.0-or-later,https://github.com/ncw/gmp/blob/master/LICENSE,The GNU multiprecision library,,gmp-6.3.0-hf036a51_2,conda-forge,hf036a51_2,2
 gmpy2,2.2.1,LGPL-3.0-or-later,https://github.com/aleaxit/gmpy/blob/master/COPYING.LESSER,GMP/MPIR,MPFR,gmpy2-2.2.1-py39h127c8af_0,conda-forge,py39h127c8af_0,0
 h11,0.16.0,MIT,https://github.com/python-hyper/h11/blob/master/LICENSE.txt,Implements HTTP/1.1 protocol in Python.,,h11-0.16.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
@@ -53,7 +52,8 @@ jsonschema-specifications,2025.4.1,MIT,https://pypi.org/project/jsonschema-speci
 libabseil,20250512.1,Apache-2.0,https://github.com/abseil/abseil-cpp?tab=Apache-2.0-1-ov-file,The repository contains the Abseil C++ library code,,libabseil-20250512.1-cxx17_hfc00f1c_0,conda-forge,cxx17_hfc00f1c_0,0
 libblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libblas-3.9.0-20_osx64_openblas,conda-forge,20_osx64_openblas,20
 libcblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libcblas-3.9.0-20_osx64_openblas,conda-forge,20_osx64_openblas,20
-libcxx,21.1.0,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,,libcxx-21.1.0-h3d58e20_1,conda-forge,h3d58e20_1,1
+libcxx,21.1.1,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,,libcxx-21.1.1-h3d58e20_0,conda-forge,h3d58e20_0,0
+libexpat,2.7.1,MIT,,,,libexpat-2.7.1-h21dd04a_0,conda-forge,h21dd04a_0,0
 libffi,3.4.6,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,,libffi-3.4.6-h281671d_1,conda-forge,h281671d_1,1
 libgfortran,15.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran-15.1.0-h5f6db21_1,conda-forge,h5f6db21_1,1
 libgfortran5,15.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran5-15.1.0-hfa3c126_1,conda-forge,hfa3c126_1,1
@@ -80,7 +80,7 @@ numpy,1.23.0,BSD-3-Clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt
 onnx,1.18.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.18.0-np2py39h9df0071_1,conda-forge,np2py39h9df0071_1,1
 onnxruntime,1.19.2,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform,high performance ML inferencing and training accelerator,onnxruntime-1.19.2-py39he9c89a5_0_cpu,conda-forge,py39he9c89a5_0_cpu,0
 openai,1.100.2,MIT,https://github.com/openai/openai-python/blob/main/LICENSE,Provides access to OpenAI APIs and models.,,openai-1.100.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-openssl,3.5.2,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.5.2-h6e31bce_0,conda-forge,h6e31bce_0,0
+openssl,3.5.3,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.5.3-h230baf5_0,conda-forge,h230baf5_0,0
 packaging,25.0,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-25.0-pyh29332c3_1,conda-forge,pyh29332c3_1,1
 pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py39h089d6f7_0,conda-forge,py39h089d6f7_0,0
 patsy,1.0.1,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-1.0.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
@@ -92,7 +92,7 @@ psutil,5.8.0,BSD-3-Clause,https://github.com/giampaolo/psutil/blob/master/LICENS
 pydantic,2.10.5,MIT,https://github.com/samuelcolvin/pydantic/blob/master/LICENSE,Data validation and settings management,,pydantic-2.10.5-pyh3cfb1c2_0,conda-forge,pyh3cfb1c2_0,0
 pydantic-core,2.27.2,MIT,https://pypi.org/project/pydantic-core/,Core library for Pydantic data validation.,,pydantic-core-2.27.2-py39hd8827cb_0,conda-forge,py39hd8827cb_0,0
 pygments,2.19.2,BSD-2-Clause,,,,pygments-2.19.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-python,3.9.21,Python-2.0,https://docs.python.org/3/license.html,python runtime,,python-3.9.21-h55ef250_2_cpython,conda-forge,h55ef250_2_cpython,2
+python,3.9.23,Python-2.0,https://docs.python.org/3/license.html,python runtime,,python-3.9.23-h8a7f3fd_0_cpython,conda-forge,h8a7f3fd_0_cpython,0
 python-dateutil,2.9.0.post0,Apache-2.0,https://github.com/dateutil/dateutil/blob/master/LICENSE,Extensions to the standard Python datetime module,,python-dateutil-2.9.0.post0-pyhe01879c_2,conda-forge,pyhe01879c_2,2
 python-dotenv,1.1.1,BSD-3-Clause,https://github.com/theskumar/python-dotenv/blob/main/LICENSE,Loads environment variables from .env files.,,python-dotenv-1.1.1-pyhe01879c_0,conda-forge,pyhe01879c_0,0
 python-flatbuffers,25.2.10,Apache-2.0,https://github.com/google/flatbuffers/blob/master/LICENSE.txt,library for use with the Flatbuffers serialization format,,python-flatbuffers-25.2.10-pyhbc23db3_0,conda-forge,pyhbc23db3_0,0
@@ -120,7 +120,7 @@ stumpy,1.12.0,BSD-3-Clause,https://github.com/TDAmeritrade/stumpy?tab=License-1-
 sympy,1.14.0,BSD-3-Clause,https://github.com/sympy/sympy/blob/master/LICENSE,Python Library for Symbolic Mathematics,,sympy-1.14.0-pyh2585a3b_105,conda-forge,pyh2585a3b_105,105
 tbb,2021.5.0,Apache-2.0,https://github.com/oneapi-src/oneTBB/blob/master/LICENSE.txt,threading library,,tbb-2021.5.0-hb8565cd_5,conda-forge,hb8565cd_5,5
 threadpoolctl,3.6.0,BSD-3-Clause,https://github.com/joblib/threadpoolctl/blob/master/LICENSE,Python helpers to control the threadpools of native libraries,,threadpoolctl-3.6.0-pyhecae5ae_0,conda-forge,pyhecae5ae_0,0
-tiktoken,0.9.0,MIT,https://github.com/openai/tiktoken/blob/main/LICENSE,"Tokenizer for OpenAI models (e.g., GPT-3).",,tiktoken-0.9.0-py39hde49db8_0,conda-forge,py39hde49db8_0,0
+tiktoken,0.11.0,MIT,https://github.com/openai/tiktoken/blob/main/LICENSE,"Tokenizer for OpenAI models (e.g., GPT-3).",,tiktoken-0.11.0-py39h6285dac_0,conda-forge,py39h6285dac_0,0
 tokenizers,0.21.4,Apache-2.0,https://github.com/huggingface/tokenizers/blob/main/LICENSE,tokenizers for machine learning,,tokenizers-0.21.4-py39h6285dac_0,conda-forge,py39h6285dac_0,0
 tqdm,4.67.1,MPL-2.0 or MIT,https://github.com/tqdm/tqdm/blob/master/LICENCE,Progress Meter Library,,tqdm-4.67.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
 typer,0.16.1,MIT,,,,typer-0.16.1-pyhc167863_0,conda-forge,pyhc167863_0,0

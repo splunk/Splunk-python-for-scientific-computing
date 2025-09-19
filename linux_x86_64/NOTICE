@@ -32,7 +32,6 @@ fastdtw                       	MIT                                 	https://gith
 filelock                      	Unlicense                           	https://github.com/tox-dev/py-filelock/blob/main/LICENSE
 frozenlist                    	Apache-2.0                          	https://github.com/aio-libs/frozenlist?tab=Apache-2.0-1-ov-file#readme
 fsspec                        	BSD-3-Clause                        	https://github.com/fsspec/filesystem_spec/blob/master/LICENSE
-future                        	MIT                                 	https://github.com/PythonCharmers/python-future
 gmp                           	BSD-3-Clause                        	https://github.com/ncw/gmp/blob/master/LICENSE
 gmpy2                         	LGPL-3.0-or-later                   	https://github.com/aleaxit/gmpy/blob/master/COPYING.LESSER
 h11                           	MIT                                 	https://github.com/python-hyper/h11/blob/master/LICENSE.txt
@@ -55,6 +54,7 @@ jsonschema-specifications     	MIT                                 	https://pypi
 libabseil                     	Apache-2.0                          	https://github.com/abseil/abseil-cpp?tab=Apache-2.0-1-ov-file
 libblas                       	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libcblas                      	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
+libexpat                      	MIT
 libffi                        	libffi license                      	https://github.com/libffi/libffi/blob/master/LICENSE
 libgcc                        	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgcc-ng                     	GPL-3.0-only WITH GCC-exception-3.1n	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
