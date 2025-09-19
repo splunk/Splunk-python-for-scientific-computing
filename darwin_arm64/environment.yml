@@ -15,7 +15,7 @@ dependencies:
   - botocore=1.36.0=pyge38_1234567_0
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py39h941272d_3
-  - bzip2=1.0.8=h99b78c6_7
+  - bzip2=1.0.8=hd037594_8
   - ca-certificates=2025.8.3=hbd8a1cb_0
   - certifi=2025.8.3=pyhd8ed1ab_0
   - chardet=3.0.4=py39h0caf4da_1008
@@ -34,7 +34,6 @@ dependencies:
   - filelock=3.19.1=pyhd8ed1ab_0
   - frozenlist=1.7.0=py39h2ffb7dc_0
   - fsspec=2025.7.0=pyhd8ed1ab_0
-  - future=0.18.3=pyhd8ed1ab_0
   - gmp=6.3.0=h7bae524_2
   - gmpy2=2.2.1=py39h478d0be_0
   - h11=0.16.0=pyhd8ed1ab_0
@@ -57,7 +56,8 @@ dependencies:
   - libabseil=20250512.1=cxx17_hd41c47c_0
   - libblas=3.9.0=20_osxarm64_openblas
   - libcblas=3.9.0=20_osxarm64_openblas
-  - libcxx=21.1.0=hf598326_1
+  - libcxx=21.1.1=hf598326_0
+  - libexpat=2.7.1=hec049ff_0
   - libffi=3.4.6=h1da3d7d_1
   - libgfortran=15.1.0=hfdf1602_1
   - libgfortran5=15.1.0=hb74de2c_1
@@ -85,7 +85,7 @@ dependencies:
   - onnx=1.18.0=np2py39h4dfc2c3_1
   - onnxruntime=1.19.2=py39hdd78af0_0_cpu
   - openai=1.100.2=pyhd8ed1ab_0
-  - openssl=3.5.2=he92f556_0
+  - openssl=3.5.3=h5503f6c_0
   - packaging=25.0=pyh29332c3_1
   - pandas=1.1.5=py39ha4bedbf_0
   - patsy=1.0.1=pyhd8ed1ab_1
@@ -97,7 +97,7 @@ dependencies:
   - pydantic=2.10.5=pyh3cfb1c2_0
   - pydantic-core=2.27.2=py39hc40b5db_0
   - pygments=2.19.2=pyhd8ed1ab_0
-  - python=3.9.21=hdec7a8b_2_cpython
+  - python=3.9.23=h7139b31_0_cpython
   - python-dateutil=2.9.0.post0=pyhe01879c_2
   - python-dotenv=1.1.1=pyhe01879c_0
   - python-flatbuffers=25.2.10=pyhbc23db3_0
@@ -125,7 +125,7 @@ dependencies:
   - sympy=1.14.0=pyh2585a3b_105
   - tbb=2021.5.0=hffc8910_5
   - threadpoolctl=3.6.0=pyhecae5ae_0
-  - tiktoken=0.9.0=py39hb8ba7bf_0
+  - tiktoken=0.11.0=py39h0e07724_0
   - tokenizers=0.21.4=py39h0e07724_0
   - tqdm=4.67.1=pyhd8ed1ab_1
   - typer=0.16.1=pyhc167863_0
