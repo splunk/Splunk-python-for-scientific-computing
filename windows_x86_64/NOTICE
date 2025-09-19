@@ -31,7 +31,6 @@ fastdtw                       	MIT                                 	https://gith
 filelock                      	Unlicense                           	https://github.com/tox-dev/py-filelock/blob/main/LICENSE
 frozenlist                    	Apache-2.0                          	https://github.com/aio-libs/frozenlist?tab=Apache-2.0-1-ov-file#readme
 fsspec                        	BSD-3-Clause                        	https://github.com/fsspec/filesystem_spec/blob/master/LICENSE
-future                        	MIT                                 	https://github.com/PythonCharmers/python-future
 h11                           	MIT                                 	https://github.com/python-hyper/h11/blob/master/LICENSE.txt
 h2                            	MIT                                 	https://github.com/python-hyper/h2/blob/master/LICENSE
 hf-xet                        	Apache-2.0
@@ -52,6 +51,7 @@ jsonschema-specifications     	MIT                                 	https://pypi
 libabseil                     	Apache-2.0                          	https://github.com/abseil/abseil-cpp?tab=Apache-2.0-1-ov-file
 libblas                       	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
 libcblas                      	BSD-3-Clause                        	http://www.netlib.org/blas/#_licensing
+libexpat                      	MIT
 libffi                        	libffi license                      	https://github.com/libffi/libffi/blob/master/LICENSE
 liblapack                     	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt
 liblzma                       	0BSD                                	https://anaconda.org/conda-forge/liblzma
