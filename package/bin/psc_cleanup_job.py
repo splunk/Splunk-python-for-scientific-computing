@@ -44,8 +44,8 @@ RENAME_RULES = {
     }
 }
 
-ALLOWED_VERSIONS = {"3.2.1", "3.2.2", "3.2.3", "3.2.4",
-                    "4.2.1", "4.2.2", "4.2.3", "4.2.4"}
+ALLOWED_VERSIONS = {"3.2.1", "3.2.2", "3.2.3", "3.2.4", "3.2.5", "3.2.6",
+                    "4.2.1", "4.2.2", "4.2.3", "4.2.4", "4.2.5", "4.2.6"}
 
 def get_system_paths():
     if platform.system() == "Darwin" and "ARM64" in platform.version():
