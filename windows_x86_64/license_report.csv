@@ -78,7 +78,7 @@ numpy,1.23.0,BSD-3-Clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt
 onnx,1.18.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.18.0-np2py39h244bc95_1,conda-forge,np2py39h244bc95_1,1
 onnxruntime,1.19.2,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform,high performance ML inferencing and training accelerator,onnxruntime-1.19.2-py39hc8505ec_0_cpu,conda-forge,py39hc8505ec_0_cpu,0
 openai,1.100.2,MIT,https://github.com/openai/openai-python/blob/main/LICENSE,Provides access to OpenAI APIs and models.,,openai-1.100.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-openssl,3.5.3,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.5.3-h725018a_0,conda-forge,h725018a_0,0
+openssl,3.5.3,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.5.3-h725018a_1,conda-forge,h725018a_1,1
 packaging,25.0,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-25.0-pyh29332c3_1,conda-forge,pyh29332c3_1,1
 pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py39h2e25243_0,conda-forge,py39h2e25243_0,0
 patsy,1.0.1,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-1.0.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
@@ -133,7 +133,7 @@ ucrt,10.0.26100.0,LicenseRef-MicrosoftWindowsSDK10,https://docs.microsoft.com/en
 urllib3,1.26.19,MIT,https://github.com/urllib3/urllib3/blob/main/LICENSE.txt,HTTP library with thread-safe connection pooling file post,,urllib3-1.26.19-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 uvicorn,0.29.0,BSD-3-Clause,,,,uvicorn-0.29.0-py39hcbf5309_0,conda-forge,py39hcbf5309_0,0
 uvicorn-standard,0.29.0,BSD-3-Clause,,,,uvicorn-standard-0.29.0-hcbf5309_0,conda-forge,hcbf5309_0,0
-vc,14.3,BSD-3-Clause,https://github.com/conda/conda/wiki/VC-features,Meta package for selecting VS runtime options,,vc-14.3-h2df5915_10,pkgs/main,h2df5915_10,10
+vc,14.3,BSD-3-Clause,https://github.com/conda/conda/wiki/VC-features,Meta package for selecting VS runtime options,,vc-14.3-h41ae7f8_31,conda-forge,h41ae7f8_31,31
 vc14_runtime,14.44.35208,LicenseRef-MicrosoftVisualCpp2015-2022Runtime,https://visualstudio.microsoft.com/downloads/,,,vc14_runtime-14.44.35208-h818238b_31,conda-forge,h818238b_31,31
 vcomp14,14.44.35208,LicenseRef-MicrosoftVisualCpp2015-2022Runtime,,,,vcomp14-14.44.35208-h818238b_31,conda-forge,h818238b_31,31
 vs2015_runtime,14.44.35208,BSD-3-Clause,https://anaconda.org/anaconda/vs2015_runtime,MSVC runtimes,,vs2015_runtime-14.44.35208-h38c0c73_31,conda-forge,h38c0c73_31,31

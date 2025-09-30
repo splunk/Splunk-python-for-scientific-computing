@@ -20,6 +20,9 @@ Write-Output "Creating PSC conda environment in $VENV_BUILD_DIR and installing p
 Write-Output "SOLVER  $SOLVER for installing packages"
 
 
+& conda config --remove-key channels 2>$null
+& conda config --add channels conda-forge
+& conda config --set channel_priority strict
 & conda install --prefix $VENV_BUILD_DIR -n base conda-libmamba-solver
 #& conda config --prefix $VENV_BUILD_DIR --set solver libmamba
 & conda env create --prefix $VENV_BUILD_DIR -f $env:ENVIRONMENT_FILE "--solver=$SOLVER"

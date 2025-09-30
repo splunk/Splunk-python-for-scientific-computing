@@ -1,7 +1,6 @@
 name: build\venv
 channels:
   - conda-forge
-  - defaults
 dependencies:
   - _python_abi3_support=1.0=hd8ed1ab_2
   - aiohappyeyeballs=2.6.1=pyhd8ed1ab_0
@@ -86,7 +85,7 @@ dependencies:
   - onnx=1.18.0=np2py39h244bc95_1
   - onnxruntime=1.19.2=py39hc8505ec_0_cpu
   - openai=1.100.2=pyhd8ed1ab_0
-  - openssl=3.5.3=h725018a_0
+  - openssl=3.5.3=h725018a_1
   - packaging=25.0=pyh29332c3_1
   - pandas=1.1.5=py39h2e25243_0
   - patsy=1.0.1=pyhd8ed1ab_1
@@ -144,7 +143,7 @@ dependencies:
   - urllib3=1.26.19=pyhd8ed1ab_0
   - uvicorn=0.29.0=py39hcbf5309_0
   - uvicorn-standard=0.29.0=hcbf5309_0
-  - vc=14.3=h2df5915_10
+  - vc=14.3=h41ae7f8_31
   - vc14_runtime=14.44.35208=h818238b_31
   - vcomp14=14.44.35208=h818238b_31
   - vs2015_runtime=14.44.35208=h38c0c73_31
