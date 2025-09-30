@@ -1,7 +1,6 @@
 name: psc
 channels:
   - conda-forge
-channel_priority: strict
 dependencies:
   - boto3==1.36
   - botocore==1.36
