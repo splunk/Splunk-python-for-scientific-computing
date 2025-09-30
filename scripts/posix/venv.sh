@@ -12,6 +12,10 @@ fi
 BLACKLISTED_PACKAGES=$(cat "$PLATFORM_DIR/blacklist.txt" | tr "\n" " ")
 
 rm -r "$VENV_BUILD_DIR"
+"$CONDA" config --prefix "$VENV_BUILD_DIR" --remove-key channels 2>/dev/null
+"$CONDA" config --prefix "$VENV_BUILD_DIR" --add channels conda-forge
+"$CONDA" config --prefix "$VENV_BUILD_DIR" --set channel_priority strict
+
 "$CONDA" install --prefix "$VENV_BUILD_DIR" -n base conda-libmamba-solver
 #"$CONDA" config --prefix "$VENV_BUILD_DIR" --set solver libmamba
 "$CONDA" env create --prefix "$VENV_BUILD_DIR" -f "$ENVIRONMENT_FILE" "--solver=$SOLVER"

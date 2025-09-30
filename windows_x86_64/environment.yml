@@ -1,7 +1,6 @@
 name: build\venv
 channels:
   - conda-forge
-  - defaults
 dependencies:
   - aiohappyeyeballs=2.6.1=pyhd8ed1ab_0
   - aiohttp=3.12.15=py39h5769e4c_0
@@ -28,10 +27,13 @@ dependencies:
   - libcblas=3.9.0=35_h2a3cdd5_mkl
   - libexpat=2.7.1=hac47afa_0
   - libffi=3.4.6=h537db12_1
+  - libhwloc=2.11.2=default_hc8275d1_1000
+  - libiconv=1.18=hc1393d2_2
   - liblapack=3.9.0=35_hf9ab0e9_mkl
   - liblzma=5.8.1=h2466b09_2
   - libprotobuf=6.31.1=hdcda5b4_1
   - libsqlite=3.50.4=hf5d6505_0
+  - libxml2=2.13.8=h741aa76_1
   - libzlib=1.3.1=h2466b09_2
   - llvm-openmp=20.1.8=hfa2b4ca_2
   - m2w64-gcc-libgfortran=5.3.0=6
@@ -47,7 +49,7 @@ dependencies:
   - numpy=1.23.0=py39h1a62c8c_0
   - onnx=1.18.0=np2py39h244bc95_1
   - onnxruntime=1.19.2=py39hc8505ec_0_cpu
-  - openssl=3.5.3=h725018a_0
+  - openssl=3.5.3=h725018a_1
   - packaging=25.0=pyh29332c3_1
   - pandas=1.1.5=py39h2e25243_0
   - patsy=1.0.1=pyhd8ed1ab_1
@@ -57,6 +59,7 @@ dependencies:
   - propcache=0.3.1=py39hf73967f_0
   - protobuf=6.31.1=py39h9bd55df_0
   - psutil=5.8.0=py39hb82d6ee_2
+  - pthreads-win32=2.9.1=h2466b09_4
   - pyreadline3=3.5.4=py39hcbf5309_1
   - pysocks=1.7.1=pyh09c184e_7
   - python=3.9.23=h8c5b53a_0_cpython
@@ -73,7 +76,7 @@ dependencies:
   - six=1.17.0=pyhe01879c_1
   - statsmodels=0.13.2=py39h5d4886f_0
   - sympy=1.14.0=pyh04b8f61_5
-  - tbb=2021.7.0=h91493d7_0
+  - tbb=2021.13.0=h62715c5_1
   - threadpoolctl=3.6.0=pyhecae5ae_0
   - tk=8.6.13=h2c6b04d_2
   - typing-extensions=4.14.1=h4440ef1_0
@@ -81,7 +84,7 @@ dependencies:
   - tzdata=2025b=h78e105d_0
   - ucrt=10.0.26100.0=h57928b3_0
   - urllib3=1.26.19=pyhd8ed1ab_0
-  - vc=14.3=h2df5915_10
+  - vc=14.3=h41ae7f8_31
   - vc14_runtime=14.44.35208=h818238b_31
   - vcomp14=14.44.35208=h818238b_31
   - vs2015_runtime=14.44.35208=h38c0c73_31

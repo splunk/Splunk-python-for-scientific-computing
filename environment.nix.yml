@@ -1,6 +1,5 @@
 name: build/venv
 channels:
-  - pytorch
   - conda-forge
 dependencies:
   - boto3==1.36

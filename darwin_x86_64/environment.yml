@@ -1,7 +1,6 @@
 name: build/venv
 channels:
   - conda-forge
-  - defaults
 dependencies:
   - aiohappyeyeballs=2.6.1=pyhd8ed1ab_0
   - boto3=1.36.0=pyhd8ed1ab_0
