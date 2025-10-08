@@ -17,7 +17,7 @@ dependencies:
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py39hf88036b_3
   - bzip2=1.0.8=hda65f42_8
-  - ca-certificates=2025.8.3=hbd8a1cb_0
+  - ca-certificates=2025.10.5=hbd8a1cb_0
   - certifi=2025.8.3=pyhd8ed1ab_0
   - chardet=3.0.4=py39h079e4ff_1008
   - click=8.1.8=pyh707e725_0
@@ -59,21 +59,21 @@ dependencies:
   - libcblas=3.9.0=20_linux64_openblas
   - libexpat=2.7.1=hecca717_0
   - libffi=3.4.6=h2dba641_1
-  - libgcc=15.1.0=h767d61c_5
-  - libgcc-ng=15.1.0=h69a702a_5
-  - libgfortran=15.1.0=h69a702a_5
-  - libgfortran-ng=15.1.0=h69a702a_5
-  - libgfortran5=15.1.0=hcea5267_5
-  - libgomp=15.1.0=h767d61c_5
+  - libgcc=15.2.0=h767d61c_6
+  - libgcc-ng=15.2.0=h69a702a_6
+  - libgfortran=15.2.0=h69a702a_6
+  - libgfortran-ng=15.2.0=h69a702a_6
+  - libgfortran5=15.2.0=hcd61629_6
+  - libgomp=15.2.0=h767d61c_6
   - liblapack=3.9.0=20_linux64_openblas
   - libllvm11=11.1.0=he0ac6c6_5
   - liblzma=5.8.1=hb9d3cd8_2
   - libnsl=2.0.1=hb9d3cd8_1
   - libopenblas=0.3.25=pthreads_h413a1c8_0
   - libprotobuf=6.31.1=h9ef548d_1
-  - libstdcxx=15.1.0=h8f9b012_5
-  - libstdcxx-ng=15.1.0=h4852527_5
-  - libuuid=2.41.1=he9a06e4_0
+  - libstdcxx=15.2.0=h8f9b012_6
+  - libstdcxx-ng=15.2.0=h4852527_6
+  - libuuid=2.41.2=he9a06e4_0
   - libuv=1.51.0=hb03c661_1
   - libxcrypt=4.4.36=hd590300_1
   - libzlib=1.3.1=hb9d3cd8_2
@@ -92,7 +92,7 @@ dependencies:
   - onnx=1.18.0=np2py39he82bb67_1
   - onnxruntime=1.19.2=py39he53e9e0_0_cpu
   - openai=1.100.2=pyhd8ed1ab_0
-  - openssl=3.5.3=h26f9b46_0
+  - openssl=3.5.3=h26f9b46_1
   - packaging=25.0=pyh29332c3_1
   - pandas=1.1.5=py39hde0f152_0
   - patsy=1.0.1=pyhd8ed1ab_1
