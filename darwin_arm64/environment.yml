@@ -15,7 +15,7 @@ dependencies:
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py39h941272d_3
   - bzip2=1.0.8=hd037594_8
-  - ca-certificates=2025.8.3=hbd8a1cb_0
+  - ca-certificates=2025.10.5=hbd8a1cb_0
   - certifi=2025.8.3=pyhd8ed1ab_0
   - chardet=3.0.4=py39h0caf4da_1008
   - click=8.1.8=pyh707e725_0
@@ -55,11 +55,11 @@ dependencies:
   - libabseil=20250512.1=cxx17_hd41c47c_0
   - libblas=3.9.0=20_osxarm64_openblas
   - libcblas=3.9.0=20_osxarm64_openblas
-  - libcxx=21.1.1=hf598326_0
+  - libcxx=21.1.2=hf598326_0
   - libexpat=2.7.1=hec049ff_0
   - libffi=3.4.6=h1da3d7d_1
-  - libgfortran=15.1.0=hfdf1602_1
-  - libgfortran5=15.1.0=hb74de2c_1
+  - libgfortran=15.2.0=hfcf01ff_1
+  - libgfortran5=15.2.0=h742603c_1
   - liblapack=3.9.0=20_osxarm64_openblas
   - libllvm11=11.1.0=hfa12f05_5
   - liblzma=5.8.1=h39f12f2_2
@@ -68,7 +68,7 @@ dependencies:
   - libuv=1.51.0=h6caf38d_1
   - libzlib=1.3.1=h8359307_2
   - litellm=1.73.6=pyhd8ed1ab_0
-  - llvm-openmp=21.1.0=hbb9b287_0
+  - llvm-openmp=21.1.2=h4a912ad_3
   - llvmlite=0.39.1=py39h8ca5d33_1
   - markdown-it-py=3.0.0=pyhd8ed1ab_1
   - markupsafe=3.0.2=py39hefdd603_1
@@ -84,7 +84,7 @@ dependencies:
   - onnx=1.18.0=np2py39h4dfc2c3_1
   - onnxruntime=1.19.2=py39hdd78af0_0_cpu
   - openai=1.100.2=pyhd8ed1ab_0
-  - openssl=3.5.3=h5503f6c_0
+  - openssl=3.5.3=h5503f6c_1
   - packaging=25.0=pyh29332c3_1
   - pandas=1.1.5=py39ha4bedbf_0
   - patsy=1.0.1=pyhd8ed1ab_1

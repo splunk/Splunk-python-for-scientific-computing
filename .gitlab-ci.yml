@@ -38,6 +38,7 @@ workflow:
 
 
 stages:
+  - license-check
   - build
   - upload
   - prodsec-review
@@ -115,6 +116,15 @@ include:
   id_tokens:
     CI_JOB_JWT:
       aud: $CICD_VAULT_ADDR
+
+validate-package-channel-sources:
+  stage: license-check
+  extends: .image-app-template
+  script:
+    - export PSC_VERSION=$(git describe --tags --abbrev=0)
+    - pip install pandas loguru
+    - python3 ./tools/channel_sanity.py $PSC_VERSION
+  allow_failure: false
 
 
 xray-scan-linux:
