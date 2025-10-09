@@ -3,14 +3,19 @@ channels:
   - conda-forge
 dependencies:
   - aiohappyeyeballs=2.6.1=pyhd8ed1ab_0
+  - aiohttp=3.12.15=py39h2753485_0
+  - aiosignal=1.4.0=pyhd8ed1ab_0
+  - async-timeout=5.0.1=pyhd8ed1ab_1
+  - attrs=25.3.0=pyh71513ae_0
   - boto3=1.36.0=pyhd8ed1ab_0
   - botocore=1.36.26=pyge38_1234567_0
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py39hdf37715_3
   - bzip2=1.0.8=h500dc9f_8
-  - ca-certificates=2025.8.3=hbd8a1cb_0
+  - ca-certificates=2025.10.5=hbd8a1cb_0
   - certifi=2025.8.3=pyhd8ed1ab_0
   - chardet=3.0.4=py39h2c36a5b_1008
+  - charset-normalizer=3.4.3=pyhd8ed1ab_0
   - coloredlogs=15.0.1=pyhd8ed1ab_4
   - cpython=3.9.23=py39hd8ed1ab_0
   - frozenlist=1.7.0=py39h262b9f6_0
@@ -23,48 +28,55 @@ dependencies:
   - libabseil=20250512.1=cxx17_hfc00f1c_0
   - libblas=3.9.0=20_osx64_openblas
   - libcblas=3.9.0=20_osx64_openblas
-  - libcxx=21.1.1=h3d58e20_0
+  - libcxx=21.1.2=h3d58e20_0
   - libexpat=2.7.1=h21dd04a_0
   - libffi=3.4.6=h281671d_1
-  - libgfortran=15.1.0=h5f6db21_1
-  - libgfortran5=15.1.0=hfa3c126_1
+  - libgfortran=15.2.0=h306097a_1
+  - libgfortran5=15.2.0=h336fb69_1
   - liblapack=3.9.0=20_osx64_openblas
   - liblzma=5.8.1=hd471939_2
   - libopenblas=0.3.25=openmp_hfef2a42_0
   - libprotobuf=6.31.1=h6e993e7_1
+  - libsqlite=3.50.4=h39a8b3b_0
   - libzlib=1.3.1=hd23fc13_2
-  - llvm-openmp=21.1.0=hf4e0ed4_0
+  - llvm-openmp=21.1.2=h472b3d1_3
   - mpc=1.3.1=h9d8efa1_1
   - mpfr=4.2.1=haed47dc_3
   - mpmath=1.3.0=pyhd8ed1ab_1
   - multidict=6.6.3=py39h781ac47_0
+  - ncurses=6.5=h0622a9a_3
   - networkx=3.0=pyhd8ed1ab_0
   - numpy=1.23.0=py39hda39a74_0
   - onnx=1.18.0=np2py39h9df0071_1
   - onnxruntime=1.19.2=py39he9c89a5_0_cpu
-  - openssl=3.5.3=h230baf5_0
+  - openssl=3.5.3=h230baf5_1
   - packaging=25.0=pyh29332c3_1
   - pandas=1.1.5=py39h089d6f7_0
   - patsy=1.0.1=pyhd8ed1ab_1
+  - pip=25.2=pyh8b19718_0
   - platformdirs=4.3.8=pyhe01879c_0
   - pooch=1.8.2=pyhd8ed1ab_3
   - propcache=0.3.1=py39hd18e689_0
   - protobuf=6.31.1=py39hd3b17bb_0
   - psutil=5.8.0=py39h89e85a6_2
+  - pysocks=1.7.1=pyha55dd90_7
   - python=3.9.23=h8a7f3fd_0_cpython
   - python-dateutil=2.9.0.post0=pyhe01879c_2
   - python-flatbuffers=25.2.10=pyhbc23db3_0
   - python_abi=3.9=8_cp39
   - pytz=2025.2=pyhd8ed1ab_0
+  - readline=8.2=h7cca4af_2
   - requests=2.32.5=pyhd8ed1ab_0
   - ruptures=1.1.9=py39hb943cd9_2
   - s3transfer=0.11.3=pyhd8ed1ab_0
   - scikit-learn=1.5.1=py39h771d6a6_1
   - scipy=1.10.0=py39h8a15683_2
+  - setuptools=59.8.0=py39h6e9494a_1
   - six=1.17.0=pyhe01879c_1
   - statsmodels=0.13.2=py39h15b18c7_0
   - sympy=1.14.0=pyh2585a3b_105
   - threadpoolctl=3.6.0=pyhecae5ae_0
+  - tk=8.6.13=hf689a15_2
   - typing-extensions=4.14.1=h4440ef1_0
   - typing_extensions=4.14.1=pyhe01879c_0
   - tzdata=2025b=h78e105d_0

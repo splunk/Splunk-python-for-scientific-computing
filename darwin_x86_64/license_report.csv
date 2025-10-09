@@ -5,7 +5,7 @@ botocore,1.36.26,Apache-2.0,https://github.com/boto/botocore/blob/develop/LICENS
 bottle,0.12.23,MIT,https://bottlepy.org/docs/dev/,a fast simple and lightweight WSGI micro web-framework for Python,,bottle-0.12.23-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 brotli-python,1.1.0,MIT,https://github.com/google/brotli?tab=MIT-1-ov-file#readme,Brotli compression format,,brotli-python-1.1.0-py39hdf37715_3,conda-forge,py39hdf37715_3,3
 bzip2,1.0.8,bzip2-1.0.6,https://gitlab.com/bzip2/bzip2/-/blob/master/COPYING,high quality data compressor,,bzip2-1.0.8-h500dc9f_8,conda-forge,h500dc9f_8,8
-ca-certificates,2025.8.3,ISC,https://github.com/conda-forge/ca-certificates-feedstock,Certificates for use with other packages,,ca-certificates-2025.8.3-hbd8a1cb_0,conda-forge,hbd8a1cb_0,0
+ca-certificates,2025.10.5,ISC,https://github.com/conda-forge/ca-certificates-feedstock,Certificates for use with other packages,,ca-certificates-2025.10.5-hbd8a1cb_0,conda-forge,hbd8a1cb_0,0
 certifi,2025.8.3,ISC,https://github.com/certifi/python-certifi/blob/master/LICENSE,Mozilla’s collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts,,certifi-2025.8.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 chardet,3.0.4,LGPL-2.1-only,https://github.com/chardet/chardet?tab=LGPL-2.1-1-ov-file#readme,Universal character encoding detector,,chardet-3.0.4-py39h2c36a5b_1008,conda-forge,py39h2c36a5b_1008,1008
 coloredlogs,15.0.1,MIT,https://github.com/xolox/python-coloredlogs/blob/master/LICENSE.txt,Enables colored terminal output for Python's logging module,,coloredlogs-15.0.1-pyhd8ed1ab_4,conda-forge,pyhd8ed1ab_4,4
@@ -20,17 +20,17 @@ joblib,1.5.1,BSD-3-Clause,https://github.com/joblib/joblib/blob/master/LICENSE.t
 libabseil,20250512.1,Apache-2.0,https://github.com/abseil/abseil-cpp?tab=Apache-2.0-1-ov-file,The repository contains the Abseil C++ library code,,libabseil-20250512.1-cxx17_hfc00f1c_0,conda-forge,cxx17_hfc00f1c_0,0
 libblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libblas-3.9.0-20_osx64_openblas,conda-forge,20_osx64_openblas,20
 libcblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libcblas-3.9.0-20_osx64_openblas,conda-forge,20_osx64_openblas,20
-libcxx,21.1.1,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,,libcxx-21.1.1-h3d58e20_0,conda-forge,h3d58e20_0,0
+libcxx,21.1.2,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,,libcxx-21.1.2-h3d58e20_0,conda-forge,h3d58e20_0,0
 libexpat,2.7.1,MIT,,,,libexpat-2.7.1-h21dd04a_0,conda-forge,h21dd04a_0,0
 libffi,3.4.6,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,,libffi-3.4.6-h281671d_1,conda-forge,h281671d_1,1
-libgfortran,15.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran-15.1.0-h5f6db21_1,conda-forge,h5f6db21_1,1
-libgfortran5,15.1.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran5-15.1.0-hfa3c126_1,conda-forge,hfa3c126_1,1
+libgfortran,15.2.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran-15.2.0-h306097a_1,conda-forge,h306097a_1,1
+libgfortran5,15.2.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran5-15.2.0-h336fb69_1,conda-forge,h336fb69_1,1
 liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapack-3.9.0-20_osx64_openblas,conda-forge,20_osx64_openblas,20
 liblzma,5.8.1,0BSD,https://anaconda.org/conda-forge/liblzma,XZ compression library.,,liblzma-5.8.1-hd471939_2,conda-forge,hd471939_2,2
 libopenblas,0.3.25,BSD-3-Clause,https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE,An optimized BLAS library based on GotoBLAS2 1.13 BSD version,,libopenblas-0.3.25-openmp_hfef2a42_0,conda-forge,openmp_hfef2a42_0,0
 libprotobuf,6.31.1,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc,the protobuf compiler,libprotobuf-6.31.1-h6e993e7_1,conda-forge,h6e993e7_1,1
 libzlib,1.3.1,Zlib,http://zlib.net/zlib_license.html,compression library,dependency of python,libzlib-1.3.1-hd23fc13_2,conda-forge,hd23fc13_2,2
-llvm-openmp,21.1.0,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM openmp runtime,,llvm-openmp-21.1.0-hf4e0ed4_0,conda-forge,hf4e0ed4_0,0
+llvm-openmp,21.1.2,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM openmp runtime,,llvm-openmp-21.1.2-h472b3d1_3,conda-forge,h472b3d1_3,3
 mpc,1.3.1,LGPL-3.0-or-later,https://gitlab.inria.fr/mpc/mpc/-/blob/master/COPYING.LESSER,GNU C library for arithmetic of complex numbers with arbitrarily high precision and correct rounding,,mpc-1.3.1-h9d8efa1_1,conda-forge,h9d8efa1_1,1
 mpfr,4.2.1,LGPL-3.0-only,https://gitlab.inria.fr/mpfr/mpfr/-/blob/master/COPYING,a C library for multiple-precision floating-point computations with correct rounding,,mpfr-4.2.1-haed47dc_3,conda-forge,haed47dc_3,3
 mpmath,1.3.0,BSD-3-Clause,https://github.com/mpmath/mpmath/blob/master/LICENSE,A Python library for arbitrary-precision floating-point arithmetic,,mpmath-1.3.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
@@ -39,7 +39,7 @@ networkx,3.0,BSD-3-Clause,https://github.com/networkx/networkx/blob/master/LICEN
 numpy,1.23.0,BSD-3-Clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,,numpy-1.23.0-py39hda39a74_0,conda-forge,py39hda39a74_0,0
 onnx,1.18.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.18.0-np2py39h9df0071_1,conda-forge,np2py39h9df0071_1,1
 onnxruntime,1.19.2,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform,high performance ML inferencing and training accelerator,onnxruntime-1.19.2-py39he9c89a5_0_cpu,conda-forge,py39he9c89a5_0_cpu,0
-openssl,3.5.3,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.5.3-h230baf5_0,conda-forge,h230baf5_0,0
+openssl,3.5.3,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.5.3-h230baf5_1,conda-forge,h230baf5_1,1
 packaging,25.0,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-25.0-pyh29332c3_1,conda-forge,pyh29332c3_1,1
 pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py39h089d6f7_0,conda-forge,py39h089d6f7_0,0
 patsy,1.0.1,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-1.0.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
