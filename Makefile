@@ -47,7 +47,7 @@ endif
 export VERSION ?= $(VERSION_TAG)
 export BUILD ?= $(VERSION_BUILD)
 
-.PHONY: analyze build clean dist fossa freeze license publish linkapp
+.PHONY: analyze build clean dist fossa freeze license publish linkapp test setup
 COMMON_DEPS := $(SCRIPT_DIR)/prereq.$(SCRIPT_EXT) Makefile
 
 build/miniconda:

@@ -29,6 +29,7 @@ else
   PROJECT_NAME="$CI_PROJECT_URL/-/tree/$CI_COMMIT_REF_NAME/$PLATFORM"
   if [ "$ARCH" == "$ARM64" ]; then
     echo "Found ${ARCH} build, Running fossa using Rosseta"
+    export PATH="/usr/local/bin:$PATH"
     arch "-$ARM64" fossa analyze --only-target "conda" --only-path $PLATFORM -p "$PROJECT_NAME" -b "${CI_COMMIT_REF_NAME}" --title "$PROJECT_TITLE" --team "$CI_PROJECT_URL"
   else
     fossa analyze --only-target "conda" --only-path $PLATFORM -p "$PROJECT_NAME" -b "${CI_COMMIT_REF_NAME}" --title "$PROJECT_TITLE" --team "$CI_PROJECT_URL"
