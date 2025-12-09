@@ -15,6 +15,8 @@ variables:
   PACKAGE_NAME_DARWIN_x86_64: "${PACKAGE_NAME}_${DARWIN_SUFFIX}"
   PACKAGE_NAME_WINDOWS_x86_64: "${PACKAGE_NAME}_${WINDOWS_SUFFIX}"
   APP_CERT_FOLDER: "app_cert"
+  WINDOWS_RUNNER_GIT_PATH: 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\Git\cmd'
+  WINDOWS_RUNNER_7ZIP_PATH: 'C:\Program Files\7-Zip'
   VERSION_OVERRIDE: 3.2.5 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
 
 
@@ -200,16 +202,16 @@ fossa-scan-linux:
 fossa-scan-windows:
   extends: .fossa-scan
   before_script:
+    - $Env:Path+=";${WINDOWS_RUNNER_GIT_PATH}"
     - choco install make
-  image: ${WINDOWS_BUILD_IMAGE}
   timeout: 5 hour
   tags:
-    - psc-win64
+    - windows2019
 
 fossa-scan-mac-x86_64:
   extends: .fossa-scan
   tags:
-    - psc-mac-x86_64
+    - darwin-intel-xcode15
 
 .build:
   stage: build
@@ -229,18 +231,21 @@ build-linux:
 build-windows:
   extends: .build
   before_script:
+    - $Env:Path+=";${WINDOWS_RUNNER_GIT_PATH}"
+    - choco install 7zip -y
+    - $Env:Path+=";{WINDOWS_RUNNER_7ZIP_PATH}"
     - choco install make
-  image: ${WINDOWS_BUILD_IMAGE}
+
   timeout: 5 hour
   tags:
-    - psc-win64
+    - windows2019
 
 build-mac-x86_64:
   extends: .build
   before_script:
     - git clean -xdf
   tags:
-    - psc-mac-x86_64
+    - darwin-intel-xcode15
 
 
 upload-psc:

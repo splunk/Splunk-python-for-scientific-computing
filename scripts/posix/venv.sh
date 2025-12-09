@@ -3,6 +3,11 @@ source "$SCRIPT_DIR/prereq.sh"
 RED='\033[31m'
 RESET='\033[0m'
 
+if [ "$OS" = "Darwin" ] && [ "$ARCH" = "x86_64" ]; then
+  export CONDA_OVERRIDE_OSX="11"
+fi
+
+
 if [ -z "$ENVIRONMENT_FILE" ]; then
   ENVIRONMENT_FILE="$PLATFORM_DIR/environment.yml";
   SOLVER="libmamba";
