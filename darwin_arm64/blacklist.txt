@@ -37,9 +37,7 @@ pyarrow
 pyarrow-core
 pyarrow-hotfix
 pycparser
-cryptography
 pysocks
-cffi
 charset-normalizer
 importlib_metadata
 importlib-metadata

@@ -1,4 +1,5 @@
 Package licenses:
+_openmp_mutex                 	BSD-3-Clause                        	https://github.com/conda-forge/_openmp_mutex-feedstock/blob/master/LICENSE.txt
 _python_abi3_support          	MIT                                 	
 aiohappyeyeballs              	PSF-2.0                             	https://github.com/aio-libs/aiohappyeyeballs/blob/main/LICENSE
 aiohttp                       	MIT                                 	https://anaconda.org/anaconda/aiohttp
@@ -14,10 +15,12 @@ brotli-python                 	MIT                                 	https://gith
 bzip2                         	bzip2 License v1.0.6                	https://gitlab.com/bzip2/bzip2/-/blob/master/COPYING
 ca-certificates               	MPL2                                	https://github.com/conda-forge/ca-certificates-feedstock
 certifi                       	MPL2                                	https://github.com/certifi/python-certifi/blob/master/LICENSE
+cffi                          	MIT                                 	
 chardet                       	LGPL2.1-only                        	https://github.com/chardet/chardet?tab=LGPL-2.1-1-ov-file#readme
 click                         	BSD-3-Clause                        	https://anaconda.org/anaconda/click
 coloredlogs                   	MIT                                 	https://github.com/xolox/python-coloredlogs/blob/master/LICENSE.txt
 cpython                       	Python-2.0                          	https://github.com/python/cpython/blob/main/LICENSE
+cryptography                  	Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT	
 distro                        	Apache-2.0                          	https://github.com/python-distro/distro/blob/master/LICENSE
 dnspython                     	ISC                                 	
 email-validator               	Unlicense                           	
@@ -55,6 +58,7 @@ libcblas                      	BSD-3-Clause                        	http://www.n
 libcxx                        	MIT                                 	https://llvm.org/docs/DeveloperPolicy.html#license
 libexpat                      	MIT                                 	
 libffi                        	libffi license                      	https://github.com/libffi/libffi/blob/master/LICENSE
+libgcc                        	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran                   	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 libgfortran5                  	GPL-3.0-only WITH GCC-exception-3.1 	http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html
 liblapack                     	BSD-3-Clause                        	https://netlib.org/lapack/LICENSE.txt

@@ -16,14 +16,16 @@ dependencies:
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py39ha51f57c_3
   - bzip2=1.0.8=h0ad9c76_8
-  - ca-certificates=2025.10.5=h4c7d964_0
+  - ca-certificates=2026.1.4=h4c7d964_0
   - certifi=2025.8.3=pyhd8ed1ab_0
+  - cffi=1.16.0=py39ha55989b_0
   - chardet=3.0.4=py39h467e6f4_1008
   - charset-normalizer=3.4.3=pyhd8ed1ab_0
   - click=8.1.8=pyh7428d3b_0
   - colorama=0.4.6=pyhd8ed1ab_1
   - coloredlogs=15.0.1=pyhd8ed1ab_4
   - cpython=3.9.23=py39hd8ed1ab_0
+  - cryptography=43.0.3=py39hae46aff_0
   - distro=1.9.0=pyhd8ed1ab_1
   - dnspython=2.7.0=pyhff2d567_1
   - email-validator=2.2.0=pyhd8ed1ab_1
@@ -57,15 +59,15 @@ dependencies:
   - libabseil=20250512.1=cxx17_habfad5f_0
   - libblas=3.9.0=35_h5709861_mkl
   - libcblas=3.9.0=35_h2a3cdd5_mkl
-  - libexpat=2.7.1=hac47afa_0
-  - libffi=3.4.6=h537db12_1
+  - libexpat=2.7.3=hac47afa_0
+  - libffi=3.5.2=h52bdfb6_0
   - liblapack=3.9.0=35_hf9ab0e9_mkl
   - liblzma=5.8.1=h2466b09_2
-  - libprotobuf=6.31.1=hdcda5b4_1
-  - libsqlite=3.50.4=hf5d6505_0
+  - libprotobuf=6.31.1=hdcda5b4_4
+  - libsqlite=3.51.1=hf5d6505_1
   - libzlib=1.3.1=h2466b09_2
   - litellm=1.73.6=pyhd8ed1ab_0
-  - llvm-openmp=21.1.2=hfa2b4ca_3
+  - llvm-openmp=21.1.8=h4fa8253_0
   - llvmlite=0.39.1=py39hd28a505_1
   - m2w64-gcc-libgfortran=5.3.0=6
   - m2w64-gcc-libs=5.3.0=7
@@ -85,7 +87,7 @@ dependencies:
   - onnx=1.18.0=np2py39h244bc95_1
   - onnxruntime=1.19.2=py39hc8505ec_0_cpu
   - openai=1.100.2=pyhd8ed1ab_0
-  - openssl=3.5.3=h725018a_1
+  - openssl=3.6.0=h725018a_0
   - packaging=25.0=pyh29332c3_1
   - pandas=1.1.5=py39h2e25243_0
   - patsy=1.0.1=pyhd8ed1ab_1
@@ -95,6 +97,7 @@ dependencies:
   - propcache=0.3.1=py39hf73967f_0
   - protobuf=6.31.1=py39h9bd55df_0
   - psutil=5.8.0=py39hb82d6ee_2
+  - pycparser=2.22=pyh29332c3_1
   - pydantic=2.10.5=pyh3cfb1c2_0
   - pydantic-core=2.27.2=py39h92a245a_0
   - pygments=2.19.2=pyhd8ed1ab_0
@@ -130,7 +133,7 @@ dependencies:
   - tbb=2021.5.0=h91493d7_5
   - threadpoolctl=3.6.0=pyhecae5ae_0
   - tiktoken=0.11.0=py39h2d6e2de_0
-  - tk=8.6.13=h2c6b04d_2
+  - tk=8.6.13=h2c6b04d_3
   - tokenizers=0.21.4=py39h2d6e2de_0
   - tqdm=4.67.1=pyhd8ed1ab_1
   - typer=0.16.1=pyhc167863_0
@@ -138,15 +141,15 @@ dependencies:
   - typer-slim-standard=0.16.1=h810d63d_0
   - typing-extensions=4.14.1=h4440ef1_0
   - typing_extensions=4.14.1=pyhe01879c_0
-  - tzdata=2025b=h78e105d_0
+  - tzdata=2025c=hc9c84f9_1
   - ucrt=10.0.26100.0=h57928b3_0
   - urllib3=1.26.19=pyhd8ed1ab_0
   - uvicorn=0.29.0=py39hcbf5309_0
   - uvicorn-standard=0.29.0=hcbf5309_0
-  - vc=14.3=h41ae7f8_31
-  - vc14_runtime=14.44.35208=h818238b_31
-  - vcomp14=14.44.35208=h818238b_31
-  - vs2015_runtime=14.44.35208=h38c0c73_31
+  - vc=14.3=h41ae7f8_34
+  - vc14_runtime=14.44.35208=h818238b_34
+  - vcomp14=14.44.35208=h818238b_34
+  - vs2015_runtime=14.44.35208=h38c0c73_34
   - watchdog=2.1.7=py39hcbf5309_1
   - watchfiles=1.1.0=py39h92a245a_0
   - websockets=15.0.1=py39hd134818_1

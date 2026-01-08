@@ -12,10 +12,8 @@ aws-checksums
 aws-crt-cpp
 aws-sdk-cpp
 brotlipy
-cffi
 charset-normalizer
 colorama
-cryptography
 flit-core
 importlib_metadata
 importlib-metadata

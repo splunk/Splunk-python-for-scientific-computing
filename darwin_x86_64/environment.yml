@@ -2,6 +2,7 @@ name: build/venv
 channels:
   - conda-forge
 dependencies:
+  - _openmp_mutex=4.5=7_kmp_llvm
   - _python_abi3_support=1.0=hd8ed1ab_2
   - aiohappyeyeballs=2.6.1=pyhd8ed1ab_0
   - aiohttp=3.12.15=py39h2753485_0
@@ -15,12 +16,14 @@ dependencies:
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.1.0=py39hdf37715_3
   - bzip2=1.0.8=h500dc9f_8
-  - ca-certificates=2025.10.5=hbd8a1cb_0
+  - ca-certificates=2026.1.4=hbd8a1cb_0
   - certifi=2025.8.3=pyhd8ed1ab_0
+  - cffi=1.16.0=py39h18ef598_0
   - chardet=3.0.4=py39h2c36a5b_1008
   - click=8.1.8=pyh707e725_0
   - coloredlogs=15.0.1=pyhd8ed1ab_4
   - cpython=3.9.23=py39hd8ed1ab_0
+  - cryptography=43.0.3=py39hb2b0753_0
   - distro=1.9.0=pyhd8ed1ab_1
   - dnspython=2.7.0=pyhff2d567_1
   - email-validator=2.2.0=pyhd8ed1ab_1
@@ -55,20 +58,21 @@ dependencies:
   - libabseil=20250512.1=cxx17_hfc00f1c_0
   - libblas=3.9.0=20_osx64_openblas
   - libcblas=3.9.0=20_osx64_openblas
-  - libcxx=21.1.2=h3d58e20_0
-  - libexpat=2.7.1=h21dd04a_0
-  - libffi=3.4.6=h281671d_1
-  - libgfortran=15.2.0=h306097a_1
-  - libgfortran5=15.2.0=h336fb69_1
+  - libcxx=21.1.8=h3d58e20_0
+  - libexpat=2.7.3=heffb93a_0
+  - libffi=3.5.2=h750e83c_0
+  - libgcc=15.2.0=h08519bb_15
+  - libgfortran=15.2.0=h7e5c614_15
+  - libgfortran5=15.2.0=hd16e46c_15
   - liblapack=3.9.0=20_osx64_openblas
   - libllvm11=11.1.0=h8fb7429_5
   - liblzma=5.8.1=hd471939_2
   - libopenblas=0.3.25=openmp_hfef2a42_0
-  - libprotobuf=6.31.1=h6e993e7_1
+  - libprotobuf=6.31.1=hcc66ac3_4
   - libuv=1.51.0=h58003a5_1
   - libzlib=1.3.1=hd23fc13_2
   - litellm=1.73.6=pyhd8ed1ab_0
-  - llvm-openmp=21.1.2=h472b3d1_3
+  - llvm-openmp=21.1.8=h472b3d1_0
   - llvmlite=0.39.1=py39had167e2_1
   - markdown-it-py=3.0.0=pyhd8ed1ab_1
   - markupsafe=3.0.2=py39hd18e689_1
@@ -83,7 +87,7 @@ dependencies:
   - onnx=1.18.0=np2py39h9df0071_1
   - onnxruntime=1.19.2=py39he9c89a5_0_cpu
   - openai=1.100.2=pyhd8ed1ab_0
-  - openssl=3.5.3=h230baf5_1
+  - openssl=3.6.0=h230baf5_0
   - packaging=25.0=pyh29332c3_1
   - pandas=1.1.5=py39h089d6f7_0
   - patsy=1.0.1=pyhd8ed1ab_1
@@ -131,7 +135,7 @@ dependencies:
   - typer-slim-standard=0.16.1=h810d63d_0
   - typing-extensions=4.14.1=h4440ef1_0
   - typing_extensions=4.14.1=pyhe01879c_0
-  - tzdata=2025b=h78e105d_0
+  - tzdata=2025c=hc9c84f9_1
   - urllib3=1.26.19=pyhd8ed1ab_0
   - uvicorn=0.29.0=py39h6e9494a_0
   - uvicorn-standard=0.29.0=h6e9494a_0
