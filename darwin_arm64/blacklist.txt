@@ -32,7 +32,6 @@ libiconv
 libsqlite
 readline
 tk
-pip
 pyarrow
 pyarrow-core
 pyarrow-hotfix

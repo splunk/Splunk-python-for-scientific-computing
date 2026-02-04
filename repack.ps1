@@ -116,10 +116,10 @@ if ($MODE -eq 0) {
      # Remove __pycache__
     Get-Childitem -Directory -Path "$PACK_TARGET" -Name "__pycache__" -Recurse -ErrorAction SilentlyContinue | ForEach-Object { Remove-Item -Recurse -Path "$PACK_TARGET\$_" -ErrorAction Ignore}
 
-    # Remove all tests folders except networkx's tests folder
+    # Remove all tests folders except networkx's and numpy's _core/test folder
     $script:TEST_DIRS = ("test", "tests")
     Get-ChildItem -Path "$PACK_TARGET" -Directory -Recurse  |
-        Where-Object { $_.FullName -inotmatch 'networkx'} |
+        Where-Object { $_.FullName -inotmatch 'networkx' -and $_.FullName -inotmatch 'numpy[\\/_]_core[\\/_]tests'} |
         Where-Object {"$TEST_DIRS".Contains($_.Name)} |
         ForEach-Object {Write-Output "Deleting  "$_.FullName;  Remove-Item -Recurse -Path $_.FullName -ErrorAction Ignore}
 

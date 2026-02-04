@@ -1,0 +1,8 @@
+# Miniconda information
+# See the latest of miniconda builds from https://repo.anaconda.com/miniconda/
+export MICROMAMBA_VERSION="2.0.8-0"
+export LINUX_64_SHA256="0905ea12f61d85964e6881b579db5291af290e8b666cdd0869828e1c1ba21487"
+export LINUX_AARCH64_SHA256="6a2f8d40ac3ed9a295c9b006a9fb6be8057c4821abd91fce8fe19d4c6696a760"
+export LINUX_PPC64LE_SHA256="4473b80c63a9cbd93a113b46ead38808030652bdf42cf087180977757da7b5a6"
+export DARWIN_64_SHA256="45aa40d1187c86834b590e9c20e3bac63bf83ff420cbda8eee85fd937e1b9f68"
+export DARWIN_ARM64_SHA256="901c547f66404b81095577532e8d9e7c69fe78ffac0b9ba980110f36e4cceffd"

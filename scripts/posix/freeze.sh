@@ -1,26 +1,31 @@
-# make a virtualenv with a shorter list of "primary" packages
-# the list does not contain secondary dependencies
-# after the virtualenv is made, we generate a complete list of
-# all packages for a particular platform type
+#!/bin/bash
+# Exports the current environment to environment.yml file
+# Creates a reproducible package list for the platform
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 source "$SCRIPT_DIR/prereq.sh"
 
 OUTPUT_PACKAGE_LIST_FILE="$PLATFORM_DIR/environment.yml"
 
-"$CONDA" env export -p "$VENV_BUILD_DIR" > "$OUTPUT_PACKAGE_LIST_FILE"
-# remove the last line in the newly generated environment.yml file, since it has
-# information specific to the build system, and it's not being used by conda
+echo "[INFO] Exporting environment to $OUTPUT_PACKAGE_LIST_FILE..."
+
+# Export current environment configuration
+"$MICROMAMBA" env export -p "$MAMBA_VENV_PREFIX" > "$OUTPUT_PACKAGE_LIST_FILE"
+
+# Remove the last line (contains build-system specific information)
 if [ "$OS" = "Darwin" ]; then
   sed -i '' -e '$ d' "$OUTPUT_PACKAGE_LIST_FILE"
 else
   sed -i '$ d' "$OUTPUT_PACKAGE_LIST_FILE"
 fi
-# Remove the path of the build dir from the end result environment.yml file
+
+# Clean up build directory paths from the exported file
 if [ "$OS" = "Darwin" ]; then
   sed -i '' -e "s/${PROJECT_DIR//\//\\/}\///" "$OUTPUT_PACKAGE_LIST_FILE"
 else
   sed -i "s/${PROJECT_DIR//\//\\/}\///" "$OUTPUT_PACKAGE_LIST_FILE"
 fi
 
+# Show differences if file already existed
+echo "[INFO] Environment file generated. Showing changes:"
 git diff "$OUTPUT_PACKAGE_LIST_FILE"

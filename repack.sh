@@ -153,7 +153,9 @@ if [[ $MODE -lt 5 ]]; then
         find "$PACK_TARGET" -xtype l -print0 | $XARGS -0 rm
         # remove all tests folders except networkx's tests folder
         PKG_INCLUDE_TESTS="$PACK_TARGET/*networkx*"
-        find "$PACK_TARGET" -type d -iname tests -not -path "$PKG_INCLUDE_TESTS" -print0 | $XARGS -0 rm -rf
+        PKG_INCLUDE_NUMPY="$PACK_TARGET/*numpy*"
+        PKG_INCLUDE_NUMPY_CORE="$PACK_TARGET/*numpy*/_core/test*"
+        find "$PACK_TARGET" -type d \( -iname tests -o -iname test \) -not -path "$PKG_INCLUDE_TESTS" -not -path "$PKG_INCLUDE_NUMPY_CORE" -not -path "$PKG_INCLUDE_NUMPY/tests" -print0 | $XARGS -0 rm -rf
 
         # Remove other unnecessary cruft
         rm -f "$PACK_TARGET"/bin/{sqlite3,tclsh8.5,wish8.5,xmlcatalog,xmllint,xsltproc,smtpd.py,xml2-config,xslt-config,c_rehash}

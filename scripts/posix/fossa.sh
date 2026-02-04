@@ -7,8 +7,8 @@ is_set ARCH
 is_set FOSSA_API_KEY
 
 # FOSSA analyze
-echo $CONDA
-eval "$($CONDA shell.bash hook)"
+echo $MICROMAMBA
+eval "$($MICROMAMBA shell.bash hook)"
 conda activate "$VENV_BUILD_DIR"
 if ! command -v fossa &> /dev/null
 then

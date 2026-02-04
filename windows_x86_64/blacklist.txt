@@ -26,7 +26,6 @@ libgoogle-cloud-storage
 libgrpc
 libsqlite
 menuinst
-pip
 pyarrow
 pycparser
 pysocks

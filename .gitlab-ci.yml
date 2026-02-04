@@ -244,6 +244,8 @@ fossa-scan-windows:
   extends: .fossa-scan
   before_script:
     - $Env:Path+=";${WINDOWS_RUNNER_GIT_PATH}"
+    - choco install 7zip -y
+    - $Env:Path+=";${WINDOWS_RUNNER_7ZIP_PATH}"
     - choco install make
   timeout: 2 hour
   tags:

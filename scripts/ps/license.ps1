@@ -1,15 +1,47 @@
-$script:SCRIPT_DIR=$PSScriptRoot
+# Set script directory and load prerequisites
+$script:SCRIPT_DIR = $PSScriptRoot
 . $(Join-Path "$SCRIPT_DIR" "prereq.ps1")
 
-$script:BLACKLISTED_PACKAGES = Get-Content $(Join-Path $PLATFORM_DIR "blacklist.txt")
-$env:Path += ";$($MINICONDA_BUILD_DIR);$(Join-Path $MINICONDA_BUILD_DIR "Scripts");$(Join-Path $MINICONDA_BUILD_DIR "Library\bin")"
+# Set MICROMAMBA variable from MAMBA_EXE environment variable
+$MICROMAMBA = $Env:MAMBA_EXE
 
-# remove pip from final build because we don't need them
-# but we need them in `windows_x86_64/environment.yml` file for fossa to work
-& conda remove -p $VENV_BUILD_DIR -y --force pip
+# Verify MICROMAMBA is set and executable exists
+if ([string]::IsNullOrEmpty($MICROMAMBA)) {
+    Write-Error "MICROMAMBA variable is not set"
+    exit 1
+}
 
-$env:PLATFORM=$PLATFORM
-$env:BLACKLISTED_PACKAGES=$BLACKLISTED_PACKAGES
-$env:VENV_BUILD_DIR=$VENV_BUILD_DIR
-& $(Join-Path $MINICONDA_BUILD_DIR "python") $(Join-Path $PROJECT_DIR $(Join-Path "tools" "license.py"))
+if (-not (Test-Path $MICROMAMBA)) {
+    Write-Error "MICROMAMBA executable not found at: $MICROMAMBA"
+    exit 1
+}
+
+# Verify Python executable exists
+$PYTHON_EXE = Join-Path $VENV_BUILD_DIR "envs\psc\python.exe"
+if (-not (Test-Path $PYTHON_EXE)) {
+    Write-Error "Python executable not found at: $PYTHON_EXE"
+    exit 1
+}
+
+# Verify blacklist file exists
+$BLACKLIST_FILE = Join-Path $PLATFORM_DIR "blacklist.txt"
+
+# Load blacklisted packages from file and convert to space-separated string
+$script:BLACKLISTED_PACKAGES = (Get-Content $BLACKLIST_FILE) -join " "
+
+# Set environment variables for license generation script
+$env:PLATFORM = $PLATFORM
+$env:MICROMAMBA = $MICROMAMBA
+$env:BLACKLISTED_PACKAGES = $BLACKLISTED_PACKAGES
+$env:VENV_BUILD_DIR = Join-Path $VENV_BUILD_DIR "envs\psc"
+
+# Display paths for verification
+Write-Output "MICROMAMBA: $MICROMAMBA"
+Write-Output "Python Path: $PYTHON_EXE"
+Write-Output "Venv Build Dir: $($env:VENV_BUILD_DIR)"
+
+# Run the license generation Python script
+$LICENSE_SCRIPT = Join-Path $PROJECT_DIR "tools\license_mamba.py"
+& $PYTHON_EXE $LICENSE_SCRIPT
+
 Write-Output "`r`n[INFO] License file ${PLATFORM_DIR}/LICENSE updated"

@@ -33,7 +33,6 @@ libsqlite
 readline
 ncurses
 tk
-pip
 pyarrow
 pyarrow-core
 pyarrow-hotfix

@@ -50,10 +50,10 @@ export BUILD ?= $(VERSION_BUILD)
 .PHONY: analyze build clean dist fossa freeze license publish linkapp test setup
 COMMON_DEPS := $(SCRIPT_DIR)/prereq.$(SCRIPT_EXT) Makefile
 
-build/miniconda:
-	$(SCRIPT_DIR)/install_miniconda.$(SCRIPT_EXT)
+build/micromamba:
+	$(SCRIPT_DIR)/install_base.$(SCRIPT_EXT)
 
-build/venv: build/miniconda $(ENVIRONMENT_FILE) $(BLACKLIST) $(SCRIPT_DIR)/venv.$(SCRIPT_EXT) $(COMMON_DEPS)
+build/venv: build/micromamba $(ENVIRONMENT_FILE) $(BLACKLIST) $(SCRIPT_DIR)/venv.$(SCRIPT_EXT) $(COMMON_DEPS)
 	$(SCRIPT_DIR)/venv.$(SCRIPT_EXT)
 
 $(FREEZE_TARGET): build/venv $(SCRIPT_DIR)/freeze.$(SCRIPT_EXT) $(COMMON_DEPS)
@@ -61,10 +61,11 @@ $(FREEZE_TARGET): build/venv $(SCRIPT_DIR)/freeze.$(SCRIPT_EXT) $(COMMON_DEPS)
 
 freeze: $(FREEZE_TARGET)
 
-build/miniconda-repack.tar.gz: build/venv $(SCRIPT_DIR)/conda_pack.$(SCRIPT_EXT) $(COMMON_DEPS)
-	$(SCRIPT_DIR)/conda_pack.$(SCRIPT_EXT)
+build/micromamba-repack.tar.gz: build/venv $(SCRIPT_DIR)/mamba_pack.$(SCRIPT_EXT) $(COMMON_DEPS)
+	$(SCRIPT_DIR)/mamba_pack.$(SCRIPT_EXT)
 
-build/$(BUILD_TARGET): build/miniconda-repack.tar.gz $(SCRIPT_DIR)/build.$(SCRIPT_EXT) $(BUILD_DEP) $(COMMON_DEPS)
+build/$(BUILD_TARGET): build/micromamba-repack.tar.gz $(SCRIPT_DIR)/build.$(SCRIPT_EXT) $(COMMON_DEPS)
+	@echo "Building $(BUILD_TARGET)..."
 	$(SCRIPT_DIR)/build.$(SCRIPT_EXT)
 
 build: build/$(BUILD_TARGET)
@@ -78,9 +79,6 @@ analyze: build/venv $(SCRIPT_DIR)/analyze.$(SCRIPT_EXT) $(COMMON_DEPS)
 	$(SCRIPT_DIR)/analyze.$(SCRIPT_EXT)
 
 fossa: build/venv $(SCRIPT_DIR)/fossa.$(SCRIPT_EXT) $(COMMON_DEPS)
-	$(SCRIPT_DIR)/fossa.$(SCRIPT_EXT)
-
-fossa_ci:
 	$(SCRIPT_DIR)/fossa.$(SCRIPT_EXT)
 
 license: build/venv $(SCRIPT_DIR)/license.$(SCRIPT_EXT) tools/license.py $(COMMON_DEPS)

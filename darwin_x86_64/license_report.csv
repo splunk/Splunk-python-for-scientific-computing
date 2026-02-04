@@ -1,145 +1,133 @@
 name,version,license,license_url,functionality,notes,dist_name,channel,build,build_number
-_openmp_mutex,4.5,BSD-3-Clause,https://github.com/conda-forge/_openmp_mutex-feedstock/blob/master/LICENSE.txt,meta package,,_openmp_mutex-4.5-7_kmp_llvm,conda-forge,7_kmp_llvm,7
-_python_abi3_support,1.0,MIT,,,,_python_abi3_support-1.0-hd8ed1ab_2,conda-forge,hd8ed1ab_2,2
+_openmp_mutex,4.5,BSD-3-Clause,https://github.com/conda-forge/_openmp_mutex-feedstock/blob/master/LICENSE.txt,meta package,,_openmp_mutex-4.5-7_kmp_llvm,conda-forge,4_kmp_llvm,4
+_python_abi3_support,1.0,MIT,,,,_python_abi3_support-1.0-hd8ed1ab_2,conda-forge,hd8ed1ab_0,0
 aiohappyeyeballs,2.6.1,PSF-2.0,https://github.com/aio-libs/aiohappyeyeballs/blob/main/LICENSE,Helps connects using Happy Eyeballs with pre-resolved addrinfo,,aiohappyeyeballs-2.6.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-aiohttp,3.12.15,MIT AND Apache-2.0,https://anaconda.org/anaconda/aiohttp,Enables asynchronous HTTP client and server.,,aiohttp-3.12.15-py39h2753485_0,conda-forge,py39h2753485_0,0
+aiohttp,3.13.3,MIT AND Apache-2.0,https://anaconda.org/anaconda/aiohttp,Enables asynchronous HTTP client and server.,,aiohttp-3.13.3-py313h537e735_0,conda-forge,pyhf64b827_0,0
 aiosignal,1.4.0,Apache-2.0,https://github.com/aio-libs/aiosignal/blob/master/LICENSE,Manages asynchronous signals for event handling.,,aiosignal-1.4.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-annotated-types,0.7.0,MIT,https://github.com/annotated-types/annotated-types/blob/main/LICENSE,Provides runtime support for Python type annotations.,,annotated-types-0.7.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-anyio,4.10.0,MIT,https://github.com/agronholm/anyio/blob/master/LICENSE,Provides a unified asynchronous API for different I/O backends.,,anyio-4.10.0-pyhe01879c_0,conda-forge,pyhe01879c_0,0
-async-timeout,5.0.1,Apache-2.0,https://github.com/aio-libs/async-timeout/blob/master/LICENSE,Sets timeout for asynchronous operations.,,async-timeout-5.0.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-attrs,25.3.0,MIT,https://github.com/python-attrs/attrs/blob/main/LICENSE,Simplifies creating classes with attributes.,,attrs-25.3.0-pyh71513ae_0,conda-forge,pyh71513ae_0,0
+annotated-doc,0.0.4,MIT,,,,annotated-doc-0.0.4-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+annotated-types,0.7.0,MIT,https://github.com/annotated-types/annotated-types/blob/main/LICENSE,Provides runtime support for Python type annotations.,,annotated-types-0.7.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_0,0
+anyio,4.12.1,MIT,https://github.com/agronholm/anyio/blob/master/LICENSE,Provides a unified asynchronous API for different I/O backends.,,anyio-4.12.1-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+attrs,25.4.0,MIT,https://github.com/python-attrs/attrs/blob/main/LICENSE,Simplifies creating classes with attributes.,,attrs-25.4.0-pyhcf101f3_1,conda-forge,pyh71513ae_0,0
+backports.zstd,1.3.0,BSD-3-Clause AND MIT AND EPL-2.0,,,,backports.zstd-1.3.0-py313h591e92b_0,conda-forge,py314h680f03e_0,0
 boto3,1.36.0,Apache-2.0,https://github.com/boto/boto3/blob/develop/LICENSE,Amazon Web Services SDK for Python,,boto3-1.36.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-botocore,1.36.0,Apache-2.0,https://github.com/boto/botocore/blob/develop/LICENSE.txt,Low-level data driven core of boto3,,botocore-1.36.0-pyge38_1234567_0,conda-forge,pyge38_1234567_0,0
+botocore,1.36.0,Apache-2.0,https://github.com/boto/botocore/blob/develop/LICENSE.txt,Low-level data driven core of boto3,,botocore-1.36.0-pyge310_1234567_0,conda-forge,pyge310_1234567_0,0
 bottle,0.12.23,MIT,https://bottlepy.org/docs/dev/,a fast simple and lightweight WSGI micro web-framework for Python,,bottle-0.12.23-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-brotli-python,1.1.0,MIT,https://github.com/google/brotli?tab=MIT-1-ov-file#readme,Brotli compression format,,brotli-python-1.1.0-py39hdf37715_3,conda-forge,py39hdf37715_3,3
-bzip2,1.0.8,bzip2-1.0.6,https://gitlab.com/bzip2/bzip2/-/blob/master/COPYING,high quality data compressor,,bzip2-1.0.8-h500dc9f_8,conda-forge,h500dc9f_8,8
-ca-certificates,2026.1.4,ISC,https://github.com/conda-forge/ca-certificates-feedstock,Certificates for use with other packages,,ca-certificates-2026.1.4-hbd8a1cb_0,conda-forge,hbd8a1cb_0,0
-certifi,2025.8.3,ISC,https://github.com/certifi/python-certifi/blob/master/LICENSE,Mozilla’s collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts,,certifi-2025.8.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-cffi,1.16.0,MIT,,,,cffi-1.16.0-py39h18ef598_0,conda-forge,py39h18ef598_0,0
-chardet,3.0.4,LGPL-2.1-only,https://github.com/chardet/chardet?tab=LGPL-2.1-1-ov-file#readme,Universal character encoding detector,,chardet-3.0.4-py39h2c36a5b_1008,conda-forge,py39h2c36a5b_1008,1008
-click,8.1.8,BSD-3-Clause,https://anaconda.org/anaconda/click,Simplifies the creation of command-line interfaces.,,click-8.1.8-pyh707e725_0,conda-forge,pyh707e725_0,0
+brotli-python,1.2.0,MIT,https://github.com/google/brotli?tab=MIT-1-ov-file#readme,Brotli compression format,,brotli-python-1.2.0-py313h8d69aa9_1,conda-forge,py310h67da81d_0,0
+bzip2,1.0.8,bzip2-1.0.6,https://gitlab.com/bzip2/bzip2/-/blob/master/COPYING,high quality data compressor,,bzip2-1.0.8-h500dc9f_8,conda-forge,h10d778d_5,5
+ca-certificates,2026.1.4,ISC,https://github.com/conda-forge/ca-certificates-feedstock,Certificates for use with other packages,,ca-certificates-2026.1.4-hbd8a1cb_0,conda-forge,h4c7d964_0,0
+certifi,2026.1.4,ISC,https://github.com/certifi/python-certifi/blob/master/LICENSE,Mozilla’s collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts,,certifi-2026.1.4-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+cffi,1.17.1,MIT,,,,cffi-1.17.1-py313h49682b3_0,conda-forge,py310h137ab04_1,1
+chardet,3.0.4,LGPL2,https://github.com/chardet/chardet?tab=LGPL-2.1-1-ov-file#readme,Universal character encoding detector,,chardet-3.0.4-py_1,conda-forge,py_1,1
+click,8.3.1,BSD-3-Clause,https://anaconda.org/anaconda/click,Simplifies the creation of command-line interfaces.,,click-8.3.1-pyh8f84b5b_1,conda-forge,pyh707e725_0,0
 coloredlogs,15.0.1,MIT,https://github.com/xolox/python-coloredlogs/blob/master/LICENSE.txt,Enables colored terminal output for Python's logging module,,coloredlogs-15.0.1-pyhd8ed1ab_4,conda-forge,pyhd8ed1ab_4,4
-cpython,3.9.23,Python-2.0,https://github.com/python/cpython/blob/main/LICENSE,Python reference implementation of the Python language.,,cpython-3.9.23-py39hd8ed1ab_0,conda-forge,py39hd8ed1ab_0,0
-cryptography,43.0.3,Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT,,,,cryptography-43.0.3-py39hb2b0753_0,conda-forge,py39hb2b0753_0,0
-distro,1.9.0,Apache-2.0,https://github.com/python-distro/distro/blob/master/LICENSE,Retrieves Linux distribution information.,,distro-1.9.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-dnspython,2.7.0,ISC,,,,dnspython-2.7.0-pyhff2d567_1,conda-forge,pyhff2d567_1,1
-email-validator,2.2.0,Unlicense,,,,email-validator-2.2.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-email_validator,2.2.0,Unlicense,,,,email_validator-2.2.0-hd8ed1ab_1,conda-forge,hd8ed1ab_1,1
-exceptiongroup,1.3.0,MIT and PSF-2.0,https://github.com/agronholm/exceptiongroup/blob/main/LICENSE,Helps manage multiple exceptions in Python.,,exceptiongroup-1.3.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-fastapi,0.116.1,MIT,,,,fastapi-0.116.1-h26c32bb_1,conda-forge,h26c32bb_1,1
-fastapi-cli,0.0.8,MIT,,,,fastapi-cli-0.0.8-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-fastapi-core,0.116.1,MIT,,,,fastapi-core-0.116.1-pyhe01879c_1,conda-forge,pyhe01879c_1,1
-fastdtw,0.3.4,MIT,https://github.com/slaypni/fastdtw?tab=MIT-1-ov-file#readme,Dynamic Time Warping (DTW) algorithm with an O(N) time and memory complexity,,fastdtw-0.3.4-py39hbd905a8_4,conda-forge,py39hbd905a8_4,4
-filelock,3.19.1,Unlicense,https://github.com/tox-dev/py-filelock/blob/main/LICENSE,A platform independent file lock,,filelock-3.19.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-frozenlist,1.7.0,Apache-2.0,https://github.com/aio-libs/frozenlist?tab=Apache-2.0-1-ov-file#readme,A list-like structure which implements collections.abc.MutableSequence,,frozenlist-1.7.0-py39h262b9f6_0,conda-forge,py39h262b9f6_0,0
-fsspec,2025.7.0,BSD-3-Clause,https://github.com/fsspec/filesystem_spec/blob/master/LICENSE,A specification for pythonic filesystems,,fsspec-2025.7.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-gmp,6.3.0,GPL-2.0-or-later OR LGPL-3.0-or-later,https://github.com/ncw/gmp/blob/master/LICENSE,The GNU multiprecision library,,gmp-6.3.0-hf036a51_2,conda-forge,hf036a51_2,2
-gmpy2,2.2.1,LGPL-3.0-or-later,https://github.com/aleaxit/gmpy/blob/master/COPYING.LESSER,GMP/MPIR,MPFR,gmpy2-2.2.1-py39h127c8af_0,conda-forge,py39h127c8af_0,0
-h11,0.16.0,MIT,https://github.com/python-hyper/h11/blob/master/LICENSE.txt,Implements HTTP/1.1 protocol in Python.,,h11-0.16.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-h2,4.2.0,MIT,https://github.com/python-hyper/h2/blob/master/LICENSE,Implements HTTP/2 protocol in Python.,,h2-4.2.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-hf-xet,1.1.8,Apache-2.0,,,,hf-xet-1.1.8-py39h4f44fc4_0,conda-forge,py39h4f44fc4_0,0
+cpython,3.13.11,Python-2.0,https://github.com/python/cpython/blob/main/LICENSE,Python reference implementation of the Python language.,,cpython-3.13.11-py313hd8ed1ab_101,conda-forge,py313hd8ed1ab_0,0
+cryptography,46.0.3,Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT,,,,cryptography-46.0.3-py313h36c3d76_1,conda-forge,py310h45ec8ab_1,1
+distro,1.9.0,Apache-2.0,https://github.com/python-distro/distro/blob/master/LICENSE,Retrieves Linux distribution information.,,distro-1.9.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_0,0
+docker,7.1.0,,,,,docker-7.1.0-pypi_0,pypi,pypi_0,0
+exceptiongroup,1.3.1,MIT and PSF-2.0,https://github.com/agronholm/exceptiongroup/blob/main/LICENSE,Helps manage multiple exceptions in Python.,,exceptiongroup-1.3.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+fastapi-core,0.121.3,MIT,,,,fastapi-core-0.121.3-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+fastuuid,0.14.0,BSD-3-Clause,,,,fastuuid-0.14.0-py313hce20172_0,conda-forge,py311hb4188ea_0,0
+filelock,3.20.3,Unlicense,https://github.com/tox-dev/py-filelock/blob/main/LICENSE,A platform independent file lock,,filelock-3.20.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+frozenlist,1.7.0,Apache-2.0,https://github.com/aio-libs/frozenlist?tab=Apache-2.0-1-ov-file#readme,A list-like structure which implements collections.abc.MutableSequence,,frozenlist-1.7.0-py313haf29b43_0,conda-forge,pyhf298e5d_0,0
+fsspec,2026.1.0,BSD-3-Clause,https://github.com/fsspec/filesystem_spec/blob/master/LICENSE,A specification for pythonic filesystems,,fsspec-2026.1.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+future,0.18.3,MIT,https://github.com/PythonCharmers/python-future,Missing compatibility layer between Python 2 and Python 3,,future-0.18.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+gmp,6.3.0,GPL-2.0-or-later OR LGPL-3.0-or-later,https://github.com/ncw/gmp/blob/master/LICENSE,The GNU multiprecision library,,gmp-6.3.0-hf036a51_2,conda-forge,h73e2aa4_1,1
+gmpy2,2.2.1,LGPL-3.0-or-later,https://github.com/aleaxit/gmpy/blob/master/COPYING.LESSER,GMP/MPIR,MPFR,gmpy2-2.2.1-py313ha985355_2,conda-forge,py310h18a5c99_2,2
+h11,0.16.0,MIT,https://github.com/python-hyper/h11/blob/master/LICENSE.txt,Implements HTTP/1.1 protocol in Python.,,h11-0.16.0-pyhcf101f3_1,conda-forge,pyhcf101f3_1,1
+h2,4.3.0,MIT,https://github.com/python-hyper/h2/blob/master/LICENSE,Implements HTTP/2 protocol in Python.,,h2-4.3.0-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+hf-xet,1.2.1,Apache-2.0,,,,hf-xet-1.2.1-py310hec24068_0,conda-forge,py310hec24068_0,0
 hpack,4.1.0,MIT,https://github.com/python-hyper/hpack/blob/master/LICENSE,Implements HPACK compression for HTTP/2 headers.,,hpack-4.1.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 httpcore,1.0.9,BSD-3-Clause,https://github.com/encode/httpcore/blob/master/LICENSE.md,Low-level HTTP networking for Python HTTPX.,,httpcore-1.0.9-pyh29332c3_0,conda-forge,pyh29332c3_0,0
-httptools,0.6.4,MIT,,,,httptools-0.6.4-py39h80efdc8_0,conda-forge,py39h80efdc8_0,0
 httpx,0.28.1,BSD-3-Clause,https://github.com/encode/httpx/blob/master/LICENSE.md,Asynchronous HTTP client for Python with HTTP/2 support.,,httpx-0.28.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-huggingface_hub,0.34.4,Apache-2.0,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,,huggingface_hub-0.34.4-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
+huggingface_hub,1.3.7,Apache-2.0,https://github.com/huggingface/huggingface_hub/blob/main/LICENSE,dependency of transformers library,,huggingface_hub-1.3.7-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
 humanfriendly,10.0,MIT,https://github.com/xolox/python-humanfriendly/blob/master/LICENSE.txt,Human friendly output for text interfaces using Python,,humanfriendly-10.0-pyh707e725_8,conda-forge,pyh707e725_8,8
 hyperframe,6.1.0,MIT,https://github.com/python-hyper/hyperframe/blob/master/LICENSE,Handles framing and serialization for HTTP/2.,,hyperframe-6.1.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-idna,3.10,BSD-3-Clause,https://github.com/kjd/idna,Internationalized Domain Names in Applications (IDNA),,idna-3.10-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-jinja2,3.1.6,BSD-3-Clause,https://github.com/pallets/jinja/,Jinja is a fast,expressive,jinja2-3.1.6-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-jiter,0.10.0,MIT,https://github.com/pydantic/jiter/blob/main/LICENSE,Simplifies iterative functions with caching.,,jiter-0.10.0-py39hd8827cb_0,conda-forge,py39hd8827cb_0,0
-jmespath,1.0.1,MIT,https://github.com/jmespath/jmespath.py,Allows you to declaratively specify how to extract elements from a JSON document,,jmespath-1.0.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-joblib,1.5.1,BSD-3-Clause,https://github.com/joblib/joblib/blob/master/LICENSE.txt,Python function as pipeline jobs,,joblib-1.5.1-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-jsonschema,4.25.1,MIT,https://github.com/python-jsonschema/jsonschema/blob/main/json/LICENSE,Validates JSON data against schemas.,,jsonschema-4.25.1-pyhe01879c_0,conda-forge,pyhe01879c_0,0
-jsonschema-specifications,2025.4.1,MIT,https://pypi.org/project/jsonschema-specifications/,Contains specifications for JSON Schema draft versions.,,jsonschema-specifications-2025.4.1-pyh29332c3_0,conda-forge,pyh29332c3_0,0
+idna,3.11,BSD-3-Clause,https://github.com/kjd/idna,Internationalized Domain Names in Applications (IDNA),,idna-3.11-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+jinja2,3.1.6,BSD-3-Clause,https://github.com/pallets/jinja/,Jinja is a fast,expressive,jinja2-3.1.6-pyhcf101f3_1,conda-forge,pyhcf101f3_1,1
+jiter,0.13.0,MIT,https://github.com/pydantic/jiter/blob/main/LICENSE,Simplifies iterative functions with caching.,,jiter-0.13.0-py313h09d8f74_0,conda-forge,py310he3ce05d_0,0
+jmespath,1.1.0,MIT,https://github.com/jmespath/jmespath.py,Allows you to declaratively specify how to extract elements from a JSON document,,jmespath-1.1.0-pyhcf101f3_1,conda-forge,pyhcf101f3_1,1
+joblib,1.5.3,BSD-3-Clause,https://github.com/joblib/joblib/blob/master/LICENSE.txt,Python function as pipeline jobs,,joblib-1.5.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+jsonschema,4.26.0,MIT,https://github.com/python-jsonschema/jsonschema/blob/main/json/LICENSE,Validates JSON data against schemas.,,jsonschema-4.26.0-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+jsonschema-specifications,2025.9.1,MIT,https://pypi.org/project/jsonschema-specifications/,Contains specifications for JSON Schema draft versions.,,jsonschema-specifications-2025.9.1-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+kubernetes,35.0.0,,,,,kubernetes-35.0.0-pypi_0,pypi,pypi_0,0
 libabseil,20250512.1,Apache-2.0,https://github.com/abseil/abseil-cpp?tab=Apache-2.0-1-ov-file,The repository contains the Abseil C++ library code,,libabseil-20250512.1-cxx17_hfc00f1c_0,conda-forge,cxx17_hfc00f1c_0,0
-libblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libblas-3.9.0-20_osx64_openblas,conda-forge,20_osx64_openblas,20
-libcblas,3.9.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libcblas-3.9.0-20_osx64_openblas,conda-forge,20_osx64_openblas,20
-libcxx,21.1.8,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,,libcxx-21.1.8-h3d58e20_0,conda-forge,h3d58e20_0,0
+libblas,3.11.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libblas-3.11.0-5_he492b99_openblas,conda-forge,0_h047f892_accelerate,0
+libcblas,3.11.0,BSD-3-Clause,http://www.netlib.org/blas/#_licensing,Linear Algebra PACKage,,libcblas-3.11.0-5_h9b27e0a_openblas,conda-forge,0_h9b27e0a_openblas,0
+libcxx,21.1.8,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM C++ standard library,,libcxx-21.1.8-h3d58e20_1,conda-forge,h3d58e20_0,0
 libexpat,2.7.3,MIT,,,,libexpat-2.7.3-heffb93a_0,conda-forge,heffb93a_0,0
-libffi,3.5.2,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,,libffi-3.5.2-h750e83c_0,conda-forge,h750e83c_0,0
-libgcc,15.2.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GCC low-level runtime library,,libgcc-15.2.0-h08519bb_15,conda-forge,h08519bb_15,15
-libgfortran,15.2.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran-15.2.0-h7e5c614_15,conda-forge,h7e5c614_15,15
-libgfortran5,15.2.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran5-15.2.0-hd16e46c_15,conda-forge,hd16e46c_15,15
-liblapack,3.9.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapack-3.9.0-20_osx64_openblas,conda-forge,20_osx64_openblas,20
-libllvm11,11.1.0,Apache-2.0 WITH LLVM-exception,https://github.com/llvm-mirror/llvm?tab=License-1-ov-file#readme,Development headers and libraries for LLVM,,libllvm11-11.1.0-h8fb7429_5,conda-forge,h8fb7429_5,5
-liblzma,5.8.1,0BSD,https://anaconda.org/conda-forge/liblzma,Provides compression/decompression via the LZMA algorithm.,,liblzma-5.8.1-hd471939_2,conda-forge,hd471939_2,2
-libopenblas,0.3.25,BSD-3-Clause,https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE,An optimized BLAS library based on GotoBLAS2 1.13 BSD version,,libopenblas-0.3.25-openmp_hfef2a42_0,conda-forge,openmp_hfef2a42_0,0
-libprotobuf,6.31.1,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc,the protobuf compiler,libprotobuf-6.31.1-hcc66ac3_4,conda-forge,hcc66ac3_4,4
-libuv,1.51.0,MIT,https://github.com/libuv/libuv/blob/v1.x/LICENSE,Cross-platform asynchronous I/O,,libuv-1.51.0-h58003a5_1,conda-forge,h58003a5_1,1
-libzlib,1.3.1,Zlib,http://zlib.net/zlib_license.html,compression library,dependency of python,libzlib-1.3.1-hd23fc13_2,conda-forge,hd23fc13_2,2
-litellm,1.73.6,MIT,https://github.com/BerriAI/litellm/blob/main/LICENSE,Implements lightweight language models for inference.,,litellm-1.73.6-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+libffi,3.5.2,MIT,https://github.com/libffi/libffi/blob/master/LICENSE,A Portable Foreign Function Interface Library,,libffi-3.5.2-hd1f9c09_0,conda-forge,h750e83c_0,0
+libgcc,15.2.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,The GCC low-level runtime library,,libgcc-15.2.0-h08519bb_15,conda-forge,h08519bb_12,12
+libgfortran,15.2.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran-15.2.0-h7e5c614_15,conda-forge,h306097a_1,1
+libgfortran5,15.2.0,GPL-3.0-only WITH GCC-exception-3.1,http://www.gnu.org/licenses/gpl|https://www.gnu.org/licenses/gcc-exception-3.1.en.html,Fortran runtime library,,libgfortran5-15.2.0-hd16e46c_15,conda-forge,h336fb69_1,1
+libhwloc,2.12.2,BSD-3-Clause,,,,libhwloc-2.12.2-default_h273dbb7_1000,conda-forge,default_h273dbb7_1000,1000
+liblapack,3.11.0,BSD-3-Clause,https://netlib.org/lapack/LICENSE.txt,Linear Algebra PACKage,,liblapack-3.11.0-5_h859234e_openblas,conda-forge,0_h859234e_openblas,0
+liblzma,5.8.2,0BSD,https://anaconda.org/conda-forge/liblzma,Provides compression/decompression via the LZMA algorithm.,,liblzma-5.8.2-h11316ed_0,conda-forge,h11316ed_0,0
+libmpdec,4.0.0,BSD-2-Clause,,,,libmpdec-4.0.0-hf3981d6_1,conda-forge,h6e16a3a_0,0
+libopenblas,0.3.30,BSD-3-Clause,https://github.com/xianyi/OpenBLAS/blob/develop/LICENSE,An optimized BLAS library based on GotoBLAS2 1.13 BSD version,,libopenblas-0.3.30-openmp_h6006d49_4,conda-forge,openmp_h6006d49_2,2
+libprotobuf,6.31.1,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format. C++ Libraries and protoc,the protobuf compiler,libprotobuf-6.31.1-hcc66ac3_4,conda-forge,h03562ea_2,2
+libxml2,2.15.1,MIT,https://gitlab.gnome.org/GNOME/libxml2/,The XML C parser and toolkit of Gnome,,libxml2-2.15.1-h745d5cb_1,conda-forge,h23bb396_0,0
+libxml2-16,2.15.1,MIT,,,,libxml2-16-2.15.1-hd57b93d_1,conda-forge,h0ad03eb_0,0
+libzlib,1.3.1,Zlib,http://zlib.net/zlib_license.html,compression library,dependency of python,libzlib-1.3.1-hd23fc13_2,conda-forge,h87427d6_1,1
+litellm,1.80.0,MIT,https://github.com/BerriAI/litellm/blob/main/LICENSE,Implements lightweight language models for inference.,,litellm-1.80.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_0,0
 llvm-openmp,21.1.8,Apache-2.0 WITH LLVM-exception,https://llvm.org/docs/DeveloperPolicy.html#license,LLVM openmp runtime,,llvm-openmp-21.1.8-h472b3d1_0,conda-forge,h472b3d1_0,0
-llvmlite,0.39.1,BSD-2-Clause,https://github.com/numba/llvmlite/blob/main/LICENSE,A lightweight LLVM python binding for writing JIT compilers,,llvmlite-0.39.1-py39had167e2_1,conda-forge,py39had167e2_1,1
-markdown-it-py,3.0.0,MIT,,,,markdown-it-py-3.0.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-markupsafe,3.0.2,BSD-3-Clause,https://github.com/pallets/markupsafe,Safely add untrusted strings to HTML/XML markup.,,markupsafe-3.0.2-py39hd18e689_1,conda-forge,py39hd18e689_1,1
-mdurl,0.1.2,MIT,,,,mdurl-0.1.2-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-mpc,1.3.1,LGPL-3.0-or-later,https://gitlab.inria.fr/mpc/mpc/-/blob/master/COPYING.LESSER,GNU C library for arithmetic of complex numbers with arbitrarily high precision and correct rounding,,mpc-1.3.1-h9d8efa1_1,conda-forge,h9d8efa1_1,1
-mpfr,4.2.1,LGPL-3.0-only,https://gitlab.inria.fr/mpfr/mpfr/-/blob/master/COPYING,a C library for multiple-precision floating-point computations with correct rounding,,mpfr-4.2.1-haed47dc_3,conda-forge,haed47dc_3,3
-mpmath,1.3.0,BSD-3-Clause,https://github.com/mpmath/mpmath/blob/master/LICENSE,A Python library for arbitrary-precision floating-point arithmetic,,mpmath-1.3.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-multidict,6.6.3,Apache-2.0,https://github.com/aio-libs/multidict?tab=License-1-ov-file#readme,multidict implementation,,multidict-6.6.3-py39h781ac47_0,conda-forge,py39h781ac47_0,0
+llvmlite,0.46.0,BSD-2-Clause,https://github.com/numba/llvmlite/blob/main/LICENSE,A lightweight LLVM python binding for writing JIT compilers,,llvmlite-0.46.0-py313h590e1ab_0,conda-forge,py310hd43b3a3_0,0
+madoka,0.7.2.1,BSD-3-Clause,,,,madoka-0.7.2.1-py313h252b9d7_1,conda-forge,py310h3ace970_1,1
+markupsafe,3.0.3,BSD-3-Clause,https://github.com/pallets/markupsafe,Safely add untrusted strings to HTML/XML markup.,,markupsafe-3.0.3-py313h0f4d31d_0,conda-forge,pyh7db6752_0,0
+mpc,1.3.1,LGPL-3.0-or-later,https://gitlab.inria.fr/mpc/mpc/-/blob/master/COPYING.LESSER,GNU C library for arithmetic of complex numbers with arbitrarily high precision and correct rounding,,mpc-1.3.1-h9d8efa1_1,conda-forge,h81bd1dd_0,0
+mpfr,4.2.1,LGPL-3.0-only,https://gitlab.inria.fr/mpfr/mpfr/-/blob/master/COPYING,a C library for multiple-precision floating-point computations with correct rounding,,mpfr-4.2.1-haed47dc_3,conda-forge,h0c69b56_0,0
+mpmath,1.3.0,BSD-3-Clause,https://github.com/mpmath/mpmath/blob/master/LICENSE,A Python library for arbitrary-precision floating-point arithmetic,,mpmath-1.3.0-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_0,0
+multidict,6.7.0,Apache-2.0,https://github.com/aio-libs/multidict?tab=License-1-ov-file#readme,multidict implementation,,multidict-6.7.0-py313h5d7b66b_0,conda-forge,pyh62beb40_0,0
 networkx,3.0,BSD-3-Clause,https://github.com/networkx/networkx/blob/master/LICENSE.txt,Python package for creating and manipulating complex networks,,networkx-3.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-numba,0.56.4,BSD-2-Clause,https://github.com/numba/numba?tab=BSD-2-Clause-1-ov-file#readme,NumPy aware dynamic Python compiler using LLVM,,numba-0.56.4-py39h6e2ba77_1,conda-forge,py39h6e2ba77_1,1
-numpy,1.23.0,BSD-3-Clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,,numpy-1.23.0-py39hda39a74_0,conda-forge,py39hda39a74_0,0
-onnx,1.18.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.18.0-np2py39h9df0071_1,conda-forge,np2py39h9df0071_1,1
-onnxruntime,1.19.2,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform,high performance ML inferencing and training accelerator,onnxruntime-1.19.2-py39he9c89a5_0_cpu,conda-forge,py39he9c89a5_0_cpu,0
-openai,1.100.2,MIT,https://github.com/openai/openai-python/blob/main/LICENSE,Provides access to OpenAI APIs and models.,,openai-1.100.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-openssl,3.6.0,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.6.0-h230baf5_0,conda-forge,h230baf5_0,0
-packaging,25.0,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-25.0-pyh29332c3_1,conda-forge,pyh29332c3_1,1
-pandas,1.1.5,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-1.1.5-py39h089d6f7_0,conda-forge,py39h089d6f7_0,0
-patsy,1.0.1,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-1.0.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-platformdirs,4.3.8,MIT,https://github.com/platformdirs/platformdirs?tab=MIT-1-ov-file#readme,a tool to help you choose an appropriate directory name,,platformdirs-4.3.8-pyhe01879c_0,conda-forge,pyhe01879c_0,0
-pooch,1.8.2,BSD-3-Clause,https://github.com/fatiando/pooch,A friend to fetch your data files,,pooch-1.8.2-pyhd8ed1ab_3,conda-forge,pyhd8ed1ab_3,3
-propcache,0.3.1,Apache-2.0,https://github.com/aio-libs/propcache/blob/master/LICENSE,Implements object caching for Python properties.,,propcache-0.3.1-py39hd18e689_0,conda-forge,py39hd18e689_0,0
-protobuf,6.31.1,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format,,protobuf-6.31.1-py39hd3b17bb_0,conda-forge,py39hd3b17bb_0,0
-psutil,5.8.0,BSD-3-Clause,https://github.com/giampaolo/psutil/blob/master/LICENSE,process manipuation,,psutil-5.8.0-py39h89e85a6_2,conda-forge,py39h89e85a6_2,2
+numba,0.63.1,BSD-2-Clause,https://github.com/numba/numba?tab=BSD-2-Clause-1-ov-file#readme,NumPy aware dynamic Python compiler using LLVM,,numba-0.63.1-py313hd3f9b42_0,conda-forge,py310hce29faf_0,0
+numpy,2.2.6,BSD-3-Clause,https://github.com/numpy/numpy/blob/master/LICENSE.txt,The fundamental package for scientific computing with Python,,numpy-2.2.6-py313hc518a0f_0,conda-forge,py310h07c5b4d_0,0
+onnx,1.18.0,Apache-2.0,https://github.com/onnx/onnx/blob/main/LICENSE,Open Neural Network Exchange library,,onnx-1.18.0-np2py313hcea52c5_2,conda-forge,np20py310hc144977_0,0
+onnxruntime,1.22.0,MIT AND BSL-1.0,https://github.com/microsoft/onnxruntime/blob/master/LICENSE,cross-platform,high performance ML inferencing and training accelerator,onnxruntime-1.22.0-py313h7bddbbd_0_cpu,conda-forge,py310h0c45b29_0_cpu,0
+openai,2.16.0,MIT,https://github.com/openai/openai-python/blob/main/LICENSE,Provides access to OpenAI APIs and models.,,openai-2.16.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+openssl,3.6.1,Apache-2.0,https://github.com/openssl/openssl/blob/master/LICENSE.txt,ssl library,,openssl-3.6.1-hb6871ef_1,conda-forge,hb6871ef_0,0
+packaging,26.0,Apache-2.0,https://github.com/pypa/packaging/blob/main/LICENSE|https://github.com/pypa/packaging/blob/main/LICENSE.APACHE|https://github.com/pypa/packaging/blob/main/LICENSE.BSD,Core utilities for Python packages,,packaging-26.0-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+pandas,2.2.3,BSD-3-Clause,https://github.com/pandas-dev/pandas/blob/master/LICENSE,data structures and data analysis tools,,pandas-2.2.3-py313h2e7108f_3,conda-forge,py310h96a9d13_3,3
+patsy,1.0.2,BSD-2-Clause AND PSF-2.0,https://github.com/pydata/patsy/blob/master/LICENSE.txt,library for describing statistical models and building design matrices,,patsy-1.0.2-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+pip,26.0,MIT,https://github.com/pypa/pip/blob/main/LICENSE.txt,Package management system in python,,pip-26.0-pyh145f28c_0,conda-forge,pyh145f28c_0,0
+pondpond,1.4.1,Apache-2.0,,,,pondpond-1.4.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
+propcache,0.3.1,Apache-2.0,https://github.com/aio-libs/propcache/blob/master/LICENSE,Implements object caching for Python properties.,,propcache-0.3.1-py313h717bdf5_0,conda-forge,pyhe1237c8_0,0
+protobuf,6.31.1,BSD-3-Clause,https://github.com/protocolbuffers/protobuf/blob/main/LICENSE,Google's data interchange format,,protobuf-6.31.1-py313hc85ccdc_2,conda-forge,py310h2fab0f3_1,1
+psutil,7.0.0,BSD-3-Clause,https://github.com/giampaolo/psutil/blob/master/LICENSE,process manipuation,,psutil-7.0.0-py313h585f44e_1,conda-forge,py310h1b7cace_1,1
 pydantic,2.10.5,MIT,https://github.com/samuelcolvin/pydantic/blob/master/LICENSE,Data validation and settings management,,pydantic-2.10.5-pyh3cfb1c2_0,conda-forge,pyh3cfb1c2_0,0
-pydantic-core,2.27.2,MIT,https://pypi.org/project/pydantic-core/,Core library for Pydantic data validation.,,pydantic-core-2.27.2-py39hd8827cb_0,conda-forge,py39hd8827cb_0,0
-pygments,2.19.2,BSD-2-Clause,,,,pygments-2.19.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-python,3.9.23,Python-2.0,https://docs.python.org/3/license.html,python runtime,,python-3.9.23-h8a7f3fd_0_cpython,conda-forge,h8a7f3fd_0_cpython,0
+pydantic-core,2.27.2,MIT,https://pypi.org/project/pydantic-core/,Core library for Pydantic data validation.,,pydantic-core-2.27.2-py313h3c055b9_0,conda-forge,py310h98870a7_0,0
+python,3.13.11,Python-2.0,https://docs.python.org/3/license.html,python runtime,,python-3.13.11-h17c18a5_101_cp313,conda-forge,h17c18a5_100_cp313,100
 python-dateutil,2.9.0.post0,Apache-2.0,https://github.com/dateutil/dateutil/blob/master/LICENSE,Extensions to the standard Python datetime module,,python-dateutil-2.9.0.post0-pyhe01879c_2,conda-forge,pyhe01879c_2,2
-python-dotenv,1.1.1,BSD-3-Clause,https://github.com/theskumar/python-dotenv/blob/main/LICENSE,Loads environment variables from .env files.,,python-dotenv-1.1.1-pyhe01879c_0,conda-forge,pyhe01879c_0,0
-python-flatbuffers,25.2.10,Apache-2.0,https://github.com/google/flatbuffers/blob/master/LICENSE.txt,library for use with the Flatbuffers serialization format,,python-flatbuffers-25.2.10-pyhbc23db3_0,conda-forge,pyhbc23db3_0,0
-python-gil,3.9.23,Python-2.0,,,,python-gil-3.9.23-hd8ed1ab_0,conda-forge,hd8ed1ab_0,0
-python-multipart,0.0.18,Apache-2.0,,,,python-multipart-0.0.18-pyhff2d567_1,conda-forge,pyhff2d567_1,1
-python_abi,3.9,BSD-3-Clause,https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt,Meta package to select python implementation,,python_abi-3.9-8_cp39,conda-forge,8_cp39,8
+python-dotenv,1.2.1,BSD-3-Clause,https://github.com/theskumar/python-dotenv/blob/main/LICENSE,Loads environment variables from .env files.,,python-dotenv-1.2.1-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+python-flatbuffers,25.9.23,Apache-2.0,https://github.com/google/flatbuffers/blob/master/LICENSE.txt,library for use with the Flatbuffers serialization format,,python-flatbuffers-25.9.23-pyh1e1bc0e_0,conda-forge,pyh1e1bc0e_0,0
+python-gil,3.13.11,Python-2.0,,,,python-gil-3.13.11-h4df99d1_101,conda-forge,h4df99d1_100,100
+python-tzdata,2025.3,Apache-2.0,,,,python-tzdata-2025.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+python_abi,3.13,BSD-3-Clause,https://github.com/conda-forge/python_abi-feedstock/blob/main/LICENSE.txt,Meta package to select python implementation,,python_abi-3.13-8_cp313,conda-forge,7_cp313,7
 pytz,2025.2,MIT,https://github.com/newvem/pytz/blob/master/LICENSE.txt,dependency,,pytz-2025.2-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-pyyaml,6.0.2,MIT,https://github.com/yaml/pyyaml/blob/master/LICENSE,YAML parser,,pyyaml-6.0.2-py39hd18e689_2,conda-forge,py39hd18e689_2,2
-referencing,0.36.2,MIT,https://anaconda.org/anaconda/referencing,Manages references in Python data structures.,,referencing-0.36.2-pyh29332c3_0,conda-forge,pyh29332c3_0,0
-regex,2025.7.34,Python-2.0,https://bitbucket.org/mrabarnett/mrab-regex/src/hg/LICENSE.txt,regular expression library,,regex-2025.7.34-py39hb1cfd32_0,conda-forge,py39hb1cfd32_0,0
-requests,2.32.5,Apache-2.0,https://github.com/psf/requests/blob/main/LICENSE,HTTP Library for Python,,requests-2.32.5-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-rich,14.1.0,MIT,,,,rich-14.1.0-pyhe01879c_0,conda-forge,pyhe01879c_0,0
-rich-toolkit,0.15.0,MIT,,,,rich-toolkit-0.15.0-pyhe01879c_0,conda-forge,pyhe01879c_0,0
-rpds-py,0.27.0,MIT,https://github.com/crate-py/rpds/blob/main/LICENSE,Implements persistent data structures in Python.,,rpds-py-0.27.0-py39h4b192f4_0,conda-forge,py39h4b192f4_0,0
-ruptures,1.1.9,BSD-2-Clause,https://github.com/deepcharles/ruptures,Python library for off-line change point detection,,ruptures-1.1.9-py39hb943cd9_2,conda-forge,py39hb943cd9_2,2
+pyyaml,6.0.3,MIT,https://github.com/yaml/pyyaml/blob/master/LICENSE,YAML parser,,pyyaml-6.0.3-py313h0f4d31d_0,conda-forge,pyh7db6752_0,0
+referencing,0.37.0,MIT,https://anaconda.org/anaconda/referencing,Manages references in Python data structures.,,referencing-0.37.0-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+regex,2026.1.15,Apache-2.0 AND CNRI-Python,https://bitbucket.org/mrabarnett/mrab-regex/src/hg/LICENSE.txt,regular expression library,,regex-2026.1.15-py313h36bb7f5_0,conda-forge,py310hf70ac88_0,0
+requests,2.32.5,Apache-2.0,https://github.com/psf/requests/blob/main/LICENSE,HTTP Library for Python,,requests-2.32.5-pyhcf101f3_1,conda-forge,pyhcf101f3_1,1
+rpds-py,0.30.0,MIT,https://github.com/crate-py/rpds/blob/main/LICENSE,Implements persistent data structures in Python.,,rpds-py-0.30.0-py313hcc225dc_0,conda-forge,py310h64024f4_0,0
 s3transfer,0.11.3,Apache-2.0,https://github.com/boto/s3transfer,An Amazon S3 transfer manager,,s3transfer-0.11.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-scikit-learn,1.5.1,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-1.5.1-py39h771d6a6_1,conda-forge,py39h771d6a6_1,1
-scipy,1.10.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.10.0-py39h8a15683_2,conda-forge,py39h8a15683_2,2
-shellingham,1.5.4,MIT,,,,shellingham-1.5.4-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-six,1.17.0,MIT,https://github.com/benjaminp/six/blob/master/LICENSE,backwards compatibility utility package,,six-1.17.0-pyhe01879c_1,conda-forge,pyhe01879c_1,1
-sniffio,1.3.1,Apache-2.0,https://github.com/python-trio/sniffio/blob/master/LICENSE,Detects the underlying async I/O library.,,sniffio-1.3.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-starlette,0.47.2,BSD-3-Clause,,,,starlette-0.47.2-pyh82d4cca_0,conda-forge,pyh82d4cca_0,0
-statsmodels,0.13.2,BSD-3-Clause,https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt,statistics and math library package,,statsmodels-0.13.2-py39h15b18c7_0,conda-forge,py39h15b18c7_0,0
+scikit-learn,1.6.1,BSD-3-Clause,https://github.com/scikit-learn/scikit-learn/blob/master/COPYING,machine learning library,,scikit-learn-1.6.1-py313hedeaec8_0,conda-forge,py310h6ed8a50_0,0
+scipy,1.15.0,BSD-3-Clause,https://github.com/scipy/scipy/blob/master/LICENSE.txt,math libraries and data science tools,,scipy-1.15.0-py313h1cb6e1a_1,conda-forge,py310hf1ced75_0,0
+shellingham,1.5.4,MIT,,,,shellingham-1.5.4-pyhd8ed1ab_2,conda-forge,pyhd8ed1ab_0,0
+six,1.17.0,MIT,https://github.com/benjaminp/six/blob/master/LICENSE,backwards compatibility utility package,,six-1.17.0-pyhe01879c_1,conda-forge,pyhd8ed1ab_0,0
+sniffio,1.3.1,Apache-2.0,https://github.com/python-trio/sniffio/blob/master/LICENSE,Detects the underlying async I/O library.,,sniffio-1.3.1-pyhd8ed1ab_2,conda-forge,pyhd8ed1ab_0,0
+starlette,0.50.0,BSD-3-Clause,,,,starlette-0.50.0-pyhfdc7a7d_0,conda-forge,pyhfdc7a7d_0,0
+statsmodels,0.14.5,BSD-3-Clause,https://github.com/statsmodels/statsmodels/blob/master/LICENSE.txt,statistics and math library package,,statsmodels-0.14.5-py313h0f4b8c3_1,conda-forge,py310h0bce67a_1,1
 stumpy,1.12.0,BSD-3-Clause,https://github.com/TDAmeritrade/stumpy?tab=License-1-ov-file#readme,a python library that computes something called a matrix profile,which can then be used for a variety of time series data mining tasks,stumpy-1.12.0-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-sympy,1.14.0,BSD-3-Clause,https://github.com/sympy/sympy/blob/master/LICENSE,Python Library for Symbolic Mathematics,,sympy-1.14.0-pyh2585a3b_105,conda-forge,pyh2585a3b_105,105
-tbb,2021.5.0,Apache-2.0,https://github.com/oneapi-src/oneTBB/blob/master/LICENSE.txt,threading library,,tbb-2021.5.0-hb8565cd_5,conda-forge,hb8565cd_5,5
+sympy,1.14.0,BSD-3-Clause,https://github.com/sympy/sympy/blob/master/LICENSE,Python Library for Symbolic Mathematics,,sympy-1.14.0-pyh2585a3b_105,conda-forge,pyh04b8f61_5,5
+tbb,2021.13.0,Apache-2.0,https://github.com/oneapi-src/oneTBB/blob/master/LICENSE.txt,threading library,,tbb-2021.13.0-h06b67a2_5,conda-forge,h06b67a2_5,5
 threadpoolctl,3.6.0,BSD-3-Clause,https://github.com/joblib/threadpoolctl/blob/master/LICENSE,Python helpers to control the threadpools of native libraries,,threadpoolctl-3.6.0-pyhecae5ae_0,conda-forge,pyhecae5ae_0,0
-tiktoken,0.11.0,MIT,https://github.com/openai/tiktoken/blob/main/LICENSE,"Tokenizer for OpenAI models (e.g., GPT-3).",,tiktoken-0.11.0-py39h6285dac_0,conda-forge,py39h6285dac_0,0
-tokenizers,0.21.4,Apache-2.0,https://github.com/huggingface/tokenizers/blob/main/LICENSE,tokenizers for machine learning,,tokenizers-0.21.4-py39h6285dac_0,conda-forge,py39h6285dac_0,0
-tqdm,4.67.1,MPL-2.0 or MIT,https://github.com/tqdm/tqdm/blob/master/LICENCE,Progress Meter Library,,tqdm-4.67.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
-typer,0.16.1,MIT,,,,typer-0.16.1-pyhc167863_0,conda-forge,pyhc167863_0,0
-typer-slim,0.16.1,MIT,,,,typer-slim-0.16.1-pyhe01879c_0,conda-forge,pyhe01879c_0,0
-typer-slim-standard,0.16.1,MIT,,,,typer-slim-standard-0.16.1-h810d63d_0,conda-forge,h810d63d_0,0
-typing-extensions,4.14.1,PSF-2.0,https://github.com/python/typing_extensions/blob/main/LICENSE,type hinting library for python,,typing-extensions-4.14.1-h4440ef1_0,conda-forge,h4440ef1_0,0
-typing_extensions,4.14.1,PSF-2.0,https://github.com/python/typing_extensions/blob/main/LICENSE,Type Hints for Python,,typing_extensions-4.14.1-pyhe01879c_0,conda-forge,pyhe01879c_0,0
-tzdata,2025c,LicenseRef-Public-Domain,https://github.com/eggert/tz?tab=License-1-ov-file#readme,The Time Zone Database (called tz,tzdb or zoneinfo) data,tzdata-2025c-hc9c84f9_1,conda-forge,hc9c84f9_1,1
-urllib3,1.26.19,MIT,https://github.com/urllib3/urllib3/blob/main/LICENSE.txt,HTTP library with thread-safe connection pooling file post,,urllib3-1.26.19-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
-uvicorn,0.29.0,BSD-3-Clause,,,,uvicorn-0.29.0-py39h6e9494a_0,conda-forge,py39h6e9494a_0,0
-uvicorn-standard,0.29.0,BSD-3-Clause,,,,uvicorn-standard-0.29.0-h6e9494a_0,conda-forge,h6e9494a_0,0
-uvloop,0.21.0,MIT OR Apache-2.0,,,,uvloop-0.21.0-py39h296a897_1,conda-forge,py39h296a897_1,1
-watchdog,2.1.7,Apache-2.0,https://github.com/gorakhargosh/watchdog/blob/master/LICENSE,python library for monitor file system events,,watchdog-2.1.7-py39h147bbb7_1,conda-forge,py39h147bbb7_1,1
-watchfiles,1.1.0,MIT,,,,watchfiles-1.1.0-py39hd8827cb_0,conda-forge,py39hd8827cb_0,0
-websockets,15.0.1,BSD-3-Clause,,,,websockets-15.0.1-py39h7952fe9_1,conda-forge,py39h7952fe9_1,1
-wheel,0.45.1,MIT,https://github.com/pypa/wheel/blob/master/LICENSE.txt,package distribution,,wheel-0.45.1-pyhd8ed1ab_1,conda-forge,pyhd8ed1ab_1,1
+tiktoken,0.12.0,MIT,https://github.com/openai/tiktoken/blob/main/LICENSE,"Tokenizer for OpenAI models (e.g., GPT-3).",,tiktoken-0.12.0-py313h185603f_3,conda-forge,py310h813fcaf_0,0
+tokenizers,0.22.2,Apache-2.0,https://github.com/huggingface/tokenizers/blob/main/LICENSE,tokenizers for machine learning,,tokenizers-0.22.2-py313h185603f_0,conda-forge,py310h813fcaf_0,0
+tqdm,4.67.2,MPL-2.0 and MIT,https://github.com/tqdm/tqdm/blob/master/LICENCE,Progress Meter Library,,tqdm-4.67.2-pyh8f84b5b_2,conda-forge,pyh8f84b5b_2,2
+typer-slim,0.21.1,MIT,,,,typer-slim-0.21.1-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+typing-extensions,4.15.0,PSF-2.0,https://github.com/python/typing_extensions/blob/main/LICENSE,type hinting library for python,,typing-extensions-4.15.0-h396c80c_0,conda-forge,h396c80c_0,0
+typing_extensions,4.15.0,PSF-2.0,https://github.com/python/typing_extensions/blob/main/LICENSE,Type Hints for Python,,typing_extensions-4.15.0-pyhcf101f3_0,conda-forge,pyhcf101f3_0,0
+tzdata,2025c,LicenseRef-Public-Domain,https://github.com/eggert/tz?tab=License-1-ov-file#readme,The Time Zone Database (called tz,tzdb or zoneinfo) data,tzdata-2025c-hc9c84f9_1,conda-forge,h8577fbf_0,0
+urllib3,2.6.3,MIT,https://github.com/urllib3/urllib3/blob/main/LICENSE.txt,HTTP library with thread-safe connection pooling file post,,urllib3-2.6.3-pyhd8ed1ab_0,conda-forge,pyhd8ed1ab_0,0
+watchdog,6.0.0,Apache-2.0,https://github.com/gorakhargosh/watchdog/blob/master/LICENSE,python library for monitor file system events,,watchdog-6.0.0-py313hf050af9_2,conda-forge,py310h1b7cace_1,1
 yaml,0.2.5,MIT,https://github.com/yaml/libyaml/blob/master/License,A C library for parsing yaml,,yaml-0.2.5-h4132b18_3,conda-forge,h4132b18_3,3
-yarl,1.20.1,Apache-2.0,https://github.com/aio-libs/yarl/blob/master/LICENSE,URL library,,yarl-1.20.1-py39hd18e689_0,conda-forge,py39hd18e689_0,0
+yarl,1.22.0,Apache-2.0,https://github.com/aio-libs/yarl/blob/master/LICENSE,URL library,,yarl-1.22.0-py313h0f4d31d_0,conda-forge,pyh7db6752_0,0
+zstd,1.5.7,BSD-3-Clause,https://github.com/facebook/zstd,lossless compression algorithm,,zstd-1.5.7-h3eecb57_6,conda-forge,h281d3d1_4,4
