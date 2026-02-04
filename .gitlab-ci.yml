@@ -17,7 +17,7 @@ variables:
   APP_CERT_FOLDER: "app_cert"
   WINDOWS_RUNNER_GIT_PATH: 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\Git\cmd'
   WINDOWS_RUNNER_7ZIP_PATH: 'C:\Program Files\7-Zip'
-  VERSION_OVERRIDE: 3.2.5 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
+  VERSION_OVERRIDE: 3.3.0 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
 
 
 workflow:
@@ -90,9 +90,10 @@ include:
     - pip install python-magic-debian-bin==0.4.25
     - export PATH="/home/pyuser/.local/bin:$PATH"
     - cd "${CI_PROJECT_DIR}"
-    - bash "./scripts/posix/appcert_prereq.sh" "${ARTIFACT_NAME}"
+    - bash "./scripts/posix/appcert_prereq.sh" "${ARTIFACT_NAME}" "${VERSION_OVERRIDE}"
     - splunk-appinspect inspect "${CI_PROJECT_DIR}/app_cert/${ARTIFACT_NAME}" --included-tags cloud --mode precert --data-format json --output-file "${CI_PROJECT_DIR}/app_cert/results_${VERSION_OVERRIDE//./}_${SUFFIX}_copy.json" --max-messages all
     - echo "Appinspect stage complete.."
+
   artifacts:
     paths:
       - app_cert/*
@@ -203,6 +204,8 @@ fossa-scan-windows:
   extends: .fossa-scan
   before_script:
     - $Env:Path+=";${WINDOWS_RUNNER_GIT_PATH}"
+    - choco install 7zip -y
+    - $Env:Path+=";${WINDOWS_RUNNER_7ZIP_PATH}"
     - choco install make
   timeout: 5 hour
   tags:

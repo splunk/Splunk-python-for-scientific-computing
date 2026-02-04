@@ -1,37 +1,42 @@
+#!/bin/bash
+# Creates and configures the Python virtual environment
+# Uses environment.yml file and removes blacklisted packages
+
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 source "$SCRIPT_DIR/prereq.sh"
-RED='\033[31m'
-RESET='\033[0m'
 
 if [ "$OS" = "Darwin" ] && [ "$ARCH" = "x86_64" ]; then
   export CONDA_OVERRIDE_OSX="11"
 fi
 
-
+# Determine environment file to use
 if [ -z "$ENVIRONMENT_FILE" ]; then
-  ENVIRONMENT_FILE="$PLATFORM_DIR/environment.yml";
-  SOLVER="libmamba";
+  ENVIRONMENT_FILE="$PLATFORM_DIR/environment.yml"
 else
-  ENVIRONMENT_FILE="$PROJECT_DIR/$ENVIRONMENT_FILE";
-  SOLVER="classic";
+  ENVIRONMENT_FILE="$PROJECT_DIR/$ENVIRONMENT_FILE"
 fi
 
+# Load blacklisted packages (convert newlines to spaces)
 BLACKLISTED_PACKAGES=$(cat "$PLATFORM_DIR/blacklist.txt" | tr "\n" " ")
 
-rm -r "$VENV_BUILD_DIR"
+# Clean up existing virtual environment
+echo "[INFO] Removing existing virtual environment..."
+rm -rf "$MAMBA_ROOT_PREFIX"
 
-"$CONDA" config --remove channels defaults || true
-"$CONDA" config --set channel_priority strict
-"$CONDA" config --show channels
-"$CONDA" config --show channel_priority
+"$MICROMAMBA" config remove channels defaults || true
+"$MICROMAMBA" config set channel_priority strict
 
-"$CONDA" install --prefix "$VENV_BUILD_DIR" -n base conda-libmamba-solver
-#"$CONDA" config --prefix "$VENV_BUILD_DIR" --set solver libmamba
-"$CONDA" env create --prefix "$VENV_BUILD_DIR" -f "$ENVIRONMENT_FILE" "--solver=$SOLVER"
-eval "$($CONDA shell.bash hook)"
+# Create new virtual environment from environment file
+echo "[INFO] Creating virtual environment from $ENVIRONMENT_FILE..."
+"$MICROMAMBA" create --yes --prefix "$MAMBA_VENV_PREFIX" -f "$ENVIRONMENT_FILE" -c conda-forge --override-channels
 
-conda activate "$VENV_BUILD_DIR"
-conda clean -tipy
-"$CONDA" remove -p "$VENV_BUILD_DIR" -y --force $BLACKLISTED_PACKAGES || true
+# Activate the environment
+"$MICROMAMBA" activate "$MAMBA_VENV_PREFIX"
 
-"$CONDA" list -p "$VENV_BUILD_DIR" | sed -E "s|(pkgs/[^ ]+)|${RED}\1${RESET}|g"
+# Remove blacklisted packages (ignore errors if packages don't exist)
+if [ -n "$BLACKLISTED_PACKAGES" ]; then
+  echo "[INFO] Removing blacklisted packages: $BLACKLISTED_PACKAGES"
+  "$MICROMAMBA" remove -p "$MAMBA_VENV_PREFIX" -y --force $BLACKLISTED_PACKAGES || true
+fi
+
+echo "[INFO] Virtual environment setup complete"

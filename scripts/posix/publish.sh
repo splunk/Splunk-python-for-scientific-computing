@@ -22,11 +22,12 @@ if [[ -z "$CI" ]]; then
 else
   if [[ -n "$CI_COMMIT_TAG" ]]; then
     # RELEASE TAG
+
     if [[ "$UPLOAD" ==  "true" ]]; then
       TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/release"
     else
       TARGET_FOLDER="${TARGET_FOLDER_PREFIX}/releases/${VERSION%.*}.x/$VERSION"
-    fi  
+    fi
   elif [[ "$CI_PIPELINE_SOURCE" == "merge_request_event" ]]; then
     # MERGE REQUEST
     if [[ -z "$CI_MERGE_REQUEST_IID" || "$CI_MERGE_REQUEST_IID" == " " ]]; then
@@ -53,6 +54,7 @@ do
   else
     TAR_NAME=$APP_PLATFORM
   fi
+
   if [ -f "$BASE_BUILD_DIR/${APP_PLATFORM}.tgz" ]; then
     echo "publishing ${APP_PLATFORM} to ${REPO_URL}/${TARGET_FOLDER}"
     curl -u ${ARTIFACTORY_AUTHORIZATION} -X PUT "${REPO_URL}/${TARGET_FOLDER}/${TAR_NAME}.tgz" -T "$BASE_BUILD_DIR/${APP_PLATFORM}.tgz"

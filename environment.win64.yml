@@ -1,23 +1,24 @@
-name: build/venv
+name: psc
 channels:
   - conda-forge
 dependencies:
-  - boto3==1.36
+  - boto3==1.36.0
   - bottle==0.12.23
   - chardet==3.0.4
+  - pandas==2.2.3
+  - psutil==7.0.0
+  - python==3.13.11
   - networkx==3.0
-  - numpy==1.23.0
-  - python==3.9.23
-  - pandas==1.1.5
-  - psutil==5.8.0
-  - scipy==1.10.0
-  - statsmodels==0.13.2
-  - scikit-learn==1.5.1
+  - numpy==2.2.6
+  - scipy==1.15.0
+  - statsmodels==0.14.5
+  - scikit-learn==1.6.1
   - onnx==1.18
-  - onnxruntime==1.19.2
-  - openssl==3.5.3
-  - ruptures==1.1.9
+  - onnxruntime==1.22.0
+  - openssl==3.6.1
+  - pydantic==2.10.5
+  - watchdog==6.0.0
   - protobuf==6.31.1
   - requests==2.32.5
-  - aiohttp==3.12.15
-
+  - aiohttp==3.13.3
+  - urllib3==2.6.3
