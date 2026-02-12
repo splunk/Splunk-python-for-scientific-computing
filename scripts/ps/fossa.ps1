@@ -13,5 +13,12 @@ if (-Not $env:CI) {
 } else {
     $script:PROJECT_TITLE = "Python for Scientific Computing ${PLATFORM}"
     $script:PROJECT_NAME = "${env:CI_PROJECT_URL}/-/tree/${env:CI_COMMIT_REF_NAME}/${PLATFORM}"
-    & fossa analyze --only-target "conda" --only-path $PLATFORM -p $PROJECT_NAME -b ${env:CI_COMMIT_REF_NAME} --title $PROJECT_TITLE --team "${env:CI_PROJECT_URL}"
+
+    ## Very important to set Tls12 otherwise fossa analyze fails with TLS Error
+    Write-Output "Setting SecurityProtocol to Tls12"
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+    Write-Output "Running FOSSA Analyze"
+    Invoke-WebRequest https://app.fossa.com/ -UseBasicParsing
+    & fossa analyze --only-target "conda" --only-path $PLATFORM --debug -p $PROJECT_NAME -b ${env:CI_COMMIT_REF_NAME} --title $PROJECT_TITLE --team "${env:CI_PROJECT_URL}"
 }
