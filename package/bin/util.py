@@ -2,7 +2,8 @@
 import os
 import re
 import fnmatch
-
+import json
+import configparser
 
 # originally moved from exec_anaconda.py
 # Note: the following functions do NOT work with Search Head
@@ -76,6 +77,33 @@ def match_field_globs(input_fields, requested_fields):
             output_fields.append(f)
 
     return output_fields
+
+
+def get_app_version(psc_folder):
+    """Get the version of the Splunk app from the app.manifest file or app.conf."""
+    manifest_path = make_splunkhome_path(["etc", "apps", psc_folder, "app.manifest"])
+    
+    # First try to read from app.manifest
+    if os.path.isfile(manifest_path):
+        try:
+            with open(manifest_path, "r", encoding="utf-8") as f:
+                manifest_data = json.load(f)
+            return manifest_data["info"]["id"]["version"]
+        except Exception:
+            pass
+    
+    # Fallback to app.conf if app.manifest is not present
+    app_conf_path = make_splunkhome_path(["etc", "apps", psc_folder, "default", "app.conf"])
+    
+    if not os.path.isfile(app_conf_path):
+        return None
+    
+    try:
+        config = configparser.ConfigParser()
+        config.read(app_conf_path, encoding="utf-8")
+        return config.get("launcher", "version")
+    except Exception:
+        return None
 
 
 class MLSPLNotImplementedError(RuntimeError):
