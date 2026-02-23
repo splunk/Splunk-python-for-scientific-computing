@@ -14,7 +14,7 @@ import sys
 import time
 import traceback
 
-from util import get_apps_path
+from util import get_apps_path, get_app_version
 
 # NOTE: This file must be Python 2 and 3 compatible until
 # Splunk Enterprise drops support for Python2.
@@ -102,6 +102,13 @@ def exec_anaconda():
     system_path = os.path.join(sa_path, 'bin', '%s' % (SUPPORTED_SYSTEMS[system]))
 
     if system[0] == 'Windows':
+        psc_folder = f"{PSC_PATH_PREFIX}{SUPPORTED_SYSTEMS[system]}"
+        app_version = get_app_version(psc_folder)
+        version_pattern = app_version.replace(".", "_").lower() if app_version else ""
+        versioned_path = os.path.join(system_path, version_pattern)
+        if os.path.exists(versioned_path):
+            system_path = versioned_path
+
         python_path = os.path.join(system_path, 'python.exe')
         # MLA-564: Windows need the DLLs to be in the PATH
         dllpath = os.path.join(system_path, 'Library', 'bin')

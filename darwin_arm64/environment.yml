@@ -1,4 +1,4 @@
-name: base
+name: 
 channels:
   - conda-forge
 dependencies:
@@ -10,28 +10,29 @@ dependencies:
   - annotated-doc=0.0.4=pyhcf101f3_0
   - annotated-types=0.7.0=pyhd8ed1ab_1
   - anyio=4.12.1=pyhcf101f3_0
+  - async-timeout=5.0.1=pyhcf101f3_2
   - attrs=25.4.0=pyhcf101f3_1
   - backports.zstd=1.3.0=py313h48bb75e_0
   - boto3=1.36.0=pyhd8ed1ab_0
   - botocore=1.36.0=pyge310_1234567_0
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.2.0=py313hde1f3bb_1
-  - bzip2=1.0.8=hd037594_8
+  - bzip2=1.0.8=hd037594_9
   - ca-certificates=2026.1.4=hbd8a1cb_0
   - certifi=2026.1.4=pyhd8ed1ab_0
   - cffi=1.17.1=py313hc845a76_0
   - chardet=3.0.4=py_1
   - click=8.3.1=pyh8f84b5b_1
   - coloredlogs=15.0.1=pyhd8ed1ab_4
-  - cpython=3.13.11=py313hd8ed1ab_101
-  - cryptography=46.0.3=py313h76c770c_1
+  - cpython=3.13.12=py313hd8ed1ab_100
+  - cryptography=46.0.5=py313he3f6fad_0
   - distro=1.9.0=pyhd8ed1ab_1
   - exceptiongroup=1.3.1=pyhd8ed1ab_0
   - fastapi-core=0.121.3=pyhcf101f3_0
   - fastuuid=0.14.0=py313h22cbeaa_0
-  - filelock=3.20.3=pyhd8ed1ab_0
+  - filelock=3.24.3=pyhd8ed1ab_0
   - frozenlist=1.7.0=py313hf28abc0_0
-  - fsspec=2026.1.0=pyhd8ed1ab_0
+  - fsspec=2026.2.0=pyhd8ed1ab_0
   - future=0.18.3=pyhd8ed1ab_0
   - gmp=6.3.0=h7bae524_2
   - gmpy2=2.2.1=py313hc1c22ca_2
@@ -41,7 +42,7 @@ dependencies:
   - hpack=4.1.0=pyhd8ed1ab_0
   - httpcore=1.0.9=pyh29332c3_0
   - httpx=0.28.1=pyhd8ed1ab_0
-  - huggingface_hub=1.3.7=pyhd8ed1ab_0
+  - huggingface_hub=1.4.1=pyhd8ed1ab_0
   - humanfriendly=10.0=pyh707e725_8
   - hyperframe=6.1.0=pyhd8ed1ab_0
   - idna=3.11=pyhd8ed1ab_0
@@ -54,12 +55,12 @@ dependencies:
   - libabseil=20250512.1=cxx17_hd41c47c_0
   - libblas=3.11.0=5_h51639a9_openblas
   - libcblas=3.11.0=5_hb0561ab_openblas
-  - libcxx=21.1.8=hf598326_1
-  - libexpat=2.7.3=haf25636_0
+  - libcxx=21.1.8=h55c6f16_2
+  - libexpat=2.7.4=hf6b4638_0
   - libffi=3.5.2=hcf2aa1b_0
-  - libgcc=15.2.0=hcbb3090_16
-  - libgfortran=15.2.0=h07b0088_16
-  - libgfortran5=15.2.0=hdae7583_16
+  - libgcc=15.2.0=hcbb3090_18
+  - libgfortran=15.2.0=h07b0088_18
+  - libgfortran5=15.2.0=hdae7583_18
   - libhwloc=2.12.2=default_ha3cc4f2_1000
   - liblapack=3.11.0=5_hd9741b5_openblas
   - liblzma=5.8.2=h8088a28_0
@@ -73,41 +74,45 @@ dependencies:
   - llvm-openmp=21.1.8=h4a912ad_0
   - llvmlite=0.46.0=py313he297ed2_0
   - madoka=0.7.2.1=py313h5c29297_1
+  - markdown-it-py=4.0.0=pyhd8ed1ab_0
   - markupsafe=3.0.3=py313h7d74516_0
+  - mdurl=0.1.2=pyhd8ed1ab_1
   - mpc=1.3.1=h8f1351a_1
   - mpfr=4.2.1=hb693164_3
   - mpmath=1.3.0=pyhd8ed1ab_1
-  - multidict=6.7.0=py313h92dd972_0
+  - multidict=6.7.1=py313haf6918d_0
   - ncurses=6.5=h5e97a16_3
   - networkx=3.0=pyhd8ed1ab_0
   - numba=0.63.1=py313ha873477_0
   - numpy=2.2.6=py313h41a2e72_0
   - onnx=1.18.0=np2py313h0fff2d2_2
   - onnxruntime=1.22.0=py313h69fa487_0_cpu
-  - openai=2.16.0=pyhd8ed1ab_0
+  - openai=2.21.0=pyhd8ed1ab_0
   - openssl=3.6.1=hd24854e_1
   - packaging=26.0=pyhcf101f3_0
   - pandas=2.2.3=py313h668b085_3
   - patsy=1.0.2=pyhcf101f3_0
-  - pip=26.0=pyh145f28c_0
+  - pip=26.0.1=pyh145f28c_0
   - pondpond=1.4.1=pyhd8ed1ab_1
   - propcache=0.3.1=py313ha9b7d5b_0
   - protobuf=6.31.1=py313he4076bf_2
   - psutil=7.0.0=py313hcdf3177_1
   - pydantic=2.10.5=pyh3cfb1c2_0
   - pydantic-core=2.27.2=py313hdde674f_0
+  - pygments=2.19.2=pyhd8ed1ab_0
   - python=3.13.11=hfc2f54d_101_cp313
   - python-dateutil=2.9.0.post0=pyhe01879c_2
   - python-dotenv=1.2.1=pyhcf101f3_0
   - python-flatbuffers=25.9.23=pyh1e1bc0e_0
-  - python-gil=3.13.11=h4df99d1_101
+  - python-gil=3.13.12=h4df99d1_100
   - python-tzdata=2025.3=pyhd8ed1ab_0
   - python_abi=3.13=8_cp313
   - pytz=2025.2=pyhd8ed1ab_0
-  - pyyaml=6.0.3=py313h7d74516_0
+  - pyyaml=6.0.3=py313h65a2061_1
   - referencing=0.37.0=pyhcf101f3_0
-  - regex=2026.1.15=py313h0997733_0
+  - regex=2026.2.19=py313h0997733_0
   - requests=2.32.5=pyhcf101f3_1
+  - rich=13.9.4=pyhd8ed1ab_1
   - rpds-py=0.30.0=py313h2c089d5_0
   - s3transfer=0.11.3=pyhd8ed1ab_0
   - scikit-learn=1.6.1=py313hecba28c_0
@@ -123,8 +128,9 @@ dependencies:
   - threadpoolctl=3.6.0=pyhecae5ae_0
   - tiktoken=0.12.0=py313h4bd1e59_2
   - tokenizers=0.22.2=py313h4bd1e59_0
-  - tqdm=4.67.2=pyh8f84b5b_2
-  - typer-slim=0.21.1=pyhcf101f3_0
+  - tqdm=4.67.3=pyh8f84b5b_0
+  - typer=0.24.0=pyhcf101f3_0
+  - typer-slim=0.24.0=pyhcf101f3_0
   - typing-extensions=4.15.0=h396c80c_0
   - typing_extensions=4.15.0=pyhcf101f3_0
   - tzdata=2025c=hc9c84f9_1

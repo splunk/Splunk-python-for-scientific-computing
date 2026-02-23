@@ -9,28 +9,29 @@ dependencies:
   - annotated-doc=0.0.4=pyhcf101f3_0
   - annotated-types=0.7.0=pyhd8ed1ab_1
   - anyio=4.12.1=pyhcf101f3_0
+  - async-timeout=5.0.1=pyhcf101f3_2
   - attrs=25.4.0=pyhcf101f3_1
   - backports.zstd=1.3.0=py313h2a31948_0
   - boto3=1.36.0=pyhd8ed1ab_0
   - botocore=1.36.0=pyge310_1234567_0
   - bottle=0.12.23=pyhd8ed1ab_0
   - brotli-python=1.2.0=py313h3ebfc14_1
-  - bzip2=1.0.8=h0ad9c76_8
+  - bzip2=1.0.8=h0ad9c76_9
   - ca-certificates=2026.1.4=h4c7d964_0
   - certifi=2026.1.4=pyhd8ed1ab_0
   - cffi=1.17.1=py313h5ea7bf4_1
   - chardet=3.0.4=py_1
   - click=8.3.1=pyha7b4d00_1
   - coloredlogs=15.0.1=pyhd8ed1ab_4
-  - cpython=3.13.11=py313hd8ed1ab_101
-  - cryptography=46.0.3=py313hf5c5e30_1
+  - cpython=3.13.12=py313hd8ed1ab_100
+  - cryptography=46.0.5=py313hf5c5e30_0
   - distro=1.9.0=pyhd8ed1ab_1
   - exceptiongroup=1.3.1=pyhd8ed1ab_0
   - fastapi-core=0.121.3=pyhcf101f3_0
   - fastuuid=0.14.0=py313h8c17c7d_0
-  - filelock=3.20.3=pyhd8ed1ab_0
+  - filelock=3.24.3=pyhd8ed1ab_0
   - frozenlist=1.7.0=py313h0c48a3b_0
-  - fsspec=2026.1.0=pyhd8ed1ab_0
+  - fsspec=2026.2.0=pyhd8ed1ab_0
   - future=0.18.3=pyhd8ed1ab_0
   - h11=0.16.0=pyhcf101f3_1
   - h2=4.3.0=pyhcf101f3_0
@@ -38,7 +39,7 @@ dependencies:
   - hpack=4.1.0=pyhd8ed1ab_0
   - httpcore=1.0.9=pyh29332c3_0
   - httpx=0.28.1=pyhd8ed1ab_0
-  - huggingface_hub=1.3.7=pyhd8ed1ab_0
+  - huggingface_hub=1.4.1=pyhd8ed1ab_0
   - humanfriendly=10.0=pyh7428d3b_8
   - hyperframe=6.1.0=pyhd8ed1ab_0
   - icu=78.2=h637d24d_0
@@ -52,7 +53,7 @@ dependencies:
   - libabseil=20250512.1=cxx17_habfad5f_0
   - libblas=3.9.0=35_h5709861_mkl
   - libcblas=3.9.0=35_h2a3cdd5_mkl
-  - libexpat=2.7.3=hac47afa_0
+  - libexpat=2.7.4=hac47afa_0
   - libffi=3.5.2=h3d046cb_0
   - libhwloc=2.12.2=default_h4379cf1_1000
   - libiconv=1.18=hc1393d2_2
@@ -68,40 +69,44 @@ dependencies:
   - llvm-openmp=21.1.8=h4fa8253_0
   - llvmlite=0.46.0=py313h5c49287_0
   - madoka=0.7.2.1=py313hf069bd2_1
+  - markdown-it-py=4.0.0=pyhd8ed1ab_0
   - markupsafe=3.0.3=py313hd650c13_0
+  - mdurl=0.1.2=pyhd8ed1ab_1
   - mkl=2024.2.2=h57928b3_16
   - mpmath=1.3.0=pyhd8ed1ab_1
-  - multidict=6.7.0=py313hd650c13_0
+  - multidict=6.7.1=py313hd650c13_0
   - networkx=3.0=pyhd8ed1ab_0
   - numba=0.63.1=py313h2da9318_0
   - numpy=2.2.6=py313hefb8edb_0
   - onnx=1.18.0=np2py313h980d884_2
   - onnxruntime=1.22.0=py313h6b32aa8_0_cpu
-  - openai=2.16.0=pyhd8ed1ab_0
+  - openai=2.21.0=pyhd8ed1ab_0
   - openssl=3.6.1=hf411b9b_1
   - packaging=26.0=pyhcf101f3_0
   - pandas=2.2.3=py313hf91d08e_3
   - patsy=1.0.2=pyhcf101f3_0
-  - pip=26.0=pyh145f28c_0
+  - pip=26.0.1=pyh145f28c_0
   - pondpond=1.4.1=pyhd8ed1ab_1
   - propcache=0.3.1=py313hb4c8b1a_0
   - protobuf=6.31.1=py313h16c7a9f_2
   - psutil=7.0.0=py313h5ea7bf4_1
   - pydantic=2.10.5=pyh3cfb1c2_0
   - pydantic-core=2.27.2=py313hf3b5b86_0
+  - pygments=2.19.2=pyhd8ed1ab_0
   - pyreadline3=3.5.4=py313hfa70ccb_2
   - python=3.13.11=h09917c8_101_cp313
   - python-dateutil=2.9.0.post0=pyhe01879c_2
   - python-dotenv=1.2.1=pyhcf101f3_0
   - python-flatbuffers=25.9.23=pyh1e1bc0e_0
-  - python-gil=3.13.11=h4df99d1_101
+  - python-gil=3.13.12=h4df99d1_100
   - python-tzdata=2025.3=pyhd8ed1ab_0
   - python_abi=3.13=8_cp313
   - pytz=2025.2=pyhd8ed1ab_0
-  - pyyaml=6.0.3=py313hd650c13_0
+  - pyyaml=6.0.3=py313hd650c13_1
   - referencing=0.37.0=pyhcf101f3_0
-  - regex=2026.1.15=py313h5ea7bf4_0
+  - regex=2026.2.19=py313h5ea7bf4_0
   - requests=2.32.5=pyhcf101f3_1
+  - rich=13.9.4=pyhd8ed1ab_1
   - rpds-py=0.30.0=py313hfbe8231_0
   - s3transfer=0.11.3=pyhd8ed1ab_0
   - scikit-learn=1.6.1=py313h4f67946_0
@@ -118,8 +123,9 @@ dependencies:
   - tiktoken=0.12.0=py313h034fbed_3
   - tk=8.6.13=h6ed50ae_3
   - tokenizers=0.22.2=py313h034fbed_0
-  - tqdm=4.67.2=pyha7b4d00_2
-  - typer-slim=0.21.1=pyhcf101f3_0
+  - tqdm=4.67.3=pyha7b4d00_0
+  - typer=0.24.0=pyhcf101f3_0
+  - typer-slim=0.24.0=pyhcf101f3_0
   - typing-extensions=4.15.0=h396c80c_0
   - typing_extensions=4.15.0=pyhcf101f3_0
   - tzdata=2025c=hc9c84f9_1
@@ -136,3 +142,4 @@ dependencies:
   - pip:
     - docker==7.1.0
     - kubernetes==35.0.0
+

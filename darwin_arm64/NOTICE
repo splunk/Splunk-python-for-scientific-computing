@@ -1,12 +1,13 @@
 Package licenses:
-_python_abi3_support          	MIT                                 	
-aiohappyeyeballs              	PSF-2.0                             	https://github.com/aio-libs/aiohappyeyeballs/blob/main/LICENSE
 _openmp_mutex                 	BSD-3-Clause                        	https://github.com/conda-forge/_openmp_mutex-feedstock/blob/master/LICENSE.txt
+aiohappyeyeballs              	PSF-2.0                             	https://github.com/aio-libs/aiohappyeyeballs/blob/main/LICENSE
+_python_abi3_support          	MIT                                 	
 aiohttp                       	MIT                                 	https://anaconda.org/anaconda/aiohttp
 aiosignal                     	Apache-2.0                          	https://github.com/aio-libs/aiosignal/blob/master/LICENSE
 annotated-doc                 	MIT                                 	
 annotated-types               	MIT                                 	https://github.com/annotated-types/annotated-types/blob/main/LICENSE
 anyio                         	MIT                                 	https://github.com/agronholm/anyio/blob/master/LICENSE
+async-timeout                 	Apache-2.0                          	https://github.com/aio-libs/async-timeout/blob/master/LICENSE
 attrs                         	MIT                                 	https://github.com/python-attrs/attrs/blob/main/LICENSE
 backports.zstd                	BSD-3-Clause AND MIT AND EPL-2.0    	
 boto3                         	Apache-2.0                          	https://github.com/boto/boto3/blob/develop/LICENSE
@@ -22,8 +23,8 @@ click                         	BSD-3-Clause                        	https://anac
 coloredlogs                   	MIT                                 	https://github.com/xolox/python-coloredlogs/blob/master/LICENSE.txt
 cpython                       	Python-2.0                          	https://github.com/python/cpython/blob/main/LICENSE
 cryptography                  	Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT	
-distro                        	Apache-2.0                          	https://github.com/python-distro/distro/blob/master/LICENSE
 docker                        	                                    	
+distro                        	Apache-2.0                          	https://github.com/python-distro/distro/blob/master/LICENSE
 exceptiongroup                	MIT                                 	https://github.com/agronholm/exceptiongroup/blob/main/LICENSE
 fastapi-core                  	MIT                                 	
 fastuuid                      	BSD-3-Clause                        	
@@ -72,7 +73,9 @@ litellm                       	MIT                                 	https://gith
 llvm-openmp                   	MIT                                 	https://llvm.org/docs/DeveloperPolicy.html#license
 llvmlite                      	BSD-2-Clause                        	https://github.com/numba/llvmlite/blob/main/LICENSE
 madoka                        	BSD-3-Clause                        	
+markdown-it-py                	MIT                                 	
 markupsafe                    	BSD-3-Clause                        	https://github.com/pallets/markupsafe
+mdurl                         	MIT                                 	
 mpc                           	LGPL-3.0                            	https://gitlab.inria.fr/mpc/mpc/-/blob/master/COPYING.LESSER
 mpfr                          	LGPL-3.0                            	https://gitlab.inria.fr/mpfr/mpfr/-/blob/master/COPYING
 mpmath                        	BSD-3-Clause                        	https://github.com/mpmath/mpmath/blob/master/LICENSE
@@ -95,6 +98,7 @@ protobuf                      	BSD-3-Clause                        	https://gith
 psutil                        	BSD 3-clause                        	https://github.com/giampaolo/psutil/blob/master/LICENSE
 pydantic                      	MIT                                 	https://github.com/samuelcolvin/pydantic/blob/master/LICENSE
 pydantic-core                 	MIT                                 	https://pypi.org/project/pydantic-core/
+pygments                      	BSD-2-Clause                        	
 python                        	PSF                                 	https://docs.python.org/3/license.html
 python-dateutil               	Apache 2.0                          	https://github.com/dateutil/dateutil/blob/master/LICENSE
 python-dotenv                 	BSD 3-clause                        	https://github.com/theskumar/python-dotenv/blob/main/LICENSE
@@ -107,6 +111,7 @@ pyyaml                        	MIT                                 	https://gith
 referencing                   	MIT                                 	https://anaconda.org/anaconda/referencing
 regex                         	Python-2.0 and Apache 2.0           	https://bitbucket.org/mrabarnett/mrab-regex/src/hg/LICENSE.txt
 requests                      	Apache 2.0                          	https://github.com/psf/requests/blob/main/LICENSE
+rich                          	MIT                                 	
 rpds-py                       	MIT                                 	https://github.com/crate-py/rpds/blob/main/LICENSE
 s3transfer                    	Apache-2.0                          	https://github.com/boto/s3transfer
 scikit-learn                  	New BSD License                     	https://github.com/scikit-learn/scikit-learn/blob/master/COPYING
@@ -123,6 +128,7 @@ threadpoolctl                 	BSD 3-clause                        	https://gith
 tiktoken                      	MIT                                 	https://github.com/openai/tiktoken/blob/main/LICENSE
 tokenizers                    	Apache-2.0                          	https://github.com/huggingface/tokenizers/blob/main/LICENSE
 tqdm                          	MIT                                 	https://github.com/tqdm/tqdm/blob/master/LICENCE
+typer                         	MIT                                 	
 typer-slim                    	MIT                                 	
 typing-extensions             	PSF-2.0                             	https://github.com/python/typing_extensions/blob/main/LICENSE
 typing_extensions             	PSF-2.0                             	https://github.com/python/typing_extensions/blob/main/LICENSE

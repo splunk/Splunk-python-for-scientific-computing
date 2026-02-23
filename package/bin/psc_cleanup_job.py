@@ -7,6 +7,7 @@ import platform
 import subprocess
 import traceback
 import re
+import configparser
 from datetime import datetime
 
 from splunk import setupSplunkLogger
@@ -96,19 +97,31 @@ logger = setup_logging('psc_cleanup_job.log',
                        level=logging.DEBUG)
 
 def get_app_version():
-    """Get the version of the Splunk app from the app.manifest file."""
+    """Get the version of the Splunk app from the app.manifest file or app.conf."""
     manifest_path = make_splunkhome_path(["etc", "apps", psc_folder, "app.manifest"])
     
-    if not os.path.isfile(manifest_path):
-        logger.info(f"[ERROR] app.manifest file not found: {manifest_path}, Please check the SPLUNK_HOME path")
+    # First try to read from app.manifest
+    if os.path.isfile(manifest_path):
+        try:
+            with open(manifest_path, "r", encoding="utf-8") as f:
+                manifest_data = json.load(f)
+            return manifest_data["info"]["id"]["version"]
+        except Exception as e:
+            logger.info(f"[ERROR] Failed to read or parse app.manifest: {e}")
+    
+    # Fallback to app.conf if app.manifest is not present
+    app_conf_path = make_splunkhome_path(["etc", "apps", psc_folder, "default", "app.conf"])
+    
+    if not os.path.isfile(app_conf_path):
+        logger.info(f"[ERROR] Neither app.manifest nor app.conf found. Please check the SPLUNK_HOME path")
         return None
-        
+    
     try:
-        with open(manifest_path, "r", encoding="utf-8") as f:
-            manifest_data = json.load(f)
-        return manifest_data["info"]["id"]["version"]
+        config = configparser.ConfigParser()
+        config.read(app_conf_path, encoding="utf-8")
+        return config.get("launcher", "version")
     except Exception as e:
-        logger.info(f"[ERROR] Failed to read or parse app.manifest: {e}")
+        logger.info(f"[ERROR] Failed to read or parse app.conf: {e}")
         return None
 
 def count_scientific_python_processes():

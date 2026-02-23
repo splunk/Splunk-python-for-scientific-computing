@@ -2,6 +2,7 @@ name: psc
 channels:
   - conda-forge
 dependencies:
+  - async-timeout==5.0.1
   - boto3==1.36.0
   - botocore==1.36.0
   - bottle==0.12.23
@@ -28,7 +29,7 @@ dependencies:
   - protobuf==6.31.1
   - requests==2.32.5
   - aiohttp==3.13.3
-  - cryptography==46.0.3
+  - cryptography==46.0.5
   - cffi==1.17.1
   - urllib3==2.6.3
   - pip:
