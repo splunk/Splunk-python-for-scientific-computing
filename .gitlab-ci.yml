@@ -17,7 +17,7 @@ variables:
   APP_CERT_FOLDER: "app_cert"
   WINDOWS_RUNNER_GIT_PATH: 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\Git\cmd'
   WINDOWS_RUNNER_7ZIP_PATH: 'C:\Program Files\7-Zip'
-  VERSION_OVERRIDE: 3.3.0 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
+  VERSION_OVERRIDE: 3.3.1 # Change this for temp version update, note: this is only effective for MR and master builds, tag builds uses git tag as version
 
 
 workflow:
